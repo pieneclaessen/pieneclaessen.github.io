@@ -247,29 +247,82 @@ input, select, textarea {
 		width: 60em;
 	}
 
-		.container.xsmall {
-			width: 15em;
+	.container.xsmall {width: 15em;}
+	.container.small {width: 30em;}
+	.container.medium {width: 45em;}
+	.container.large {width: 75em;}
+	.container.xlarge {width: 90em;}
+	.container.max {width: 100%;}
+
+		/* New: Smaller container only for #two block */
+		#two .small-container {
+  			width: 30em !important;
+			max-width: 100%; /* same as .container.small */
+			margin-left: auto;
+			margin-right: auto;
+			padding: 1em;
 		}
 
-		.container.small {
-			width: 30em;
+		/* Grid and icon styles for #two */
+		#two ul.major-icons {
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: center;
+			gap: 2em;
+			list-style: none;
+			padding: 0;
+			margin: 0 auto;
+			max-width: 100%;
+			box-sizing: border-box;
 		}
 
-		.container.medium {
-			width: 45em;
+		#two ul.major-icons li {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			text-align: center;
 		}
 
-		.container.large {
-			width: 75em;
+		#two ul.major-icons li .icon {
+			transform: rotate(45deg);
+			border-radius: 4px;
+			border: 1px solid rgba(144, 144, 144, 0.5);
+			height: 5em;
+			width: 5em;
+			line-height: 5em;
+			margin-bottom: 0.4em;
+			display: inline-block;
+			color: #444;
 		}
 
-		.container.xlarge {
-			width: 90em;
+		#two ul.major-icons li .icon:before {
+			display: inline-block;
+			transform: rotate(-45deg);
+			line-height: inherit;
+			font-size: 2em;
 		}
 
-		.container.max {
-			width: 100%;
+		#two ul.major-icons li .icon.fab:before {
+			font-family: "Font Awesome 6 Brands" !important;
+			line-height: 1 !important;
+			position: relative;
+			top: 0.25em;
+			left: 0;
 		}
+
+		#two ul.major-icons li h3 {
+			margin: 0.3em 0 0.5em;
+			font-size: 1.05em;
+			font-weight: 600;
+		}
+
+		#two ul.major-icons li p {
+			margin: 0;
+			font-size: 0.85em;
+			line-height: 1.3;
+			max-width: 14em;
+		}
+}
 
 		@media screen and (max-width: 980px) {
 
@@ -278,6 +331,13 @@ input, select, textarea {
 				width: 100% !important;
 			}
 
+			/* For smaller container on smaller screens */
+			#two .small-container {
+				max-width: 100% !important;
+				width: 100% !important;
+				padding: 1em;
+  			}
+
 		}
 
 		@media screen and (max-width: 480px) {
@@ -285,6 +345,11 @@ input, select, textarea {
 			.container {
 				max-width: calc(100% - 3em);
 			}
+
+			#two .small-container {
+				max-width: calc(100% - 3em) !important;
+				padding: 1em;
+  			}
 
 		}
 
@@ -3235,6 +3300,12 @@ icon
 					#4E3F2C 75%,
 					#664E32 100%
 					);
+				max-height: 28em;        /* limit max height */
+				overflow: hidden;        /* hide overflow if any */
+				padding-top: 1em;        /* adjust vertical padding */
+				padding-bottom: 1em;
+				margin: 0 auto;
+				box-sizing: border-box;				
 			}
 
 	}
@@ -3311,6 +3382,12 @@ icon
 					#4E3F2C 75%,
 					#664E32 100%
 					);
+				max-height: 28em;        /* limit max height */
+				overflow: hidden;        /* hide overflow if any */
+				padding-top: 1em;        /* adjust vertical padding */
+				padding-bottom: 1em;
+				margin: 0 auto;
+				box-sizing: border-box;
 
 	}
 
@@ -3366,6 +3443,12 @@ icon
 					#4E3F2C 75%,
 					#664E32 100%
 					);
+				max-height: 28em;        /* limit max height */
+				overflow: hidden;        /* hide overflow if any */
+				padding-top: 1em;        /* adjust vertical padding */
+				padding-bottom: 1em;
+				margin: 0 auto;
+				box-sizing: border-box;			
 			}
 
 	}
@@ -3469,6 +3552,12 @@ icon
 					#4E3F2C 75%,
 					#664E32 100%
 					);
+				max-height: 28em;        /* limit max height */
+				overflow: hidden;        /* hide overflow if any */
+				padding-top: 1em;        /* adjust vertical padding */
+				padding-bottom: 1em;
+				margin: 0 auto;
+				box-sizing: border-box;				
 
 	}
 
@@ -3539,6 +3628,12 @@ icon
 					#4E3F2C 75%,
 					#664E32 100%
 					);
+				max-height: 28em;        /* limit max height */
+				overflow: hidden;        /* hide overflow if any */
+				padding-top: 1em;        /* adjust vertical padding */
+				padding-bottom: 1em;
+				margin: 0 auto;
+				box-sizing: border-box;				
 
 	}
 
@@ -3588,5 +3683,11 @@ icon
 					#4E3F2C 75%,
 					#664E32 100%
 					);
+				max-height: 28em;        /* limit max height */
+				overflow: hidden;        /* hide overflow if any */
+				padding-top: 1em;        /* adjust vertical padding */
+				padding-bottom: 1em;
+				margin: 0 auto;
+				box-sizing: border-box;				
 
 	}
