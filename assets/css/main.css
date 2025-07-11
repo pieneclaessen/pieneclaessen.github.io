@@ -2913,16 +2913,16 @@ input, select, textarea {
 /* Header */
 
 	#header {
-		padding: 9em 0 9em 0 ;
-		background-color: #4686a0;
-		color: rgba(255, 255, 255, 0.75);
-		background-attachment: fixed;
-		background-image: url("images/background-image.jpg");
-		background-position: center center;
-		background-size: cover;
-		overflow: hidden;
-		position: relative;
-		text-align: center;
+	    padding: 9em 0 9em 0 ;
+	    background-color: #4686a0; /* fallback color */
+	    color: rgba(255, 255, 255, 0.75);
+	    background-attachment: fixed;
+	    background-image: url("images/background-image.jpg");
+	    background-position: center center;
+	    background-size: cover;
+	    overflow: hidden;
+	    position: relative;
+	    text-align: center;
 	}
 
 		#header a {
@@ -3070,21 +3070,6 @@ input, select, textarea {
 				transform: translateY(0);
 				opacity: 1;
 			}
-
-		#header:after {
-			-moz-transition: opacity 1s ease;
-			-webkit-transition: opacity 1s ease;
-			-ms-transition: opacity 1s ease;
-			transition: opacity 1s ease;
-			background-image: linear-gradient(45deg, #4fa49a, #4361c2);
-			content: '';
-			height: 100%;
-			left: 0;
-			opacity: 0;
-			position: absolute;
-			top: 0;
-			width: 100%;
-		}
 
 	body.is-preload #header .inner {
 		-moz-transform: scale(1.05);
