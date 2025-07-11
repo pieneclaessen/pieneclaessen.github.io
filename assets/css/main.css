@@ -2917,7 +2917,7 @@ input, select, textarea {
 	    background-color: #4686a0; /* fallback color */
 	    color: rgba(255, 255, 255, 0.75);
 	    background-attachment: fixed;
-	    background-image: url("images/background-image.jpg");
+	    background-image: url("images/background_header.jpg");
 	    background-position: center center;
 	    background-size: cover;
 	    overflow: hidden;
