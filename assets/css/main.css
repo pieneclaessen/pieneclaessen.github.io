@@ -1,11 +1,6 @@
 @import url("fontawesome-all.min.css");
 @import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,300italic,400,400italic");
 
-/*
-	Photon by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
-*/
 
 html, body, div, span, applet, object,
 iframe, h1, h2, h3, h4, h5, h6, p, blockquote,
@@ -240,118 +235,151 @@ input, select, textarea {
 	}
 
 /* Container */
-
-	.container {
-		margin: 0 auto;
-		max-width: calc(100% - 4em);
-		width: 60em;
-	}
-
-	.container.xsmall {width: 15em;}
-	.container.small {width: 30em;}
-	.container.medium {width: 45em;}
-	.container.large {width: 75em;}
-	.container.xlarge {width: 90em;}
-	.container.max {width: 100%;}
-
-		/* New: Smaller container only for #two block */
-		#two .small-container {
-  			width: 65em !important;
-			max-width: 100%; /* same as .container.small */
-			margin-left: auto;
-			margin-right: auto;
-			padding: 1em;
-		}
-
-		/* Grid and icon styles for #two */
-		#two ul.major-icons {
-			display: flex;
-			flex-wrap: wrap;
-			justify-content: center;
-			gap: 2em;
-			list-style: none;
-			padding: 0;
-			margin: 0 auto;
-			max-width: 100%;
-			box-sizing: border-box;
-		}
-
-		#two ul.major-icons li {
-			display: flex;
-			flex-direction: column;
-			align-items: center;
-			text-align: center;
-		}
-
-		#two ul.major-icons li .icon {
-			transform: rotate(45deg);
-			border-radius: 4px;
-			border: 1px solid rgba(144, 144, 144, 0.5);
-			height: 5em;
-			width: 5em;
-			line-height: 5em;
-			margin-bottom: 2em;
-			display: inline-block;
-			color: #444;
-		}
-
-		#two ul.major-icons li .icon:before {
-			display: inline-block;
-			transform: rotate(-45deg);
-			line-height: inherit;
-			font-size: 2em;
-		}
-
-		#two ul.major-icons li .icon.fab:before {
-			font-family: "Font Awesome 6 Brands" !important;
-			line-height: 1 !important;
-			position: relative;
-			top: 0.25em;
-			left: 0;
-		}
-
-		#two ul.major-icons li h3 {
-			margin: 0.3em 0 0.5em;
-			font-size: 1.05em;
-			font-weight: 600;
-		}
-
-		#two ul.major-icons li p {
-			margin: 0;
-			font-size: 0.85em;
-			line-height: 1.3;
-			max-width: 14em;
-		}
+.container {
+	margin: 0 auto;
+	max-width: calc(100% - 3em);
+	width: 60em;
+	box-sizing: border-box;
 }
 
-		@media screen and (max-width: 980px) {
+.container.xsmall { width: 15em; }
+.container.small { width: 30em; }
+.container.medium { width: 45em; }
+.container.large { width: 75em; }
+.container.xlarge { width: 90em; }
+.container.max { width: 100%; }
 
-			.container {
-				max-width: 100% !important;
-				width: 100% !important;
-			}
+/* New: Smaller container only for #two block */
+#two .small-container {
+	width: 65em
+	max-width: 100%;
+	margin-left: auto;
+	margin-right: auto;
+	padding: 1em;
+}
 
-			/* For smaller container on smaller screens */
-			#two .small-container {
-				max-width: 100% !important;
-				width: 100% !important;
-				padding: 1em;
-  			}
+/* Grid and icon styles for #two */
+#two ul.major-icons {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	gap: 2em;
+	list-style: none;
+	padding: 0;
+	margin: 0 auto;
+	max-width: 100%;
+	box-sizing: border-box;
+}
 
-		}
+#two ul.major-icons li {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	text-align: center;
+	flex: 1 1 10em;
+	max-width: 12em;
+	min-width: 8em;
+}
 
-		@media screen and (max-width: 480px) {
+#two ul.major-icons li .icon {
+	transform: rotate(45deg);
+	border-radius: 4px;
+	border: 1px solid rgba(144, 144, 144, 0.5);
+	height: 5em;
+	width: 5em;
+	line-height: 5em;
+	margin-bottom: 2em;
+	display: inline-block;
+	color: #444;
+}
 
-			.container {
-				max-width: calc(100% - 3em);
-			}
+#two ul.major-icons li .icon:before {
+	display: inline-block;
+	transform: rotate(-45deg);
+	line-height: inherit;
+	font-size: 2em;
+}
 
-			#two .small-container {
-				max-width: calc(100% - 3em) !important;
-				padding: 1em;
-  			}
+#two ul.major-icons li .icon.fab:before {
+	font-family: "Font Awesome 6 Brands" !important;
+	line-height: 1 !important;
+	position: relative;
+	top: 0.25em;
+	left: 0;
+}
 
-		}
+#two ul.major-icons li h3 {
+	margin: 0.3em 0 0.5em;
+	font-size: 1.05em;
+	font-weight: 600;
+}
+
+#two ul.major-icons li p {
+	margin: 0;
+	font-size: 0.85em;
+	line-height: 1.3;
+	max-width: 14em;
+}
+
+/* Media Queries */
+
+@media screen and (max-width: 980px) {
+	.container {
+		max-width: 100% !important;
+		width: 100% !important;
+	}
+
+	#two .small-container {
+		max-width: 100% !important;
+		width: 100% !important;
+		padding: 1em;
+	}
+}
+
+@media screen and (max-width: 700px) {
+	#two ul.major-icons li {
+		flex: 1 1 7em;
+		max-width: 10em;
+		min-width: 6em;
+	}
+
+	#two ul.major-icons li .icon {
+		width: 3.5em;
+		height: 3.5em;
+		line-height: 3.5em;
+	}
+
+	#two ul.major-icons li h3 {
+		font-size: 0.95em;
+	}
+
+	#two ul.major-icons li p {
+		font-size: 0.8em;
+	}
+}
+
+@media screen and (max-width: 480px) {
+	#two ul.major-icons li {
+		flex: 1 1 6em;
+		max-width: 9em;
+		min-width: 5em;
+	}
+
+	#two ul.major-icons li .icon {
+		width: 3em;
+		height: 3em;
+		line-height: 3em;
+	}
+
+	#two ul.major-icons li h3 {
+		font-size: 0.9em;
+	}
+
+	#two ul.major-icons li p {
+		font-size: 0.75em;
+	}
+}
+
 
 /* Row */
 
