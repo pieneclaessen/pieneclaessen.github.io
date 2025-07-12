@@ -276,9 +276,11 @@ input, select, textarea {
 	flex-direction: column;
 	align-items: center;
 	text-align: center;
-	flex: 1 1 10em;
-	max-width: 12em;
-	min-width: 8em;
+	flex: 1 1 8em;
+	max-width: none;
+	min-width: 6em;
+	box-sizing: border-box;
+	padding: 0.5em;
 }
 
 #two ul.major-icons li .icon {
@@ -337,17 +339,10 @@ input, select, textarea {
 }
 
 @media screen and (max-width: 700px) {
-	#two ul.major-icons {
-		gap: 1em; /* reduce gap */
-		justify-content: space-between; /* better spacing */
-	}
-		
 	#two ul.major-icons li {
-		flex: 1 1 40%;
-		max-width: 40%;
-		min-width: auto;
-		box-sizing: border-box;
-		margin-bottom: 1em;
+		flex: 1 1 7em;
+		max-width: 10em;
+		min-width: 6em;
 	}
 
 	#two ul.major-icons li .icon {
@@ -367,18 +362,17 @@ input, select, textarea {
 
 @media screen and (max-width: 480px) {
 	#two ul.major-icons {
-    	gap: 0.8em;
-		justify-content: space-between;
+    	flex-wrap: wrap; /* make sure it wraps */
   	}
 	
 	#two ul.major-icons li {
-		flex: 1 1 48%;
-		max-width: 48%;
+		flex: 1 1 45%;
+		max-width: 45%;
 		min-width: auto;
 		box-sizing: border-box;
 		margin-bottom: 1em;
 	}
-}
+	}
 
 	#two ul.major-icons li .icon {
 		width: 3em;
@@ -3606,6 +3600,25 @@ icon
 /* XSmall */
 
 	@media screen and (max-width: 480px) {
+		#two ul.major-icons {
+			justify-content: flex-start; 
+			gap: 1em;
+			padding: 0 0.5em;/* optional, align left for small screens */
+		}
+
+		#two ul.major-icons li {
+			flex: 1 1 100%; /* full width items */
+			max-width: 100%;
+			min-width: auto;
+			padding: 1em 0; /* smaller vertical padding */
+		}
+		#two ul.major-icons li .icon {
+			height: 4em;
+			width: 4em;
+			line-height: 4em;
+			margin-bottom: 1em;
+}
+}
 
 		/* Button */
 
