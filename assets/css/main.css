@@ -3019,7 +3019,7 @@ icon
 
 	#header {
 	    padding: 9em 0 9em 0 ;
-	    background-color: #4686a0; /* fallback color */
+	    background-color: #c0865f; /* fallback color */
 	    color: rgba(255, 255, 255, 0.75);
 	    background-attachment: fixed;
 	    background-image: url("images/background_header.jpg");
@@ -3029,6 +3029,27 @@ icon
 	    position: relative;
 	    text-align: center;
 	}
+
+	body.hospital-page #header {
+		padding: 6em 0 6em 0;
+		background-color: #714d2f; /* Dark brown base */
+		color: rgba(255, 255, 255, 0.75);
+		background-attachment: fixed, fixed, fixed;
+		background-image: 
+		url("images/overlay2.png"), 
+		url("images/overlay4.svg"), 
+		linear-gradient(45deg, rgba(98, 65, 38, 0.85), rgba(33, 18, 8, 0.85));
+		background-position: top left, center center, center center;
+		background-size: auto, cover, cover;
+		text-align: center;
+		margin-bottom: 3rem;
+	}
+
+	body.hospital-page a.button {
+		margin-bottom: 2rem; /* Adjust spacing as you like */
+		display: inline-block; /* ensures margin applies properly */
+}
+
 
 		#header a {
 			border-bottom-color: rgba(255, 255, 255, 0.5);
@@ -3040,6 +3061,7 @@ icon
 
 		#header h1, #header h2, #header h3, #header h4, #header h5, #header h6, #header strong, #header b {
 			color: #ffffff;
+			font-weight: 700;
 		}
 
 		#header header p {
@@ -3294,6 +3316,7 @@ icon
 
 		#footer .icons {
 			display: flex;
+			font-size: 2.5em;
 			justify-content: center;
 			flex-wrap: wrap;
 			gap: 1.5em;
@@ -3304,7 +3327,7 @@ icon
 
 
 		#footer .copyright {
-			font-size: 0.8em;
+			font-size: 1em;
 			list-style: none;
 			margin: 2em 0 0 0;
 			padding: 0;
