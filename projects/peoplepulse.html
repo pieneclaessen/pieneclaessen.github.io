@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>HR Attrition dashboard</title>
+  <link rel="stylesheet" href="../assets/css/main.css" /> <!-- or your CSS path -->
+</head>
+<body class = "hospital-page">
+  <header id="header">
+    <h1>HR Attrition dashboard</h1>
+  </header>
+  <section id="main">
+    <div class="container">
+      <h3>Business context</h3>
+      <p>PeoplePulse is a fictional medical R&D company specialized in research for new medicine. The HR department had the feeling that there is quite a lot of staff turnover and they wanted to have a better insight in this. The dashboard is therefore designed to give them a clear overview of the attrition within the company.</p>
+      <h5 class="tools-used">Tools used: Microsoft PowerBI</h5>
+      <!-- 👇 Add Power BI Report here -->
+      <div style="text-align: center; margin-bottom: 2em">
+        <!-- Embed the Power BI iframe here -->
+        <iframe title="People Pulse Attrition Rate" width="1000" height="600"
+          src="https://app.powerbi.com/view?r=eyJrIjoiYmUwNDM4NzQtZjZhZC00NTI2LTk1MWUtYTAxMzBiZTI3MTJiIiwidCI6ImViNjFmY2UzLTU0NmUtNDVjMC1iZGI5LWM2NDNjOTA1YjMzNyIsImMiOjl9"
+          frameborder="0" allowFullScreen="true"></iframe>
+      </div>
+        
+      <h3>Key insights</h3>
+        <ul>
+            <li>Overall the attrition rate is the highest by the employees who earn up to 5k. This is true for all three departments, but especially in human resource and in R&D this is the group that leave the company. For sales the rates are a bit more balanced, eventhough the up to 5k group is still the largest.</li>
+            <li>Even though it seems that the attrition rate is high for employees who travel rarely, this is mainly because this is the largest group of employees, and therefore it has a high count. Looking at percentages we can see that the attrition rate for rarely travelling employees is 15% (which is around average), for the frequently travelling employees 25% and for the non-travelling employees only 8%. </li>
+            <li>For all departements there is a peak in attrition after 1 year, after a few years (6) and after 10 years. Especially the peak after 1 year is striking, as the attrition rate here is 49%.</li>
+            <li>Looking at the attrition rate of different roles, it is noteworthy that the rate for sales representatives if very high (39%). Most of these are young professionals aged 18-25.</li>
+        </ul>
+
+        <h3>Recommendations</h3>
+        <ul>
+            <li>It appears that employees who travel frequently have a way higher attrition rate than the rarely and non traveling employees. This might be because it might be difficult to combine the frequent travel with their private life. To investigate if the current employees who travel frequently are happy with this frequent travel, it will be usefull to send out an questionary to these employees. If it appears that many employees are not satisfied with it, it might be worth to see if the travel can be reduced or shared among more employees.</li>
+            <li>As many people leave the company after 1 year already, it is recommended to look into the reason why. Is this because PeoplePulse work with mainly temporary contracts or is it because many employees are not satisfied and thus resulting in a high staff turnover. Besides, also after a few years of working (6 and 10 years) the attrition rate peaks. To prevent people leaving the company because of perspective, it is recommended for the HR department to speak early about career paths and growth oppertunities with staff in a timely manner. </li>
+            <li>Also do a survey among sales representatives about their satisfaction. The attrition rate in this group is very high, especially among the younger staff (18-25 years). Try to find out whether this staff is not happy and thus leave or if it’s because a very plausible reason (such as a high rate of student who leave once their study is finished).</li>
+        </ul>
+
+
+        <a href="../index.html#three" class="button">Back to the main page</a>
+    </div>
+  </section>
+</div>
+</section>
+  <footer id="footer">
+    <p>&copy; 2025 Piene Claessen. All rights reserved.</p>
+  </footer>
+</body>
+</html>

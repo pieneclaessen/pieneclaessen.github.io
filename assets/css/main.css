@@ -234,6 +234,18 @@ input, select, textarea {
 		text-align: right;
 	}
 
+	#three .col-4 h3,
+	#three .col-12-medium h3 {
+		margin-bottom: 0.4em;
+	}
+
+	#three .col-4 p,
+	#three .col-12-medium p {
+		font-size: 0.9em;
+		line-height: 1.4em;
+		margin-bottom: 0.5em;
+}
+
 /* Container */
 .container {
 	margin: 0 auto;
@@ -310,9 +322,10 @@ input, select, textarea {
 	left: 0;
 }
 
+
 #two ul.major-icons li h3 {
 	margin: 0.3em 0 0.5em;
-	font-size: 1.05em;
+	font-size: 1.3em;
 	font-weight: 600;
 }
 
@@ -381,11 +394,11 @@ input, select, textarea {
 	}
 
 	#two ul.major-icons li h3 {
-		font-size: 0.9em;
+		font-size: 1.5em;
 	}
 
 	#two ul.major-icons li p {
-		font-size: 0.75em;
+		font-size: 1em;
 	}
 
 
@@ -2492,7 +2505,7 @@ input, select, textarea {
 
 	ol {
 		list-style: decimal;
-		margin: 0 0 2em 0;
+		margin: 0 0 1em 0;
 		padding-left: 1.25em;
 	}
 
@@ -2502,7 +2515,7 @@ input, select, textarea {
 
 	ul {
 		list-style: disc;
-		margin: 0 0 2em 0;
+		margin: 0 0 1em 0;
 		padding-left: 1em;
 	}
 
@@ -2526,9 +2539,25 @@ input, select, textarea {
 				}
 
 	dl {
-		margin: 0 0 2em 0;
+		margin: 0 0 1em 0;
 	}
 
+	ol, ul, dl {
+		font-size: 0.85em;
+	}
+
+	h3, h5 {
+		margin-bottom: 0em;
+	}
+
+	h3 + ul, h3 + ol, h5 + ul, h5 + ol {
+		margin-bottom: 3em;
+	}
+
+	.tools-used {
+		margin-top: -1.5em;
+		margin-bottom: 2em;
+		}
 /* Actions */
 
 	ul.actions {
@@ -2920,7 +2949,7 @@ icon
 /* Main */
 
 	.main {
-		padding: 6em 0 4em 0 ;
+		padding: 3em 0 3em 0 ;
 	}
 
 		.main.style1 {
@@ -2928,7 +2957,7 @@ icon
 		}
 
 		.main.style2 {
-			padding: 6em 0 4em 0; /* keep existing padding */
+			padding: 3em 0 2em 0; /* keep existing padding */
     		background-image: linear-gradient(180deg, #C3B59F 0%, #5B4F40 100%);
 			color: rgba(255, 255, 255, 0.75);
 			background-attachment: fixed;
@@ -3047,6 +3076,7 @@ icon
 
 	body.hospital-page a.button {
 		margin-bottom: 2rem; /* Adjust spacing as you like */
+		margin-top: 2rem;
 		display: inline-block; /* ensures margin applies properly */
 }
 
@@ -3221,7 +3251,7 @@ icon
 /* Footer */
 
 	#footer {
-		padding: 6em 0 6em 0;
+		padding: 4em 0 4em 0;
 		background-color: #714d2f; /* Dark brown base */
 		color: rgba(255, 255, 255, 0.75);
 		background-attachment: fixed, fixed, fixed;
