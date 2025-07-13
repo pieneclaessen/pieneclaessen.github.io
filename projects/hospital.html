@@ -11,34 +11,49 @@
   </header>
   <section id="main">
     <div class="container">
-      <h2>Project Overview</h2>
-      <p>This project analyzes hospital data using Python and popular data analysis libraries such as pandas and matplotlib.</p>
+      <h3>Business context</h3>
+      <p>Healthcare quality is a critical concern for patients, policymakers, and providers themselves. To better understand the factors influencing hospital performance, this analysis explores patterns in hospital ratings and operational characteristics across the United States. Using a robust dataset of hospitals, I firstly conduct an exploratory data analysis (EDA) to uncover insights that can guide improvements in healthcare delivery. I will than focus my analysis on 5 key business questions, which can be found in the full code below<br></p>
+      <h5 class="tools-used">Tools used: SQL, Jupyter Notebook, Python (Pandas, NumPy, Matplotlib, and Seaborn)</h5>
 
-      <h3>Goals</h3>
-      <ul>
-        <li>Identify key trends in hospital admissions</li>
-        <li>Analyze patient demographics</li>
-        <li>Visualize findings with clear plots</li>
-      </ul>
+      <h3>Conclusion</h3>
+        <p>This analysis reveals clear patterns in hospital performance across the United States. Geographic differences show that some states consistently achieve higher average ratings than others, highlighting regional diversity. Smaller hospitals generally tend to receive higher overall quality ratings, though excellent and poor care can be found at any size.<br>
+          Ownership type also impacts quality: voluntary non-profit and government hospitals typically outperform proprietary hospitals in overall ratings and patient experience. Among the factors influencing overall rating, patient experience shows the strongest positive correlation, and therefore be the most important aspect for hospitals aiming to improve quality.<br>
+          Finally, capacity and staffing management present a balancing act. While many hospitals operate below full capacity, achieving efficiency must be weighed against maintaining high quality and patient centered care.</p>
+      
+      <h3>Recommendations</h3>
+      <ul style="font-size: 1em;">
+        <li>
+          <strong>Prioritize patient experience initiatives</strong>
+          <ul style="font-size: 0.95em; margin-top: 0.2em; margin-bottom: 0.5em;">
+            <li>Invest in staff training for communication, empathy, and responsiveness as this boosts overall patient experience</li>
+            <li>Monitor patient feedback systematically and act on it to drive continuous improvement</li>
+          </ul>
+        </li>
 
-      <h3>Tools Used</h3>
-      <ul>
-        <li>Python (pandas, matplotlib, seaborn)</li>
-        <li>Jupyter Notebook</li>
+        <li>
+          <strong>Optimize capacity and staffing</strong>
+          <ul style="font-size: 0.95em; margin-top: 0.2em; margin-bottom: 0.5em;">
+            <li>Balance the staff-to-bed ratio to strive for the optimal balance between capacity and staff</li>
+            <li>Allocate staffing dynamically (if possible) to be flexible at high peaks</li>
+          </ul>
+        </li>
+
+        <li>
+          <strong>Address geograpahical disparities</strong>
+          <ul style="font-size: 0.95em; margin-top: 0.2em; margin-bottom: 0.5em;">
+            <li>Local government and policy makers (especially in the low performing states) should investegate why their hospital underperform and learn from the high performing states. Every patient has to right on quality care</li>
+            <li>For hospitals it might be important to have a high overall rating. This can attract more patients but might also lead to more funding and attracting better staff.</li>
+          </ul>
+        </li>
       </ul>
 
       <iframe
-        src="../images/EDA.html"
+        src="../images/EDA_hospital.html"
         width="100%"
         height="800"
         frameborder="0">
       </iframe>
 
-      <h3>Example Images</h3>
-      <img src="../images/hospital_image.jpg" alt="Hospital project screenshot" style="max-width:100%;" />
-
-      <h3>Conclusion</h3>
-      <p>This project provided actionable insights for hospital management and improved reporting workflows.</p>
 
       <a href="../index.html#three" class="button">Back to the main page</a>
     </div>
