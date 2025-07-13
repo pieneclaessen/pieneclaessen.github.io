@@ -2957,7 +2957,7 @@ icon
 		}
 
 		.main.style2 {
-			padding: 3em 0 2em 0; /* keep existing padding */
+			padding: 3em 2em; /* keep existing padding */
     		background-image: linear-gradient(180deg, #C3B59F 0%, #5B4F40 100%);
 			color: rgba(255, 255, 255, 0.75);
 			background-attachment: fixed;
