@@ -2964,6 +2964,21 @@ icon
 			background-size: cover;
 			background-repeat: no-repeat;
 		}
+
+		#two{
+			padding: 3em 0 2em 0;
+			background: linear-gradient(
+				45deg,
+			#1D1E19 0%, 
+					#1D1E1B 20%, 
+					#322924 50%,
+					#4E3F2C 75%,
+					#664E32 100%
+			);
+			color: rgba(255, 255, 255, 0.75);
+			background-repeat: no-repeat;
+		text-align: center;		}
+		
 			.main.style2 a {
 				border-bottom-color: rgba(255, 255, 255, 0.5);
 			}
@@ -3390,7 +3405,7 @@ icon
 		/* Header */
 
 			#header {
-				padding: 6em 0 6em 0 ;
+				padding: 10em 0 10em 0 ;
 			}
 
 		/* One */
@@ -3402,8 +3417,7 @@ icon
 		/* Two */
 
 			#two {
-				text-align: center;
-        		background: linear-gradient(
+				background: linear-gradient(
 					45deg, 
 					#1D1E19 0%, 
 					#1D1E1B 20%, 
@@ -3411,7 +3425,6 @@ icon
 					#4E3F2C 75%,
 					#664E32 100%
 					);
-				max-height: 32em;        /* limit max height */
 				overflow: hidden;        /* hide overflow if any */
 				padding-top: 1em;        /* adjust vertical padding */
 				padding-bottom: 1em;
@@ -3493,7 +3506,6 @@ icon
 					#4E3F2C 75%,
 					#664E32 100%
 					);
-				max-height: 32em;        /* limit max height */
 				overflow: hidden;        /* hide overflow if any */
 				padding-top: 1em;        /* adjust vertical padding */
 				padding-bottom: 1em;
@@ -3554,7 +3566,6 @@ icon
 					#4E3F2C 75%,
 					#664E32 100%
 					);
-				max-height: 32em;        /* limit max height */
 				overflow: hidden;        /* hide overflow if any */
 				padding-top: 1em;        /* adjust vertical padding */
 				padding-bottom: 1em;
@@ -3663,7 +3674,6 @@ icon
 					#4E3F2C 75%,
 					#664E32 100%
 					);
-				max-height: 32em;        /* limit max height */
 				overflow: hidden;        /* hide overflow if any */
 				padding-top: 1em;        /* adjust vertical padding */
 				padding-bottom: 1em;
@@ -3758,7 +3768,6 @@ icon
 					#4E3F2C 75%,
 					#664E32 100%
 					);
-				max-height: 32em;        /* limit max height */
 				overflow: hidden;        /* hide overflow if any */
 				padding-top: 1em;        /* adjust vertical padding */
 				padding-bottom: 1em;
@@ -3813,7 +3822,6 @@ icon
 					#4E3F2C 75%,
 					#664E32 100%
 					);
-				max-height: 32em;        /* limit max height */
 				overflow: hidden;        /* hide overflow if any */
 				padding-top: 1em;        /* adjust vertical padding */
 				padding-bottom: 1em;
