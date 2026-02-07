@@ -1,5 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
+<link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+/>
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -15,12 +19,12 @@
         <div class="nav-container">
             <div class="nav-logo">
                 <span class="logo-bracket">[</span>
-                <span class="logo-name">PC</span>
+                <span class="logo-name">Claessen Tech</span>
                 <span class="logo-bracket">]</span>
             </div>
             <div class="nav-links">
-                <a href="#about" class="nav-link">About</a>
-                <a href="#experience" class="nav-link">Experience</a>
+                <a href="aboutme.html" class="nav-link">About</a>
+                <a href="portfolio.html" class="nav-link">Experience</a>
                 <a href="#skills" class="nav-link">Skills</a>
                 <a href="#contact" class="nav-link nav-link-highlight">Contact</a>
             </div>
@@ -39,54 +43,34 @@
             <div class="gradient-orb orb-1"></div>
             <div class="gradient-orb orb-2"></div>
         </div>
+
         <div class="hero-content">
-            <div class="hero-label">Data Scientist & ML Engineer</div>
-            <h1 class="hero-title">
-                <span class="title-line">Piene</span>
-                <span class="title-line">Claessen</span>
-            </h1>
-            <p class="hero-description">
-                Building data-driven solutions with Python, Machine Learning, and LLMs.<br>
-                Specializing in end-to-end ML pipelines, predictive analytics, and AI integration.
-            </p>
-            <div class="hero-cta">
-                <a href="#contact" class="btn btn-primary">Get in Touch</a>
-                <a href="#skills" class="btn btn-secondary">View Skills</a>
+            <!-- Handshake icon -->
+            <div class="hero-icon">
+                <i class="fa-solid fa-handshake"></i>
             </div>
-            <div class="terminal-preview">
-                <div class="terminal-header">
-                    <div class="terminal-dots">
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                    </div>
-                    <div class="terminal-title">~/portfolio</div>
-                </div>
-                <div class="terminal-content">
-                    <div class="terminal-line">
-                        <span class="prompt">$</span> cat expertise.txt
-                    </div>
-                    <div class="terminal-line output">
-                        <span class="key">role:</span> <span class="value">"Freelance Data Scientist"</span>
-                    </div>
-                    <div class="terminal-line output">
-                        <span class="key">focus:</span> <span class="value">["ML", "LLMs", "Data Engineering"]</span>
-                    </div>
-                    <div class="terminal-line output">
-                        <span class="key">location:</span> <span class="value">"Netherlands"</span>
-                    </div>
-                    <div class="terminal-line">
-                        <span class="prompt">$</span> <span class="cursor">_</span>
-                    </div>
-                </div>
+
+            <!-- Title -->
+            <h1 class="hero-title">
+                Hi, I'm <strong>Piene Claessen</strong>
+            </h1>
+
+            <!-- Subtitle -->
+            <p class="hero-description">
+                Freelance Data Analyst & Data Scientist
+            </p>
+
+            <!-- CTA -->
+            <div class="hero-cta">
+                <a href="#about" class="btn btn-primary">Discover more</a>
             </div>
         </div>
+
         <div class="scroll-indicator">
             <div class="scroll-line"></div>
             <div class="scroll-text">Scroll</div>
         </div>
     </section>
-
     <!-- About Section -->
     <section id="about" class="about">
         <div class="container">
@@ -134,8 +118,8 @@
                         <h3>Quick Facts</h3>
                         <ul class="info-list">
                             <li>
-                                <span class="info-label">Location</span>
-                                <span class="info-value">Netherlands</span>
+                                <span class="info-label">Experience</span>
+                                <span class="info-value">6+ years</span>
                             </li>
                             <li>
                                 <span class="info-label">Education</span>
@@ -143,7 +127,7 @@
                             </li>
                             <li>
                                 <span class="info-label">Focus</span>
-                                <span class="info-value">ML & LLM Solutions</span>
+                                <span class="info-value">ML & Analytic solutions</span>
                             </li>
                             <li>
                                 <span class="info-label">Availability</span>
@@ -173,197 +157,6 @@
         </div>
     </section>
 
-    <!-- Experience Section -->
-    <section id="experience" class="experience">
-        <div class="container">
-            <div class="section-header">
-                <span class="section-number">02</span>
-                <h2 class="section-title">Experience</h2>
-            </div>
-            
-            <div class="timeline">
-                <!-- Data Scientist Role -->
-                <div class="timeline-item" data-aos="fade-up">
-                    <div class="timeline-marker"></div>
-                    <div class="timeline-content">
-                        <div class="timeline-header">
-                            <div>
-                                <h3 class="role-title">Data Scientist</h3>
-                                <div class="company-name">Royal Netherlands Air and Space Force</div>
-                            </div>
-                            <div class="timeline-date">Apr 2024 - Present</div>
-                        </div>
-                        <p class="role-description">
-                            Contributing to the Digital Transformation program by developing data products that strengthen and accelerate operational capabilities.
-                        </p>
-                        <div class="achievements">
-                            <div class="achievement-item">
-                                <div class="achievement-icon">🚁</div>
-                                <div class="achievement-text">
-                                    Developed predictive maintenance tool for NH90 helicopter using ML, increasing on-time parts availability by ~20% and reducing excess stock by ~25%
-                                </div>
-                            </div>
-                            <div class="achievement-item">
-                                <div class="achievement-icon">🤖</div>
-                                <div class="achievement-text">
-                                    Built LLM-powered AI agent enabling operational teams to retrieve mission-critical insights ~30% faster
-                                </div>
-                            </div>
-                            <div class="achievement-item">
-                                <div class="achievement-icon">🔄</div>
-                                <div class="achievement-text">
-                                    Designed and validated predictive analyses to support operational decision-making
-                                </div>
-                            </div>
-                            <div class="achievement-item">
-                                <div class="achievement-icon">🔗</div>
-                                <div class="achievement-text">
-                                    Cleaned, processed, and integrated data from multiple source systems using SQL and Azure
-                                </div>
-                            </div>
-                        </div>
-                        <div class="tech-stack">
-                            <span class="tech-tag">Python</span>
-                            <span class="tech-tag">Machine Learning</span>
-                            <span class="tech-tag">LLMs</span>
-                            <span class="tech-tag">RAG Pipelines</span>
-                            <span class="tech-tag">SQL</span>
-                            <span class="tech-tag">Azure</span>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Data Analyst Role -->
-                <div class="timeline-item" data-aos="fade-up">
-                    <div class="timeline-marker"></div>
-                    <div class="timeline-content">
-                        <div class="timeline-header">
-                            <div>
-                                <h3 class="role-title">Data Analyst</h3>
-                                <div class="company-name">Royal Netherlands Air and Space Force</div>
-                            </div>
-                            <div class="timeline-date">Mar 2022 - Apr 2024</div>
-                        </div>
-                        <p class="role-description">
-                            Led data initiatives within the Digital Transformation program, establishing foundational frameworks and capabilities.
-                        </p>
-                        <div class="achievements">
-                            <div class="achievement-item">
-                                <div class="achievement-icon">📊</div>
-                                <div class="achievement-text">
-                                    Built multiple interactive Power BI dashboards, enabling faster data-driven decisions across teams
-                                </div>
-                            </div>
-                            <div class="achievement-item">
-                                <div class="achievement-icon">📋</div>
-                                <div class="achievement-text">
-                                    Established Air Force-wide data governance and management frameworks tailored to military context
-                                </div>
-                            </div>
-                            <div class="achievement-item">
-                                <div class="achievement-icon">🎓</div>
-                                <div class="achievement-text">
-                                    Delivered data literacy training to 50+ senior officers including colonels and generals
-                                </div>
-                            </div>
-                            <div class="achievement-item">
-                                <div class="achievement-icon">⚡</div>
-                                <div class="achievement-text">
-                                    Implemented SharePoint/Nintex platform, improving reporting efficiency by ~30%
-                                </div>
-                            </div>
-                        </div>
-                        <div class="tech-stack">
-                            <span class="tech-tag">Power BI</span>
-                            <span class="tech-tag">Data Governance</span>
-                            <span class="tech-tag">SharePoint</span>
-                            <span class="tech-tag">Nintex</span>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Military Pilot Role -->
-                <div class="timeline-item" data-aos="fade-up">
-                    <div class="timeline-marker"></div>
-                    <div class="timeline-content">
-                        <div class="timeline-header">
-                            <div>
-                                <h3 class="role-title">Military Pilot in Training</h3>
-                                <div class="company-name">Royal Netherlands Air and Space Force</div>
-                            </div>
-                            <div class="timeline-date">Sep 2019 - Mar 2022</div>
-                        </div>
-                        <p class="role-description">
-                            Trained to become a Military Aviator, developing disciplined decision-making and operational awareness under high-pressure conditions.
-                        </p>
-                        <div class="achievements">
-                            <div class="achievement-item">
-                                <div class="achievement-icon">🎖️</div>
-                                <div class="achievement-text">
-                                    Completed officer training at the Royal Military Academy (KMA)
-                                </div>
-                            </div>
-                            <div class="achievement-item">
-                                <div class="achievement-icon">✈️</div>
-                                <div class="achievement-text">
-                                    Obtained frozen ATPL with courses in meteorology, flight planning, and human performance
-                                </div>
-                            </div>
-                            <div class="achievement-item">
-                                <div class="achievement-icon">🛩️</div>
-                                <div class="achievement-text">
-                                    Logged approximately 30 flight hours on the Pilatus PC-7
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Database Analyst Role -->
-                <div class="timeline-item" data-aos="fade-up">
-                    <div class="timeline-marker"></div>
-                    <div class="timeline-content">
-                        <div class="timeline-header">
-                            <div>
-                                <h3 class="role-title">Database Analyst</h3>
-                                <div class="company-name">IRI</div>
-                            </div>
-                            <div class="timeline-date">Jan 2018 - Sep 2019</div>
-                        </div>
-                        <p class="role-description">
-                            Built and maintained databases for FMCG clients in the UK, translating client needs into accessible data structures.
-                        </p>
-                        <div class="achievements">
-                            <div class="achievement-item">
-                                <div class="achievement-icon">🗄️</div>
-                                <div class="achievement-text">
-                                    Designed full database solutions from scratch for FMCG manufacturers
-                                </div>
-                            </div>
-                            <div class="achievement-item">
-                                <div class="achievement-icon">✅</div>
-                                <div class="achievement-text">
-                                    Increased data accuracy and reliability by ~15% across client databases
-                                </div>
-                            </div>
-                            <div class="achievement-item">
-                                <div class="achievement-icon">🌍</div>
-                                <div class="achievement-text">
-                                    Managed remote collaboration with UK stakeholders across time zones
-                                </div>
-                            </div>
-                        </div>
-                        <div class="tech-stack">
-                            <span class="tech-tag">Database Design</span>
-                            <span class="tech-tag">SQL</span>
-                            <span class="tech-tag">Data Quality</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
     <!-- Skills Section -->
     <section id="skills" class="skills">
         <div class="container">
@@ -383,7 +176,7 @@
                         <div class="skill-chip">Python</div>
                         <div class="skill-chip">SQL</div>
                         <div class="skill-chip">PostgreSQL</div>
-                        <div class="skill-chip">Git</div>
+                        <div class="skill-chip">Version control</div>
                         <div class="skill-chip">Docker</div>
                     </div>
                 </div>
@@ -395,11 +188,11 @@
                         <h3>Machine Learning</h3>
                     </div>
                     <div class="skills-list">
-                        <div class="skill-chip">Scikit-Learn</div>
-                        <div class="skill-chip">TensorFlow</div>
-                        <div class="skill-chip">PyTorch</div>
-                        <div class="skill-chip">XGBoost</div>
-                        <div class="skill-chip">Predictive Modeling</div>
+                        <div class="skill-chip">Supervised Learning</div>
+                        <div class="skill-chip">Unsupervised Learning</div>
+                        <div class="skill-chip">Feature Engineering</div>
+                        <div class="skill-chip">Hyperparameter Tuning</div>
+                        <div class="skill-chip">Model Evaluation</div>
                         <div class="skill-chip">Model Deployment</div>
                     </div>
                 </div>
@@ -411,26 +204,11 @@
                         <h3>LLMs & AI</h3>
                     </div>
                     <div class="skills-list">
+                        <div class="skill-chip">RAG Pipelines</div>
                         <div class="skill-chip">LangChain</div>
                         <div class="skill-chip">HuggingFace</div>
-                        <div class="skill-chip">RAG Pipelines</div>
                         <div class="skill-chip">Prompt Engineering</div>
-                        <div class="skill-chip">AI Agents</div>
-                    </div>
-                </div>
-
-                <!-- Data Processing -->
-                <div class="skill-category">
-                    <div class="category-title">
-                        <span class="category-icon">📊</span>
-                        <h3>Data Processing</h3>
-                    </div>
-                    <div class="skills-list">
-                        <div class="skill-chip">Pandas</div>
-                        <div class="skill-chip">NumPy</div>
-                        <div class="skill-chip">Data Cleaning</div>
-                        <div class="skill-chip">ETL Pipelines</div>
-                        <div class="skill-chip">Data Integration</div>
+                        <div class="skill-chip">OpenAI API</div>
                     </div>
                 </div>
 
@@ -443,36 +221,8 @@
                     <div class="skills-list">
                         <div class="skill-chip">Power BI</div>
                         <div class="skill-chip">Matplotlib</div>
+                        <div class="skill-chip">Plotly</div>
                         <div class="skill-chip">Seaborn</div>
-                        <div class="skill-chip">Interactive Dashboards</div>
-                    </div>
-                </div>
-
-                <!-- Cloud & Tools -->
-                <div class="skill-category">
-                    <div class="category-title">
-                        <span class="category-icon">☁️</span>
-                        <h3>Cloud & DevOps</h3>
-                    </div>
-                    <div class="skills-list">
-                        <div class="skill-chip">Azure ML Pipelines</div>
-                        <div class="skill-chip">Azure DevOps</div>
-                        <div class="skill-chip">Dataiku</div>
-                        <div class="skill-chip">CI/CD</div>
-                    </div>
-                </div>
-
-                <!-- Methods & Practices -->
-                <div class="skill-category">
-                    <div class="category-title">
-                        <span class="category-icon">⚙️</span>
-                        <h3>Methods & Practices</h3>
-                    </div>
-                    <div class="skills-list">
-                        <div class="skill-chip">Agile/Scrum</div>
-                        <div class="skill-chip">Data Governance</div>
-                        <div class="skill-chip">Workflow Automation</div>
-                        <div class="skill-chip">Technical Documentation</div>
                     </div>
                 </div>
             </div>
@@ -536,10 +286,9 @@
                 <div class="footer-left">
                     <div class="footer-logo">
                         <span class="logo-bracket">[</span>
-                        <span class="logo-name">PC</span>
+                        <span class="logo-name">Claessen Tech</span>
                         <span class="logo-bracket">]</span>
                     </div>
-                    <p>Freelance Data Scientist specializing in ML, LLMs, and data-driven solutions.</p>
                 </div>
                 <div class="footer-right">
                     <div class="footer-links">
