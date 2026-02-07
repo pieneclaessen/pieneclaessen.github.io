@@ -73,7 +73,7 @@ const skillObserver = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
         if (entry.isIntersecting) {
             const progress = entry.target;
-            const width = progress.style.width;
+            const width = progress.style.width || progress.dataset.progress || '0%';
             progress.style.width = '0%';
             setTimeout(() => {
                 progress.style.width = width;
@@ -85,17 +85,6 @@ const skillObserver = new IntersectionObserver((entries) => {
 
 skillBars.forEach(bar => {
     skillObserver.observe(bar);
-});
-
-// Add parallax effect to hero orbs
-window.addEventListener('scroll', () => {
-    const scrolled = window.pageYOffset;
-    const orbs = document.querySelectorAll('.gradient-orb');
-    
-    orbs.forEach((orb, index) => {
-        const speed = (index + 1) * 0.3;
-        orb.style.transform = `translate(${scrolled * speed * 0.1}px, ${scrolled * speed * 0.1}px)`;
-    });
 });
 
 // Counter animation for stats
@@ -135,58 +124,6 @@ const statObserver = new IntersectionObserver((entries) => {
 
 document.querySelectorAll('.stat-number').forEach(stat => {
     statObserver.observe(stat);
-});
-
-// Add typing effect to hero title
-function typeWriter(element, text, speed = 100) {
-    let i = 0;
-    element.textContent = '';
-    
-    function type() {
-        if (i < text.length) {
-            element.textContent += text.charAt(i);
-            i++;
-            setTimeout(type, speed);
-        }
-    }
-    
-    type();
-}
-
-// Initialize typing effect on page load
-window.addEventListener('load', () => {
-    // Add entrance animations
-    document.body.classList.add('loaded');
-});
-
-// Add mouse move effect to hero background
-const hero = document.querySelector('.hero');
-const heroBackground = document.querySelector('.hero-background');
-
-if (hero && heroBackground) {
-    hero.addEventListener('mousemove', (e) => {
-        const { clientX, clientY } = e;
-        const { offsetWidth, offsetHeight } = hero;
-        
-        const xPos = (clientX / offsetWidth - 0.5) * 20;
-        const yPos = (clientY / offsetHeight - 0.5) * 20;
-        
-        heroBackground.style.transform = `translate(${xPos}px, ${yPos}px)`;
-    });
-}
-
-// Add glow effect to contact cards
-const contactCards = document.querySelectorAll('.contact-card');
-
-contactCards.forEach(card => {
-    card.addEventListener('mousemove', (e) => {
-        const rect = card.getBoundingClientRect();
-        const x = e.clientX - rect.left;
-        const y = e.clientY - rect.top;
-        
-        card.style.setProperty('--mouse-x', `${x}px`);
-        card.style.setProperty('--mouse-y', `${y}px`);
-    });
 });
 
 // Timeline items stagger animation
@@ -231,47 +168,6 @@ function setActiveNav() {
 
 window.addEventListener('scroll', setActiveNav);
 
-// Add cursor trail effect (optional enhancement)
-const createCursorTrail = () => {
-    const coords = { x: 0, y: 0 };
-    const circles = document.querySelectorAll('.cursor-circle');
-    
-    if (circles.length === 0) return;
-    
-    circles.forEach(function (circle, index) {
-        circle.x = 0;
-        circle.y = 0;
-    });
-    
-    window.addEventListener('mousemove', function(e) {
-        coords.x = e.clientX;
-        coords.y = e.clientY;
-    });
-    
-    function animateCircles() {
-        let x = coords.x;
-        let y = coords.y;
-        
-        circles.forEach(function (circle, index) {
-            circle.style.left = x - 12 + 'px';
-            circle.style.top = y - 12 + 'px';
-            
-            circle.style.transform = `scale(${(circles.length - index) / circles.length})`;
-            
-            circle.x = x;
-            circle.y = y;
-            
-            const nextCircle = circles[index + 1] || circles[0];
-            x += (nextCircle.x - x) * 0.3;
-            y += (nextCircle.y - y) * 0.3;
-        });
-        
-        requestAnimationFrame(animateCircles);
-    }
-    
-    animateCircles();
-};
-
 // Lazy load images (if any are added later)
 const images = document.querySelectorAll('img[data-src]');
 const imageObserver = new IntersectionObserver((entries) => {
@@ -291,12 +187,10 @@ images.forEach(img => {
 
 // Add page load animations
 document.addEventListener('DOMContentLoaded', () => {
-    // Preload animation
     setTimeout(() => {
         document.body.classList.add('loaded');
     }, 100);
     
-    // Initialize all animations
     setActiveNav();
 });
 
@@ -305,23 +199,7 @@ window.addEventListener('load', () => {
     document.body.style.opacity = '1';
 });
 
-// Easter egg: Konami code
-let konamiCode = [];
-const konamiPattern = ['ArrowUp', 'ArrowUp', 'ArrowDown', 'ArrowDown', 'ArrowLeft', 'ArrowRight', 'ArrowLeft', 'ArrowRight', 'b', 'a'];
-
-document.addEventListener('keydown', (e) => {
-    konamiCode.push(e.key);
-    konamiCode = konamiCode.slice(-10);
-    
-    if (JSON.stringify(konamiCode) === JSON.stringify(konamiPattern)) {
-        document.body.style.animation = 'rainbow 2s infinite';
-        setTimeout(() => {
-            document.body.style.animation = '';
-        }, 5000);
-    }
-});
-
-// Add CSS for rainbow animation
+// Add CSS for rainbow animation and nav
 const style = document.createElement('style');
 style.textContent = `
     @keyframes rainbow {
