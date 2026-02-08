@@ -177,6 +177,12 @@ body {
     padding: calc(var(--spacing-unit) * 10) 0;
 }
 
+/* Hero without icon - reduce height to match visual spacing */
+.hero-no-icon {
+    min-height: 55vh;
+    padding: calc(var(--spacing-unit) * 8) 0;
+}
+
 .hero-background {
     position: absolute;
     inset: 0;
@@ -1241,7 +1247,7 @@ section {
 }
 
 .contact-icon {
-    font-size: 2rem;
+    font-size: 2.5rem;
 }
 
 .contact-info {
@@ -1265,54 +1271,24 @@ section {
 
 /* Default icon and text colors */
 .contact-card .contact-icon {
-    color: #ffffff; /* icon default white */
+    color: #ffffff;
     transition: color var(--transition-speed);
 }
 
 .contact-card .contact-info {
-    color: #ffffff; /* all text inside contact-info white */
+    color: #ffffff;
 }
 
-/* Override contact-value specifically */
 .contact-card .contact-value {
-    color: #ffffff; /* ensure email/phone is white */
+    color: #ffffff;
 }
 
 /* Icon changes to cyan on hover */
 .contact-card:hover .contact-icon,
 .contact-card:hover .contact-value,
-.contact-card:hover .contact-label
- {
-    color: var(--color-accent-primary); /* cyan */
+.contact-card:hover .contact-label {
+    color: var(--color-accent-primary);
 }
-
-
-/* Default icon and text colors */
-.contact-card .contact-icon {
-    color: #ffffff; /* icon default white */
-    transition: color var(--transition-speed);
-}
-
-.contact-card .contact-info {
-    color: #ffffff; /* all text inside contact-info white */
-}
-
-/* Override contact-value specifically */
-.contact-card .contact-value {
-    color: #ffffff; /* ensure email/phone is white */
-}
-
-/* Icon changes to cyan on hover */
-.contact-card:hover .contact-icon {
-    color: var(--color-accent-primary); /* cyan */
-}
-
-/* Keep text white on hover */
-.contact-card:hover .contact-info,
-.contact-card:hover .contact-value {
-    color: #ffffff;
-}
-
 
 /* Footer */
 .footer {
@@ -1398,6 +1374,19 @@ section {
     .timeline-wrapper {
         padding-left: 30px;
     }
+    
+    /* PowerBI adjustments for tablet - reduced height */
+    .modal-image iframe {
+        height: 350px;
+    }
+    
+    .powerbi-container {
+        height: 350px;
+    }
+    
+    .powerbi-container iframe {
+        height: 350px;
+    }
 }
 
 @media (max-width: 768px) {
@@ -1411,6 +1400,11 @@ section {
     
     .hero-title {
         font-size: 3rem;
+    }
+    
+    .hero-no-icon {
+        min-height: 50vh;
+        padding: calc(var(--spacing-unit) * 6) 0;
     }
     
     .footer-content {
@@ -1431,13 +1425,13 @@ section {
     }
 
     .modal-content {
-        width: 92vw;
+        width: 95vw;
         max-height: 90vh;
     }
 
     .modal-body {
-        padding: calc(var(--spacing-unit) * 4);
-        padding-top: calc(var(--spacing-unit) * 3);
+        padding: calc(var(--spacing-unit) * 3);
+        padding-top: calc(var(--spacing-unit) * 2);
     }
 
     .modal-title {
@@ -1449,9 +1443,9 @@ section {
         gap: calc(var(--spacing-unit) * 2);
     }
 
+    /* PowerBI adjustments for mobile - significantly reduced height */
     .modal-image iframe {
-        height: 500px;
-        transform: scale(0.8);
+        height: 300px;
     }
 
     .modal-close {
@@ -1467,95 +1461,7 @@ section {
         height: 2px;
     }
 
-    .powerbi-container {
-        height: 400px;
-    }
-
-    .powerbi-container iframe {
-        height: 500px;
-        transform: scale(0.8);
-    }
-
-    .powerbi-full-width {
-        margin-left: calc(var(--spacing-unit) * -4);
-        margin-right: calc(var(--spacing-unit) * -4);
-    }
-
-    .powerbi-title-wrapper {
-        padding: 0 calc(var(--spacing-unit) * 4);
-    }
-
-    .skills-container {
-        grid-template-columns: 1fr;
-    }
-}
-
-@media (max-width: 480px) {
-    .container {
-        padding: 0 calc(var(--spacing-unit) * 2);
-    }
     
-    .hero-title {
-        font-size: 2.5rem;
-    }
-    
-    .section-title {
-        font-size: 2rem;
-    }
-    
-    .timeline-header {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 4px;
-    }
-    
-    .timeline-date {
-        white-space: normal;
-    }
-    
-    .project-image {
-        height: 200px;
-    }
-
-    .modal-content {
-        width: 98vw;
-        max-height: 95vh;
-        border-radius: 8px;
-    }
-
-    .modal-body {
-        padding: calc(var(--spacing-unit) * 3);
-        padding-top: calc(var(--spacing-unit) * 2);
-    }
-
-    .modal-title {
-        font-size: 1.5rem;
-    }
-
-    .modal-image iframe {
-        height: 450px;
-        transform: scale(0.75);
-    }
-
-    .powerbi-container {
-        height: 340px;
-    }
-
-    .powerbi-container iframe {
-        height: 450px;
-        transform: scale(0.75);
-    }
-
-    .powerbi-full-width {
-        margin-left: calc(var(--spacing-unit) * -3);
-        margin-right: calc(var(--spacing-unit) * -3);
-    }
-
-    .powerbi-title-wrapper {
-        padding: 0 calc(var(--spacing-unit) * 3);
-    }
-}
-
 /* Scroll animations */
 [data-aos] {
     opacity: 0;
