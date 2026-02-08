@@ -196,8 +196,8 @@ if (markers.length > 0) {
 // Project data
 const projects = {
     project1: {
-        title: 'AI Predictive Model',
-        image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=900&h=400&fit=crop',
+        title: 'KTM Showroom',
+        image: 'images/ktm_dashboard.png',
         year: '2024',
         role: 'Data Scientist',
         duration: '4 months',
