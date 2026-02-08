@@ -199,17 +199,19 @@ const projects = {
         title: 'KTM Showroom',
         image: 'images/ktm_dashboard.png',
         year: '2024',
-        role: 'Data Scientist',
-        duration: '4 months',
-        overview: 'Developed an advanced predictive maintenance system for the NH90 helicopter fleet using machine learning algorithms. The model analyzes historical maintenance data, flight parameters, and sensor readings to predict component failures before they occur, significantly reducing unplanned downtime and maintenance costs.',
+        role: 'Data Analyst',
+        duration: '2 weeks',
+        type: 'powerbi', // Set to 'powerbi' for interactive dashboards
+        powerbiUrl: 'https://app.powerbi.com/view?r=eyJrIjoiYzE1ZDhhZjItMjRhMS00ZWUxLWIyOGYtYzM4MGMxMGYxYjc0IiwidCI6ImViNjFmY2UzLTU0NmUtNDVjMC1iZGI5LWM2NDNjOTA1YjMzNyIsImMiOjl9',
+        overview: 'KTM, a renowned Austrian motorcycle manufacturer, offers a wide range of high-performance bikes. This interactive web application showcases their lineup of naked bike models, allowing customers to explore and compare different options with ease. Users can browse through models, select their preferred colors, and view key technical specifications side by side.',
         features: [
-            'Real-time anomaly detection using ensemble learning methods',
-            'Predictive analytics for critical helicopter components',
-            'Integration with existing maintenance management systems',
-            'Interactive dashboard for maintenance teams',
-            'Automated alerting system for high-risk predictions'
+            'Interactive model selection and comparison',
+            'Dynamic color customization options',
+            'Side-by-side technical specifications',
+            'Responsive design for all devices',
+            'Real-time filtering and search capabilities'
         ],
-        skills: ['Python', 'Machine Learning', 'Pandas', 'Scikit-learn', 'TensorFlow', 'Data Visualization', 'Time Series Analysis']
+        skills: ['Python', 'PowerBI', 'DAX', 'Data Visualization']
     },
     project2: {
         title: 'Interactive Dashboard',
@@ -217,6 +219,7 @@ const projects = {
         year: '2023',
         role: 'Data Analyst',
         duration: '3 months',
+        type: 'standard', // Regular project with just an image
         overview: 'Created a comprehensive analytics dashboard for the Royal Netherlands Air Force, providing real-time insights into operational metrics, resource allocation, and performance indicators. The dashboard serves multiple departments and has become a critical tool for data-driven decision making.',
         features: [
             'Real-time data integration from multiple sources',
@@ -239,11 +242,31 @@ if (modal && modalClose && projectCards.length > 0) {
         const project = projects[projectId];
         
         document.getElementById('modalTitle').textContent = project.title;
-        document.getElementById('modalImage').src = project.image;
         document.getElementById('modalYear').textContent = project.year;
         document.getElementById('modalRole').textContent = project.role;
         document.getElementById('modalDuration').textContent = project.duration;
         document.getElementById('modalOverview').textContent = project.overview;
+        
+        // Handle modal image/PowerBI display at the top
+        const modalImageContainer = document.querySelector('.modal-image');
+        
+        if (project.type === 'powerbi' && project.powerbiUrl) {
+            // Show PowerBI dashboard instead of image
+            modalImageContainer.innerHTML = `
+                <iframe 
+                    title="${project.title}" 
+                    width="100%" 
+                    height="600"
+                    src="${project.powerbiUrl}"
+                    frameborder="0" 
+                    allowFullScreen="true"
+                    style="border: none; display: block;">
+                </iframe>
+            `;
+        } else {
+            // Show regular image
+            modalImageContainer.innerHTML = `<img id="modalImage" src="${project.image}" alt="${project.title}">`;
+        }
         
         const featuresList = document.getElementById('modalFeatures');
         featuresList.innerHTML = project.features.map(feature => `<li>${feature}</li>`).join('');
@@ -292,4 +315,4 @@ if (modal && modalClose && projectCards.length > 0) {
 
 console.log('%c🚀 Portfolio by Piene Claessen', 'color: #00d9ff; font-size: 20px; font-weight: bold;');
 console.log('%cData Scientist | ML Engineer | LLM Specialist', 'color: #94a3b8; font-size: 14px;');
-console.log('%cInterested in working together? Reach out at claessenpiene@gmail.com', 'color: #00d9ff; font-size: 12px;');
+console.log('%cInterested in working together? Reach out at info@claessentech.com', 'color: #00d9ff; font-size: 12px;');
