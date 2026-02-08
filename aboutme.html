@@ -20,10 +20,8 @@
             </div>
             <div class="nav-links">
                 <a href="index.html" class="nav-link">Home</a>
-                <a href="#experience" class="nav-link nav-link-highlight">Experience</a>
-                <a href="#education" class="nav-link">Education</a>
-                <a href="#skills" class="nav-link">Skills</a>
-                <a href="#contact" class="nav-link">Contact</a>
+                <a href="aboutme.html" class="nav-link nav-link-highlight">About me</a>
+                <a href="portfolio.html" class="nav-link">Portfolio</a>
             </div>
             <div class="nav-toggle">
                 <span></span>
@@ -34,7 +32,7 @@
     </nav>
 
     <!-- Hero / Intro Section -->
-    <section class="hero">
+    <section class="hero" id="home">
         <div class="hero-background">
             <div class="grid-overlay"></div>
             <div class="gradient-orb orb-1"></div>
@@ -46,81 +44,155 @@
         </div>
     </section>
 
-    <!-- Experience Section -->
-    <!-- Career Journey / Experience Section -->
-    <section class="experience" id="experience">
-        <div class="experience-container">
-            <div class="section-title fade-in">
-                <h2>Career Journey</h2>
-                <p>Professional experience and key milestones</p>
+     <!-- About Me Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-number">01</span>
+                <h2 class="section-title">Who am I?</h2>
             </div>
 
-            <div class="timeline">
-                <div class="timeline-item fade-in">
-                    <div class="timeline-date">April 2024 - Present</div>
-                    <h3 class="timeline-title">Data Scientist</h3>
-                    <div class="timeline-company">Royal Netherlands Air and Space Force</div>
-                    <p class="timeline-description">
-                        Contributing to the Digital Transformation program, developing data products including 
-                        predictive maintenance tools, AI agents, and analytical solutions that strengthen 
-                        operational capabilities.
+            <div class="about-content">
+                <!-- Text Block -->
+                <div class="about-text">
+                    <p class="lead-text">
+                        I am a (freelance) Data Scientist bridging business and technology by developing end-to-end data products that support operational decision-making.
                     </p>
+                    <p>
+                        From data pipelines and machine learning models to dashboards, I translate business needs into practical solutions and turn technical outcomes into actionable insights. With a background as a military pilot trainee, I bring a structured mindset and the ability to perform under pressure.
+                    </p>
+                    <p>A selection of my recent work:</p>
+                    <ul>
+                        <li>Developed a predictive maintenance ML model for the NH90 helicopter.</li>
+                        <li>Built large language models (LLMs) for knowledge automation using RAG.</li>
+                        <li>Designed and deployed Power BI dashboards and data products across multiple departments.</li>
+                        <li>Developed predictive analytics to support decision-making.</li>
+                        <li>Trained senior management in the strategic use of data and analytics.</li>
+                    </ul>
+                    <p>
+                        In short, technical solutions that deliver tangible value and are actually used in day-to-day operations.
+                    </p>
+                    <a href="images/CV-Piene Claessen.pdf" class="btn btn-primary" download>Download CV</a>
                 </div>
 
-                <div class="timeline-item fade-in">
-                    <div class="timeline-date">March 2022 - April 2024</div>
-                    <h3 class="timeline-title">Data Analyst</h3>
-                    <div class="timeline-company">Royal Netherlands Air and Space Force</div>
-                    <p class="timeline-description">
-                        Led data analytics initiatives, established Air Force-wide data governance frameworks, 
-                        built Power BI dashboards, and delivered data literacy training to 50+ senior officers.
-                    </p>
-                </div>
-
-                <div class="timeline-item fade-in">
-                    <div class="timeline-date">September 2019 - March 2022</div>
-                    <h3 class="timeline-title">Military Pilot in Training</h3>
-                    <div class="timeline-company">Royal Netherlands Air and Space Force</div>
-                    <p class="timeline-description">
-                        Completed officer training at the Royal Military Academy (KMA), obtained frozen ATPL, 
-                        and logged 30 flight hours on Pilatus PC-7. Developed disciplined decision-making 
-                        and operational awareness under high-pressure conditions.
-                    </p>
-                </div>
-
-                <div class="timeline-item fade-in">
-                    <div class="timeline-date">January 2018 - September 2019</div>
-                    <h3 class="timeline-title">Database Analyst</h3>
-                    <div class="timeline-company">IRI</div>
-                    <p class="timeline-description">
-                        Designed and implemented database solutions for FMCG clients in the UK, translating 
-                        client needs into accessible data structures and improving data accuracy by ~15%.
-                    </p>
+                <!-- Profile Photo -->
+                <div class="about-sidebar">
+                    <div class="profile-photo">
+                        <img src="images/profielfoto.png" alt="Piene Claessen">
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Education Section -->
-    <section id="education" class="education">
+    <!-- Combined Experience & Education Timeline -->
+    <section class="experience" id="experience">
         <div class="container">
             <div class="section-header">
                 <span class="section-number">02</span>
-                <h2 class="section-title">Education</h2>
+                <h2 class="section-title">Experience & Education</h2>
             </div>
-            <div class="education-list">
-                <div class="education-item">
-                    <h3>MSc International Management</h3>
-                    <span>University Name, Year</span>
+            
+            <div class="timeline-wrapper">
+                <div class="timeline-line"></div>
+                
+                <!-- Work Experience -->
+                <div class="timeline-item" data-aos="fade-up">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-date">April 2024 - Present</div>
+                        <h3 class="timeline-title">💼 Data Scientist</h3>
+                        <div class="timeline-company">Royal Netherlands Air and Space Force</div>
+                        <p class="timeline-description">
+                            Contributing to the Digital Transformation program, developing data products including 
+                            predictive maintenance tools, AI agents, and analytical solutions.
+                        </p>
+                        <div class="timeline-tags">
+                            <span class="tag">Machine Learning</span>
+                            <span class="tag">Python</span>
+                            <span class="tag">AI Agents</span>
+                        </div>
+                    </div>
                 </div>
-                <div class="education-item">
-                    <h3>BSc Business Analytics</h3>
-                    <span>University Name, Year</span>
+
+                <div class="timeline-item" data-aos="fade-up">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-date">March 2022 - April 2024</div>
+                        <h3 class="timeline-title">💼 Data Analyst</h3>
+                        <div class="timeline-company">Royal Netherlands Air and Space Force</div>
+                        <p class="timeline-description">
+                            Led data analytics initiatives, established Air Force-wide data governance frameworks, 
+                            built Power BI dashboards, and delivered data literacy training to 50+ officers.
+                        </p>
+                        <div class="timeline-tags">
+                            <span class="tag">Power BI</span>
+                            <span class="tag">Data Governance</span>
+                            <span class="tag">Analytics</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline-item" data-aos="fade-up">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-date">September 2019 - March 2022</div>
+                        <h3 class="timeline-title">✈️ Military Pilot in Training</h3>
+                        <div class="timeline-company">Royal Netherlands Air and Space Force</div>
+                        <p class="timeline-description">
+                            Completed officer training at the Royal Military Academy (KMA), obtained frozen ATPL, 
+                            and logged 30 flight hours on Pilatus PC-7.
+                        </p>
+                        <div class="timeline-tags">
+                            <span class="tag">Leadership</span>
+                            <span class="tag">ATPL</span>
+                            <span class="tag">PC-7</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Divider between Work and Education -->
+                <div class="section-divider">
+                    <span class="divider-icon">🎓</span>
+                </div>
+
+                <!-- Education -->
+                <div class="timeline-item" data-aos="fade-up">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-date">2016 - 2018</div>
+                        <h3 class="timeline-title">🎓 MSc International Management</h3>
+                        <div class="timeline-company">Maastricht University</div>
+                        <p class="timeline-description">
+                            Specialized in strategic management and international business, with a focus on 
+                            data-driven decision making and digital transformation.
+                        </p>
+                        <div class="timeline-tags">
+                            <span class="tag">Strategy</span>
+                            <span class="tag">Analytics</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline-item" data-aos="fade-up">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-date">2013 - 2016</div>
+                        <h3 class="timeline-title">🎓 BSc Business Analytics</h3>
+                        <div class="timeline-company">Maastricht University</div>
+                        <p class="timeline-description">
+                            Foundation in quantitative methods, statistics, programming, and business intelligence. 
+                            Developed strong analytical and problem-solving skills.
+                        </p>
+                        <div class="timeline-tags">
+                            <span class="tag">Statistics</span>
+                            <span class="tag">Programming</span>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
-
 
     <!-- Contact Section -->
     <section id="contact" class="contact">
@@ -129,24 +201,48 @@
                 <span class="section-number">04</span>
                 <h2 class="section-title">Get In Touch</h2>
             </div>
+            
             <div class="contact-content">
                 <div class="contact-text">
                     <h3>Let's Work Together</h3>
-                    <p>If you’re looking for freelance data science or analytics support, I’d love to hear about your project.</p>
+                    <p>
+                        I'm currently available for freelance data science projects. Whether you need predictive analytics, 
+                        machine learning solutions, LLM integration, or data strategy consulting, I'd love to hear about your project.
+                    </p>
+                    <p>
+                        My approach combines technical excellence with business understanding, ensuring that data solutions 
+                        deliver real, measurable value to your organization.
+                    </p>
                 </div>
+                
                 <div class="contact-methods">
-                    <a href="mailto:claessenpiene@gmail.com" class="contact-card">
-                        <div class="contact-icon">📧</div>
+                    <a href="mailto:info@claessentech.com" class="contact-card">
+                        <div class="contact-icon">
+                            <i class="fa-solid fa-envelope"></i>
+                        </div>
                         <div class="contact-info">
                             <div class="contact-label">Email</div>
-                            <div class="contact-value">claessenpiene@gmail.com</div>
+                            <div class="contact-value">info@claessentech.com</div>
                         </div>
                     </a>
+                    
                     <a href="tel:+31646037322" class="contact-card">
-                        <div class="contact-icon">📱</div>
+                        <div class="contact-icon">
+                            <i class="fa-solid fa-phone"></i>
+                        </div>
                         <div class="contact-info">
                             <div class="contact-label">Phone</div>
                             <div class="contact-value">+31 6 4603 7322</div>
+                        </div>
+                    </a>
+                    
+                    <a href="https://linkedin.com" target="_blank" class="contact-card">
+                        <div class="contact-icon">
+                            <i class="fa-brands fa-linkedin"></i>
+                        </div>
+                        <div class="contact-info">
+                            <div class="contact-label">LinkedIn</div>
+                            <div class="contact-value">Connect with me</div>
                         </div>
                     </a>
                 </div>
@@ -168,10 +264,8 @@
                 <div class="footer-right">
                     <div class="footer-links">
                         <a href="index.html">Home</a>
-                        <a href="#experience">Experience</a>
-                        <a href="#education">Education</a>
-                        <a href="#skills">Skills</a>
-                        <a href="#contact">Contact</a>
+                        <a href="aboutme.html">About me</a>
+                        <a href="portfolio.html">Portfolio</a>
                     </div>
                     <div class="footer-bottom">
                         <p>&copy; 2026 Piene Claessen. All rights reserved.</p>
@@ -180,5 +274,7 @@
             </div>
         </div>
     </footer>
+    
+    <script src="script.js"></script>
 </body>
 </html>

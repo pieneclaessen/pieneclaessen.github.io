@@ -18,18 +18,20 @@ window.addEventListener('scroll', () => {
 const navToggle = document.querySelector('.nav-toggle');
 const navLinks = document.querySelector('.nav-links');
 
-navToggle.addEventListener('click', () => {
-    navLinks.classList.toggle('active');
-    navToggle.classList.toggle('active');
-});
-
-// Close mobile menu when clicking a link
-document.querySelectorAll('.nav-link').forEach(link => {
-    link.addEventListener('click', () => {
-        navLinks.classList.remove('active');
-        navToggle.classList.remove('active');
+if (navToggle && navLinks) {
+    navToggle.addEventListener('click', () => {
+        navLinks.classList.toggle('active');
+        navToggle.classList.toggle('active');
     });
-});
+
+    // Close mobile menu when clicking a link
+    document.querySelectorAll('.nav-link').forEach(link => {
+        link.addEventListener('click', () => {
+            navLinks.classList.remove('active');
+            navToggle.classList.remove('active');
+        });
+    });
+}
 
 // Smooth scroll with offset for fixed nav
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
@@ -50,8 +52,8 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 
 // Intersection Observer for scroll animations
 const observerOptions = {
-    threshold: 0.1,
-    rootMargin: '0px 0px -100px 0px'
+    threshold: 0.15,
+    rootMargin: '0px 0px -50px 0px'
 };
 
 const observer = new IntersectionObserver((entries) => {
@@ -67,81 +69,26 @@ document.querySelectorAll('[data-aos]').forEach(el => {
     observer.observe(el);
 });
 
-// Skill bar animation on scroll
-const skillBars = document.querySelectorAll('.skill-progress');
-const skillObserver = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-        if (entry.isIntersecting) {
-            const progress = entry.target;
-            const width = progress.style.width || progress.dataset.progress || '0%';
-            progress.style.width = '0%';
-            setTimeout(() => {
-                progress.style.width = width;
-            }, 100);
-            skillObserver.unobserve(entry.target);
-        }
-    });
-}, { threshold: 0.5 });
-
-skillBars.forEach(bar => {
-    skillObserver.observe(bar);
-});
-
-// Counter animation for stats
-function animateCounter(element, target) {
-    const duration = 2000;
-    const start = 0;
-    const increment = target / (duration / 16);
-    let current = start;
-    
-    const timer = setInterval(() => {
-        current += increment;
-        if (current >= target) {
-            element.textContent = target;
-            clearInterval(timer);
-        } else {
-            element.textContent = Math.floor(current);
-        }
-    }, 16);
-}
-
-// Observe stat numbers
-const statObserver = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-        if (entry.isIntersecting) {
-            const number = entry.target;
-            const text = number.textContent;
-            const match = text.match(/(\d+)/);
-            
-            if (match) {
-                const value = parseInt(match[1]);
-                animateCounter(number, value);
-            }
-            statObserver.unobserve(entry.target);
-        }
-    });
-}, { threshold: 0.5 });
-
-document.querySelectorAll('.stat-number').forEach(stat => {
-    statObserver.observe(stat);
-});
-
-// Timeline items stagger animation
+// Timeline items animation with stagger
 const timelineItems = document.querySelectorAll('.timeline-item');
-const timelineObserver = new IntersectionObserver((entries) => {
-    entries.forEach((entry, index) => {
-        if (entry.isIntersecting) {
-            setTimeout(() => {
-                entry.target.classList.add('aos-animate');
-            }, index * 100);
-            timelineObserver.unobserve(entry.target);
-        }
-    });
-}, { threshold: 0.2 });
+if (timelineItems.length > 0) {
+    const timelineObserver = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+                // Get the index of this item in the NodeList
+                const index = Array.from(timelineItems).indexOf(entry.target);
+                // Add a delay based on the item's index for stagger effect
+                setTimeout(() => {
+                    entry.target.classList.add('aos-animate');
+                }, index * 150);
+            }
+        });
+    }, { threshold: 0.2 });
 
-timelineItems.forEach(item => {
-    timelineObserver.observe(item);
-});
+    timelineItems.forEach(item => {
+        timelineObserver.observe(item);
+    });
+}
 
 // Add active state to navigation based on scroll position
 const sections = document.querySelectorAll('section[id]');
@@ -168,23 +115,6 @@ function setActiveNav() {
 
 window.addEventListener('scroll', setActiveNav);
 
-// Lazy load images (if any are added later)
-const images = document.querySelectorAll('img[data-src]');
-const imageObserver = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-        if (entry.isIntersecting) {
-            const img = entry.target;
-            img.src = img.dataset.src;
-            img.removeAttribute('data-src');
-            imageObserver.unobserve(img);
-        }
-    });
-});
-
-images.forEach(img => {
-    imageObserver.observe(img);
-});
-
 // Add page load animations
 document.addEventListener('DOMContentLoaded', () => {
     setTimeout(() => {
@@ -199,14 +129,9 @@ window.addEventListener('load', () => {
     document.body.style.opacity = '1';
 });
 
-// Add CSS for rainbow animation and nav
+// Add CSS for mobile navigation
 const style = document.createElement('style');
 style.textContent = `
-    @keyframes rainbow {
-        0% { filter: hue-rotate(0deg); }
-        100% { filter: hue-rotate(360deg); }
-    }
-    
     .nav-links.active {
         display: flex;
         flex-direction: column;
@@ -247,6 +172,147 @@ style.textContent = `
 `;
 document.head.appendChild(style);
 
+// Timeline marker pulse effect on scroll into view
+const markers = document.querySelectorAll('.timeline-marker');
+if (markers.length > 0) {
+    const markerObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                const marker = entry.target;
+                marker.style.animation = 'markerPulse 0.6s ease-out';
+                setTimeout(() => {
+                    marker.style.animation = '';
+                }, 600);
+            }
+        });
+    }, { threshold: 0.5 });
+
+    markers.forEach(marker => {
+        markerObserver.observe(marker);
+    });
+}
+
+// Portfolio Modal Functionality
+// Project data
+const projects = {
+    project1: {
+        title: 'KTM Showroom',
+        image: 'images/ktm_dashboard.png',
+        year: '2024',
+        role: 'Data Analyst',
+        duration: '2 weeks',
+        type: 'powerbi', // Set to 'powerbi' for interactive dashboards
+        powerbiUrl: 'https://app.powerbi.com/view?r=eyJrIjoiYzE1ZDhhZjItMjRhMS00ZWUxLWIyOGYtYzM4MGMxMGYxYjc0IiwidCI6ImViNjFmY2UzLTU0NmUtNDVjMC1iZGI5LWM2NDNjOTA1YjMzNyIsImMiOjl9',
+        overview: 'KTM, a renowned Austrian motorcycle manufacturer, offers a wide range of high-performance bikes. This interactive web application showcases their lineup of naked bike models, allowing customers to explore and compare different options with ease. Users can browse through models, select their preferred colors, and view key technical specifications side by side.',
+        features: [
+            'Interactive model selection and comparison',
+            'Dynamic color customization options',
+            'Side-by-side technical specifications',
+            'Responsive design for all devices',
+            'Real-time filtering and search capabilities'
+        ],
+        skills: ['Python', 'PowerBI', 'DAX', 'Data Visualization']
+    },
+    project2: {
+        title: 'Interactive Dashboard',
+        image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=900&h=400&fit=crop&sat=-100',
+        year: '2023',
+        role: 'Data Analyst',
+        duration: '3 months',
+        type: 'standard', // Regular project with just an image
+        overview: 'Created a comprehensive analytics dashboard for the Royal Netherlands Air Force, providing real-time insights into operational metrics, resource allocation, and performance indicators. The dashboard serves multiple departments and has become a critical tool for data-driven decision making.',
+        features: [
+            'Real-time data integration from multiple sources',
+            'Custom KPI tracking and visualization',
+            'Role-based access control and data filtering',
+            'Automated report generation and distribution',
+            'Mobile-responsive design for field access'
+        ],
+        skills: ['Tableau', 'SQL', 'ETL', 'Data Analysis', 'Power BI', 'Data Modeling', 'Visualization']
+    }
+};
+
+// Modal functionality
+const modal = document.getElementById('projectModal');
+const modalClose = document.getElementById('modalClose');
+const projectCards = document.querySelectorAll('.project-card');
+
+if (modal && modalClose && projectCards.length > 0) {
+    function openModal(projectId) {
+        const project = projects[projectId];
+        
+        document.getElementById('modalTitle').textContent = project.title;
+        document.getElementById('modalYear').textContent = project.year;
+        document.getElementById('modalRole').textContent = project.role;
+        document.getElementById('modalDuration').textContent = project.duration;
+        document.getElementById('modalOverview').textContent = project.overview;
+        
+        // Handle modal image/PowerBI display at the top
+        const modalImageContainer = document.querySelector('.modal-image');
+        
+        if (project.type === 'powerbi' && project.powerbiUrl) {
+            // Show PowerBI dashboard instead of image
+            modalImageContainer.innerHTML = `
+                <iframe 
+                    title="${project.title}" 
+                    width="100%" 
+                    height="600"
+                    src="${project.powerbiUrl}"
+                    frameborder="0" 
+                    allowFullScreen="true"
+                    style="border: none; display: block;">
+                </iframe>
+            `;
+        } else {
+            // Show regular image
+            modalImageContainer.innerHTML = `<img id="modalImage" src="${project.image}" alt="${project.title}">`;
+        }
+        
+        const featuresList = document.getElementById('modalFeatures');
+        featuresList.innerHTML = project.features.map(feature => `<li>${feature}</li>`).join('');
+        
+        const skillsContainer = document.getElementById('modalSkills');
+        skillsContainer.innerHTML = project.skills.map(skill => 
+            `<span class="skill-chip">${skill}</span>`
+        ).join('');
+        
+        modal.classList.add('active');
+        document.body.style.overflow = 'hidden';
+    }
+
+    function closeModal() {
+        modal.classList.remove('active');
+        document.body.style.overflow = '';
+    }
+
+    // Event listeners for opening modal
+    projectCards.forEach(card => {
+        card.addEventListener('click', () => {
+            const projectId = card.dataset.project;
+            openModal(projectId);
+        });
+    });
+
+    // Event listeners for closing modal
+    modalClose.addEventListener('click', closeModal);
+
+    modal.addEventListener('click', (e) => {
+        if (e.target === modal) closeModal();
+    });
+
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') closeModal();
+    });
+
+    // Prevent modal content clicks from closing modal
+    const modalContent = document.querySelector('.modal-content');
+    if (modalContent) {
+        modalContent.addEventListener('click', (e) => {
+            e.stopPropagation();
+        });
+    }
+}
+
 console.log('%c🚀 Portfolio by Piene Claessen', 'color: #00d9ff; font-size: 20px; font-weight: bold;');
 console.log('%cData Scientist | ML Engineer | LLM Specialist', 'color: #94a3b8; font-size: 14px;');
-console.log('%cInterested in working together? Reach out at claessenpiene@gmail.com', 'color: #00d9ff; font-size: 12px;');
+console.log('%cInterested in working together? Reach out at info@claessentech.com', 'color: #00d9ff; font-size: 12px;');
