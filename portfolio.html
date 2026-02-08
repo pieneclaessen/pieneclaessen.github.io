@@ -48,22 +48,20 @@
     <section id="portfolio" class="portfolio">
         <div class="container">
             <div class="section-header">
-                <span class="section-number">02</span>
+                <span class="section-number">01</span>
                 <h2 class="section-title">My Projects</h2>
             </div>
 
             <div class="portfolio-grid">
-                <!-- Dummy Project 1 -->
-                <div class="project-card" data-aos="fade-up">
-                    <a href="#" class="project-link">
-                        <div class="project-image">
-                            <img src="https://via.placeholder.com/600x400" alt="Project 1">
-                        </div>
-                        <div class="project-content">
-                            <h3 class="project-title">AI Predictive Model</h3>
-                            <p class="project-description">Developed a predictive maintenance model using Python and machine learning for industrial systems.</p>
-                        </div>
-                    </a>
+                <!-- Project 1 -->
+                <div class="project-card" data-aos="fade-up" data-project="project1">
+                    <div class="project-image">
+                        <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=600&h=400&fit=crop" alt="AI Predictive Model">
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">AI Predictive Model</h3>
+                        <p class="project-description">Developed a predictive maintenance model using Python and machine learning for industrial systems.</p>
+                    </div>
                     <div class="project-skills">
                         <span class="skill-chip">Python</span>
                         <span class="skill-chip">Machine Learning</span>
@@ -73,17 +71,15 @@
                     </div>
                 </div>
 
-                <!-- Dummy Project 2 -->
-                <div class="project-card" data-aos="fade-up">
-                    <a href="#" class="project-link">
-                        <div class="project-image">
-                            <img src="https://via.placeholder.com/600x400" alt="Project 2">
-                        </div>
-                        <div class="project-content">
-                            <h3 class="project-title">Interactive Dashboard</h3>
-                            <p class="project-description">Built an interactive analytics dashboard for real-time data insights using Tableau and SQL.</p>
-                        </div>
-                    </a>
+                <!-- Project 2 -->
+                <div class="project-card" data-aos="fade-up" data-project="project2">
+                    <div class="project-image">
+                        <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=600&h=400&fit=crop&sat=-100" alt="Interactive Dashboard">
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">Interactive Dashboard</h3>
+                        <p class="project-description">Built an interactive analytics dashboard for real-time data insights using Tableau and SQL.</p>
+                    </div>
                     <div class="project-skills">
                         <span class="skill-chip">Tableau</span>
                         <span class="skill-chip">SQL</span>
@@ -95,6 +91,45 @@
             </div>
         </div>
     </section>
+
+    <!-- Modal -->
+    <div class="modal-overlay" id="projectModal">
+        <div class="modal-content">
+            <div class="modal-close" id="modalClose"></div>
+            <div class="modal-image">
+                <img id="modalImage" src="" alt="">
+            </div>
+            <div class="modal-body">
+                <h2 class="modal-title" id="modalTitle"></h2>
+                <div class="modal-meta">
+                    <div class="modal-meta-item">
+                        <span class="modal-meta-label">Year</span>
+                        <span class="modal-meta-value" id="modalYear"></span>
+                    </div>
+                    <div class="modal-meta-item">
+                        <span class="modal-meta-label">Role</span>
+                        <span class="modal-meta-value" id="modalRole"></span>
+                    </div>
+                    <div class="modal-meta-item">
+                        <span class="modal-meta-label">Duration</span>
+                        <span class="modal-meta-value" id="modalDuration"></span>
+                    </div>
+                </div>
+                <div class="modal-section">
+                    <h3 class="modal-section-title">Overview</h3>
+                    <p class="modal-description" id="modalOverview"></p>
+                </div>
+                <div class="modal-section">
+                    <h3 class="modal-section-title">Key Features</h3>
+                    <ul class="modal-features" id="modalFeatures"></ul>
+                </div>
+                <div class="modal-section">
+                    <h3 class="modal-section-title">Technologies</h3>
+                    <div class="modal-skills" id="modalSkills"></div>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <!-- Footer -->
     <footer class="footer">
@@ -121,6 +156,6 @@
         </div>
     </footer>
 
-    <script src="main.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
