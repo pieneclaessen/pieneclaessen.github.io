@@ -253,15 +253,14 @@ if (modal && modalClose && projectCards.length > 0) {
         if (project.type === 'powerbi' && project.powerbiUrl) {
             // Show PowerBI dashboard instead of image
             modalImageContainer.innerHTML = `
-                <iframe 
-                    title="${project.title}" 
-                    width="100%" 
-                    height="100%"
-                    src="${project.powerbiUrl}"
-                    frameborder="0" 
-                    allowFullScreen="true"
-                    style="border: none; display: block; min-height: 75vh;">
-                </iframe>
+                <div class="powerbi-aspect-ratio">
+                    <iframe
+                        title="${project.title}"
+                        src="${project.powerbiUrl}"
+                        frameborder="0"
+                        allowFullScreen="true">
+                    </iframe>
+                </div>
             `;
         } else {
             // Show regular image

@@ -1056,6 +1056,24 @@ section {
     line-height: 0;
 }
 
+.powerbi-aspect-ratio {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    overflow: hidden;
+    background: #1a1a2e;
+}
+
+.powerbi-aspect-ratio iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: calc(100% + 70px);
+    border: none;
+    display: block;
+}
+
 .powerbi-container {
     width: 100%;
     background: var(--color-bg-primary);
@@ -1379,13 +1397,21 @@ section {
     .modal-image iframe {
         height: 350px;
     }
-    
+
     .powerbi-container {
         height: 350px;
     }
-    
+
     .powerbi-container iframe {
         height: 350px;
+    }
+
+    .powerbi-aspect-ratio {
+        aspect-ratio: 16 / 9;
+    }
+
+    .powerbi-aspect-ratio iframe {
+        height: calc(100% + 90px);
     }
 }
 
@@ -1446,6 +1472,14 @@ section {
     /* PowerBI adjustments for mobile - significantly reduced height */
     .modal-image iframe {
         height: 300px;
+    }
+
+    .powerbi-aspect-ratio {
+        aspect-ratio: 16 / 8;
+    }
+
+    .powerbi-aspect-ratio iframe {
+        height: calc(100% + 100px);
     }
 
     .modal-close {
