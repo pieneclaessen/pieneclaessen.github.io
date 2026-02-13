@@ -116,7 +116,7 @@ body {
     color: var(--color-text-secondary);
     text-decoration: none;
     font-weight: 600;
-    font-size: 0.95rem;
+    font-size: 1rem;
     letter-spacing: 0.5px;
     position: relative;
     transition: color var(--transition-speed);
@@ -1266,7 +1266,7 @@ section {
 }
 
 .contact-icon {
-    font-size: 2.5rem;
+    font-size: 2rem;
 }
 
 .contact-info {
@@ -1283,7 +1283,7 @@ section {
 }
 
 .contact-value {
-    font-size: 1.35rem;
+    font-size: 1.2rem;
     font-weight: 600;
     color: var(--color-accent-primary);
 }
