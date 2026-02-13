@@ -1,161 +1,315 @@
-<!DOCTYPE HTML>
-<!--
-	Photon by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
-<html>
-	<head>
-		<title>Piene Claessen Portfolio</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="assets/css/main.css" />
-		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
-		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+<!DOCTYPE html>
+<html lang="en">
+<link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+/>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Piene Claessen | Freelance Data Scientist</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600;700&family=Archivo:wght@300;400;600;700;900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="nav">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <span class="logo-bracket">[</span>
+                <span class="logo-name">Claessen Tech</span>
+                <span class="logo-bracket">]</span>
+            </div>
+            <div class="nav-links">
+                <a href="index.html" class="nav-link nav-link-highlight">Home</a>
+                <a href="aboutme.html" class="nav-link">About me</a>
+                <a href="portfolio.html" class="nav-link">Portfolio</a>
+            </div>
+            <div class="nav-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
 
-	</head>
-	<body class="is-preload">
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-background">
+            <div class="grid-overlay"></div>
+            <div class="gradient-orb orb-1"></div>
+            <div class="gradient-orb orb-2"></div>
+        </div>
 
-		<!-- Header -->
-			<section id="header">
-				<div class="inner">
-					<span class="icon solid major fa-handshake"></span>
-					<h1>Hi, I'm <strong>Piene Claessen</strong></a></h1>
-					<p>Freelance data analyst and data scientist</p>
-					<ul class="actions special">
-						<li><a href="#one" class="button scrolly">Discover more</a></li>
-					</ul>
-				</div>
-			</section>
+        <div class="hero-content">
+            <!-- Handshake icon -->
+            <div class="hero-icon">
+                <i class="fa-solid fa-handshake"></i>
+            </div>
 
-		<!-- One -->
-			<section id="one" class="main style1">
-				<div class="container">
-					<div class="row gtr-150">
-						<div class="col-6 col-12-medium">
-							<header class="major">
-								<h2>About me</h2>
-							</header>
-							<p>I am a data analyst and data scientist with a strong track record of developing data products that deliver business value. Skilled at bridging business and technology by identifying needs, translating them into practical solutions, and building them end-to-end. I have a proven ability to communicate technical concepts clearly to stakeholders, demonstrating the value of data-driven approaches. My expertise is in dashboards, workflow automation, and applied machine learning.</p>
-						</div>
-						<div class="col-6 col-12-medium imp-medium">
-							<span class="image fit" style="max-width: 300px; display: block; margin: 0 auto;">
-  								<img src="images/profile_picture.png" alt="" style="width: 100%; height: auto;" />
-							</span>
-						</div>
-					</div>
-				</div>
-			</section>
+            <!-- Title -->
+            <h1 class="hero-title">
+                Hi, I'm <strong>Piene Claessen</strong>
+            </h1>
 
-	<!-- Two -->
-		<section id="two" class="main style2">
-			<div class="container small-container">
-				<header class="major">
-					<h2>Technical skills</h2>
-				</header>
-				<ul class="major-icons">
-					<li>
-						<span class="icon solid style1 major fa-chart-line"></span>
-						<h3>Dashboards</h3>
-						<p>Cleaning and transforming data into clear, interactive dashboards using Microsoft Power BI</p>
-					</li>
-					<li>
-						<span class="icon style1 major fab fa-python"></span>
-						<h3>Python</h3>
-						<p>Performing data cleaning, analysis, and visualization using Python libraries such as NumPy, Pandas, Scikit-learn, Matplotlib and Seaborn</p>
-					</li>
-					<li>
-						<span class="icon solid style1 major fa-database"></span>
-						<h3>SQL</h3>
-						<p>Storing, querying, and processing structured data efficiently for analysis and reporting</p>
-					</li>
-					<li>
-						<span class="icon solid style1 major fa-brain"></span>
-						<h3>Machine Learning</h3>
-						<p>Designing machine learning algorithms for predictive modeling, pattern recognition, and data-driven insights</p>
-					</li>
-				</ul>
-			</div>
-		</section>
+            <!-- Subtitle -->
+            <p class="hero-description">
+                Freelance Data Analyst & Data Scientist
+            </p>
 
-		<!-- Three -->
-		<section id="three" class="main style1 special">
-			<div class="container">
-				<header class="major">
-					<h2>My Portfolio</h2>
-				</header>
-				<p>Have a look at recent projects that I have completed</p>
-				<div class="row gtr-150">
-					<div class="col-4 col-12-medium">
-						<span class="image fit"><img src="images/hospital_analytics.jpg" alt="" /></span>
-						<h3>Hospital data analysis</h3>
-						<p>A datadriven exploration of hospital quality ratings across the United States, using Python to uncover patterns, trends, and factors that influence healthcare performance.</p>
-						<ul class="actions special">
-							<li><a href="projects/hospital.html" class="button">More</a></li>
-						</ul>	
-					</div>	
-					<div class="col-4 col-12-medium">
-						<span class="image fit"><img src="images/hr_dashboard.png" alt="" /></span>
-						<h3>HR Attrition dashboard</h3>
-						<p>An interactive HR analytics dashboard designed to explore attrition data at PeoplePulse, uncovering the factors behind employee turnover and supporting strategic HR planning.</p>
-						<ul class="actions special">
-							<li><a href="projects/peoplepulse.html" class="button">More</a></li>
-						</ul>
-					</div>
-					<div class="col-4 col-12-medium">
-						<span class="image fit"><img src="images/ktm_dashboard.png" alt="" /></span>
-						<h3>KTM Product Catalogue</h3>
-						<p>A product catalogue developed of the in Microsoft Power BI, providing a clean and interactive overview of available models, helping users make informed purchasing decisions through intuitive visualizations..</p>
-						<ul class="actions special">
-							<li><a href="projects/ktm.html" class="button">More</a></li>
-						</ul>
-					</div>
-					<div class="col-4 col-12-medium">
-						<span class="image fit"><img src="images/stride_dashboard.png" alt="" /></span>
-						<h3>Stride Bikes sales dashboard</h3>
-						<p>An interactive dashboard designed for Stride Bikes, offering real-time insights into sales performance and helping identify growth opportunities across regions and products.</p>
-						<ul class="actions special">
-							<li><a href="projects/stride.html" class="button">More</a></li>
-						</ul>
-					</div>
-				</div>
-			</div>
-		</section>
+            <!-- CTA -->
+            <div class="hero-cta">
+                <a href="#about" class="btn btn-primary">Discover more</a>
+            </div>
+        </div>
 
-		<!-- Four -->
-			<section id="four" class="main style2 special">
-				<div class="container">
-					<header class="major">
-						<h2>Looking for a data expert who can turn your data into actionable insights?</h2>
-					</header>
-					<p>Let's talk to see what I can do for you!</p>
-					<ul class="actions special">
-						<li><a href="mailto:claessenpiene@gmail.com" class="button wide primary">Email me</a></li>
-						<li><a href="assets/CV_Piene_Claessen.pdf" target="_blank" class="button wide">Download my resume</a></li>
+        <div class="scroll-indicator">
+            <div class="scroll-line"></div>
+            <div class="scroll-text">Scroll</div>
+        </div>
+    </section>
 
-					</ul>
-				</div>
-			</section>
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-number">01</span>
+                <h2 class="section-title">Who am I?</h2>
+            </div>
+            <div class="about-content">
+                <div class="about-text">
+                    <p class="lead-text">
+                        I'm a freelance data scientist with a unique background combining military precision with advanced analytics expertise.
+                    </p>
+                    <p>
+                        My journey from military pilot to data scientist has shaped my approach: structured, reliable, and focused on delivering measurable business value. I specialize in developing end-to-end data solutions—from pipelines to dashboards—and translating technical outcomes into clear, actionable insights for stakeholders.
+                    </p>
+                    <p>
+                        In recent years, I’ve worked in complex, high‑stakes environments where data directly supports operational decision‑making. I’ve built predictive maintenance models, developed LLM‑powered AI tools, and designed data governance frameworks that make information accessible and actionable. These experiences taught me how to bridge business and technology in a way that turns advanced analytics into solutions people actually use.
+                    </p>
+                    <div class="about-highlights">
+                        <div class="highlight-item">
+                            <div class="highlight-icon">🎯</div>
+                            <div class="highlight-text">
+                                <strong>Mission-Driven</strong>
+                                <span>Former military pilot trainee with operational mindset</span>
+                            </div>
+                        </div>
+                        <div class="highlight-item">
+                            <div class="highlight-icon">🔬</div>
+                            <div class="highlight-text">
+                                <strong>Technical Excellence</strong>
+                                <span>ML, LLMs, RAG pipelines, cloud platforms</span>
+                            </div>
+                        </div>
+                        <div class="highlight-item">
+                            <div class="highlight-icon">💡</div>
+                            <div class="highlight-text">
+                                <strong>Business Impact</strong>
+                                <span>Proven track record of delivering measurable results</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-sidebar">
+                    <div class="info-card">
+                        <h3>Quick Facts</h3>
+                        <ul class="info-list">
+                            <li>
+                                <span class="info-label">Experience</span>
+                                <span class="info-value">6+ years</span>
+                            </li>
+                            <li>
+                                <span class="info-label">Education</span>
+                                <span class="info-value">MSc International Management</span>
+                            </li>
+                            <li>
+                                <span class="info-label">Focus</span>
+                                <span class="info-value">ML & Analytic solutions</span>
+                            </li>
+                            <li>
+                                <span class="info-label">Availability</span>
+                                <span class="info-value">Freelance Projects</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="info-card">
+                        <h3>Certifications</h3>
+                        <div class="cert-badge">
+                            <div class="cert-icon">📊</div>
+                            <div class="cert-text">
+                                <div class="cert-name">PL-300</div>
+                                <div class="cert-desc">Data Analyst Associate</div>
+                            </div>
+                        </div>
+                        <div class="cert-badge">
+                            <div class="cert-icon">☁️</div>
+                            <div class="cert-text">
+                                <div class="cert-name">AZ-900</div>
+                                <div class="cert-desc">Azure Fundamentals</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-		<!-- Footer -->
-			<section id="footer">
-				<ul class="icons">
-					<li><a href="mailto:claessenpiene@gmail.com" class="icon solid alt fa-envelope"><span class="label">Email</span></a></li>
-					<li><a href="https://www.linkedin.com/in/piene-claessen/" target="_blank" class="icon brands fa-linkedin"><span class="label">LinkedIn</span></a></li>
-					<li><a href="https://github.com/pieneclaessen" target = "_blank" class="icon brands alt fa-github"><span class="label">GitHub</span></a></li>
-				</ul>
-				<ul class="copyright">
-					<li>&copy; 2025 Piene Claessen. All rights reserved.</li>
-				</ul>
-			</section>
+    <!-- Skills Section -->
+    <section id="skills" class="skills">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-number">03</span>
+                <h2 class="section-title">Skills & Expertise</h2>
+            </div>
+            
+            <div class="skills-container">
+                <!-- Programming -->
+                <div class="skill-category">
+                    <div class="category-title">
+                        <span class="category-icon">&lt;/&gt;</span>
+                        <h3>Programming</h3>
+                    </div>
+                    <div class="skills-list">
+                        <div class="skill-chip">Python</div>
+                        <div class="skill-chip">SQL</div>
+                        <div class="skill-chip">PostgreSQL</div>
+                        <div class="skill-chip">Version control</div>
+                        <div class="skill-chip">Docker</div>
+                    </div>
+                </div>
 
-		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/jquery.scrolly.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
+                <!-- Machine Learning -->
+                <div class="skill-category">
+                    <div class="category-title">
+                        <span class="category-icon">🤖</span>
+                        <h3>Machine Learning</h3>
+                    </div>
+                    <div class="skills-list">
+                        <div class="skill-chip">Supervised Learning</div>
+                        <div class="skill-chip">Unsupervised Learning</div>
+                        <div class="skill-chip">Feature Engineering</div>
+                        <div class="skill-chip">Hyperparameter Tuning</div>
+                        <div class="skill-chip">Model Evaluation</div>
+                        <div class="skill-chip">Model Deployment</div>
+                    </div>
+                </div>
 
-	</body>
+                <!-- LLMs & AI -->
+                <div class="skill-category">
+                    <div class="category-title">
+                        <span class="category-icon">🧠</span>
+                        <h3>LLMs & AI</h3>
+                    </div>
+                    <div class="skills-list">
+                        <div class="skill-chip">RAG Pipelines</div>
+                        <div class="skill-chip">LangChain</div>
+                        <div class="skill-chip">HuggingFace</div>
+                        <div class="skill-chip">Prompt Engineering</div>
+                        <div class="skill-chip">OpenAI API</div>
+                    </div>
+                </div>
+
+                <!-- Visualization -->
+                <div class="skill-category">
+                    <div class="category-title">
+                        <span class="category-icon">📈</span>
+                        <h3>Visualization</h3>
+                    </div>
+                    <div class="skills-list">
+                        <div class="skill-chip">Power BI</div>
+                        <div class="skill-chip">Matplotlib</div>
+                        <div class="skill-chip">Plotly</div>
+                        <div class="skill-chip">Seaborn</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-number">04</span>
+                <h2 class="section-title">Get In Touch</h2>
+            </div>
+            
+            <div class="contact-content">
+                <div class="contact-text">
+                    <h3>Let's Work Together</h3>
+                    <p>
+                        I'm currently available for freelance data science projects. Whether you need predictive analytics, 
+                        machine learning solutions, LLM integration, or data strategy consulting, I'd love to hear about your project.
+                    </p>
+                    <p>
+                        My approach combines technical excellence with business understanding, ensuring that data solutions 
+                        deliver real, measurable value to your organization.
+                    </p>
+                </div>
+                
+                <div class="contact-methods">
+                    <a href="mailto:info@claessentech.com" class="contact-card">
+                        <div class="contact-icon">
+                            <i class="fa-solid fa-envelope"></i>
+                        </div>
+                        <div class="contact-info">
+                            <div class="contact-label">Email</div>
+                            <div class="contact-value">info@claessentech.com</div>
+                        </div>
+                    </a>
+                    
+                    <a href="tel:+31646037322" class="contact-card">
+                        <div class="contact-icon">
+                            <i class="fa-solid fa-phone"></i>
+                        </div>
+                        <div class="contact-info">
+                            <div class="contact-label">Phone</div>
+                            <div class="contact-value">+31646037322</div>
+                        </div>
+                    </a>
+                    
+                    <a href="https://linkedin.com" target="_blank" class="contact-card">
+                        <div class="contact-icon">
+                            <i class="fa-brands fa-linkedin"></i>
+                        </div>
+                        <div class="contact-info">
+                            <div class="contact-label">LinkedIn</div>
+                            <div class="contact-value">Let's get connected!</div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-left">
+                    <div class="footer-logo">
+                        <span class="logo-bracket">[</span>
+                        <span class="logo-name">Claessen Tech</span>
+                        <span class="logo-bracket">]</span>
+                    </div>
+                </div>
+                <div class="footer-right">
+                    <div class="footer-links">
+                        <a href="index.html">Home</a>                        
+                        <a href="aboutme.html">About me</a>
+                        <a href="portfolio.html">Portfolio</a>
+                    </div>
+                    <div class="footer-bottom">
+                        <p>&copy; 2026 Piene Claessen. All rights reserved.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
 </html>
