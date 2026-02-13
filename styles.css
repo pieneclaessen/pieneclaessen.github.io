@@ -433,6 +433,7 @@ section {
     grid-template-columns: 1fr 350px;
     gap: calc(var(--spacing-unit) * 6);
     margin-top: 40px;
+    align-items: start;
 }
 
 .about-text {
@@ -593,8 +594,8 @@ section {
 }
 
 .profile-photo {
-    width: 280px;
-    height: 420px;
+    width: 350px;
+    height: 500px;
     border-radius: 12px;
     overflow: hidden;
     background-color: #0f1629;
@@ -1362,6 +1363,12 @@ section {
 
     .about-sidebar {
         order: -1;
+        justify-content: flex-start;
+        align-items: center;
+    }
+    
+    .profile-photo {
+        margin: 0 auto;
     }
     
     .contact-content {
@@ -1494,6 +1501,7 @@ section {
         width: 20px;
         height: 2px;
     }
+}
 
     
 /* Scroll animations */
