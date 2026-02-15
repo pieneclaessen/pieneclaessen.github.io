@@ -198,10 +198,10 @@ const projects = {
     project1: {
         title: 'KTM Showroom',
         image: 'images/ktm_card.png',
-        Projecttype: 'Data Visualisation',
+        Projecttype: 'Data Visualization',
         Projectgoal: 'Interactive dashboard to compare motorcycle performance and key features.',
         Problemsolved: 'Quickly visualize and analyze metrics for smarter insights.',
-        type: 'powerbi', // Set to 'powerbi' for interactive dashboards
+        type: 'powerbi',
         powerbiUrl: 'https://app.powerbi.com/view?r=eyJrIjoiYzE1ZDhhZjItMjRhMS00ZWUxLWIyOGYtYzM4MGMxMGYxYjc0IiwidCI6ImViNjFmY2UzLTU0NmUtNDVjMC1iZGI5LWM2NDNjOTA1YjMzNyIsImMiOjl9',
         overview: 'KTM, a renowned Austrian motorcycle manufacturer, offers a wide range of high-performance bikes. This interactive web application showcases their lineup of naked bike models, allowing customers to explore and compare different options with ease. Users can browse through models, select their preferred colors, and view key technical specifications side by side.',
         features: [
@@ -216,20 +216,20 @@ const projects = {
     },
     project2: {
         title: 'Interactive Dashboard',
-        image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=900&h=400&fit=crop&sat=-100',
-        year: '2023',
-        role: 'Data Analyst',
-        duration: '3 months',
-        type: 'standard', // Regular project with just an image
-        overview: 'Created a comprehensive analytics dashboard for the Royal Netherlands Air Force, providing real-time insights into operational metrics, resource allocation, and performance indicators. The dashboard serves multiple departments and has become a critical tool for data-driven decision making.',
+        image: 'images/hr_dashboard.png',
+        Projecttype: 'Data Visualization',
+        Projectgoal: 'Visualize and analyze employee attrition to identify patterns and drivers.',
+        Problemsolved: 'Quick insights into turnover trends, high‑risk groups, and workforce dynamics.',
+        type: 'powerbi',
+        powerbiUrl: 'https://app.powerbi.com/view?r=eyJrIjoiYmUwNDM4NzQtZjZhZC00NTI2LTk1MWUtYTAxMzBiZTI3MTJiIiwidCI6ImViNjFmY2UzLTU0NmUtNDVjMC1iZGI5LWM2NDNjOTA1YjMzNyIsImMiOjl9',
+        overview: 'This interactive HR attrition dashboard provides a clear and anonymized view of employee turnover, enabling HR teams and managers to explore trends, identify high-risk groups, and make informed workforce decisions. Users can filter by department, role, tenure, or location and instantly visualize key metrics to understand patterns at a glance.',
         features: [
-            'Real-time data integration from multiple sources',
-            'Custom KPI tracking and visualization',
-            'Role-based access control and data filtering',
-            'Automated report generation and distribution',
-            'Mobile-responsive design for field access'
+            'Interactive filtering by department, role, and education',
+            'Attrition trend visualization and turnover rates over time',
+            'Python analytics for deeper insights into attrition drivers',
+            'Actionable recommendations for workforce planning',
         ],
-        skills: ['Tableau', 'SQL', 'ETL', 'Data Analysis', 'Power BI', 'Data Modeling', 'Visualization']
+        skills: ['PowerBI', 'DAX', 'Python','SQL', 'Data Modeling', 'ETL', 'Data Visualization']
     }
 };
 
