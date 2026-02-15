@@ -197,10 +197,10 @@ if (markers.length > 0) {
 const projects = {
     project1: {
         title: 'KTM Showroom',
-        image: 'images/ktm_dashboard.png',
-        year: '2024',
-        role: 'Data Analyst',
-        duration: '2 weeks',
+        image: 'images/ktm_card.png',
+        Projecttype: 'Data Visualisation',
+        Projectgoal: 'Interactive dashboard to compare motorcycle performance and key features.',
+        Problemsolved: 'Quickly visualize and analyze metrics for smarter insights.',
         type: 'powerbi', // Set to 'powerbi' for interactive dashboards
         powerbiUrl: 'https://app.powerbi.com/view?r=eyJrIjoiYzE1ZDhhZjItMjRhMS00ZWUxLWIyOGYtYzM4MGMxMGYxYjc0IiwidCI6ImViNjFmY2UzLTU0NmUtNDVjMC1iZGI5LWM2NDNjOTA1YjMzNyIsImMiOjl9',
         overview: 'KTM, a renowned Austrian motorcycle manufacturer, offers a wide range of high-performance bikes. This interactive web application showcases their lineup of naked bike models, allowing customers to explore and compare different options with ease. Users can browse through models, select their preferred colors, and view key technical specifications side by side.',
@@ -211,7 +211,8 @@ const projects = {
             'Responsive design for all devices',
             'Real-time filtering and search capabilities'
         ],
-        skills: ['Python', 'PowerBI', 'DAX', 'Data Visualization']
+        skills: ['PowerBI', 'DAX', 'Data Modeling', 'ETL', 'Data Visualization']
+
     },
     project2: {
         title: 'Interactive Dashboard',
@@ -240,13 +241,13 @@ const projectCards = document.querySelectorAll('.project-card');
 if (modal && modalClose && projectCards.length > 0) {
     function openModal(projectId) {
         const project = projects[projectId];
-        
+    
         document.getElementById('modalTitle').textContent = project.title;
-        document.getElementById('modalYear').textContent = project.year;
-        document.getElementById('modalRole').textContent = project.role;
-        document.getElementById('modalDuration').textContent = project.duration;
+        document.getElementById('modalProjectType').textContent = project.Projecttype || '';
+        document.getElementById('modalProjectGoal').textContent = project.Projectgoal || '';
+        document.getElementById('modalProblemSolved').textContent = project.Problemsolved || '';
         document.getElementById('modalOverview').textContent = project.overview;
-        
+            
         // Handle modal image/PowerBI display at the top
         const modalImageContainer = document.querySelector('.modal-image');
         
