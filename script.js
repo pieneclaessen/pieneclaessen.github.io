@@ -196,6 +196,25 @@ if (markers.length > 0) {
 // Project data
 const projects = {
     project1: {
+        title: 'AI-Powered HR Chatbot Assistant',
+        image: 'images/chatbot.png', // Create a thumbnail image for the card
+        Projecttype: 'LLM with RAG',
+        Projectgoal: 'HR assistant to provide employees with realtime, context-aware answers to HR queries.',
+        Problemsolved: 'Employees and HR teams get instant, accurate answers to policies, procedures, and FAQs, reducing response times and manual workload.',
+        type: 'video',
+        videoUrl: 'images/Chatbot_video_2x.mp4', // Update this path to your video file
+        videoType: 'local',
+        overview: 'This AI-powered HR chatbot leverages a Large Language Model (LLM) combined with Retrieval-Augmented Generation (RAG) to provide employees with context-aware answers. It integrates HR documentation, company policies, and FAQs, allowing users to ask questions in natural language and get precise, actionable responses. The solution reduces HR workload and improves employee experience.',
+        features: [
+            'Context-aware answers using LLM + RAG',
+            'Integration with company HR knowledge base and policy documents',
+            'Real-time question answering with personalized responses',
+            'Scalable architecture for handling multiple employees simultaneously',
+            'Secure and privacy-compliant handling of employee queries'
+        ],
+        skills: ['LLM', 'RAG', 'Python', 'OpenAI API', 'Vector Databases', 'NLP', 'Git']
+    },
+    project2: {
         title: 'KTM Showroom',
         image: 'images/ktm_card.png',
         Projecttype: 'Data Visualization',
@@ -212,10 +231,9 @@ const projects = {
             'Real-time filtering and search capabilities'
         ],
         skills: ['PowerBI', 'DAX', 'Data Modeling', 'ETL', 'Data Visualization']
-
     },
-    project2: {
-        title: 'Interactive Dashboard',
+    project3: {
+        title: 'HR Attrition Dashboard',
         image: 'images/hr_dashboard.png',
         Projecttype: 'Data Visualization',
         Projectgoal: 'Visualize and analyze employee attrition to identify patterns and drivers.',
@@ -227,9 +245,9 @@ const projects = {
             'Interactive filtering by department, role, and education',
             'Attrition trend visualization and turnover rates over time',
             'Python analytics for deeper insights into attrition drivers',
-            'Actionable recommendations for workforce planning',
+            'Actionable recommendations for workforce planning'
         ],
-        skills: ['PowerBI', 'DAX', 'Python','SQL', 'Data Modeling', 'ETL', 'Data Visualization']
+        skills: ['PowerBI', 'DAX', 'Python', 'SQL', 'Data Modeling', 'ETL', 'Data Visualization']
     }
 };
 
@@ -248,11 +266,11 @@ if (modal && modalClose && projectCards.length > 0) {
         document.getElementById('modalProblemSolved').textContent = project.Problemsolved || '';
         document.getElementById('modalOverview').textContent = project.overview;
             
-        // Handle modal image/PowerBI display at the top
+        // Handle modal image/PowerBI/Video display at the top
         const modalImageContainer = document.querySelector('.modal-image');
         
         if (project.type === 'powerbi' && project.powerbiUrl) {
-            // Show PowerBI dashboard instead of image
+            // Show PowerBI dashboard
             modalImageContainer.innerHTML = `
                 <div class="powerbi-aspect-ratio">
                     <iframe
@@ -263,6 +281,32 @@ if (modal && modalClose && projectCards.length > 0) {
                     </iframe>
                 </div>
             `;
+        } else if (project.type === 'video' && project.videoUrl) {
+            // Show video
+            if (project.videoType === 'local') {
+                // Local video file
+                modalImageContainer.innerHTML = `
+                    <div class="video-container">
+                        <video controls>
+                            <source src="${project.videoUrl}" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </div>
+                `;
+            } else {
+                // YouTube or other embedded video
+                modalImageContainer.innerHTML = `
+                    <div class="video-container">
+                        <iframe
+                            title="${project.title}"
+                            src="${project.videoUrl}"
+                            frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            allowFullScreen="true">
+                        </iframe>
+                    </div>
+                `;
+            }
         } else {
             // Show regular image
             modalImageContainer.innerHTML = `<img id="modalImage" src="${project.image}" alt="${project.title}">`;
