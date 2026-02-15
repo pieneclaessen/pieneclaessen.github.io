@@ -196,12 +196,31 @@ if (markers.length > 0) {
 // Project data
 const projects = {
     project1: {
+        title: 'AI-Powered HR Chatbot Assistant',
+        image: 'images/chatbot.png', // Create a thumbnail image for the card
+        Projecttype: 'LLM with RAG',
+        Projectgoal: 'HR assistant to provide employees with realtime, context-aware answers to HR queries.',
+        Problemsolved: 'Employees and HR teams get instant, accurate answers to policies, procedures, and FAQs, reducing response times and manual workload.',
+        type: 'video',
+        videoUrl: 'images/Chatbot_video_2x.mp4', // Update this path to your video file
+        videoType: 'local',
+        overview: 'This AI-powered HR chatbot leverages a Large Language Model (LLM) combined with Retrieval-Augmented Generation (RAG) to provide employees with context-aware answers. It integrates HR documentation, company policies, and FAQs, allowing users to ask questions in natural language and get precise, actionable responses. The solution reduces HR workload and improves employee experience.',
+        features: [
+            'Context-aware answers using LLM + RAG',
+            'Integration with company HR knowledge base and policy documents',
+            'Real-time question answering with personalized responses',
+            'Scalable architecture for handling multiple employees simultaneously',
+            'Secure and privacy-compliant handling of employee queries'
+        ],
+        skills: ['LLM', 'RAG', 'Python', 'OpenAI API', 'Vector Databases', 'NLP', 'Git']
+    },
+    project2: {
         title: 'KTM Showroom',
         image: 'images/ktm_card.png',
-        Projecttype: 'Data Visualisation',
+        Projecttype: 'Data Visualization',
         Projectgoal: 'Interactive dashboard to compare motorcycle performance and key features.',
         Problemsolved: 'Quickly visualize and analyze metrics for smarter insights.',
-        type: 'powerbi', // Set to 'powerbi' for interactive dashboards
+        type: 'powerbi',
         powerbiUrl: 'https://app.powerbi.com/view?r=eyJrIjoiYzE1ZDhhZjItMjRhMS00ZWUxLWIyOGYtYzM4MGMxMGYxYjc0IiwidCI6ImViNjFmY2UzLTU0NmUtNDVjMC1iZGI5LWM2NDNjOTA1YjMzNyIsImMiOjl9',
         overview: 'KTM, a renowned Austrian motorcycle manufacturer, offers a wide range of high-performance bikes. This interactive web application showcases their lineup of naked bike models, allowing customers to explore and compare different options with ease. Users can browse through models, select their preferred colors, and view key technical specifications side by side.',
         features: [
@@ -212,24 +231,23 @@ const projects = {
             'Real-time filtering and search capabilities'
         ],
         skills: ['PowerBI', 'DAX', 'Data Modeling', 'ETL', 'Data Visualization']
-
     },
-    project2: {
-        title: 'Interactive Dashboard',
-        image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=900&h=400&fit=crop&sat=-100',
-        year: '2023',
-        role: 'Data Analyst',
-        duration: '3 months',
-        type: 'standard', // Regular project with just an image
-        overview: 'Created a comprehensive analytics dashboard for the Royal Netherlands Air Force, providing real-time insights into operational metrics, resource allocation, and performance indicators. The dashboard serves multiple departments and has become a critical tool for data-driven decision making.',
+    project3: {
+        title: 'HR Attrition Dashboard',
+        image: 'images/hr_dashboard.png',
+        Projecttype: 'Data Visualization',
+        Projectgoal: 'Visualize and analyze employee attrition to identify patterns and drivers.',
+        Problemsolved: 'Quick insights into turnover trends, high‑risk groups, and workforce dynamics.',
+        type: 'powerbi',
+        powerbiUrl: 'https://app.powerbi.com/view?r=eyJrIjoiYmUwNDM4NzQtZjZhZC00NTI2LTk1MWUtYTAxMzBiZTI3MTJiIiwidCI6ImViNjFmY2UzLTU0NmUtNDVjMC1iZGI5LWM2NDNjOTA1YjMzNyIsImMiOjl9',
+        overview: 'This interactive HR attrition dashboard provides a clear and anonymized view of employee turnover, enabling HR teams and managers to explore trends, identify high-risk groups, and make informed workforce decisions. Users can filter by department, role, tenure, or location and instantly visualize key metrics to understand patterns at a glance.',
         features: [
-            'Real-time data integration from multiple sources',
-            'Custom KPI tracking and visualization',
-            'Role-based access control and data filtering',
-            'Automated report generation and distribution',
-            'Mobile-responsive design for field access'
+            'Interactive filtering by department, role, and education',
+            'Attrition trend visualization and turnover rates over time',
+            'Python analytics for deeper insights into attrition drivers',
+            'Actionable recommendations for workforce planning'
         ],
-        skills: ['Tableau', 'SQL', 'ETL', 'Data Analysis', 'Power BI', 'Data Modeling', 'Visualization']
+        skills: ['PowerBI', 'DAX', 'Python', 'SQL', 'Data Modeling', 'ETL', 'Data Visualization']
     }
 };
 
@@ -248,11 +266,11 @@ if (modal && modalClose && projectCards.length > 0) {
         document.getElementById('modalProblemSolved').textContent = project.Problemsolved || '';
         document.getElementById('modalOverview').textContent = project.overview;
             
-        // Handle modal image/PowerBI display at the top
+        // Handle modal image/PowerBI/Video display at the top
         const modalImageContainer = document.querySelector('.modal-image');
         
         if (project.type === 'powerbi' && project.powerbiUrl) {
-            // Show PowerBI dashboard instead of image
+            // Show PowerBI dashboard
             modalImageContainer.innerHTML = `
                 <div class="powerbi-aspect-ratio">
                     <iframe
@@ -263,6 +281,32 @@ if (modal && modalClose && projectCards.length > 0) {
                     </iframe>
                 </div>
             `;
+        } else if (project.type === 'video' && project.videoUrl) {
+            // Show video
+            if (project.videoType === 'local') {
+                // Local video file
+                modalImageContainer.innerHTML = `
+                    <div class="video-container">
+                        <video controls>
+                            <source src="${project.videoUrl}" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </div>
+                `;
+            } else {
+                // YouTube or other embedded video
+                modalImageContainer.innerHTML = `
+                    <div class="video-container">
+                        <iframe
+                            title="${project.title}"
+                            src="${project.videoUrl}"
+                            frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            allowFullScreen="true">
+                        </iframe>
+                    </div>
+                `;
+            }
         } else {
             // Show regular image
             modalImageContainer.innerHTML = `<img id="modalImage" src="${project.image}" alt="${project.title}">`;
