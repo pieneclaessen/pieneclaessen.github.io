@@ -8,7 +8,7 @@
     
     --color-accent-primary: #00d9ff;
     --color-accent-secondary: #0ea5e9;
-    --color-accent-tertiary: #22d3ee;
+    --color-accent-tertiary: #22d3ee; 
     --color-accent-glow: rgba(0, 217, 255, 0.3);
     
     --color-text-primary: #f1f5f9;
@@ -169,18 +169,20 @@ body {
 
 .hero {
     position: relative;
-    min-height: 70vh;
+    min-height: 100vh;
+    min-height: 100svh;
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
     overflow: hidden;
-    padding: calc(var(--spacing-unit) * 10) 0;
+    padding: calc(var(--spacing-unit) * 12) 0 calc(var(--spacing-unit) * 8) 0;
 }
 
 /* Hero without icon - reduce height to match visual spacing */
 .hero-no-icon {
-    min-height: 55vh;
-    padding: calc(var(--spacing-unit) * 12) 0 calc(var(--spacing-unit) * 6) 0;
+    min-height: 60vh;
+    padding: calc(var(--spacing-unit) * 12) 0 calc(var(--spacing-unit) * 10) 0;
 }
 
 .hero-background {
@@ -290,10 +292,9 @@ body {
 }
 
 .scroll-indicator {
-    position: absolute;
-    bottom: calc(var(--spacing-unit) * 4);
-    left: 50%;
-    transform: translateX(-50%);
+    position: relative;
+    z-index: 1;
+    margin-top: calc(var(--spacing-unit) * 5);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -1357,6 +1358,12 @@ section {
 
 
 /* Responsive Design */
+@media (min-width: 769px) and (max-width: 1024px) {
+    .hero {
+        min-height: 70vh;
+    }
+}
+
 @media (max-width: 1024px) {
     .about-content {
         grid-template-columns: 1fr;
@@ -1432,14 +1439,22 @@ section {
         display: flex;
     }
     
-    .hero-title {
-        font-size: 3rem;
+    .hero-icon {
+        font-size: 3.5rem;
+        margin-bottom: calc(var(--spacing-unit) * 2);
     }
-    
-    /* FIXED: Compact hero-no-icon on mobile with good scroll indicator position */
+
+    .hero-title {
+        font-size: 2rem;
+    }
+
+    .hero-description {
+        font-size: 1.1rem;
+    }
+
     .hero-no-icon {
-        min-height: 55vh;
-        padding: calc(var(--spacing-unit) * 10) 0 calc(var(--spacing-unit) * 6) 0;
+        min-height: 60vh;
+        padding: calc(var(--spacing-unit) * 10) 0 calc(var(--spacing-unit) * 8) 0;
     }
     
     .footer-content {
