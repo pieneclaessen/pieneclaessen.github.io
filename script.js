@@ -230,7 +230,7 @@ const projects = {
             'Responsive design for all devices',
             'Real-time filtering and search capabilities'
         ],
-        skills: ['PowerBI', 'DAX', 'Data Modeling', 'ETL', 'Data Visualization']
+        skills: ['PowerBI', 'DAX','Power Query', 'Data Modeling', 'ETL', 'Data Visualization']
     },
     project3: {
         title: 'HR Attrition Dashboard',
@@ -247,7 +247,7 @@ const projects = {
             'Python analytics for deeper insights into attrition drivers',
             'Actionable recommendations for workforce planning'
         ],
-        skills: ['PowerBI', 'DAX', 'Python', 'SQL', 'Data Modeling', 'ETL', 'Data Visualization']
+        skills: ['PowerBI', 'DAX', 'Power Query', 'Python', 'SQL', 'Data Modeling', 'ETL', 'Data Visualization']
     }
 };
 
