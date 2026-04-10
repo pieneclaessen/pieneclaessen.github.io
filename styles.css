@@ -978,7 +978,7 @@ section {
     background: var(--color-bg-tertiary);
     border: 1px solid rgba(0, 217, 255, 0.15);
     border-radius: 16px;
-    padding: calc(var(--spacing-unit) * 2);
+    padding: calc(var(--spacing-unit) * 2.5);
     transition: all var(--transition-speed);
     opacity: 0;
     transform: translateY(20px);
@@ -1032,26 +1032,11 @@ section {
     gap: calc(var(--spacing-unit) * 1);
 }
 
-.skills-list.skills-secondary {
-    margin-top: calc(var(--spacing-unit) * 1);
-}
-
-.skills-list.skills-secondary .skill-chip {
-    background: rgba(0, 217, 255, 0.1);
-    color: var(--color-accent-primary);
-    border-color: rgba(0, 217, 255, 0.2);
-}
-
-.skills-list.skills-secondary .skill-chip:hover {
-    background: rgba(0, 217, 255, 0.2);
-    border-left: 2px solid var(--color-accent-primary);
-}
-
 .skill-chip {
     font-family: var(--font-mono);
     font-size: 0.75rem;
-    padding: 4px 8px;
-    background: rgba(0, 217, 255, 0.1);
+    padding: 4px 10px;
+    background: rgba(0, 217, 255, 0.08);
     color: var(--color-accent-primary);
     border: 1px solid rgba(0, 217, 255, 0.2);
     border-radius: 20px;
@@ -1287,9 +1272,9 @@ section {
 /* Background section — two-column with photo */
 .narrative-with-photo {
     display: grid;
-    grid-template-columns: 1fr 220px;
+    grid-template-columns: 1fr 280px;
     gap: calc(var(--spacing-unit) * 6);
-    align-items: center;
+    align-items: stretch;
 }
 
 .narrative-text p {
@@ -1307,8 +1292,15 @@ section {
     color: var(--color-text-primary);
 }
 
+.narrative-photo {
+    min-height: 0;
+}
+
 .narrative-photo img {
     width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top center;
     border-radius: 12px;
     border: 1px solid rgba(0, 217, 255, 0.15);
     display: block;
