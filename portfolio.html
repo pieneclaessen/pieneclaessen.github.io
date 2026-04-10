@@ -13,7 +13,7 @@
       gtag('js', new Date());
       gtag('config', 'G-QYRHMS5PSE');
     </script>
-    
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio | Piene Claessen</title>
@@ -55,24 +55,17 @@
         </div>
 
         <div class="hero-content">
+            <span class="hero-label">[ My Work ]</span>
             <h1 class="hero-title">Portfolio</h1>
             <p class="hero-description">
                 A showcase of my projects, highlighting the skills and technologies used in each.
             </p>
-
-            <!-- CTA Button -->
             <div class="hero-cta">
                 <a href="#portfolio" class="btn btn-primary">Discover more</a>
             </div>
         </div>
 
-        <!-- Scroll Indicator -->
-        <div class="scroll-indicator">
-            <div class="scroll-line"></div>
-            <div class="scroll-text">Scroll</div>
-        </div>
     </section>
-
 
     <!-- Portfolio Section -->
     <section id="portfolio" class="portfolio">
@@ -82,15 +75,28 @@
                 <h2 class="section-title">My Projects</h2>
             </div>
 
+            <!-- Filter bar -->
+            <div class="portfolio-filters">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="llm-ai">LLM / AI</button>
+                <button class="filter-btn" data-filter="data-viz">Data Visualization</button>
+                <button class="filter-btn" data-filter="ml">Machine Learning</button>
+            </div>
+
             <div class="portfolio-grid">
-                <!-- Project 1 - Video Project -->
-                <div class="project-card" data-aos="fade-up" data-project="project1">
+                <!-- Project 1 — HR Chatbot -->
+                <div class="project-card" data-aos="fade-up" data-project="project1" data-category="llm-ai">
                     <div class="project-image">
-                        <img src="images/chatbot.png" alt="Your Video Project">
+                        <span class="project-badge">LLM + RAG</span>
+                        <img src="images/chatbot.png" alt="AI-Powered HR Chatbot Assistant">
+                    </div>
+                    <div class="project-type-row">
+                        <i class="fa-solid fa-robot"></i>
+                        LLM with RAG
                     </div>
                     <div class="project-content">
                         <h3 class="project-title">AI-Powered HR Chatbot Assistant</h3>
-                        <p class="project-description">Intelligent HR assistant leveraging LLMs and RAG to answer employee queries, provide policy guidance, and support HR operations with context-aware, realtime responses.</p>
+                        <p class="project-description">Intelligent HR assistant leveraging LLMs and RAG to answer employee queries, provide policy guidance, and support HR operations with context-aware, real-time responses.</p>
                         <div class="project-skills">
                             <span class="skill-chip">LLM</span>
                             <span class="skill-chip">RAG</span>
@@ -100,17 +106,25 @@
                             <span class="skill-chip">NLP</span>
                             <span class="skill-chip">Git</span>
                         </div>
+                        <div class="project-link-hint">
+                            View Project <i class="fa-solid fa-arrow-right"></i>
+                        </div>
                     </div>
                 </div>
 
-                <!-- Project 2 - KTM -->
-                <div class="project-card" data-aos="fade-up" data-project="project2">
+                <!-- Project 2 — KTM Showroom -->
+                <div class="project-card" data-aos="fade-up" data-project="project2" data-category="data-viz">
                     <div class="project-image">
+                        <span class="project-badge">Data Viz</span>
                         <img src="images/ktm_card.png" alt="KTM Showroom Dashboard">
+                    </div>
+                    <div class="project-type-row">
+                        <i class="fa-solid fa-chart-bar"></i>
+                        Data Visualization
                     </div>
                     <div class="project-content">
                         <h3 class="project-title">KTM Showroom</h3>
-                        <p class="project-description">Interactive PowerBI dashboard showcasing KTM motorcycle lineup with dynamic filtering and comparison features.</p>
+                        <p class="project-description">Interactive PowerBI dashboard showcasing KTM motorcycle lineup with dynamic filtering and side-by-side comparison features.</p>
                         <div class="project-skills">
                             <span class="skill-chip">PowerBI</span>
                             <span class="skill-chip">DAX</span>
@@ -119,13 +133,21 @@
                             <span class="skill-chip">ETL</span>
                             <span class="skill-chip">Data Visualization</span>
                         </div>
+                        <div class="project-link-hint">
+                            View Project <i class="fa-solid fa-arrow-right"></i>
+                        </div>
                     </div>
                 </div>
 
-                <!-- Project 3 - HR Dashboard -->
-                <div class="project-card" data-aos="fade-up" data-project="project3">
+                <!-- Project 3 — HR Attrition -->
+                <div class="project-card" data-aos="fade-up" data-project="project3" data-category="data-viz">
                     <div class="project-image">
+                        <span class="project-badge">Data Viz</span>
                         <img src="images/hr_dashboard.png" alt="HR Attrition Dashboard">
+                    </div>
+                    <div class="project-type-row">
+                        <i class="fa-solid fa-chart-pie"></i>
+                        Data Visualization
                     </div>
                     <div class="project-content">
                         <h3 class="project-title">HR Attrition Dashboard</h3>
@@ -138,7 +160,9 @@
                             <span class="skill-chip">SQL</span>
                             <span class="skill-chip">Data Modeling</span>
                             <span class="skill-chip">ETL</span>
-                            <span class="skill-chip">Data Visualization</span>
+                        </div>
+                        <div class="project-link-hint">
+                            View Project <i class="fa-solid fa-arrow-right"></i>
                         </div>
                     </div>
                 </div>
@@ -181,6 +205,9 @@
                     <h3 class="modal-section-title">Technologies</h3>
                     <div class="modal-skills" id="modalSkills"></div>
                 </div>
+                <div class="modal-footer">
+                    <span class="modal-keyboard-hint">← → to navigate projects &nbsp;·&nbsp; Esc to close</span>
+                </div>
             </div>
         </div>
     </div>
@@ -192,44 +219,55 @@
                 <span class="section-number">02</span>
                 <h2 class="section-title">Get In Touch</h2>
             </div>
-            
+
             <div class="contact-content">
                 <div class="contact-text">
                     <h3>Let's Work Together</h3>
                     <p>
-                        I'm currently available for freelance data science projects. Whether you need predictive analytics, 
+                        I'm currently available for freelance data science projects. Whether you need predictive analytics,
                         machine learning solutions, LLM integration, or data strategy consulting, I'd love to hear about your project.
                     </p>
                     <p>
-                        My approach combines technical excellence with business understanding, ensuring that data solutions 
+                        My approach combines technical excellence with business understanding, ensuring that data solutions
                         deliver real, measurable value to your organization.
                     </p>
+
+                    <div class="availability-indicator">
+                        <span class="availability-dot"></span>
+                        Available for new projects
+                    </div>
+
+                    <a href="https://calendly.com/piene-claessentech/30min" target="_blank" class="btn btn-primary btn-cta-large">
+                        <i class="fa-solid fa-calendar-check"></i>
+                        Schedule a Free Discovery Call
+                    </a>
                 </div>
-                
+
                 <div class="contact-methods">
+                    <p class="contact-preferred-label">Preferred</p>
                     <a href="mailto:info@claessentech.com" class="contact-card">
-                        <div class="contact-icon">
-                            <i class="fa-solid fa-envelope"></i>
+                        <div class="contact-icon-wrap">
+                            <i class="fa-solid fa-envelope contact-icon"></i>
                         </div>
                         <div class="contact-info">
                             <div class="contact-label">Email</div>
                             <div class="contact-value">info@claessentech.com</div>
                         </div>
                     </a>
-                    
+
                     <a href="tel:+31646037322" class="contact-card">
-                        <div class="contact-icon">
-                            <i class="fa-solid fa-phone"></i>
+                        <div class="contact-icon-wrap">
+                            <i class="fa-solid fa-phone contact-icon"></i>
                         </div>
                         <div class="contact-info">
                             <div class="contact-label">Phone</div>
-                            <div class="contact-value">+31646037322</div>
+                            <div class="contact-value">+31 6 46037322</div>
                         </div>
                     </a>
-                    
+
                     <a href="https://www.linkedin.com/in/piene-claessen/" target="_blank" class="contact-card">
-                        <div class="contact-icon">
-                            <i class="fa-brands fa-linkedin"></i>
+                        <div class="contact-icon-wrap">
+                            <i class="fa-brands fa-linkedin contact-icon"></i>
                         </div>
                         <div class="contact-info">
                             <div class="contact-label">LinkedIn</div>
@@ -240,6 +278,7 @@
             </div>
         </div>
     </section>
+
     <!-- Footer -->
     <footer class="footer">
         <div class="container">
@@ -250,14 +289,14 @@
                         <span class="logo-name">Claessen Tech</span>
                         <span class="logo-bracket">]</span>
                     </a>
-                    <p class="footer-left">KvK: 99777738</p>
+                    <p>KvK: 99777738</p>
                 </div>
                 <div class="footer-right">
                     <div class="footer-links">
                         <a href="index.html">Home</a>
                         <a href="aboutme.html">About me</a>
                         <a href="portfolio.html">Portfolio</a>
-                        <a href="https://calendly.com/piene-claessentech/30min" target="_blank" class="btn btn-primary btn-footer">Book a Call</a>
+                        <a href="https://calendly.com/piene-claessentech/30min" target="_blank" class="btn btn-primary btn-nav" style="padding: 0.5rem 1rem; font-size: 0.9rem;">Book a Call</a>
                     </div>
                     <div class="footer-bottom">
                         <p>&copy; 2026 Piene Claessen. All rights reserved.</p>
