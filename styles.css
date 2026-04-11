@@ -1272,9 +1272,9 @@ section {
 /* Background section — two-column with photo */
 .narrative-with-photo {
     display: grid;
-    grid-template-columns: 1fr 280px;
-    gap: calc(var(--spacing-unit) * 6);
-    align-items: stretch;
+    grid-template-columns: 1fr 300px;
+    gap: calc(var(--spacing-unit) * 8);
+    align-items: center;
 }
 
 .narrative-text p {
@@ -1293,7 +1293,14 @@ section {
 }
 
 .narrative-photo {
-    min-height: 0;
+    position: relative;
+    border-radius: 12px;
+    overflow: hidden;
+    background-color: #0f1629;
+    box-shadow:
+        0 10px 25px rgba(0, 0, 0, 0.6),
+        0 20px 50px rgba(0, 0, 0, 0.5),
+        0 0 50px rgba(0, 217, 255, 0.15);
 }
 
 .narrative-photo img {
@@ -1302,7 +1309,6 @@ section {
     object-fit: cover;
     object-position: top center;
     border-radius: 12px;
-    border: 1px solid rgba(0, 217, 255, 0.15);
     display: block;
 }
 
