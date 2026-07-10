@@ -465,6 +465,12 @@ section { padding: 96px 0; }
 .approach-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 32px; }
 @media (max-width: 860px) { .approach-grid { grid-template-columns: 1fr; } }
 .approach-item { background: #fff; border-radius: 18px; padding: 36px 28px; box-shadow: var(--shadow-sm); }
+.approach-item .card-head {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 16px;
+}
 .approach-item .ico {
   width: 42px;
   height: 42px;
@@ -475,36 +481,10 @@ section { padding: 96px 0; }
   align-items: center;
   justify-content: center;
   font-size: 18px;
-  margin-bottom: 16px;
+  flex-shrink: 0;
 }
-.approach-item h4 { font-family: var(--display); font-size: 18px; font-weight: 700; margin-bottom: 8px; }
+.approach-item h4 { font-family: var(--display); font-size: 18px; font-weight: 700; }
 .approach-item p { color: var(--ink-dim); font-size: 14.5px; line-height: 1.7; }
-
-.pullquote {
-  text-align: center;
-  max-width: 640px;
-  margin: 40px auto 8px;
-  padding: 0 24px;
-}
-.pullquote .mark {
-  display: inline-flex;
-  margin-bottom: 14px;
-}
-.pullquote .mark svg {
-  width: 34px;
-  height: 34px;
-  stroke: none;
-  fill: var(--warm);
-}
-.pullquote p {
-  font-family: var(--display);
-  font-weight: 600;
-  font-size: clamp(1.2rem, 2.4vw, 1.6rem);
-  color: var(--ink);
-  line-height: 1.45;
-  max-width: 36ch;
-  margin: 0 auto;
-}
 
 
 /* ---------- contact ---------- */
@@ -516,7 +496,7 @@ section { padding: 96px 0; }
   background: var(--bg);
   border-radius: 36px;
   margin: 0 16px;
-  padding: 72px 48px;
+  padding: 72px 0;
 }
 .contact-card {
   background: linear-gradient(135deg, var(--accent-deep), var(--accent));
@@ -555,7 +535,7 @@ section { padding: 96px 0; }
 }
 .contact-box {
   background: rgba(255, 255, 255, 0.1);
-  border: 1px solid rgba(255, 255, 255, 0.25);
+  border: none;               /* was: 1px solid rgba(255, 255, 255, 0.25) */
   border-radius: 20px;
   padding: 30px;
 }
@@ -749,6 +729,23 @@ footer { padding: 36px 0; background: var(--bg); }
 @media (max-width: 760px) {
   .story-chapter { grid-template-columns: 1fr; }
   .story-chapter.rev { direction: ltr; }
+}
+
+.pullquote {
+  background: var(--accent-tint);
+  border-radius: var(--radius);
+  padding: 40px 44px;
+  text-align: center;
+  margin: 8px 0 16px;
+}
+.pullquote p {
+  font-family: var(--display);
+  font-weight: 600;
+  font-size: clamp(1.15rem, 2.2vw, 1.5rem);
+  color: var(--accent-deep);
+  line-height: 1.4;
+  max-width: 36ch;
+  margin: 0 auto;
 }
 
 .funfact {
