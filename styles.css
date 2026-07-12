@@ -43,6 +43,11 @@ img { max-width: 100%; display: block; }
 .wrap { max-width: 1160px; margin: 0 auto; padding: 0 32px; }
 @media (max-width: 640px) { .wrap { padding: 0 22px; } }
 
+/* Zelfde als de inline padding:0 48px die #about/#approach hadden, maar nu als
+   class zodat het op mobiel kan meeschalen i.p.v. vastgeklikt te blijven op 48px */
+.pad-wide { padding: 0 48px; }
+@media (max-width: 640px) { .pad-wide { padding: 0 22px; } }
+
 /* ---------- nav ---------- */
 header {
   position: sticky;
@@ -195,6 +200,7 @@ footer .brand img { height: 40px; }
   position: relative;
   overflow: hidden;
 }
+.portrait img { width: 100%; height: 100%; object-fit: cover; }
 .portrait .pinit {
   font-family: var(--display);
   font-weight: 700;
@@ -486,6 +492,54 @@ section { padding: 96px 0; }
 .approach-item h4 { font-family: var(--display); font-size: 18px; font-weight: 700; }
 .approach-item p { color: var(--ink-dim); font-size: 14.5px; line-height: 1.7; }
 
+/* ---------- journey (zo ziet een traject er in de praktijk uit) ---------- */
+.journey { margin-top: 48px; background: #fff; border-radius: var(--radius); padding: 36px 32px; }
+.journey-title { font-family: var(--display); font-weight: 700; font-size: 17px; text-align: center; margin-bottom: 28px; }
+.journey-steps { display: flex; align-items: flex-start; position: relative; }
+.journey-steps::before {
+  content: "";
+  position: absolute;
+  top: 17px;
+  left: 8%;
+  right: 8%;
+  height: 2px;
+  background: var(--line);
+}
+.journey-step { flex: 1; text-align: center; position: relative; padding: 0 8px; }
+.journey-num {
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  background: var(--accent-tint);
+  color: var(--accent-deep);
+  font-family: var(--display);
+  font-weight: 700;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 12px;
+  position: relative;
+  z-index: 1;
+}
+.journey-step h4 { font-family: var(--display); font-weight: 700; font-size: 13.5px; margin-bottom: 6px; }
+.journey-step p { font-size: 12px; color: var(--ink-dim); line-height: 1.5; }
+@media (max-width: 760px) {
+  .journey-steps { flex-direction: column; gap: 20px; }
+  .journey-steps::before { display: none; }
+  .journey-step {
+    display: grid;
+    grid-template-columns: 34px 1fr;
+    column-gap: 14px;
+    align-items: start;
+    text-align: left;
+    padding: 0;
+  }
+  .journey-num { grid-column: 1; grid-row: 1 / 3; margin: 0; flex-shrink: 0; }
+  .journey-step h4 { grid-column: 2; grid-row: 1; margin-bottom: 4px; }
+  .journey-step p { grid-column: 2; grid-row: 2; }
+}
+
 
 /* ---------- contact ---------- */
 /* Matches the "soft panel" rhythm of #services / #approach (bg-soft, rounded,
@@ -535,7 +589,7 @@ section { padding: 96px 0; }
 }
 .contact-box {
   background: rgba(255, 255, 255, 0.1);
-  border: none;               /* was: 1px solid rgba(255, 255, 255, 0.25) */
+  border: none;
   border-radius: 20px;
   padding: 30px;
 }
@@ -573,7 +627,7 @@ section { padding: 96px 0; }
   .contact-card { grid-template-columns: 1fr; padding: 44px 30px; border-radius: 22px; }
 }
 @media (max-width: 640px) {
-  #contact { margin: 0; border-radius: 0; padding: 56px 22px 64px; }
+  #contact { margin: 0; border-radius: 0; padding: 56px 0 64px; }
   .contact-card { padding: 34px 22px; border-radius: 20px; gap: 32px; }
   #contact h2 { font-size: clamp(1.6rem, 6vw, 2rem); }
   .contact-box { padding: 22px; }
@@ -585,16 +639,30 @@ section { padding: 96px 0; }
 footer { padding: 36px 0; background: var(--bg); }
 .footer-row {
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start;
   align-items: center;
   flex-wrap: wrap;
-  gap: 14px;
+  gap: 24px;
   font-size: 13px;
   color: var(--ink-faint);
 }
 .footer-row .brand { font-size: 14px; }
 @media (max-width: 640px) {
   .footer-row { flex-direction: column; text-align: center; gap: 8px; }
+}
+
+.footer-legal {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap;
+  font-size: 14px;
+  color: var(--ink-faint);
+}
+.footer-legal span:not(:last-child)::after {
+  content: "·";
+  margin-left: 16px;
+  color: var(--line);
 }
 
 /* ---------- scroll reveal ---------- */
@@ -691,10 +759,9 @@ footer { padding: 36px 0; background: var(--bg); }
 .step-item p { color: var(--ink-dim); font-size: 14.5px; line-height: 1.7; max-width: 60ch; }
 
 /* ---------- story chapters (meer over mij) ---------- */
-.chapter-section { padding: 10px 0; }
+.chapter-section { padding: 0; }
 .chapter-section.soft { background: var(--bg-soft); border-radius: 36px; margin: 0 16px; }
 @media (max-width: 640px) {
-  .chapter-section { padding: 48px 0; }
   .chapter-section.soft { margin: 0; }
 }
 .narrow { max-width: 820px; margin: 0 auto; }
@@ -727,8 +794,21 @@ footer { padding: 36px 0; background: var(--bg); }
 .story-chapter h3 { font-family: var(--display); font-size: 1.5rem; font-weight: 700; margin-bottom: 14px; line-height: 1.3; }
 .story-chapter p { color: var(--ink-dim); font-size: 15px; line-height: 1.75; }
 @media (max-width: 760px) {
-  .story-chapter { grid-template-columns: 1fr; }
+  .story-chapter {
+    grid-template-columns: 1fr;
+    gap: 0;
+    padding: 28px 0;
+  }
   .story-chapter.rev { direction: ltr; }
+
+  /* Op mobiel: eerst hoofdstuk-label + titel, dan de foto, dan de alinea.
+     De tekst-wrapper wordt met display:contents "onzichtbaar" gemaakt zodat
+     label, titel en alinea los van elkaar herordend kunnen worden rond de foto. */
+  .story-chapter > div:not(.chapter-photo) { display: contents; }
+  .chapter-label { order: 1; }
+  .story-chapter h3 { order: 2; margin-bottom: 0; }
+  .chapter-photo { order: 3; margin: 14px 0 20px; }
+  .story-chapter p { order: 4; }
 }
 
 .pullquote {
@@ -771,6 +851,38 @@ footer { padding: 36px 0; background: var(--bg); }
 .funfact .lbl { font-size: 12px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; color: var(--warm); margin-bottom: 4px; }
 .funfact p { font-size: 14.5px; color: var(--ink-dim); margin-bottom: 0; }
 @media (max-width: 600px) { .funfact { flex-direction: column; text-align: center; } }
+
+/* ---------- chapter notes (weetjes verspreid per hoofdstuk, meer over mij) ---------- */
+/* Zelfde opzet als .funfact, maar met de rustige bg-soft kleur (zoals #approach)
+   in plaats van de warme oranje tint. .chapter-note is het blok (één achtergrond);
+   .chapter-note-item is een losse icoon+tekst rij daarbinnen, gestapeld indien er
+   meerdere weetjes in hetzelfde blok staan (zie Hoofdstuk 3). */
+.chapter-note {
+  background: var(--bg-soft);
+  border-radius: var(--radius);
+  padding: 22px 26px;
+  margin: 4px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+.chapter-note-item {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+}
+.chapter-note-item .ic {
+  width: 40px;
+  height: 40px;
+  border-radius: 11px;
+  background: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 17px;
+  flex-shrink: 0;
+}
+.chapter-note-item p { font-size: 14px; color: var(--ink-dim); margin-bottom: 0; line-height: 1.6; }
 
 /* ---------- aanpak tiers (meer over mijn aanpak) ---------- */
 .tier-block { padding: 44px 0; border-top: 1px solid var(--line); }
@@ -824,67 +936,3 @@ ul.check li::before { content: "✓"; position: absolute; left: 0; color: var(--
 .method-wrap .step-list { max-width: 820px; margin: 0 auto; }
 
 .tier-narrow { max-width: 960px; margin: 0 auto; }
-
-/* ---------- cookie consent banner ---------- */
-#cookie-banner {
-  position: fixed;
-  left: 16px;
-  right: 16px;
-  bottom: 16px;
-  z-index: 200;
-  background: #fff;
-  border-radius: var(--radius);
-  box-shadow: var(--shadow);
-  border: 1px solid var(--line);
-  padding: 22px 26px;
-}
-.cookie-banner-inner {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 24px;
-  flex-wrap: wrap;
-  max-width: 1160px;
-  margin: 0 auto;
-}
-.cookie-banner-inner p {
-  font-size: 14px;
-  color: var(--ink-dim);
-  max-width: 60ch;
-}
-.cookie-banner-inner p a {
-  color: var(--accent-deep);
-  font-weight: 600;
-  text-decoration: underline;
-}
-.cookie-banner-actions { display: flex; gap: 12px; flex-shrink: 0; }
-.cookie-banner-actions .btn {
-  border: none;
-  cursor: pointer;
-  font-family: var(--sans);
-  padding: 10px 20px;
-  font-size: 13.5px;
-}
-.cookie-banner-actions .btn-ghost {
-  border: 1.5px solid var(--line);
-  background: #fff;
-  color: var(--ink);
-}
-.cookie-banner-actions .btn-primary { background: var(--accent); color: #fff; }
-.cookie-banner-actions .btn-primary:hover { background: var(--accent-deep); }
-@media (max-width: 640px) {
-  #cookie-banner { left: 10px; right: 10px; bottom: 10px; padding: 18px 20px; }
-  .cookie-banner-inner { flex-direction: column; align-items: flex-start; }
-  .cookie-banner-actions { width: 100%; }
-  .cookie-banner-actions .btn { flex: 1; text-align: center; }
-}
-
-/* ---------- footer legal links ---------- */
-.footer-legal { display: flex; align-items: center; gap: 16px; flex-wrap: wrap; }
-.footer-legal a { font-size: 13px; color: var(--ink-faint); }
-.footer-legal a:hover { color: var(--accent-deep); }
-.footer-legal button.linklike {
-  background: none; border: none; padding: 0; font: inherit;
-  font-size: 13px; color: var(--ink-faint); cursor: pointer;
-}
-.footer-legal button.linklike:hover { color: var(--accent-deep); }
