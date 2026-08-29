@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Data governance checklist | Claessen Tech</title>
+  <link rel="icon" type="image/png" href="../images/favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../styles.css">
+  <link rel="stylesheet" href="checklist.css">
+</head>
+<body>
+
+<header>
+  <nav class="wrap">
+    <a href="../" class="brand"><img src="../images/logo.png" alt="Claessen Tech"></a>
+    <div class="nav-links">
+      <a href="../#services">Wat ik doe</a>
+      <a href="../#about">Over mij</a>
+      <a href="../#approach">Werkwijze</a>
+      <a href="../#contact">Contact</a>
+      <a href="./">Data governance scan</a>
+      <a href="https://calendly.com/piene-claessentech/30min" class="nav-cta">Plan een kennismaking</a>
+    </div>
+  </nav>
+</header>
+
+<main id="top">
+
+  <!-- HERO -->
+  <section class="checklist-hero">
+    <div class="wrap">
+      <span class="eyebrow"><span class="dot"></span> Gratis checklist</span>
+      <h1>Data governance in de praktijk: ontdek in <span class="accent-text">5 minuten</span> waar je staat</h1>
+      <p class="lede">Van eigenaarschap en datakwaliteit tot definities, processen en verantwoordelijkheden. Vink aan wat klopt voor jouw organisatie en zie direct waar de grootste gaten zitten.</p>
+    </div>
+  </section>
+
+  <!-- CHECKLIST -->
+  <section id="checklist">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="eyebrow"><span class="dot"></span> De checklist</span>
+        <h2>Vink aan wat op dit moment klopt</h2>
+        <p class="support">Er is geen goed of fout antwoord — alleen een eerlijk beeld van waar je organisatie nu staat. Loop de 6 thema's door en bekijk aan het einde je score.</p>
+      </div>
+
+      <div id="categories"></div>
+    </div>
+  </section>
+
+  <!-- RESULTS -->
+  <section id="results">
+    <div class="wrap">
+      <div class="result-card">
+        <div class="gauge-wrap">
+          <svg viewBox="0 0 120 120">
+            <circle class="gauge-bg" cx="60" cy="60" r="52"></circle>
+            <circle class="gauge-fill" id="gaugeFill" cx="60" cy="60" r="52" stroke-dasharray="0 327"></circle>
+          </svg>
+          <div class="gauge-number">
+            <div class="num" id="gaugeNum">0</div>
+            <div class="den">van de 24</div>
+          </div>
+        </div>
+        <div class="result-text">
+          <div class="result-band" id="resultBand">0–8 punten</div>
+          <div class="result-title" id="resultTitle">De basis ontbreekt nog</div>
+          <p class="result-desc" id="resultDesc">Data en verantwoordelijkheden zijn versnipperd. Er is geen overzicht van wie wat beheert of waar data staat. Elke uitbreiding — ook met AI — vergroot dit risico. Dit is het moment om eerst structuur aan te brengen, vóórdat je verder bouwt.</p>
+          <p class="result-nudge" id="resultNudge">Wil je dit samen ontrafelen?</p>
+          <a href="https://calendly.com/piene-claessentech/30min" class="result-cta">Plan een kennismaking →</a>
+        </div>
+      </div>
+      <div class="reset-row"><span class="reset-link" onclick="resetAll()">Opnieuw beginnen</span></div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap footer-row">
+    <a href="../" class="brand"><img src="../images/logo.png" alt="Claessen Tech"></a>
+    <div class="footer-legal">
+      <span>© 2026 Piene Claessen</span>
+      <span>info@claessentech.com</span>
+      <span>+31 6 46037322</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+const data = [
+  {
+    icon:"🧭",
+    title:"1. Eigenaarschap van data",
+    intro:"Zonder eigenaar is elk databesluit uiteindelijk niemands verantwoordelijkheid.",
+    items:[
+      "Voor de belangrijkste datasets (klant-, financiële en operationele data) is een eigenaar aangewezen.",
+      "Die eigenaar is een persoon of rol, niet “de IT-afdeling” in het algemeen.",
+      "Bij twijfel over een databron weet iedereen bij wie ze moeten zijn.",
+      "Eigenaarschap is vastgelegd, niet alleen mondeling bekend bij een paar mensen."
+    ]
+  },
+  {
+    icon:"📊",
+    title:"2. Datakwaliteit & eenduidige definities",
+    intro:"Een dashboard is pas nuttig als niemand eerst twijfelt aan de cijfers erin — of aan wat ze precies betekenen.",
+    items:[
+      "Kernbegrippen (zoals “actieve klant” of “omzet”) zijn organisatiebreed hetzelfde gedefinieerd.",
+      "Er is een duidelijke “single source of truth” per belangrijke KPI.",
+      "Afwijkende cijfers tussen systemen worden actief gesignaleerd, niet toevallig ontdekt.",
+      "Nieuwe data wordt gecontroleerd op volledigheid en consistentie voordat die gebruikt wordt."
+    ]
+  },
+  {
+    icon:"🔒",
+    title:"3. Toegangsrechten & beveiliging",
+    intro:"Wie er ooit toegang kreeg, heeft die vaak nog — ook na een andere rol of vertrek.",
+    items:[
+      "Toegang tot gevoelige data is gekoppeld aan rol of functie, niet aan individuele uitzonderingen.",
+      "Toegangsrechten worden periodiek gecontroleerd en ingetrokken bij rolwijziging of vertrek.",
+      "Er is inzicht in wie welke data heeft geraadpleegd of gewijzigd.",
+      "Externe partijen en leveranciers hebben alleen toegang tot wat strikt nodig is."
+    ]
+  },
+  {
+    icon:"🗂️",
+    title:"4. Waar data staat (systemen & tools)",
+    intro:"Je kunt niet beheren wat je niet in kaart hebt gebracht.",
+    items:[
+      "Er bestaat een actueel overzicht van de belangrijkste systemen waarin data wordt opgeslagen.",
+      "Nieuwe tools of dataverzamelingen worden niet zomaar naast bestaande systemen opgezet.",
+      "Het is duidelijk welke data waar synchroniseert — en waar dat juist niet gebeurt.",
+      "Schaduw-IT (spreadsheets, losse tools per team) is in kaart gebracht, niet genegeerd."
+    ]
+  },
+  {
+    icon:"🗑️",
+    title:"5. Bewaartermijnen & opschoning",
+    intro:"Data die je niet meer nodig hebt, is alleen nog maar risico — geen waarde.",
+    items:[
+      "Voor de belangrijkste datacategorieën zijn bewaartermijnen vastgesteld.",
+      "Verouderde of overbodige data wordt daadwerkelijk verwijderd, niet alleen “ooit nog eens”.",
+      "Er is een proces voor het opschonen van data na een project, tool-wissel of afgesloten samenwerking.",
+      "Back-ups en archieven vallen ook onder een bewust bewaarbeleid, niet onder de radar."
+    ]
+  },
+  {
+    icon:"🤖",
+    title:"6. AI-gebruik & risico's specifiek",
+    intro:"AI maakt bestaande datazwaktes zichtbaarder — en de gevolgen groter.",
+    items:[
+      "Er is overzicht van welke AI-tools binnen de organisatie worden gebruikt, ook los van een officieel traject.",
+      "Duidelijk is welke data wel en niet in AI-tools of -modellen ingevoerd mag worden.",
+      "Voor AI-toepassingen die beslissingen beïnvloeden, is nagedacht over uitlegbaarheid en controleerbaarheid.",
+      "Er is een aanspreekpunt voor vragen over verantwoord AI-gebruik binnen de organisatie."
+    ]
+  }
+];
+
+const TOTAL = data.reduce((a,c)=>a+c.items.length,0);
+const checkedState = {};
+
+function renderCategories(){
+  const wrap = document.getElementById('categories');
+  wrap.innerHTML = '';
+  data.forEach((cat, ci)=>{
+    const catDiv = document.createElement('div');
+    catDiv.className = 'category';
+    catDiv.innerHTML = `
+      <div class="category-head">
+        <div class="cat-icon">${cat.icon}</div>
+        <div class="cat-title-wrap">
+          <div class="cat-title">${cat.title}</div>
+          <p class="cat-intro">${cat.intro}</p>
+        </div>
+        <div class="cat-score" id="catscore-${ci}">0/${cat.items.length}</div>
+      </div>
+      <div class="items">
+        ${cat.items.map((label, ii)=>`
+          <div class="item" id="item-${ci}-${ii}" onclick="toggle(${ci},${ii})">
+            <div class="checkbox">
+              <svg width="12" height="10" viewBox="0 0 12 10" fill="none">
+                <path d="M1 5L4.2 8.2L11 1" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </div>
+            <div class="item-label">${label}</div>
+          </div>
+        `).join('')}
+      </div>
+    `;
+    wrap.appendChild(catDiv);
+  });
+}
+
+function toggle(ci, ii){
+  const key = ci+'-'+ii;
+  checkedState[key] = !checkedState[key];
+  const el = document.getElementById(`item-${ci}-${ii}`);
+  el.classList.toggle('checked', checkedState[key]);
+  updateScores();
+}
+
+function updateScores(){
+  let total = 0;
+  data.forEach((cat, ci)=>{
+    let catCount = 0;
+    cat.items.forEach((_, ii)=>{ if(checkedState[ci+'-'+ii]) catCount++; });
+    total += catCount;
+    document.getElementById(`catscore-${ci}`).textContent = `${catCount}/${cat.items.length}`;
+  });
+
+  document.getElementById('gaugeNum').textContent = total;
+
+  const circumference = 2*Math.PI*52;
+  const fillLen = circumference * (total/TOTAL);
+  document.getElementById('gaugeFill').setAttribute('stroke-dasharray', `${fillLen} ${circumference}`);
+
+  const band = document.getElementById('resultBand');
+  const title = document.getElementById('resultTitle');
+  const desc = document.getElementById('resultDesc');
+  const nudge = document.getElementById('resultNudge');
+
+  if(total <= 8){
+    band.textContent = '0–8 punten';
+    title.textContent = 'De basis ontbreekt nog';
+    desc.textContent = 'Data en verantwoordelijkheden zijn versnipperd. Er is geen overzicht van wie wat beheert of waar data staat. Elke uitbreiding — ook met AI — vergroot dit risico. Dit is het moment om eerst structuur aan te brengen, vóórdat je verder bouwt.';
+    nudge.textContent = 'Wil je dit samen ontrafelen?';
+  } else if(total <= 16){
+    band.textContent = '9–16 punten';
+    title.textContent = 'Losse onderdelen, geen samenhang';
+    desc.textContent = 'Er zijn losse goede initiatieven, maar geen consistent geheel. Sommige teams hebben het op orde, andere niet. Dat werkt tot het misgaat — en dan meestal precies op het moment dat het het meest kost.';
+    nudge.textContent = 'Toe aan meer samenhang?';
+  } else {
+    band.textContent = '17–24 punten';
+    title.textContent = 'Een stevige basis';
+    desc.textContent = 'De basis staat. De volgende stap is niet meer “orde op zaken stellen”, maar gericht bouwen: dashboards, automatiseringen of AI-toepassingen die op deze basis kunnen vertrouwen.';
+    nudge.textContent = 'Toe aan de volgende stap?';
+  }
+}
+
+function resetAll(){
+  Object.keys(checkedState).forEach(k => checkedState[k] = false);
+  document.querySelectorAll('.item.checked').forEach(el => el.classList.remove('checked'));
+  updateScores();
+  window.scrollTo({top:0, behavior:'smooth'});
+}
+
+renderCategories();
+updateScores();
+</script>
+
+</body>
+</html>

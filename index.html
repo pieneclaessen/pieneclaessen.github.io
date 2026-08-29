@@ -22,6 +22,7 @@
       <a href="#about">Over mij</a>
       <a href="#approach">Werkwijze</a>
       <a href="#contact">Contact</a>
+      <a href="data-governance-checklist/">Data governance scan</a>
       <a href="https://calendly.com/piene-claessentech/30min" class="nav-cta">Plan een kennismaking</a>
     </div>
   </nav>
@@ -123,7 +124,7 @@
           <p>Al dat schakelen zit blijkbaar in mijn systeem, want ook buiten werktijd hou ik niet van stilzitten. Je vindt me eerder in de boksschool of onderweg naar een nieuwe bestemming dan op de bank. Nieuwsgierig naar het volledige verhaal?</p>
         </div>
         <div class="about-links">
-          <a href="/overmij" class="more-link">Lees hier meer over mij →</a>
+          <a href="overmij/" class="more-link">Lees hier meer over mij →</a>
         </div>
       </div>
     </div>
@@ -231,7 +232,7 @@
       if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); }
     });
   }, {threshold:0.12});
-  
+
   els.forEach(el=>io.observe(el));
 
   document.querySelectorAll('a.brand[href="#top"]').forEach(link => {
