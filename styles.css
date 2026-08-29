@@ -696,6 +696,47 @@ footer { padding: 36px 0; background: var(--bg); }
   }
 }
 
+/* ---------- footer: LinkedIn & WhatsApp pill buttons ---------- */
+.footer-social-pill {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-left: 60px;
+}
+
+.pill-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  font-size: 13px;
+  font-weight: 600;
+  padding: 9px 16px;
+  border-radius: 999px;
+  background: var(--accent-tint);
+  color: var(--accent-deep);
+  border: 1.5px solid transparent;
+  transition: background .2s ease, color .2s ease, transform .2s ease;
+}
+
+.pill-btn svg {
+  width: 15px;
+  height: 15px;
+  fill: currentColor;
+  flex-shrink: 0;
+}
+
+.pill-btn:hover {
+  background: var(--accent);
+  color: #fff;
+  transform: translateY(-1px);
+}
+
+@media (max-width: 640px) {
+  .footer-social-pill {
+    width: 100%;
+  }
+}
+
 /* ---------- scroll reveal ---------- */
 .reveal { opacity: 0; transform: translateY(16px); transition: opacity .6s ease, transform .6s ease; }
 .reveal.in { opacity: 1; transform: translateY(0); }
@@ -1098,7 +1139,7 @@ ul.check li::before { content: "✓"; position: absolute; left: 0; color: var(--
 .result-text { flex: 1; min-width: 240px; }
 .result-band {
   display: inline-block;
-  font-size: 12.5px;
+  font-size: 20px;
   font-weight: 600;
   letter-spacing: 0.05em;
   text-transform: uppercase;
@@ -1107,7 +1148,7 @@ ul.check li::before { content: "✓"; position: absolute; left: 0; color: var(--
 }
 .result-title { font-family: var(--display); font-size: 22px; font-weight: 700; margin: 0 0 10px; }
 .result-desc { font-size: 14.5px; line-height: 1.65; color: rgba(255,255,255,0.85); margin: 0 0 20px; }
-.result-nudge { font-size: 13px; font-weight: 600; color: var(--warm); margin: 0 0 12px; }
+.result-nudge { font-size: 18px; font-weight: 600; color: var(--warm); margin: 0 0 12px; }
 .result-cta {
   display: inline-flex;
   align-items: center;
@@ -1129,4 +1170,69 @@ ul.check li::before { content: "✓"; position: absolute; left: 0; color: var(--
   .checklist-hero { padding: 48px 0 16px; }
   .category { padding: 22px 20px 6px; }
   .result-card { padding: 32px 24px; border-radius: 22px; gap: 24px; }
+}
+
+/* ---------- cookie banner ---------- */
+.cookie-banner {
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  right: 20px;
+  max-width: 400px;
+  z-index: 9999;
+  animation: slideUp 0.3s ease-out;
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.cookie-banner-card {
+  background: var(--bg-card);
+  border-radius: var(--radius);
+  padding: 20px;
+  box-shadow: var(--shadow);
+  border: 1px solid var(--line);
+}
+
+.cookie-banner-text {
+  font-size: 14px;
+  line-height: 1.5;
+  margin-bottom: 16px;
+  color: var(--ink-dim);
+}
+
+.cookie-banner-actions {
+  display: flex;
+  gap: 12px;
+  justify-content: flex-end;
+}
+
+.cookie-banner-actions .btn {
+  flex-shrink: 0;
+}
+
+@media (max-width: 640px) {
+  .cookie-banner {
+    bottom: 12px;
+    left: 12px;
+    right: 12px;
+    max-width: none;
+  }
+
+  .cookie-banner-actions {
+    flex-direction: column;
+  }
+
+  .cookie-banner-actions .btn {
+    width: 100%;
+    justify-content: center;
+  }
 }

@@ -32,7 +32,6 @@
   <!-- HERO -->
   <section class="checklist-hero">
     <div class="wrap">
-      <span class="eyebrow"><span class="dot"></span> Gratis checklist</span>
       <h1>Data governance in de praktijk: ontdek in <span class="accent-text">5 minuten</span> waar je staat</h1>
       <p class="lede">Van eigenaarschap en datakwaliteit tot definities, processen en verantwoordelijkheden. Vink aan wat klopt voor jouw organisatie en zie direct waar de grootste gaten zitten.</p>
     </div>
@@ -42,9 +41,9 @@
   <section id="checklist">
     <div class="wrap">
       <div class="section-head">
-        <span class="eyebrow"><span class="dot"></span> De checklist</span>
+        <span class="eyebrow"><span class="dot"></span>Data governance checklist</span>
         <h2>Vink aan wat op dit moment klopt</h2>
-        <p class="support">Er is geen goed of fout antwoord — alleen een eerlijk beeld van waar je organisatie nu staat. Loop de 6 thema's door en bekijk aan het einde je score.</p>
+        <p class="support">Er is geen goed of fout antwoord, alleen een eerlijk beeld van waar je organisatie nu staat. Je hoeft geen data-expert te zijn: de vragen gaan over je organisatie, niet over techniek. Loop de 6 thema's door en bekijk aan het einde je score.</p>
       </div>
 
       <div id="categories"></div>
@@ -84,8 +83,18 @@
     <a href="../" class="brand"><img src="../images/logo.png" alt="Claessen Tech"></a>
     <div class="footer-legal">
       <span>© 2026 Piene Claessen</span>
-      <span>info@claessentech.com</span>
-      <span>+31 6 46037322</span>
+      <span>KvK 99777738</span>
+      <span>BTW NL005410096B08</span>
+    </div>
+    <div class="footer-social-pill">
+      <a class="pill-btn" href="https://www.linkedin.com/in/piene-claessen/" target="_blank" rel="noopener" aria-label="LinkedIn">
+        <svg viewBox="0 0 24 24"><path d="M20.45 20.45h-3.55v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.36V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12zM7.12 20.45H3.56V9h3.56v11.45z"/></svg>
+        LinkedIn
+      </a>
+      <a class="pill-btn" href="https://wa.me/31646037322" target="_blank" rel="noopener" aria-label="WhatsApp">
+        <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12c0 1.82.5 3.53 1.36 5L2 22l5.17-1.36C8.6 21.5 10.26 22 12 22c5.52 0 10-4.48 10-10S17.52 2 12 2zm5.2 14.2c-.24.66-1.32 1.26-1.8 1.32-.46.06-1.02.09-1.66-.1-.38-.12-.87-.28-1.5-.55-2.64-1.14-4.36-3.8-4.5-3.98-.13-.18-1.08-1.44-1.08-2.75s.7-1.94.94-2.2c.25-.27.54-.34.72-.34h.5c.16 0 .38-.03.58.45.24.58.8 2.01.87 2.16.07.15.11.32.02.5-.09.18-.14.29-.28.45-.14.16-.29.36-.42.48-.14.13-.29.28-.13.55.16.27.72 1.19 1.55 1.93 1.06.95 1.96 1.24 2.23 1.38.27.14.43.11.59-.07.16-.18.68-.79.86-1.06.18-.27.36-.22.6-.13.24.09 1.55.73 1.82.86.27.13.45.2.51.31.06.11.06.66-.18 1.31z"/></svg>
+        WhatsApp
+      </a>
     </div>
   </div>
 </footer>
@@ -98,7 +107,7 @@ const data = [
     intro:"Zonder eigenaar is elk databesluit uiteindelijk niemands verantwoordelijkheid.",
     items:[
       "Voor de belangrijkste datasets (klant-, financiële en operationele data) is een eigenaar aangewezen.",
-      "Die eigenaar is een persoon of rol, niet “de IT-afdeling” in het algemeen.",
+      "Die eigenaar is een persoon of rol, niet 'de IT-afdeling' in het algemeen.",
       "Bij twijfel over een databron weet iedereen bij wie ze moeten zijn.",
       "Eigenaarschap is vastgelegd, niet alleen mondeling bekend bij een paar mensen."
     ]
@@ -108,7 +117,7 @@ const data = [
     title:"2. Datakwaliteit & eenduidige definities",
     intro:"Een dashboard is pas nuttig als niemand eerst twijfelt aan de cijfers erin — of aan wat ze precies betekenen.",
     items:[
-      "Kernbegrippen (zoals “actieve klant” of “omzet”) zijn organisatiebreed hetzelfde gedefinieerd.",
+      "Kernbegrippen (zoals 'actieve klant' of 'omzet') zijn organisatiebreed hetzelfde gedefinieerd.",
       "Er is een duidelijke “single source of truth” per belangrijke KPI.",
       "Afwijkende cijfers tussen systemen worden actief gesignaleerd, niet toevallig ontdekt.",
       "Nieuwe data wordt gecontroleerd op volledigheid en consistentie voordat die gebruikt wordt."
@@ -132,7 +141,7 @@ const data = [
     items:[
       "Er bestaat een actueel overzicht van de belangrijkste systemen waarin data wordt opgeslagen.",
       "Nieuwe tools of dataverzamelingen worden niet zomaar naast bestaande systemen opgezet.",
-      "Het is duidelijk welke data waar synchroniseert — en waar dat juist niet gebeurt.",
+      "Het is duidelijk welke data waar synchroniseert en waar dat juist niet gebeurt.",
       "Schaduw-IT (spreadsheets, losse tools per team) is in kaart gebracht, niet genegeerd."
     ]
   },
@@ -142,7 +151,7 @@ const data = [
     intro:"Data die je niet meer nodig hebt, is alleen nog maar risico — geen waarde.",
     items:[
       "Voor de belangrijkste datacategorieën zijn bewaartermijnen vastgesteld.",
-      "Verouderde of overbodige data wordt daadwerkelijk verwijderd, niet alleen “ooit nog eens”.",
+      "Verouderde of overbodige data wordt daadwerkelijk verwijderd, niet alleen 'ooit nog eens'.",
       "Er is een proces voor het opschonen van data na een project, tool-wissel of afgesloten samenwerking.",
       "Back-ups en archieven vallen ook onder een bewust bewaarbeleid, niet onder de radar."
     ]
@@ -195,12 +204,24 @@ function renderCategories(){
   });
 }
 
+function trackEvent(name, params){
+  if (typeof window.gtag === 'function') {
+    window.gtag('event', name, params);
+  }
+}
+
 function toggle(ci, ii){
   const key = ci+'-'+ii;
   checkedState[key] = !checkedState[key];
   const el = document.getElementById(`item-${ci}-${ii}`);
   el.classList.toggle('checked', checkedState[key]);
   updateScores();
+
+  trackEvent('checklist_item_toggle', {
+    category: data[ci].title,
+    item: data[ci].items[ii].slice(0, 100),
+    state: checkedState[key] ? 'checked' : 'unchecked'
+  });
 }
 
 function updateScores(){
@@ -226,12 +247,12 @@ function updateScores(){
   if(total <= 8){
     band.textContent = '0–8 punten';
     title.textContent = 'De basis ontbreekt nog';
-    desc.textContent = 'Data en verantwoordelijkheden zijn versnipperd. Er is geen overzicht van wie wat beheert of waar data staat. Elke uitbreiding — ook met AI — vergroot dit risico. Dit is het moment om eerst structuur aan te brengen, vóórdat je verder bouwt.';
-    nudge.textContent = 'Wil je dit samen ontrafelen?';
+    desc.textContent = 'Data en verantwoordelijkheden zijn versnipperd. Er is geen overzicht van wie wat beheert of waar data staat. Elke uitbreiding, en zeker AI, vergroot dit risico. Dit is het moment om eerst structuur aan te brengen, vóórdat je verder bouwt.';
+    nudge.textContent = 'De basis écht sterk neerzetten?';
   } else if(total <= 16){
     band.textContent = '9–16 punten';
     title.textContent = 'Losse onderdelen, geen samenhang';
-    desc.textContent = 'Er zijn losse goede initiatieven, maar geen consistent geheel. Sommige teams hebben het op orde, andere niet. Dat werkt tot het misgaat — en dan meestal precies op het moment dat het het meest kost.';
+    desc.textContent = 'Er zijn losse goede initiatieven, maar geen consistent geheel. Sommige teams hebben het op orde, andere niet. Dat werkt tot het misgaat en dan meestal precies op het moment dat het het meest kost.';
     nudge.textContent = 'Toe aan meer samenhang?';
   } else {
     band.textContent = '17–24 punten';
@@ -246,11 +267,14 @@ function resetAll(){
   document.querySelectorAll('.item.checked').forEach(el => el.classList.remove('checked'));
   updateScores();
   window.scrollTo({top:0, behavior:'smooth'});
+  trackEvent('checklist_reset', {});
 }
 
 renderCategories();
 updateScores();
 </script>
+
+<script src="../cookie-consent.js"></script>
 
 </body>
 </html>
