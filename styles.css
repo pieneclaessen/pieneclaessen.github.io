@@ -986,30 +986,16 @@ section { padding: 96px 0; }
 }
 
 .collaboration-icon {
-  width: 60px;
-  height: 60px;
-  border-radius: 50%;
+  width: 64px;
+  height: 64px;
+  border-radius: 17px;
   background: var(--accent-tint);
   color: var(--accent-deep);
   display: grid;
   place-items: center;
   flex-shrink: 0;
-}
-
-.collaboration-icon svg {
-  width: 42px;
-  height: 42px;
-  display: block;
-  fill: none;
-  stroke: currentColor;
-  stroke-width: 2;
-  stroke-linecap: round;
-  stroke-linejoin: round;
-}
-
-.collaboration-icon .accent-mark {
-  stroke: var(--warm);
-  stroke-width: 2.2;
+  font-size: 30px;
+  line-height: 1;
 }
 
 .collaboration-card .collab-text {
@@ -1071,17 +1057,10 @@ section { padding: 96px 0; }
   align-items: center;
   justify-content: center;
   flex-shrink: 0;
+  font-size: 22px;
+  line-height: 1;
 }
 
-.principle-icon svg {
-  width: 24px;
-  height: 24px;
-  fill: none;
-  stroke: currentColor;
-  stroke-width: 1.8;
-  stroke-linecap: round;
-  stroke-linejoin: round;
-}
 
 .service-principle h3 {
   font-family: var(--display);
@@ -1893,12 +1872,11 @@ footer { padding: 36px 0; background: var(--bg); }
   height: 44px;
   border-radius: 12px;
   background: var(--accent-tint);
-  color: var(--accent-deep);
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 18px;
-  font-weight: 700;
+  font-size: 20px;
+  line-height: 1;
   flex-shrink: 0;
 }
 
@@ -2046,7 +2024,7 @@ footer { padding: 36px 0; background: var(--bg); }
 
 /* ---------- persoonlijk ---------- */
 .about-personal-section {
-  padding: 34px 0 68px;
+  padding: 34px 0 10px;
 }
 
 .about-personal-panel {
@@ -2097,17 +2075,8 @@ footer { padding: 36px 0; background: var(--bg); }
   place-items: center;
   border-radius: 12px;
   background: var(--accent-tint);
-  color: var(--accent-deep);
-}
-
-.about-personal-icon svg {
-  width: 22px;
-  height: 22px;
-  fill: none;
-  stroke: currentColor;
-  stroke-width: 1.7;
-  stroke-linecap: round;
-  stroke-linejoin: round;
+  font-size: 20px;
+  line-height: 1;
 }
 
 .about-personal-card h3 {
@@ -2126,51 +2095,23 @@ footer { padding: 36px 0; background: var(--bg); }
 
 /* ---------- afsluitende CTA ---------- */
 .about-now-section {
-  padding: 22px 0 82px;
+  padding: 3px 0 82px;
 }
 
-.about-now-cta {
-  min-height: 170px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 40px;
-  padding: 34px 42px;
-  border-radius: 24px;
-  background: linear-gradient(135deg, var(--accent-deep), var(--accent));
-  color: #fff;
-  box-shadow: var(--shadow);
+.about-now-section .wrap {
+  max-width: 1160px;
 }
 
-.about-now-cta-copy {
-  max-width: 600px;
-}
-
-.about-now-cta h2 {
-  font-family: var(--display);
-  font-size: clamp(1.45rem, 2.4vw, 1.85rem);
-  line-height: 1.25;
-  font-weight: 700;
-}
-
-.about-now-cta p {
-  max-width: 54ch;
-  margin-top: 10px;
-  color: rgba(255,255,255,.84);
-  font-size: 14px;
-  line-height: 1.65;
-}
-
-.about-now-cta .btn-primary {
-  flex: 0 0 auto;
+/* Overschrijft de algemene #contact-padding op de Over mij-pagina. */
+.about-page .about-now-section#contact {
+  padding-top: 30px;
+  padding-bottom: 58px;
   margin-top: 0;
-  background: #fff;
-  color: var(--accent-deep);
-  white-space: nowrap;
 }
 
-.about-now-cta .btn-primary:hover {
-  background: var(--bg-soft);
+/* Zelfde CTA-component als "Vaak is het begin het lastigst." */
+.about-now-cta {
+  margin-top: 0;
 }
 
 
@@ -2199,12 +2140,6 @@ footer { padding: 36px 0; background: var(--bg); }
 
   .about-story-hero-copy h1 {
     max-width: 15ch;
-  }
-
-  .about-now-cta {
-    align-items: flex-start;
-    flex-direction: column;
-    gap: 22px;
   }
 }
 
@@ -2249,7 +2184,7 @@ footer { padding: 36px 0; background: var(--bg); }
   }
 
   .about-personal-section {
-    padding-bottom: 48px;
+    padding-bottom: 8px;
   }
 
   .about-personal-panel {
@@ -2266,18 +2201,9 @@ footer { padding: 36px 0; background: var(--bg); }
     margin-top: 12px;
   }
 
-  .about-now-section {
-    padding-bottom: 58px;
-  }
-
-  .about-now-cta {
-    min-height: 0;
-    padding: 26px 22px;
-  }
-
-  .about-now-cta .btn-primary {
-    width: 100%;
-    justify-content: center;
+  .about-page .about-now-section#contact {
+    padding-top: 30px;
+    padding-bottom: 44px;
   }
 }
 
@@ -2831,3 +2757,4 @@ ul.check li::before { content: "✓"; position: absolute; left: 0; color: var(--
   .cookie-banner-actions { flex-direction: column; }
   .cookie-banner-actions .btn { width: 100%; justify-content: center; }
 }
+
