@@ -21,7 +21,7 @@
 
     <div class="nav-links">
       <a href="../#services">Wat ik doe</a>
-      <a href="./">Over mij</a>
+      <a href="../#about">Over mij</a>
 
       <div class="nav-cases">
         <button class="nav-cases-toggle" type="button"
@@ -77,7 +77,7 @@
   <div class="mobile-nav-panel" id="mobile-nav-panel">
     <div class="mobile-nav-inner">
       <a href="../#services">Wat ik doe</a>
-      <a href="./">Over mij</a>
+      <a href="../#about">Over mij</a>
 
       <div class="mobile-cases-nav">
         <button class="mobile-cases-toggle" type="button" aria-expanded="false">
@@ -140,7 +140,7 @@
           <!-- Vervang eventueel door een andere portretfoto -->
           <img src="../images/profielfoto_lichtblauw.jpg" alt="Piene Claessen">
           <div class="about-story-portrait-note">
-            <strong>De korte versie</strong>
+            <strong>TL;DR</strong>
             <p>
               Nieuwsgierig, praktisch en graag dicht op de werkelijkheid. Ik krijg energie van
               complexe vraagstukken terugbrengen tot iets dat mensen kunnen gebruiken.
@@ -210,8 +210,7 @@
       <article class="about-story-chapter reveal">
         <div class="about-story-photo">
           <!-- Vervang dit pad door jouw eigen foto -->
-          <img src="../images/Balkon_blauwe_blouse.JPEG" alt="Piene werkend achter haar laptop">
-          <span class="about-photo-tag">Nieuwsgierigheid</span>
+          <img src="images/studie.JPEG" alt="Piene werkend achter haar laptop">
         </div>
 
         <div class="about-story-copy">
@@ -244,8 +243,7 @@
       <article class="about-story-chapter about-story-chapter-reverse reveal">
         <div class="about-story-photo">
           <!-- Vervang dit pad door jouw Defensie-foto -->
-          <img src="../images/defensie.jpg" alt="Foto uit Pienes tijd bij Defensie">
-          <span class="about-photo-tag">Praktijk</span>
+          <img src="images/defensie.JPEG" alt="Foto uit Pienes tijd bij Defensie">
         </div>
 
         <div class="about-story-copy">
@@ -277,9 +275,7 @@
       <!-- HOOFDSTUK 3 -->
       <article class="about-story-chapter reveal">
         <div class="about-story-photo">
-          <!-- Vervang dit pad door jouw zelfstandige/laptop-foto -->
-          <img src="../images/zelfstandig.jpg" alt="Piene als zelfstandig Data & AI consultant">
-          <span class="about-photo-tag">Zelfstandig</span>
+          <img src="images/ondernemen.JPEG" alt="Piene als zelfstandig Data & AI consultant">
         </div>
 
         <div class="about-story-copy">
@@ -330,63 +326,86 @@
         <div class="about-personal-grid">
 
           <div class="about-personal-card">
-            <div class="about-summary-icon">✈</div>
+            <div class="about-personal-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24">
+                <path d="M2.5 12h19"></path>
+                <path d="m15.5 6.5 6 5.5-6 5.5"></path>
+                <path d="M8.5 8 5 12l3.5 4"></path>
+              </svg>
+            </div>
+
             <h3>Reizen</h3>
+
             <p>
-              Nieuwe plekken uitzoeken doe ik graag. En ja: de planning belandt meestal alsnog in een spreadsheet.
+              Nieuwe plekken uitzoeken doe ik graag. En ja: de planning
+              belandt meestal alsnog in een spreadsheet.
             </p>
           </div>
 
           <div class="about-personal-card">
-            <div class="about-summary-icon">🥊</div>
+            <div class="about-personal-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24">
+                <path d="M5 13.5V10a3 3 0 0 1 3-3h3"></path>
+                <path d="M11 7V5.8A1.8 1.8 0 0 1 12.8 4h1.4A1.8 1.8 0 0 1 16 5.8V7"></path>
+                <path d="M16 7h1a2 2 0 0 1 2 2v4.5"></path>
+                <path d="M5 13.5c0 3.6 2.9 6.5 6.5 6.5H14c2.8 0 5-2.2 5-5v-1.5H5Z"></path>
+              </svg>
+            </div>
+
             <h3>Boksen</h3>
+
             <p>
-              Als ik mijn hoofd leeg wil maken, is de boksschool een vrij effectieve plek.
+              Als ik mijn hoofd leeg wil maken, is de boksschool
+              een vrij effectieve plek.
             </p>
           </div>
 
           <div class="about-personal-card">
-            <div class="about-summary-icon">△</div>
+            <div class="about-personal-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24">
+                <path d="m3 19 6.5-11 3.2 5.2L15 10l6 9H3Z"></path>
+                <path d="m8 10.5 1.5 1.8 1.2-1.2"></path>
+              </svg>
+            </div>
+
             <h3>Bergen</h3>
+
             <p>
-              Volledig ontspannen lukt opvallend goed als het pad omhoog loopt.
+              Volledig ontspannen lukt opvallend goed als het pad
+              omhoog loopt.
             </p>
           </div>
 
         </div>
+
       </div>
     </div>
   </section>
 
-
-  <!-- WAAR IK NU STA -->
+  <!-- AFSLUITENDE CTA -->
   <section class="about-now-section" id="contact">
     <div class="wrap">
-      <div class="about-now-grid reveal">
 
-        <div class="about-now-main">
-          <span class="eyebrow"><span class="dot"></span> Vandaag</span>
-          <h2>Data & AI Partner voor organisaties die verder willen dan een los project.</h2>
+      <div class="about-now-cta reveal">
+
+        <div class="about-now-cta-copy">
+          <h2>Benieuwd of we een klik hebben?</h2>
 
           <p>
-            Mijn ervaring komt nu samen in langdurige samenwerkingen waarin strategie en uitvoering
-            niet los van elkaar staan. Ik help bepalen wat nodig is, bouw mee en zorg dat wat we
-            maken ook echt onderdeel wordt van hoe de organisatie werkt.
+            Vertel me waar je tegenaan loopt.
+            Je hoeft nog niet precies te weten wat je nodig hebt.
           </p>
         </div>
 
-        <div class="about-now-cta">
-          <h3>Benieuwd of we een klik hebben?</h3>
-          <p>
-            Vertel me waar je tegenaan loopt. Je hoeft nog niet precies te weten wat je nodig hebt.
-          </p>
-
-          <a href="https://calendly.com/piene-claessentech/30min" class="btn btn-primary">
-            Plan een kennismaking →
-          </a>
-        </div>
+        <a
+          href="https://calendly.com/piene-claessentech/30min"
+          class="btn btn-primary"
+        >
+          Plan een kennismaking →
+        </a>
 
       </div>
+
     </div>
   </section>
 
