@@ -16,67 +16,68 @@
 
 <header class="site-header">
   <nav class="wrap site-nav" aria-label="Hoofdnavigatie">
-    <a href="#top" class="brand">
-      <img src="images/logo.png" alt="Claessen Tech">
+    <a href="/#top" class="brand">
+      <img src="/images/logo.png" alt="Claessen Tech">
     </a>
 
     <div class="nav-links">
-      <a href="#services">Wat ik doe</a>
-      <a href="#about">Over mij</a>
-      <a href="#cases">Cases</a>
-      <a href="#contact">Contact</a>
+      <a href="/#services">Wat ik doe</a>
+      <a href="/overmij/">Over mij</a>
 
-      <a href="data-governance-checklist/" class="nav-scan">
-        <svg viewBox="0 0 24 24" aria-hidden="true">
-          <circle cx="11" cy="11" r="6.5"></circle>
-          <path d="M16 16l4.2 4.2"></path>
-        </svg>
+      <div class="nav-cases">
+        <button class="nav-cases-toggle" type="button" aria-expanded="false" aria-haspopup="true">
+          <span>Cases</span>
+          <svg viewBox="0 0 20 20" aria-hidden="true"><path d="M6 8l4 4 4-4"></path></svg>
+        </button>
+        <div class="nav-cases-menu" aria-label="Cases">
+          <a href="/cases/executive-dashboards/">Executive dashboards</a>
+          <a href="/cases/helikopter-onderhoud/">Helikopteronderhoud</a>
+          <a href="/cases/digitaliseringsportaal/">Digitaliseringsportaal</a>
+        </div>
+      </div>
+
+      <a href="/#contact">Contact</a>
+      <a href="/data-governance-checklist/" class="nav-scan">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="6.5"></circle><path d="M16 16l4.2 4.2"></path></svg>
         <span>Doe de gratis scan</span>
       </a>
-
-      <a href="https://calendly.com/piene-claessentech/30min" class="nav-cta">
-        Plan een kennismaking
-      </a>
+      <a href="https://calendly.com/piene-claessentech/30min" class="nav-cta">Plan een kennismaking</a>
     </div>
 
     <div class="nav-mobile-actions">
-      <a href="data-governance-checklist/" class="nav-scan nav-scan-mobile" aria-label="Doe de gratis scan">
-        <svg viewBox="0 0 24 24" aria-hidden="true">
-          <circle cx="11" cy="11" r="6.5"></circle>
-          <path d="M16 16l4.2 4.2"></path>
-        </svg>
+      <a href="/data-governance-checklist/" class="nav-scan nav-scan-mobile" aria-label="Doe de gratis scan">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="6.5"></circle><path d="M16 16l4.2 4.2"></path></svg>
         <span>Scan</span>
       </a>
-
-      <button class="menu-toggle" type="button"
-              aria-expanded="false"
-              aria-controls="mobile-nav-panel"
-              aria-label="Open menu">
-        <span></span>
-        <span></span>
-        <span></span>
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="mobile-nav-panel" aria-label="Open menu">
+        <span></span><span></span><span></span>
       </button>
     </div>
   </nav>
 
   <div class="mobile-nav-panel" id="mobile-nav-panel">
     <div class="mobile-nav-inner">
-      <a href="#services">Wat ik doe</a>
-      <a href="#about">Over mij</a>
-      <a href="#cases">Cases</a>
-      <a href="#contact">Contact</a>
+      <a href="/#services">Wat ik doe</a>
+      <a href="/overmij/">Over mij</a>
 
-      <a href="data-governance-checklist/" class="mobile-scan-link">
-        <svg viewBox="0 0 24 24" aria-hidden="true">
-          <circle cx="11" cy="11" r="6.5"></circle>
-          <path d="M16 16l4.2 4.2"></path>
-        </svg>
+      <div class="mobile-cases-nav">
+        <button class="mobile-cases-toggle" type="button" aria-expanded="false">
+          <span>Cases</span>
+          <svg viewBox="0 0 20 20" aria-hidden="true"><path d="M6 8l4 4 4-4"></path></svg>
+        </button>
+        <div class="mobile-cases-menu">
+          <a href="/cases/executive-dashboards/">Executive dashboards</a>
+          <a href="/cases/helikopter-onderhoud/">Helikopteronderhoud</a>
+          <a href="/cases/digitaliseringsportaal/">Digitaliseringsportaal</a>
+        </div>
+      </div>
+
+      <a href="/#contact">Contact</a>
+      <a href="/data-governance-checklist/" class="mobile-scan-link">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="6.5"></circle><path d="M16 16l4.2 4.2"></path></svg>
         Doe de gratis scan
       </a>
-
-      <a href="https://calendly.com/piene-claessentech/30min" class="mobile-nav-cta">
-        Plan een kennismaking
-      </a>
+      <a href="https://calendly.com/piene-claessentech/30min" class="mobile-nav-cta">Plan een kennismaking</a>
     </div>
   </div>
 </header>
@@ -91,17 +92,47 @@
         <p class="lede">Data verspreid over vijf systemen die elkaar tegenspreken. Uren per week verdwijnen in handmatig werk. Beslissingen worden genomen op gevoel, niet op inzicht. Ik help organisaties om dat om te draaien: met een nuchtere aanpak die begint bij de basis, niet bij de hype.</p>
         <div class="hero-actions">
           <a href="https://calendly.com/piene-claessentech/30min" class="btn btn-primary">Plan een kennismaking</a>
-          <a href="#services" class="btn btn-ghost">Ondek mijn aanpak</a>
+          <a href="#services" class="btn btn-ghost">Ontdek mijn aanpak</a>
         </div>
-        <a href="data-governance-checklist/" class="hero-scan-note">
-          <span class="hero-scan-note-icon">◎</span>
-          <span>Nieuwsgierig waar je nu staat? <strong>Doe de gratis Data Governance Scan →</strong></span>
+        <a href="/data-governance-checklist/" class="hero-scan-note">
+          <span class="hero-scan-note-icon" aria-hidden="true">
+            <svg viewBox="0 0 32 32">
+              <circle cx="14" cy="14" r="7"></circle>
+              <path d="M19.5 19.5 25 25"></path>
+              <path d="M14 2.5v3"></path>
+              <path d="M14 22.5v3"></path>
+              <path d="M2.5 14h3"></path>
+              <path d="M22.5 14h3"></path>
+              <path d="m5.8 5.8 2.1 2.1"></path>
+              <path d="m20.1 20.1 2.1 2.1"></path>
+              <path d="m22.2 5.8-2.1 2.1"></path>
+              <path d="m7.9 20.1-2.1 2.1"></path>
+            </svg>
+          </span>
+          <span class="hero-scan-note-copy">
+            Nieuwsgierig waar je nu staat?
+            <strong>Doe de gratis Data Governance Scan →</strong>
+          </span>
         </a>
       </div>
 
       <div class="portrait-wrap">
         <div class="portrait" aria-hidden="true">
-          <img src="images/Balkon_blauwe_blouse.JPEG">
+          <img
+  src="/images/piene-claessen-profiel-800.webp"
+  srcset="
+    /images/piene-claessen-profiel-500.webp 500w,
+    /images/piene-claessen-profiel-800.webp 800w,
+    /images/piene-claessen-profiel-1200.webp 1200w
+  "
+  sizes="(max-width: 980px) 90vw, 382px"
+  alt="Piene Claessen"
+  class="portrait-img"
+  width="1200"
+  height="1200"
+  fetchpriority="high"
+  decoding="async"
+>
         </div>
       </div>
     </div>
@@ -128,7 +159,7 @@
             <h4><span>→</span> Data &amp; AI Scan</h4>
             <p>Overzicht, prioriteiten en een concreet plan om de juiste keuzes te maken.</p>
           </div>
-          <a href="data-governance-checklist/" class="need-scan-link">
+          <a href="/data-governance-checklist/" class="need-scan-link">
             <span>↗</span> Eerst zelf checken? Doe de gratis scan
           </a>
         </article>
@@ -246,7 +277,7 @@
           <p>Al dat schakelen zit blijkbaar in mijn systeem, want ook buiten werktijd hou ik niet van stilzitten. Je vindt me eerder in de boksschool of onderweg naar een nieuwe bestemming dan op de bank. Nieuwsgierig naar het volledige verhaal?</p>
         </div>
         <div class="about-links">
-          <a href="overmij/" class="more-link">Lees hier meer over mij →</a>
+          <a href="/overmij/" class="more-link">Lees hier meer over mij →</a>
         </div>
       </div>
     </div>
@@ -311,7 +342,8 @@
           </div>
         </div>
       </div>
-    </section>
+    </div>
+  </section>
 
   <!-- CASES -->
   <section id="cases">
@@ -324,7 +356,7 @@
       </div>
 
       <!-- featured case: huidige, zelfstandige opdracht -->
-      <a href="cases/executive-dashboards/" class="case-featured reveal">
+      <a href="/cases/executive-dashboards/" class="case-featured reveal">
         <div class="case-tags-row">
           <span class="tag fill">👤 Huidige opdracht</span>
           <span class="tag outline">📅 12+ maanden</span>
@@ -341,20 +373,20 @@
 
       <!-- secondary cases: eerdere rollen -->
       <div class="case-grid reveal">
-        <a href="cases/helikopter-onderhoud/" class="case-card">
+        <a href="/cases/helikopter-onderhoud/" class="case-card">
           <span class="tag outline">👤 Eerdere rol · Defensie</span>
           <div class="case-body">
             <div class="case-icon" aria-hidden="true">🚁</div>
-            <h3>Voorspellen wanneer helikopteronderhoud nodig is</h3>
+            <h3>Voorspellen wanneer onderhoud aan een helikopter nodig is</h3>
             <span class="case-link">Bekijk de case →</span>
           </div>
         </a>
 
-        <a href="#" class="case-card">
+        <a href="/cases/digitaliseringsportaal/" class="case-card">
           <span class="tag outline">👤 Eerdere rol · Overheid</span>
           <div class="case-body">
             <div class="case-icon" aria-hidden="true">🎛️</div>
-            <h3>Van data naar stuurinformatie voor besluitvorming</h3>
+            <h3>Digitaliseringsportaal voor een slimmer en consistenter proces</h3>
             <span class="case-link">Bekijk de case →</span>
           </div>
         </a>
@@ -408,53 +440,70 @@
 </footer>
 
 <script>
-  const els = document.querySelectorAll('.reveal');
-  const io = new IntersectionObserver((entries)=>{
-    entries.forEach(e=>{
-      if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); }
-    });
-  }, {threshold:0.12});
-
-  els.forEach(el=>io.observe(el));
-
-  document.querySelectorAll('a.brand[href="#top"]').forEach(link => {
-    link.addEventListener('click', (e) => {
-      e.preventDefault();
-      window.scrollTo({ top: 0, behavior: 'smooth' });
-    });
-  });
-</script>
-
-
-<script>
+document.addEventListener('DOMContentLoaded', function () {
   const menuToggle = document.querySelector('.menu-toggle');
   const mobilePanel = document.querySelector('.mobile-nav-panel');
+  const desktopCases = document.querySelector('.nav-cases');
+  const desktopCasesToggle = document.querySelector('.nav-cases-toggle');
+  const mobileCases = document.querySelector('.mobile-cases-nav');
+  const mobileCasesToggle = document.querySelector('.mobile-cases-toggle');
+
+  function setMobileMenu(open) {
+    if (!menuToggle || !mobilePanel) return;
+    menuToggle.setAttribute('aria-expanded', String(open));
+    menuToggle.setAttribute('aria-label', open ? 'Sluit menu' : 'Open menu');
+    document.body.classList.toggle('menu-open', open);
+    if (!open && mobileCases && mobileCasesToggle) {
+      mobileCases.classList.remove('is-open');
+      mobileCasesToggle.setAttribute('aria-expanded', 'false');
+    }
+  }
 
   if (menuToggle && mobilePanel) {
-    const setMenu = (open) => {
-      menuToggle.setAttribute('aria-expanded', String(open));
-      menuToggle.setAttribute('aria-label', open ? 'Sluit menu' : 'Open menu');
-      document.body.classList.toggle('menu-open', open);
-    };
-
-    menuToggle.addEventListener('click', () => {
-      setMenu(menuToggle.getAttribute('aria-expanded') !== 'true');
+    menuToggle.addEventListener('click', function () {
+      setMobileMenu(menuToggle.getAttribute('aria-expanded') !== 'true');
     });
-
-    mobilePanel.querySelectorAll('a').forEach(link => {
-      link.addEventListener('click', () => setMenu(false));
+    mobilePanel.querySelectorAll('a').forEach(function (link) {
+      link.addEventListener('click', function () { setMobileMenu(false); });
     });
-
-    document.addEventListener('keydown', (event) => {
-      if (event.key === 'Escape') setMenu(false);
-    });
-
-    window.addEventListener('resize', () => {
-      if (window.innerWidth > 960) setMenu(false);
+    window.addEventListener('resize', function () {
+      if (window.innerWidth > 1180) setMobileMenu(false);
     });
   }
-</script>
 
+  if (mobileCases && mobileCasesToggle) {
+    mobileCasesToggle.addEventListener('click', function () {
+      const open = !mobileCases.classList.contains('is-open');
+      mobileCases.classList.toggle('is-open', open);
+      mobileCasesToggle.setAttribute('aria-expanded', String(open));
+    });
+  }
+
+  if (desktopCases && desktopCasesToggle) {
+    desktopCasesToggle.addEventListener('click', function (event) {
+      event.stopPropagation();
+      const open = !desktopCases.classList.contains('is-open');
+      desktopCases.classList.toggle('is-open', open);
+      desktopCasesToggle.setAttribute('aria-expanded', String(open));
+    });
+    document.addEventListener('click', function (event) {
+      if (!desktopCases.contains(event.target)) {
+        desktopCases.classList.remove('is-open');
+        desktopCasesToggle.setAttribute('aria-expanded', 'false');
+      }
+    });
+  }
+
+  document.addEventListener('keydown', function (event) {
+    if (event.key !== 'Escape') return;
+    setMobileMenu(false);
+    if (desktopCases && desktopCasesToggle) {
+      desktopCases.classList.remove('is-open');
+      desktopCasesToggle.setAttribute('aria-expanded', 'false');
+    }
+  });
+});
+</script>
 <script src="script.js"></script>
 <script src="cookie-consent.js"></script>
 

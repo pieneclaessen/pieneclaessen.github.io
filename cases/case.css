@@ -544,16 +544,23 @@
   }
 }
 
+/* ============================================================
+   Case hero sizing
+   Long titles stay inside the text column and wrap safely.
+   ============================================================ */
 
-/* Case hero sizing — supports long titles without overlapping the image */
 .case-hero-grid {
   grid-template-columns: minmax(0, 1fr) minmax(0, 1.08fr);
   gap: 48px;
 }
 
 .case-hero-copy,
-.case-hero-media {
+.case-hero-image {
   min-width: 0;
+}
+
+.case-hero-copy {
+  overflow: hidden;
 }
 
 .case-hero h1 {
@@ -566,31 +573,104 @@
   hyphens: none;
 }
 
-.case-hero-media {
+.case-hero-image {
   position: relative;
   z-index: 1;
+  width: 100%;
+  max-width: 100%;
 }
 
-.case-hero-media img {
+.case-hero-image img {
   display: block;
   width: 100%;
   max-width: 100%;
   object-fit: cover;
 }
 
-/* Works for 3 metadata fields (employment cases) and 4 (independent cases) */
+/* Works for 3 metadata fields and 4 metadata fields. */
 .case-meta {
   grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
 }
 
 @media (max-width: 1180px) and (min-width: 981px) {
   .case-hero-grid {
-    grid-template-columns: minmax(0, .92fr) minmax(0, 1.08fr);
+    grid-template-columns: minmax(0, .95fr) minmax(0, 1.05fr);
     gap: 34px;
   }
 
   .case-hero h1 {
-    font-size: clamp(2.15rem, 3.55vw, 2.9rem);
-    max-width: 16ch;
+    max-width: 100%;
+    font-size: clamp(2rem, 3.25vw, 2.75rem);
+  }
+}
+
+@media (max-width: 980px) {
+  .case-hero-grid {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .case-hero-copy,
+  .case-hero-image {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .case-hero h1 {
+    max-width: 18ch;
+    overflow-wrap: normal;
+    hyphens: none;
+  }
+}
+
+@media (max-width: 520px) {
+  .case-hero {
+    padding-top: 24px;
+  }
+
+  .case-hero-grid {
+    gap: 24px;
+  }
+
+  .case-hero h1 {
+    max-width: 100%;
+    font-size: clamp(1.8rem, 9vw, 2.35rem);
+    line-height: 1.12;
+    letter-spacing: -.025em;
+    overflow-wrap: normal;
+    hyphens: none;
+  }
+
+  .case-hero-image {
+    min-height: 0;
+    aspect-ratio: 16 / 10;
+    border-radius: 16px;
+  }
+}
+
+
+/* ============================================================
+   Long case titles — natural wrapping, no awkward hyphenation
+   ============================================================ */
+
+.case-hero h1 {
+  overflow-wrap: normal;
+  word-break: normal;
+  hyphens: none;
+  text-wrap: balance;
+}
+
+@media (max-width: 980px) {
+  .case-hero h1 {
+    max-width: 22ch;
+  }
+}
+
+@media (max-width: 520px) {
+  .case-hero h1 {
+    max-width: 100%;
+    font-size: clamp(1.75rem, 8.4vw, 2.25rem);
+    line-height: 1.13;
+    text-wrap: pretty;
   }
 }

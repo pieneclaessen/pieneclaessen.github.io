@@ -15,14 +15,30 @@
 
 <header class="site-header">
   <nav class="wrap site-nav" aria-label="Hoofdnavigatie">
-    <a href="../" class="brand">
+    <a href="../" class="brand" aria-label="Claessen Tech home">
       <img src="../images/logo.png" alt="Claessen Tech">
     </a>
 
     <div class="nav-links">
       <a href="../#services">Wat ik doe</a>
       <a href="./">Over mij</a>
-      <a href="../#cases">Cases</a>
+
+      <div class="nav-cases">
+        <button class="nav-cases-toggle" type="button"
+                aria-expanded="false" aria-haspopup="true">
+          <span>Cases</span>
+          <svg viewBox="0 0 20 20" aria-hidden="true">
+            <path d="M6 8l4 4 4-4"></path>
+          </svg>
+        </button>
+
+        <div class="nav-cases-menu" aria-label="Cases">
+          <a href="../cases/executive-dashboards/">Executive dashboards</a>
+          <a href="../cases/helikopter-onderhoud/">Helikopteronderhoud</a>
+          <a href="../cases/digitaliseringsportaal/">Digitaliseringsportaal</a>
+        </div>
+      </div>
+
       <a href="../#contact">Contact</a>
 
       <a href="../data-governance-checklist/" class="nav-scan">
@@ -62,7 +78,22 @@
     <div class="mobile-nav-inner">
       <a href="../#services">Wat ik doe</a>
       <a href="./">Over mij</a>
-      <a href="../#cases">Cases</a>
+
+      <div class="mobile-cases-nav">
+        <button class="mobile-cases-toggle" type="button" aria-expanded="false">
+          <span>Cases</span>
+          <svg viewBox="0 0 20 20" aria-hidden="true">
+            <path d="M6 8l4 4 4-4"></path>
+          </svg>
+        </button>
+
+        <div class="mobile-cases-menu">
+          <a href="../cases/executive-dashboards/">Executive dashboards</a>
+          <a href="../cases/helikopter-onderhoud/">Helikopteronderhoud</a>
+          <a href="../cases/digitaliseringsportaal/">Digitaliseringsportaal</a>
+        </div>
+      </div>
+
       <a href="../#contact">Contact</a>
 
       <a href="../data-governance-checklist/" class="mobile-scan-link">
@@ -385,49 +416,98 @@
 
 
 <script>
-  const els = document.querySelectorAll('.reveal');
+document.addEventListener('DOMContentLoaded', function () {
+  const revealElements = document.querySelectorAll('.reveal');
 
-  const io = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('in');
-        io.unobserve(entry.target);
-      }
-    });
-  }, { threshold: 0.12 });
+  if (revealElements.length) {
+    const revealObserver = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('in');
+          revealObserver.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.12 });
 
-  els.forEach(el => io.observe(el));
-</script>
-
-
-<script>
-  const menuToggle = document.querySelector('.menu-toggle');
-  const mobilePanel = document.querySelector('.mobile-nav-panel');
-
-  if (menuToggle && mobilePanel) {
-    const setMenu = (open) => {
-      menuToggle.setAttribute('aria-expanded', String(open));
-      menuToggle.setAttribute('aria-label', open ? 'Sluit menu' : 'Open menu');
-      document.body.classList.toggle('menu-open', open);
-    };
-
-    menuToggle.addEventListener('click', () => {
-      setMenu(menuToggle.getAttribute('aria-expanded') !== 'true');
-    });
-
-    mobilePanel.querySelectorAll('a').forEach(link => {
-      link.addEventListener('click', () => setMenu(false));
-    });
-
-    document.addEventListener('keydown', (event) => {
-      if (event.key === 'Escape') setMenu(false);
-    });
-
-    window.addEventListener('resize', () => {
-      if (window.innerWidth > 960) setMenu(false);
+    revealElements.forEach(function (el) {
+      revealObserver.observe(el);
     });
   }
-</script>
 
+  const menuToggle = document.querySelector('.menu-toggle');
+  const mobilePanel = document.querySelector('.mobile-nav-panel');
+  const desktopCases = document.querySelector('.nav-cases');
+  const desktopCasesToggle = document.querySelector('.nav-cases-toggle');
+  const mobileCases = document.querySelector('.mobile-cases-nav');
+  const mobileCasesToggle = document.querySelector('.mobile-cases-toggle');
+
+  function setMobileMenu(open) {
+    if (!menuToggle || !mobilePanel) return;
+
+    menuToggle.setAttribute('aria-expanded', String(open));
+    menuToggle.setAttribute('aria-label', open ? 'Sluit menu' : 'Open menu');
+    document.body.classList.toggle('menu-open', open);
+
+    if (!open && mobileCases && mobileCasesToggle) {
+      mobileCases.classList.remove('is-open');
+      mobileCasesToggle.setAttribute('aria-expanded', 'false');
+    }
+  }
+
+  if (menuToggle && mobilePanel) {
+    menuToggle.addEventListener('click', function () {
+      setMobileMenu(menuToggle.getAttribute('aria-expanded') !== 'true');
+    });
+
+    mobilePanel.querySelectorAll('a').forEach(function (link) {
+      link.addEventListener('click', function () {
+        setMobileMenu(false);
+      });
+    });
+
+    window.addEventListener('resize', function () {
+      if (window.innerWidth > 1180) {
+        setMobileMenu(false);
+      }
+    });
+  }
+
+  if (mobileCases && mobileCasesToggle) {
+    mobileCasesToggle.addEventListener('click', function () {
+      const open = !mobileCases.classList.contains('is-open');
+      mobileCases.classList.toggle('is-open', open);
+      mobileCasesToggle.setAttribute('aria-expanded', String(open));
+    });
+  }
+
+  if (desktopCases && desktopCasesToggle) {
+    desktopCasesToggle.addEventListener('click', function (event) {
+      event.stopPropagation();
+
+      const open = !desktopCases.classList.contains('is-open');
+      desktopCases.classList.toggle('is-open', open);
+      desktopCasesToggle.setAttribute('aria-expanded', String(open));
+    });
+
+    document.addEventListener('click', function (event) {
+      if (!desktopCases.contains(event.target)) {
+        desktopCases.classList.remove('is-open');
+        desktopCasesToggle.setAttribute('aria-expanded', 'false');
+      }
+    });
+  }
+
+  document.addEventListener('keydown', function (event) {
+    if (event.key !== 'Escape') return;
+
+    setMobileMenu(false);
+
+    if (desktopCases && desktopCasesToggle) {
+      desktopCases.classList.remove('is-open');
+      desktopCasesToggle.setAttribute('aria-expanded', 'false');
+    }
+  });
+});
+</script>
 </body>
 </html>

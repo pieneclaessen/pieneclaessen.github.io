@@ -22,22 +22,54 @@
     <div class="nav-links">
       <a href="../#services">Wat ik doe</a>
       <a href="../overmij/">Over mij</a>
-      <a href="../#cases">Cases</a>
+
+      <div class="nav-cases">
+        <button class="nav-cases-toggle" type="button"
+                aria-expanded="false" aria-haspopup="true">
+          <span>Cases</span>
+          <svg viewBox="0 0 20 20" aria-hidden="true">
+            <path d="M6 8l4 4 4-4"></path>
+          </svg>
+        </button>
+
+        <div class="nav-cases-menu" aria-label="Cases">
+          <a href="../cases/executive-dashboards/">Executive dashboards</a>
+          <a href="../cases/helikopter-onderhoud/">Helikopteronderhoud</a>
+          <a href="../cases/digitaliseringsportaal/">Digitaliseringsportaal</a>
+        </div>
+      </div>
+
       <a href="../#contact">Contact</a>
-      <a href="./" class="nav-scan" aria-current="page">
-        <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="6"></circle><path d="m16 16 4 4"></path></svg>
+
+      <a href="./" class="nav-scan">
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+          <circle cx="11" cy="11" r="6.5"></circle>
+          <path d="M16 16l4.2 4.2"></path>
+        </svg>
         <span>Doe de gratis scan</span>
       </a>
-      <a href="https://calendly.com/piene-claessentech/30min" class="nav-cta">Plan een kennismaking</a>
+
+      <a href="https://calendly.com/piene-claessentech/30min" class="nav-cta">
+        Plan een kennismaking
+      </a>
     </div>
 
     <div class="nav-mobile-actions">
-      <a href="./" class="nav-scan nav-scan-mobile" aria-label="Doe de gratis scan" aria-current="page">
-        <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="6"></circle><path d="m16 16 4 4"></path></svg>
+      <a href="./" class="nav-scan nav-scan-mobile" aria-label="Doe de gratis scan">
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+          <circle cx="11" cy="11" r="6.5"></circle>
+          <path d="M16 16l4.2 4.2"></path>
+        </svg>
         <span>Scan</span>
       </a>
-      <button class="menu-toggle" type="button" aria-label="Menu openen" aria-expanded="false" aria-controls="mobile-nav-panel">
-        <span></span><span></span><span></span>
+
+      <button class="menu-toggle" type="button"
+              aria-expanded="false"
+              aria-controls="mobile-nav-panel"
+              aria-label="Open menu">
+        <span></span>
+        <span></span>
+        <span></span>
       </button>
     </div>
   </nav>
@@ -46,13 +78,35 @@
     <div class="mobile-nav-inner">
       <a href="../#services">Wat ik doe</a>
       <a href="../overmij/">Over mij</a>
-      <a href="../#cases">Cases</a>
+
+      <div class="mobile-cases-nav">
+        <button class="mobile-cases-toggle" type="button" aria-expanded="false">
+          <span>Cases</span>
+          <svg viewBox="0 0 20 20" aria-hidden="true">
+            <path d="M6 8l4 4 4-4"></path>
+          </svg>
+        </button>
+
+        <div class="mobile-cases-menu">
+          <a href="../cases/executive-dashboards/">Executive dashboards</a>
+          <a href="../cases/helikopter-onderhoud/">Helikopteronderhoud</a>
+          <a href="../cases/digitaliseringsportaal/">Digitaliseringsportaal</a>
+        </div>
+      </div>
+
       <a href="../#contact">Contact</a>
-      <a href="./" class="mobile-scan-link" aria-current="page">
-        <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="6"></circle><path d="m16 16 4 4"></path></svg>
+
+      <a href="./" class="mobile-scan-link">
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+          <circle cx="11" cy="11" r="6.5"></circle>
+          <path d="M16 16l4.2 4.2"></path>
+        </svg>
         Doe de gratis scan
       </a>
-      <a href="https://calendly.com/piene-claessentech/30min" class="mobile-nav-cta">Plan een kennismaking</a>
+
+      <a href="https://calendly.com/piene-claessentech/30min" class="mobile-nav-cta">
+        Plan een kennismaking
+      </a>
     </div>
   </div>
 </header>
@@ -197,7 +251,7 @@ const data = [
     intro:"Een dashboard is pas nuttig als niemand eerst twijfelt aan de cijfers erin — of aan wat ze precies betekenen.",
     items:[
       "Kernbegrippen (zoals 'actieve klant' of 'omzet') zijn organisatiebreed hetzelfde gedefinieerd.",
-      "Er is een duidelijke “single source of truth” per belangrijke KPI.",
+      "Er is een duidelijke 'single source of truth' per belangrijke KPI.",
       "Afwijkende cijfers tussen systemen worden actief gesignaleerd, niet toevallig ontdekt.",
       "Nieuwe data wordt gecontroleerd op volledigheid en consistentie voordat die gebruikt wordt."
     ]
@@ -358,31 +412,82 @@ updateScores();
 
 </script>
 
-<script>
-const menuToggle = document.querySelector('.menu-toggle');
-const mobilePanel = document.getElementById('mobile-nav-panel');
-
-if (menuToggle && mobilePanel) {
-  const closeMenu = () => {
-    document.body.classList.remove('menu-open');
-    menuToggle.setAttribute('aria-expanded', 'false');
-  };
-
-  menuToggle.addEventListener('click', () => {
-    const open = document.body.classList.toggle('menu-open');
-    menuToggle.setAttribute('aria-expanded', open ? 'true' : 'false');
-  });
-
-  mobilePanel.querySelectorAll('a').forEach(link => link.addEventListener('click', closeMenu));
-  document.addEventListener('keydown', event => {
-    if (event.key === 'Escape') closeMenu();
-  });
-  window.addEventListener('resize', () => {
-    if (window.innerWidth > 1180) closeMenu();
-  });
-}
-</script>
-
 <script src="../cookie-consent.js"></script>
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+  const menuToggle = document.querySelector('.menu-toggle');
+  const mobilePanel = document.querySelector('.mobile-nav-panel');
+  const desktopCases = document.querySelector('.nav-cases');
+  const desktopCasesToggle = document.querySelector('.nav-cases-toggle');
+  const mobileCases = document.querySelector('.mobile-cases-nav');
+  const mobileCasesToggle = document.querySelector('.mobile-cases-toggle');
+
+  function setMobileMenu(open) {
+    if (!menuToggle || !mobilePanel) return;
+
+    menuToggle.setAttribute('aria-expanded', String(open));
+    menuToggle.setAttribute('aria-label', open ? 'Sluit menu' : 'Open menu');
+    document.body.classList.toggle('menu-open', open);
+
+    if (!open && mobileCases && mobileCasesToggle) {
+      mobileCases.classList.remove('is-open');
+      mobileCasesToggle.setAttribute('aria-expanded', 'false');
+    }
+  }
+
+  if (menuToggle && mobilePanel) {
+    menuToggle.addEventListener('click', function () {
+      setMobileMenu(menuToggle.getAttribute('aria-expanded') !== 'true');
+    });
+
+    mobilePanel.querySelectorAll('a').forEach(function (link) {
+      link.addEventListener('click', function () {
+        setMobileMenu(false);
+      });
+    });
+
+    window.addEventListener('resize', function () {
+      if (window.innerWidth > 1180) {
+        setMobileMenu(false);
+      }
+    });
+  }
+
+  if (mobileCases && mobileCasesToggle) {
+    mobileCasesToggle.addEventListener('click', function () {
+      const open = !mobileCases.classList.contains('is-open');
+      mobileCases.classList.toggle('is-open', open);
+      mobileCasesToggle.setAttribute('aria-expanded', String(open));
+    });
+  }
+
+  if (desktopCases && desktopCasesToggle) {
+    desktopCasesToggle.addEventListener('click', function (event) {
+      event.stopPropagation();
+      const open = !desktopCases.classList.contains('is-open');
+      desktopCases.classList.toggle('is-open', open);
+      desktopCasesToggle.setAttribute('aria-expanded', String(open));
+    });
+
+    document.addEventListener('click', function (event) {
+      if (!desktopCases.contains(event.target)) {
+        desktopCases.classList.remove('is-open');
+        desktopCasesToggle.setAttribute('aria-expanded', 'false');
+      }
+    });
+  }
+
+  document.addEventListener('keydown', function (event) {
+    if (event.key !== 'Escape') return;
+
+    setMobileMenu(false);
+
+    if (desktopCases && desktopCasesToggle) {
+      desktopCases.classList.remove('is-open');
+      desktopCasesToggle.setAttribute('aria-expanded', 'false');
+    }
+  });
+});
+</script>
 </body>
 </html>
