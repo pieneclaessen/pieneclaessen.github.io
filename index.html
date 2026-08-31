@@ -14,18 +14,71 @@
 </head>
 <body>
 
-<header>
-  <nav class="wrap">
-    <a href="#top" class="brand"><img src="images/logo.png" alt="Claessen Tech"></a>
+<header class="site-header">
+  <nav class="wrap site-nav" aria-label="Hoofdnavigatie">
+    <a href="#top" class="brand">
+      <img src="images/logo.png" alt="Claessen Tech">
+    </a>
+
     <div class="nav-links">
       <a href="#services">Wat ik doe</a>
       <a href="#about">Over mij</a>
-      <a href="#approach">Werkwijze</a>
+      <a href="#cases">Cases</a>
       <a href="#contact">Contact</a>
-      <a href="data-governance-checklist/">Data governance scan</a>
-      <a href="https://calendly.com/piene-claessentech/30min" class="nav-cta">Plan een kennismaking</a>
+
+      <a href="data-governance-checklist/" class="nav-scan">
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+          <circle cx="11" cy="11" r="6.5"></circle>
+          <path d="M16 16l4.2 4.2"></path>
+        </svg>
+        <span>Doe de gratis scan</span>
+      </a>
+
+      <a href="https://calendly.com/piene-claessentech/30min" class="nav-cta">
+        Plan een kennismaking
+      </a>
+    </div>
+
+    <div class="nav-mobile-actions">
+      <a href="data-governance-checklist/" class="nav-scan nav-scan-mobile" aria-label="Doe de gratis scan">
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+          <circle cx="11" cy="11" r="6.5"></circle>
+          <path d="M16 16l4.2 4.2"></path>
+        </svg>
+        <span>Scan</span>
+      </a>
+
+      <button class="menu-toggle" type="button"
+              aria-expanded="false"
+              aria-controls="mobile-nav-panel"
+              aria-label="Open menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
     </div>
   </nav>
+
+  <div class="mobile-nav-panel" id="mobile-nav-panel">
+    <div class="mobile-nav-inner">
+      <a href="#services">Wat ik doe</a>
+      <a href="#about">Over mij</a>
+      <a href="#cases">Cases</a>
+      <a href="#contact">Contact</a>
+
+      <a href="data-governance-checklist/" class="mobile-scan-link">
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+          <circle cx="11" cy="11" r="6.5"></circle>
+          <path d="M16 16l4.2 4.2"></path>
+        </svg>
+        Doe de gratis scan
+      </a>
+
+      <a href="https://calendly.com/piene-claessentech/30min" class="mobile-nav-cta">
+        Plan een kennismaking
+      </a>
+    </div>
+  </div>
 </header>
 
 <main id="top">
@@ -40,6 +93,10 @@
           <a href="https://calendly.com/piene-claessentech/30min" class="btn btn-primary">Plan een kennismaking</a>
           <a href="#services" class="btn btn-ghost">Ondek mijn aanpak</a>
         </div>
+        <a href="data-governance-checklist/" class="hero-scan-note">
+          <span class="hero-scan-note-icon">◎</span>
+          <span>Nieuwsgierig waar je nu staat? <strong>Doe de gratis Data Governance Scan →</strong></span>
+        </a>
       </div>
 
       <div class="portrait-wrap">
@@ -53,57 +110,121 @@
 <!-- WHAT I DO -->
   <section id="services">
     <div class="wrap">
-      <div class="section-head reveal">
-        <span class="eyebrow"><span class="dot"></span> Wat ik doe</span>
-        <h2>Signalen dat het tijd wordt om iets te doen</h2>
-        <p class="support">Je merkt dat data overal staat, maar nergens samenkomt. Rapportages kosten tijd, processen zijn nog handmatig en inzichten komen te laat.<b><br>Herkenbaar? Afhankelijk van waar je staat, ziet de samenwerking er anders uit.</b></p>
-      </div>
 
-      <div class="service-cards reveal">
-
-        <div class="service-card">
-          <div class="card-head">
-            <div class="icon">🔍</div>
-            <h3>Eerst duidelijkheid</h3>
-          </div>
-          <p>Je weet dat er iets moet gebeuren, maar waar start je?<br><br><em>→ We brengen samen in kaart waar data en AI jou het meeste opleveren en wat dat concreet betekent voor je organisatie.</em></p>
-        </div>
-
-        <div class="service-card">
-          <div class="card-head">
-            <div class="icon">🛠️</div>
-            <h3>Iets bouwen dat werkt</h3>
-          </div>
-          <p>Je weet al wat je nodig hebt, maar niemand die het bouwt.<br><br><em>→ Dashboards, automatiseringen en AI‑toepassingen die direct waarde leveren. Gebouwd op wat jouw organisatie écht nodig heeft.</em></p>
-        </div>
-
-        <div class="service-card">
-          <div class="card-head">
-            <div class="icon">🤝</div>
-            <h3>Bouwen én verankeren</h3>
-          </div>
-          <p>Voor organisaties die willen bouwen én groeien tegelijk.<br><br><em>→ De oplossing bouwen is maar één stap. Ik zorg er ook voor dat processen, mensen en werkwijzen aansluiten, zodat data en AI onderdeel worden van de dagelijkse praktijk.</em></p>
-        </div>
-
-        <div class="service-card">
-          <div class="card-head">
-            <div class="icon">🧭</div>
-            <h3>Een vaste sparringpartner</h3>
-          </div>
-          <p>Voor organisaties die iemand willen om op terug te vallen.<br><br><em>→ Ik bied richting, continuïteit en begeleiding, zodat je organisatie blijft groeien met data en AI.</em></p>
+      <div class="services-intro reveal">
+        <div class="services-intro-main">
+          <span class="eyebrow"><span class="dot"></span> Wat ik doe</span>
+          <h2>Waar loop je nu tegenaan?</h2>
+          <p>Je hoeft vooraf niet precies te weten welke oplossing je nodig hebt. We beginnen bij het vraagstuk waar je organisatie nu tegenaan loopt.</p>
         </div>
       </div>
 
-      <div class="start-strip reveal">
-        <div>
+      <div class="need-cards reveal">
+        <article class="need-card">
+          <div class="service-icon" aria-hidden="true">🧭</div>
+          <h3>Richting</h3>
+          <p class="need-question">"Waar moeten we beginnen?"</p>
+          <div class="need-offer">
+            <h4><span>→</span> Data &amp; AI Scan</h4>
+            <p>Overzicht, prioriteiten en een concreet plan om de juiste keuzes te maken.</p>
+          </div>
+          <a href="data-governance-checklist/" class="need-scan-link">
+            <span>↗</span> Eerst zelf checken? Doe de gratis scan
+          </a>
+        </article>
+
+        <article class="need-card">
+          <div class="service-icon" aria-hidden="true">⚙️</div>
+          <h3>Realiseren</h3>
+          <p class="need-question">"We weten wat we willen."</p>
+          <div class="need-offer">
+            <h4><span>→</span> Data &amp; AI Development</h4>
+            <p>Van dashboards en automatisering tot voorspellende modellen en AI-oplossingen die werken.</p>
+          </div>
+        </article>
+
+        <article class="need-card">
+          <div class="service-icon" aria-hidden="true">🧩</div>
+          <h3>Verankeren</h3>
+          <p class="need-question">"We willen dit structureel."</p>
+          <div class="need-offer">
+            <h4><span>→</span> Langdurige samenwerking</h4>
+            <p>Samen bouwen én zorgen dat het blijft werken. Met aandacht voor processen, mensen en werkwijzen.</p>
+          </div>
+        </article>
+
+        <article class="need-card">
+          <div class="service-icon" aria-hidden="true">🎯</div>
+          <h3>Leiden</h3>
+          <p class="need-question">"We missen richting."</p>
+          <div class="need-offer">
+            <h4><span>→</span> Fractional CDO</h4>
+            <p>Strategische keuzes, prioriteiten en leiderschap voor een datafunctie die blijvend waarde levert.</p>
+          </div>
+        </article>
+      </div>
+
+      <!-- connector: 4 verticals merge into 1 horizontal line, which flows straight into the arrow -->
+      <div class="connector reveal" aria-hidden="true">
+        <svg viewBox="0 0 1096 52" preserveAspectRatio="none">
+          <!-- outer two: rounded corner into the shared horizontal line -->
+          <path class="connector-line" d="M 130.25 0 L 130.25 5 Q 130.25 25 150.25 25 L 548 25"/>
+          <path class="connector-line" d="M 965.75 0 L 965.75 5 Q 965.75 25 945.75 25 L 548 25"/>
+          <!-- inner two: straight down onto the same line, no node markers -->
+          <path class="connector-line" d="M 408.75 0 L 408.75 25"/>
+          <path class="connector-line" d="M 687.25 0 L 687.25 25"/>
+          <!-- center: drops straight down and ends flush against the arrowhead -->
+          <path class="connector-drop" d="M 548 25 L 548 40"/>
+          <polygon class="connector-arrowhead" points="540,40 556,40 548,50"/>
+        </svg>
+      </div>
+
+      <div class="collaboration-card reveal">
+        <div class="collaboration-icon" aria-hidden="true">🤝</div>
+        <div class="collab-text">
+          <h3>Samenwerking op maat</h3>
+          <p>Afhankelijk van wat je organisatie nodig heeft, combineren we verschillende rollen — we beginnen waar het voor jou het meest waardevol is en bouwen vandaaruit verder.</p>
+        </div>
+      </div>
+
+      <div class="service-principles reveal">
+        <div class="service-principle">
+          <div class="principle-icon" aria-hidden="true">👥</div>
+          <div>
+            <h3>Geen vier losse pakketten</h3>
+            <p>Deze vormen van samenwerking staan niet los van elkaar. In de praktijk bewegen organisaties tussen verschillende behoeften. Soms beginnen we met een concrete vraag, soms met behoefte aan richting. Van daaruit bouwen we verder.</p>
+          </div>
+        </div>
+
+        <div class="service-principle">
+          <div class="principle-icon" aria-hidden="true">📅</div>
+          <div>
+            <h3>Langdurige samenwerking</h3>
+            <p>De meeste trajecten duren een jaar of langer. Niet omdat ieder probleem een jaar nodig heeft, maar omdat blijvende impact tijd nodig heeft.</p>
+          </div>
+        </div>
+
+        <div class="service-principle">
+          <div class="principle-icon" aria-hidden="true">⚡</div>
+          <div>
+            <h3>Flexibel en meebewegend</h3>
+            <p>Jouw organisatie verandert, prioriteiten verschuiven en nieuwe vragen ontstaan. Mijn rol beweegt mee met wat op dat moment de meeste waarde toevoegt.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="approach-contact-cta reveal">
+        <div class="approach-contact-copy">
           <h3>Vaak is het begin het lastigst.</h3>
           <p>Daarom start ik altijd met een kennismaking van 30 minuten om jouw situatie te begrijpen en samen te bepalen wat een logische eerste stap is.</p>
         </div>
-        <div class="start-strip-actions">
-          <a href="#approach" class="btn btn-ghost-inverse">Bekijk hoe ik werk</a>
-          <a href="https://calendly.com/piene-claessentech/30min" class="btn btn-primary">Plan een kennismaking</a>
+
+        <div class="approach-contact-actions">
+          <a href="#approach" class="approach-contact-secondary">Bekijk hoe ik werk</a>
+          <a href="https://calendly.com/piene-claessentech/30min" class="approach-contact-primary">Plan een kennismaking</a>
         </div>
       </div>
+
     </div>
   </section>
 
@@ -117,7 +238,8 @@
       </div>
 
       <div class="reveal">
-        <span class="eyebrow"><span class="dot"></span> Een beetje over mij</span>
+        <span class="eyebrow"><span class="dot"></span> Over mij</span>
+        <h2 class="about-home-title">Techniek, mensen en organisatie horen bij elkaar.</h2>
         <div class="about-body">
           <p>Ik ben Piene, Data & AI Partner - maar niet het type dat AI inzet zonder dat de basis klopt. Ik help organisaties om van versnipperde data en onderbuikgevoel naar dashboards, voorspelmodellen en AI-oplossingen te gaan die ze ook echt gebruiken.</p>
           <p>Mijn pad hierheen was niet helemaal recht. Ik begon met bedrijfskunde, vond mijn passie voor data, probeerde vervolgens een tijdje te vliegen bij de Luchtmacht, en kwam alsnog terug bij waar ik blij van word: Data! Daar bleek ik toch beter in te zijn <br>Ik verruilde de cockpit voor een bureau, maar bleef bij Defensie hangen waar ik werkte met data en AI in een omgeving die er echt toe doet. Van stuurinformatie en dashboards tot voorspelmodellen voor helikopteronderhoud. De ene dag sprak ik met een monteur over onderhoud, de volgende gaf ik een generaal een training over het strategisch gebruik van data.</p>
@@ -191,6 +313,56 @@
       </div>
     </section>
 
+  <!-- CASES -->
+  <section id="cases">
+    <div class="wrap">
+
+      <div class="cases-head reveal">
+        <span class="eyebrow"><span class="dot"></span> Cases</span>
+        <h2>Werk waar ik trots op ben</h2>
+        <p>Een selectie van mijn werk als zelfstandig consultant en in eerdere rollen.</p>
+      </div>
+
+      <!-- featured case: huidige, zelfstandige opdracht -->
+      <a href="cases/executive-dashboards/" class="case-featured reveal">
+        <div class="case-tags-row">
+          <span class="tag fill">👤 Huidige opdracht</span>
+          <span class="tag outline">📅 12+ maanden</span>
+        </div>
+        <div class="case-body">
+          <div class="case-icon" aria-hidden="true">📊</div>
+          <div class="case-main">
+            <h3>Van losse datavraagstukken naar een structurele data-aanpak</h3>
+            <p class="desc">Langdurig betrokken bij het bouwen, verbeteren en verder ontwikkelen van data binnen de organisatie.</p>
+          </div>
+          <span class="case-link">Bekijk de case →</span>
+        </div>
+      </a>
+
+      <!-- secondary cases: eerdere rollen -->
+      <div class="case-grid reveal">
+        <a href="cases/helikopter-onderhoud/" class="case-card">
+          <span class="tag outline">👤 Eerdere rol · Defensie</span>
+          <div class="case-body">
+            <div class="case-icon" aria-hidden="true">🚁</div>
+            <h3>Voorspellen wanneer helikopteronderhoud nodig is</h3>
+            <span class="case-link">Bekijk de case →</span>
+          </div>
+        </a>
+
+        <a href="#" class="case-card">
+          <span class="tag outline">👤 Eerdere rol · Overheid</span>
+          <div class="case-body">
+            <div class="case-icon" aria-hidden="true">🎛️</div>
+            <h3>Van data naar stuurinformatie voor besluitvorming</h3>
+            <span class="case-link">Bekijk de case →</span>
+          </div>
+        </a>
+      </div>
+
+    </div>
+  </section>
+
   <!-- CONTACT -->
   <section id="contact">
     <div class="wrap">
@@ -251,6 +423,36 @@
       window.scrollTo({ top: 0, behavior: 'smooth' });
     });
   });
+</script>
+
+
+<script>
+  const menuToggle = document.querySelector('.menu-toggle');
+  const mobilePanel = document.querySelector('.mobile-nav-panel');
+
+  if (menuToggle && mobilePanel) {
+    const setMenu = (open) => {
+      menuToggle.setAttribute('aria-expanded', String(open));
+      menuToggle.setAttribute('aria-label', open ? 'Sluit menu' : 'Open menu');
+      document.body.classList.toggle('menu-open', open);
+    };
+
+    menuToggle.addEventListener('click', () => {
+      setMenu(menuToggle.getAttribute('aria-expanded') !== 'true');
+    });
+
+    mobilePanel.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => setMenu(false));
+    });
+
+    document.addEventListener('keydown', (event) => {
+      if (event.key === 'Escape') setMenu(false);
+    });
+
+    window.addEventListener('resize', () => {
+      if (window.innerWidth > 960) setMenu(false);
+    });
+  }
 </script>
 
 <script src="script.js"></script>

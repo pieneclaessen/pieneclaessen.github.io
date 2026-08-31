@@ -3,76 +3,155 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Data governance checklist | Claessen Tech</title>
+  <title>Data governance scan | Claessen Tech</title>
+  <meta name="description" content="Ontdek in 5 minuten hoe stevig de data governance binnen jouw organisatie staat. Beoordeel 24 praktische stellingen en krijg direct inzicht in waar de grootste kansen liggen.">
   <link rel="icon" type="image/png" href="../images/favicon.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../styles.css">
-  <link rel="stylesheet" href="checklist.css">
 </head>
 <body>
 
-<header>
-  <nav class="wrap">
-    <a href="../" class="brand"><img src="../images/logo.png" alt="Claessen Tech"></a>
+<header class="site-header">
+  <nav class="wrap site-nav" aria-label="Hoofdnavigatie">
+    <a href="../" class="brand" aria-label="Claessen Tech home">
+      <img src="../images/logo.png" alt="Claessen Tech">
+    </a>
+
     <div class="nav-links">
       <a href="../#services">Wat ik doe</a>
-      <a href="../#about">Over mij</a>
-      <a href="../#approach">Werkwijze</a>
+      <a href="../overmij/">Over mij</a>
+      <a href="../#cases">Cases</a>
       <a href="../#contact">Contact</a>
-      <a href="./">Data governance scan</a>
+      <a href="./" class="nav-scan" aria-current="page">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="6"></circle><path d="m16 16 4 4"></path></svg>
+        <span>Doe de gratis scan</span>
+      </a>
       <a href="https://calendly.com/piene-claessentech/30min" class="nav-cta">Plan een kennismaking</a>
     </div>
+
+    <div class="nav-mobile-actions">
+      <a href="./" class="nav-scan nav-scan-mobile" aria-label="Doe de gratis scan" aria-current="page">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="6"></circle><path d="m16 16 4 4"></path></svg>
+        <span>Scan</span>
+      </a>
+      <button class="menu-toggle" type="button" aria-label="Menu openen" aria-expanded="false" aria-controls="mobile-nav-panel">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
   </nav>
+
+  <div class="mobile-nav-panel" id="mobile-nav-panel">
+    <div class="mobile-nav-inner">
+      <a href="../#services">Wat ik doe</a>
+      <a href="../overmij/">Over mij</a>
+      <a href="../#cases">Cases</a>
+      <a href="../#contact">Contact</a>
+      <a href="./" class="mobile-scan-link" aria-current="page">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="6"></circle><path d="m16 16 4 4"></path></svg>
+        Doe de gratis scan
+      </a>
+      <a href="https://calendly.com/piene-claessentech/30min" class="mobile-nav-cta">Plan een kennismaking</a>
+    </div>
+  </div>
 </header>
 
 <main id="top">
 
-  <!-- HERO -->
   <section class="checklist-hero">
-    <div class="wrap">
-      <h1>Data governance in de praktijk: ontdek in <span class="accent-text">5 minuten</span> waar je staat</h1>
-      <p class="lede">Van eigenaarschap en datakwaliteit tot definities, processen en verantwoordelijkheden. Vink aan wat klopt voor jouw organisatie en zie direct waar de grootste gaten zitten.</p>
-    </div>
-  </section>
-
-  <!-- CHECKLIST -->
-  <section id="checklist">
-    <div class="wrap">
-      <div class="section-head">
+    <div class="wrap checklist-hero-grid">
+      <div class="checklist-hero-copy">
         <span class="eyebrow"><span class="dot"></span>Data governance checklist</span>
-        <h2>Vink aan wat op dit moment klopt</h2>
-        <p class="support">Er is geen goed of fout antwoord, alleen een eerlijk beeld van waar je organisatie nu staat. Je hoeft geen data-expert te zijn: de vragen gaan over je organisatie, niet over techniek. Loop de 6 thema's door en bekijk aan het einde je score.</p>
+        <h1>Ontdek in <span class="accent-text">5 minuten</span> waar jouw organisatie staat met data governance</h1>
+        <p class="lede">Van eigenaarschap en datakwaliteit tot definities, processen en verantwoordelijkheden. Vink aan wat klopt voor jouw organisatie en zie direct waar de grootste gaten zitten.</p>
+
+        <div class="checklist-hero-facts" aria-label="Over deze scan">
+          <span><span class="fact-check">✓</span>5 minuten</span>
+          <span><span class="fact-check">✓</span>6 thema's</span>
+          <span><span class="fact-check">✓</span>Direct inzicht</span>
+        </div>
       </div>
 
-      <div id="categories"></div>
+      <div class="checklist-hero-visual">
+        <img src="../images/data-governance-hero.png" alt="Laptop met data-dashboard op een rustige werkplek">
+        <div class="checklist-image-note">
+          <span class="image-note-icon">✓</span>
+          <p>Goede data governance is de basis voor betrouwbare data, slimmere beslissingen en duurzame groei.</p>
+        </div>
+      </div>
     </div>
   </section>
 
-  <!-- RESULTS -->
-  <section id="results">
+  <section id="checklist">
+    <div class="wrap">
+      <div class="checklist-panel">
+        <div class="checklist-intro-row">
+          <div class="checklist-intro-copy">
+            <h2>Vink aan wat op dit moment klopt</h2>
+            <p>Er is geen goed of fout antwoord, alleen een eerlijk beeld van waar je organisatie nu staat. Je hoeft geen data-expert te zijn: de vragen gaan over je organisatie, niet over techniek.</p>
+          </div>
+          <aside class="checklist-help">
+            <div class="checklist-help-icon">✓</div>
+            <div>
+              <strong>Aan de slag</strong>
+              <p>Vink alleen de stellingen aan die nu kloppen. Je score wordt direct onderaan bijgewerkt.</p>
+            </div>
+          </aside>
+        </div>
+
+        <div id="categories"></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="results" aria-live="polite">
     <div class="wrap">
       <div class="result-card">
-        <div class="gauge-wrap">
-          <svg viewBox="0 0 120 120">
-            <circle class="gauge-bg" cx="60" cy="60" r="52"></circle>
-            <circle class="gauge-fill" id="gaugeFill" cx="60" cy="60" r="52" stroke-dasharray="0 327"></circle>
-          </svg>
-          <div class="gauge-number">
-            <div class="num" id="gaugeNum">0</div>
-            <div class="den">van de 24</div>
+        <div class="result-score-column">
+          <div class="gauge-wrap">
+            <svg viewBox="0 0 120 120" aria-hidden="true">
+              <circle class="gauge-bg" cx="60" cy="60" r="52"></circle>
+              <circle class="gauge-fill" id="gaugeFill" cx="60" cy="60" r="52" stroke-dasharray="0 327"></circle>
+            </svg>
+            <div class="gauge-number">
+              <div class="num" id="gaugeNum">0</div>
+              <div class="den">van de 24</div>
+            </div>
           </div>
+          <button class="reset-link" type="button" onclick="resetAll()">↻ Opnieuw beginnen</button>
         </div>
+
         <div class="result-text">
           <div class="result-band" id="resultBand">0–8 punten</div>
           <div class="result-title" id="resultTitle">De basis ontbreekt nog</div>
           <p class="result-desc" id="resultDesc">Data en verantwoordelijkheden zijn versnipperd. Er is geen overzicht van wie wat beheert of waar data staat. Elke uitbreiding — ook met AI — vergroot dit risico. Dit is het moment om eerst structuur aan te brengen, vóórdat je verder bouwt.</p>
-          <p class="result-nudge" id="resultNudge">Wil je dit samen ontrafelen?</p>
-          <a href="https://calendly.com/piene-claessentech/30min" class="result-cta">Plan een kennismaking →</a>
+
+          <div class="result-tips">
+            <div class="result-tip">
+              <span>◎</span>
+              <strong>Zet prioriteiten</strong>
+              <p>Focus op de thema's waar de grootste kansen liggen.</p>
+            </div>
+            <div class="result-tip">
+              <span>♙</span>
+              <strong>Borg eigenaarschap</strong>
+              <p>Maak verantwoordelijkheden duidelijk en zichtbaar.</p>
+            </div>
+            <div class="result-tip">
+              <span>↗</span>
+              <strong>Zorg voor continuïteit</strong>
+              <p>Zet kleine stappen die zorgen voor blijvende verbetering.</p>
+            </div>
+          </div>
         </div>
+
+        <aside class="result-cta-column">
+          <p class="result-nudge" id="resultNudge">Wil je dit samen ontrafelen?</p>
+          <p>In een vrijblijvend gesprek denken we samen door waar jouw grootste kansen liggen.</p>
+          <a href="https://calendly.com/piene-claessentech/30min" class="result-cta">Plan een kennismaking →</a>
+        </aside>
       </div>
-      <div class="reset-row"><span class="reset-link" onclick="resetAll()">Opnieuw beginnen</span></div>
     </div>
   </section>
 
@@ -178,6 +257,7 @@ function renderCategories(){
   data.forEach((cat, ci)=>{
     const catDiv = document.createElement('div');
     catDiv.className = 'category';
+    catDiv.id = `category-${ci}`;
     catDiv.innerHTML = `
       <div class="category-head">
         <div class="cat-icon">${cat.icon}</div>
@@ -230,7 +310,10 @@ function updateScores(){
     let catCount = 0;
     cat.items.forEach((_, ii)=>{ if(checkedState[ci+'-'+ii]) catCount++; });
     total += catCount;
-    document.getElementById(`catscore-${ci}`).textContent = `${catCount}/${cat.items.length}`;
+    const scoreEl = document.getElementById(`catscore-${ci}`);
+    scoreEl.textContent = `${catCount}/${cat.items.length}${catCount === cat.items.length ? ' ✓' : ''}`;
+    const categoryEl = document.getElementById(`category-${ci}`);
+    if (categoryEl) categoryEl.classList.toggle('complete', catCount === cat.items.length);
   });
 
   document.getElementById('gaugeNum').textContent = total;
@@ -272,9 +355,34 @@ function resetAll(){
 
 renderCategories();
 updateScores();
+
+</script>
+
+<script>
+const menuToggle = document.querySelector('.menu-toggle');
+const mobilePanel = document.getElementById('mobile-nav-panel');
+
+if (menuToggle && mobilePanel) {
+  const closeMenu = () => {
+    document.body.classList.remove('menu-open');
+    menuToggle.setAttribute('aria-expanded', 'false');
+  };
+
+  menuToggle.addEventListener('click', () => {
+    const open = document.body.classList.toggle('menu-open');
+    menuToggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+  });
+
+  mobilePanel.querySelectorAll('a').forEach(link => link.addEventListener('click', closeMenu));
+  document.addEventListener('keydown', event => {
+    if (event.key === 'Escape') closeMenu();
+  });
+  window.addEventListener('resize', () => {
+    if (window.innerWidth > 1180) closeMenu();
+  });
+}
 </script>
 
 <script src="../cookie-consent.js"></script>
-
 </body>
 </html>

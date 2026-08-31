@@ -3,169 +3,431 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Meer over mij | Piene Claessen</title>
+  <title>Over mij | Claessen Tech</title>
   <link rel="icon" type="image/png" href="../images/favicon.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../styles.css">
 </head>
-<body>
 
-<header>
-  <nav class="wrap">
-    <a href="../" class="brand"><img src="images/logo.png" alt="Claessen Tech"></a>
+<body class="about-page">
+
+<header class="site-header">
+  <nav class="wrap site-nav" aria-label="Hoofdnavigatie">
+    <a href="../" class="brand">
+      <img src="../images/logo.png" alt="Claessen Tech">
+    </a>
+
     <div class="nav-links">
       <a href="../#services">Wat ik doe</a>
-      <a href="../#about">Over mij</a>
-      <a href="../#approach">Werkwijze</a>
+      <a href="./">Over mij</a>
+      <a href="../#cases">Cases</a>
       <a href="../#contact">Contact</a>
-      <a href="../data-governance-checklist/">Data governance scan</a>
-      <a href="https://calendly.com/piene-claessentech/30min" class="nav-cta">Plan een kennismaking</a>
+
+      <a href="../data-governance-checklist/" class="nav-scan">
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+          <circle cx="11" cy="11" r="6.5"></circle>
+          <path d="M16 16l4.2 4.2"></path>
+        </svg>
+        <span>Doe de gratis scan</span>
+      </a>
+
+      <a href="https://calendly.com/piene-claessentech/30min" class="nav-cta">
+        Plan een kennismaking
+      </a>
+    </div>
+
+    <div class="nav-mobile-actions">
+      <a href="../data-governance-checklist/" class="nav-scan nav-scan-mobile" aria-label="Doe de gratis scan">
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+          <circle cx="11" cy="11" r="6.5"></circle>
+          <path d="M16 16l4.2 4.2"></path>
+        </svg>
+        <span>Scan</span>
+      </a>
+
+      <button class="menu-toggle" type="button"
+              aria-expanded="false"
+              aria-controls="mobile-nav-panel"
+              aria-label="Open menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
     </div>
   </nav>
+
+  <div class="mobile-nav-panel" id="mobile-nav-panel">
+    <div class="mobile-nav-inner">
+      <a href="../#services">Wat ik doe</a>
+      <a href="./">Over mij</a>
+      <a href="../#cases">Cases</a>
+      <a href="../#contact">Contact</a>
+
+      <a href="../data-governance-checklist/" class="mobile-scan-link">
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+          <circle cx="11" cy="11" r="6.5"></circle>
+          <path d="M16 16l4.2 4.2"></path>
+        </svg>
+        Doe de gratis scan
+      </a>
+
+      <a href="https://calendly.com/piene-claessentech/30min" class="mobile-nav-cta">
+        Plan een kennismaking
+      </a>
+    </div>
+  </div>
 </header>
 
 <main>
 
-  <!-- PAGE HERO -->
-  <section class="page-hero">
+  <!-- HERO -->
+  <section class="about-story-hero">
     <div class="wrap">
-      <a href="../#about" class="back-link">← Terug naar home</a>
-      <h1>Een omweg die eigenlijk geen omweg was.</h1>
-      <p class="lede">Van je passie vinden in data, een uitstapje richting de cockpit, en toch weer terugkomen bij waar je blij van wordt. Blijkbaar was dat de plek waar ik moest zijn.</p>
-    </div>
-  </section>
+      <a href="../" class="about-back-link">← Terug naar home</a>
 
-  <div class="wrap">
-    <div class="narrow">
-      <div class="chapter-note">
-        <div class="chapter-note-item">
-          <div class="ic">📝</div>
-          <p>Ook mijn reizen plan ik in een spreadsheet. Ja, echt.</p>
-        </div>
-      </div>
-    </div>
-  </div>
+      <div class="about-story-hero-grid">
+        <div class="about-story-hero-copy reveal">
+          <span class="eyebrow"><span class="dot"></span> Over mij</span>
 
-  <!-- CHAPTER 1 -->
-  <section class="chapter-section">
-    <div class="wrap">
-      <div class="narrow">
-        <div class="story-chapter">
-          <div class="chapter-photo">
-            <img src="../images/studie.JPEG" alt="Piene Claessen tijdens haar studie" style="object-position: center 50%;">
-          </div>
-          <div>
-            <div class="chapter-label">Hoofdstuk 1</div>
-            <h3>Waar het begon</h3>
-            <p>Lange tijd dacht ik dat ik een generalist was - iemand die overal iets van wist, maar nergens echt in dook. Daarom studeerde ik bedrijfskunde en haalde ik een master in International Management. Pas tijdens die master ontdekte ik hoe sterk mijn nieuwsgierigheid naar data eigenlijk was. Die combinatie, bedrijfskundige basis én datagedreven werken, helpt me nog steeds om organisaties écht te begrijpen: hoe ze beslissen, samenwerken en veranderen.</p>
-          </div>
+          <h1>Techniek, mensen en organisatie horen voor mij bij elkaar.</h1>
+
+          <p class="lede">
+            Mijn route naar data was niet recht. Achteraf gezien is dat precies waarom ik nu werk zoals ik werk.
+          </p>
+
+          <p class="about-story-intro">
+            Ik ben Piene Claessen. Mijn achtergrond loopt van bedrijfskunde en de Luchtmacht
+            tot data science, strategie en zelfstandig ondernemerschap. Die combinatie zorgt
+            ervoor dat ik niet alleen kijk naar wat technisch kan, maar vooral naar wat in een
+            organisatie echt werkt.
+          </p>
         </div>
 
-        <div class="chapter-note">
-          <div class="chapter-note-item">
-            <div class="ic">✈️</div>
-            <p>Stage gelopen in Nieuw-Zeeland én India. Blijkbaar moest het altijd meteen ver weg en uitdagend zijn.</p>
+        <div class="about-story-portrait reveal">
+          <!-- Vervang eventueel door een andere portretfoto -->
+          <img src="../images/profielfoto_lichtblauw.jpg" alt="Piene Claessen">
+          <div class="about-story-portrait-note">
+            <strong>De korte versie</strong>
+            <p>
+              Nieuwsgierig, praktisch en graag dicht op de werkelijkheid. Ik krijg energie van
+              complexe vraagstukken terugbrengen tot iets dat mensen kunnen gebruiken.
+            </p>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- CHAPTER 2 -->
-  <section class="chapter-section">
+
+  <!-- SNELLE SAMENVATTING -->
+  <section class="about-summary-shell">
     <div class="wrap">
-      <div class="narrow">
-        <div class="story-chapter rev">
-          <div class="chapter-photo">
-            <img src="../images/defensie.JPEG" alt="Piene Claessen bij Defensie">
-          </div>
+      <div class="about-summary-grid reveal">
+
+        <div class="about-summary-item">
+          <div class="about-summary-icon">◫</div>
           <div>
-            <div class="chapter-label">Hoofdstuk 2</div>
-            <h3>6,5 jaar bij Defensie</h3>
-            <p>Een groot deel van mijn ervaring bouwde ik op bij Defensie. Na de officiersopleiding volgde ik eerst de opleiding tot militair vlieger. Later maakte ik de overstap naar data analist en data scientist binnen het digitaliseringsprogramma. Daar zette ik luchtmachtbrede data‑governance kaders neer, bouwde dashboards, ontwikkelde voorspelmodellen en adviseerde hoe de organisatie toekomstbestendig kon worden. Altijd met de realiteit van de werkvloer als uitgangspunt - een principe dat ik nog steeds meeneem in elk traject.</p>
+            <h3>Bedrijfskundige basis</h3>
+            <p>
+              Ik kijk niet alleen naar data, maar ook naar processen, besluitvorming en hoe een organisatie werkt.
+            </p>
           </div>
         </div>
 
-        <div class="chapter-note">
-          <div class="chapter-note-item">
-            <div class="ic">☕</div>
-            <p>Ochtendmens, maar dan wel zonder koffie. Die heb ik niet eens nodig om wakker te worden.</p>
+        <div class="about-summary-item">
+          <div class="about-summary-icon">✈</div>
+          <div>
+            <h3>6,5 jaar Defensie</h3>
+            <p>
+              Van operationele context tot dashboards, governance en voorspelmodellen.
+            </p>
           </div>
+        </div>
+
+        <div class="about-summary-item">
+          <div class="about-summary-icon">↗</div>
+          <div>
+            <h3>Nu zelfstandig</h3>
+            <p>
+              Hands-on bouwen waar nodig, richting geven waar dat meer waarde toevoegt.
+            </p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- MIJN VERHAAL -->
+  <section class="about-story-section">
+    <div class="wrap">
+
+      <div class="about-story-section-head reveal">
+        <span class="eyebrow"><span class="dot"></span> Mijn verhaal</span>
+        <h2>Drie ervaringen die bepalen hoe ik nu werk.</h2>
+        <p>
+          Niet mijn cv van boven naar beneden, maar de momenten die mijn manier van kijken naar
+          data, organisaties en samenwerking hebben gevormd.
+        </p>
+      </div>
+
+
+      <!-- HOOFDSTUK 1 -->
+      <article class="about-story-chapter reveal">
+        <div class="about-story-photo">
+          <!-- Vervang dit pad door jouw eigen foto -->
+          <img src="../images/Balkon_blauwe_blouse.JPEG" alt="Piene werkend achter haar laptop">
+          <span class="about-photo-tag">Nieuwsgierigheid</span>
+        </div>
+
+        <div class="about-story-copy">
+          <span class="about-story-kicker">01 · Waar het begon</span>
+          <h3>Eerst begrijpen hoe iets werkt.</h3>
+
+          <p>
+            Ik begon met bedrijfskunde omdat ik organisaties wilde begrijpen. Tijdens mijn master
+            ontdekte ik hoe krachtig data kan zijn om patronen zichtbaar te maken en betere
+            beslissingen te nemen.
+          </p>
+
+          <p>
+            Die combinatie is gebleven. Voor mij is data nooit losstaand: het hoort bij processen,
+            mensen en keuzes.
+          </p>
+
+          <div class="about-story-lesson">
+            <span>Wat dat nu betekent in mijn werk</span>
+            <p>
+              Ik begin niet bij een model of dashboard, maar bij de vraag:
+              <strong>wat moet hier beter werken?</strong>
+            </p>
+          </div>
+        </div>
+      </article>
+
+
+      <!-- HOOFDSTUK 2 -->
+      <article class="about-story-chapter about-story-chapter-reverse reveal">
+        <div class="about-story-photo">
+          <!-- Vervang dit pad door jouw Defensie-foto -->
+          <img src="../images/defensie.jpg" alt="Foto uit Pienes tijd bij Defensie">
+          <span class="about-photo-tag">Praktijk</span>
+        </div>
+
+        <div class="about-story-copy">
+          <span class="about-story-kicker">02 · Defensie</span>
+          <h3>Een goed model is nog geen goede oplossing.</h3>
+
+          <p>
+            In 6,5 jaar bij Defensie werkte ik in een omgeving waar data niet alleen interessant
+            moest zijn, maar bruikbaar. Ik bouwde dashboards, werkte aan data-governance en
+            ontwikkelde voorspelmodellen voor onder andere helikopteronderhoud.
+          </p>
+
+          <p>
+            Daar zag ik hoe belangrijk context is. Een oplossing werkt pas als de mensen,
+            processen en prioriteiten eromheen kloppen.
+          </p>
+
+          <div class="about-story-lesson">
+            <span>Wat dat nu betekent in mijn werk</span>
+            <p>
+              Techniek is voor mij één deel van het vraagstuk. Implementatie, eigenaarschap en
+              gebruik horen er net zo goed bij.
+            </p>
+          </div>
+        </div>
+      </article>
+
+
+      <!-- HOOFDSTUK 3 -->
+      <article class="about-story-chapter reveal">
+        <div class="about-story-photo">
+          <!-- Vervang dit pad door jouw zelfstandige/laptop-foto -->
+          <img src="../images/zelfstandig.jpg" alt="Piene als zelfstandig Data & AI consultant">
+          <span class="about-photo-tag">Zelfstandig</span>
+        </div>
+
+        <div class="about-story-copy">
+          <span class="about-story-kicker">03 · De volgende stap</span>
+          <h3>Meer ruimte om mee te bewegen met wat nodig is.</h3>
+
+          <p>
+            Na Defensie wilde ik breder kijken dan één organisatie. Niet alleen uitvoeren, maar
+            ook helpen bepalen wat verstandig is om te bouwen — en wanneer juist niet.
+          </p>
+
+          <p>
+            Als zelfstandig consultant kan mijn rol daardoor veranderen: soms analyseer ik,
+            soms bouw ik, soms zet ik structuur neer en soms geef ik richting.
+          </p>
+
+          <div class="about-story-lesson">
+            <span>Wat dat nu betekent in mijn werk</span>
+            <p>
+              Ik verkoop geen vaste rol. Ik probeer op ieder moment de rol te pakken die het
+              meeste waarde toevoegt.
+            </p>
+          </div>
+        </div>
+      </article>
+
+    </div>
+  </section>
+
+
+  <!-- BUITEN WERK -->
+  <section class="about-personal-section">
+    <div class="wrap">
+      <div class="about-personal-panel reveal">
+
+        <div class="about-personal-head">
+          <div>
+            <span class="eyebrow"><span class="dot"></span> Buiten het werk</span>
+            <h2>Een beetje mens mag ook.</h2>
+          </div>
+
+          <p>
+            Niet alles hoeft onderdeel te zijn van mijn professionele verhaal.
+            Dit zijn gewoon drie dingen die iets over mij zeggen.
+          </p>
+        </div>
+
+        <div class="about-personal-grid">
+
+          <div class="about-personal-card">
+            <div class="about-summary-icon">✈</div>
+            <h3>Reizen</h3>
+            <p>
+              Nieuwe plekken uitzoeken doe ik graag. En ja: de planning belandt meestal alsnog in een spreadsheet.
+            </p>
+          </div>
+
+          <div class="about-personal-card">
+            <div class="about-summary-icon">🥊</div>
+            <h3>Boksen</h3>
+            <p>
+              Als ik mijn hoofd leeg wil maken, is de boksschool een vrij effectieve plek.
+            </p>
+          </div>
+
+          <div class="about-personal-card">
+            <div class="about-summary-icon">△</div>
+            <h3>Bergen</h3>
+            <p>
+              Volledig ontspannen lukt opvallend goed als het pad omhoog loopt.
+            </p>
+          </div>
+
         </div>
       </div>
     </div>
   </section>
 
-  <!-- CHAPTER 3 -->
-  <section class="chapter-section">
+
+  <!-- WAAR IK NU STA -->
+  <section class="about-now-section" id="contact">
     <div class="wrap">
-      <div class="narrow">
-        <div class="story-chapter">
-          <div class="chapter-photo">
-            <img src="../images/ondernemen.JPEG" alt="Piene Claessen als zelfstandig ondernemer">
-          </div>
-          <div>
-            <div class="chapter-label">Hoofdstuk 3</div>
-            <h3>De stap naar zelfstandig</h3>
-            <p>Na mijn tijd bij Defensie merkte ik dat ik breder wilde kijken dan één organisatie. Ik wilde meer vrijheid in hoe ik werk en met wie ik werk — ruimte om mijn eigen koers te bepalen en bedrijven te helpen dat op hun manier te doen. Die vrijheid vond ik als zelfstandige.<br>Die combinatie van strategie, data en praktijkervaring vormt nu de basis van hoe ik werk: organisaties helpen helderheid te krijgen in hun data en oplossingen te bouwen die gewoon werken — weg van de AI‑hype, afgestemd op wat er écht nodig is.</p>
-          </div>
+      <div class="about-now-grid reveal">
+
+        <div class="about-now-main">
+          <span class="eyebrow"><span class="dot"></span> Vandaag</span>
+          <h2>Data & AI Partner voor organisaties die verder willen dan een los project.</h2>
+
+          <p>
+            Mijn ervaring komt nu samen in langdurige samenwerkingen waarin strategie en uitvoering
+            niet los van elkaar staan. Ik help bepalen wat nodig is, bouw mee en zorg dat wat we
+            maken ook echt onderdeel wordt van hoe de organisatie werkt.
+          </p>
         </div>
 
-        <div class="chapter-note">
-          <div class="chapter-note-item">
-            <div class="ic">⛰️</div>
-            <p>Ik kan pas echt ontspannen als ik uitgeput boven op een berg sta.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
+        <div class="about-now-cta">
+          <h3>Benieuwd of we een klik hebben?</h3>
+          <p>
+            Vertel me waar je tegenaan loopt. Je hoeft nog niet precies te weten wat je nodig hebt.
+          </p>
 
-  <!-- CTA -->
-  <section style="padding-top:0;">
-    <div class="wrap">
-      <div class="narrow">
-        <div class="start-strip">
-          <div>
-            <h3>En, hebben we een klik?</h3>
-            <p>Ik hoor graag waar je tegenaan loopt. Dan bekijken we samen of ik je verder kan helpen.</p>
-          </div>
-          <div class="start-strip-actions">
-            <a href="../#services" class="btn btn-ghost-inverse">Bekijk wat ik doe</a>
-            <a href="https://calendly.com/piene-claessentech/30min" class="btn btn-primary">Laten we praten</a>
-          </div>
+          <a href="https://calendly.com/piene-claessentech/30min" class="btn btn-primary">
+            Plan een kennismaking →
+          </a>
         </div>
+
       </div>
     </div>
   </section>
 
 </main>
 
+
 <footer>
   <div class="wrap footer-row">
     <a href="../" class="brand"><img src="../images/logo.png" alt="Claessen Tech"></a>
+
     <div class="footer-legal">
       <span>© 2026 Piene Claessen</span>
       <span>KvK 99777738</span>
       <span>BTW NL005410096B08</span>
     </div>
+
     <div class="footer-social-pill">
-      <a class="pill-btn" href="https://www.linkedin.com/in/piene-claessen/" target="_blank" rel="noopener" aria-label="LinkedIn">
-        <svg viewBox="0 0 24 24"><path d="M20.45 20.45h-3.55v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.36V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12zM7.12 20.45H3.56V9h3.56v11.45z"/></svg>
+      <a class="pill-btn" href="https://www.linkedin.com/in/piene-claessen/" target="_blank" rel="noopener">
         LinkedIn
       </a>
-      <a class="pill-btn" href="https://wa.me/31646037322" target="_blank" rel="noopener" aria-label="WhatsApp">
-        <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12c0 1.82.5 3.53 1.36 5L2 22l5.17-1.36C8.6 21.5 10.26 22 12 22c5.52 0 10-4.48 10-10S17.52 2 12 2zm5.2 14.2c-.24.66-1.32 1.26-1.8 1.32-.46.06-1.02.09-1.66-.1-.38-.12-.87-.28-1.5-.55-2.64-1.14-4.36-3.8-4.5-3.98-.13-.18-1.08-1.44-1.08-2.75s.7-1.94.94-2.2c.25-.27.54-.34.72-.34h.5c.16 0 .38-.03.58.45.24.58.8 2.01.87 2.16.07.15.11.32.02.5-.09.18-.14.29-.28.45-.14.16-.29.36-.42.48-.14.13-.29.28-.13.55.16.27.72 1.19 1.55 1.93 1.06.95 1.96 1.24 2.23 1.38.27.14.43.11.59-.07.16-.18.68-.79.86-1.06.18-.27.36-.22.6-.13.24.09 1.55.73 1.82.86.27.13.45.2.51.31.06.11.06.66-.18 1.31z"/></svg>
+      <a class="pill-btn" href="https://wa.me/31646037322" target="_blank" rel="noopener">
         WhatsApp
       </a>
     </div>
   </div>
 </footer>
 
-<script src="../script.js"></script>
-<script src="../cookie-consent.js"></script>
+
+<script>
+  const els = document.querySelectorAll('.reveal');
+
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('in');
+        io.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.12 });
+
+  els.forEach(el => io.observe(el));
+</script>
+
+
+<script>
+  const menuToggle = document.querySelector('.menu-toggle');
+  const mobilePanel = document.querySelector('.mobile-nav-panel');
+
+  if (menuToggle && mobilePanel) {
+    const setMenu = (open) => {
+      menuToggle.setAttribute('aria-expanded', String(open));
+      menuToggle.setAttribute('aria-label', open ? 'Sluit menu' : 'Open menu');
+      document.body.classList.toggle('menu-open', open);
+    };
+
+    menuToggle.addEventListener('click', () => {
+      setMenu(menuToggle.getAttribute('aria-expanded') !== 'true');
+    });
+
+    mobilePanel.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => setMenu(false));
+    });
+
+    document.addEventListener('keydown', (event) => {
+      if (event.key === 'Escape') setMenu(false);
+    });
+
+    window.addEventListener('resize', () => {
+      if (window.innerWidth > 960) setMenu(false);
+    });
+  }
+</script>
 
 </body>
 </html>
