@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Voorspellen wanneer onderhoud aan een helikopter nodig is | Claessen Tech</title>
-  <meta name="description" content="Case over het ontwikkelen van een voorspelmodel voor helikopteronderhoud in een eerdere rol als Data Scientist bij Defensie.">
+  <title>Predictive maintenance voor helikopteronderdelen | Claessen Tech</title>
+  <meta name="description" content="Case over een predictive maintenance model voor een helikopterprogramma bij Defensie, waarmee onderhoudsbehoefte eerder kon worden voorspeld voor betere voorraadplanning.">
   <link rel="icon" type="image/png" href="../../images/favicon.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -119,13 +119,13 @@
 
       <div class="case-hero-grid">
         <div class="case-hero-copy">
-          <span class="case-context-label">Eerdere rol · Defensie</span>
-          <h1>Voorspellen wanneer onderhoud aan een helikopter nodig is</h1>
-          <p class="case-lede">Als Data Scientist bij Defensie ontwikkelde ik een voorspelmodel om te onderzoeken of onderhoudsbehoefte uit beschikbare operationele en onderhoudsdata kon worden voorspeld.</p>
+          <span class="case-context-label">Eerdere rol · Luchtmacht</span>
+          <h1>Voorspellen wanneer helikopteronderdelen onderhoud nodig hebben</h1>
+          <p class="case-lede">Als Data Scientist bij de Luchtmacht bouwde ik een predictive maintenance model voor een helikopterprogramma. Het doel: eerder inzicht krijgen in welke onderdelen onderhoud nodig zouden hebben, zodat inkopers beter vooruit konden plannen.</p>
         </div>
 
         <figure class="case-hero-image">
-          <img src="../../images/helikopteronderhoud-hero.png" alt="Helikopter als visuele illustratie bij de case over voorspellend onderhoud">
+          <img src="../images/nh90.jpeg" alt="Helikopter als visuele illustratie bij de case over voorspellend onderhoud">
         </figure>
       </div>
 
@@ -140,13 +140,13 @@
           <div class="case-meta-icon" aria-hidden="true">
             <svg viewBox="0 0 24 24"><path d="M5 21V5l7-3 7 3v16"></path><path d="M9 8h1M14 8h1M9 12h1M14 12h1M9 16h1M14 16h1"></path></svg>
           </div>
-          <div><span>Context</span><strong>Defensie</strong></div>
+          <div><span>Context</span><strong>de Koninklijke Luchtmacht</strong></div>
         </div>
         <div class="case-meta-item">
           <div class="case-meta-icon" aria-hidden="true">
             <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="8"></circle><circle cx="12" cy="12" r="4"></circle><path d="M12 2v3M22 12h-3"></path></svg>
           </div>
-          <div><span>Type vraagstuk</span><strong>Predictive analytics</strong></div>
+          <div><span>Type vraagstuk</span><strong>Predictive maintenance</strong></div>
         </div>
       </div>
     </div>
@@ -161,7 +161,8 @@
           </div>
           <div class="case-section-body">
             <div class="case-section-title"><span>01</span><h2>Het vraagstuk</h2></div>
-            <p>Onderhoud aan complexe systemen vraagt veel planning. De vraag was of beschikbare operationele en onderhoudsdata kon helpen om eerder inzicht te krijgen in wanneer onderhoud nodig zou zijn.</p>
+            <p>Voor sommige helikopteronderdelen loopt de levertijd op van zes maanden tot anderhalf jaar. Wachten tot iets kapot gaat is dus geen optie.</p>
+            <p>De vraag was: kunnen we met operationele en onderhoudsdata eerder voorspellen welke onderdelen waarschijnlijk onderhoud nodig hebben? Het model moest de inkoper ondersteunen, niet vervangen.</p>
           </div>
         </article>
 
@@ -171,7 +172,7 @@
           </div>
           <div class="case-section-body">
             <div class="case-section-title"><span>02</span><h2>Mijn rol</h2></div>
-            <p>Als Data Scientist was ik verantwoordelijk voor de data-analyse en ontwikkeling van het voorspelmodel. Ik werkte samen met technische experts om de data en operationele context goed te begrijpen.</p>
+            <p>Als Data Scientist werkte ik mee aan het model en de vertaling naar bruikbare inzichten. Daarbij stemde ik continu af met technische experts en stakeholders om data, aannames en praktijkcontext goed te begrijpen.</p>
           </div>
         </article>
 
@@ -181,7 +182,7 @@
           </div>
           <div class="case-section-body">
             <div class="case-section-title"><span>03</span><h2>Mijn aanpak</h2></div>
-            <p>Ik bouwde de analyse stap voor stap op: eerst begrijpen wat de data werkelijk betekende, daarna pas modelleren.</p>
+            <p>Stap voor stap bouwen en onderweg blijven toetsen bij de mensen die dagelijks met het onderhoud werkten.</p>
 
             <div class="case-steps">
               <div class="case-step">
@@ -189,31 +190,34 @@
                   <svg viewBox="0 0 24 24"><ellipse cx="12" cy="5" rx="7" ry="3"></ellipse><path d="M5 5v6c0 1.7 3.1 3 7 3s7-1.3 7-3V5M5 11v6c0 1.7 3.1 3 7 3s7-1.3 7-3v-6"></path></svg>
                 </div>
                 <h3>Data begrijpen</h3>
-                <p>Bronnen samenbrengen en kwaliteit, historie en betekenis onderzoeken.</p>
+                <p>Data opschonen, samenbrengen en betekenis geven.</p>
               </div>
               <span class="case-step-arrow" aria-hidden="true">→</span>
+
               <div class="case-step">
                 <div class="case-step-icon" aria-hidden="true">
                   <svg viewBox="0 0 24 24"><path d="M4 18V9M10 18V5M16 18v-7M22 18V2"></path><path d="m3 13 6-4 6 2 6-6"></path></svg>
                 </div>
-                <h3>Patronen onderzoeken</h3>
-                <p>Verbanden en signalen verkennen die samenhangen met onderhoudsbehoefte.</p>
+                <h3>Verbanden herkennen</h3>
+                <p>Patronen zoeken en tussentijds toetsen met experts.</p>
               </div>
               <span class="case-step-arrow" aria-hidden="true">→</span>
+
               <div class="case-step">
                 <div class="case-step-icon" aria-hidden="true">
                   <svg viewBox="0 0 24 24"><path d="m8 5-5 7 5 7M16 5l5 7-5 7M14 3l-4 18"></path></svg>
                 </div>
                 <h3>Model ontwikkelen</h3>
-                <p>Een voorspelmodel bouwen en iteratief toetsen op historische data.</p>
+                <p>Met XGBoost voorspellingen maken op historische data.</p>
               </div>
               <span class="case-step-arrow" aria-hidden="true">→</span>
+
               <div class="case-step">
                 <div class="case-step-icon" aria-hidden="true">
                   <svg viewBox="0 0 24 24"><circle cx="8" cy="8" r="3"></circle><circle cx="17" cy="9" r="2.5"></circle><path d="M2.5 20v-2a5.5 5.5 0 0 1 11 0v2M13 20v-1.5a4.5 4.5 0 0 1 9 0V20"></path></svg>
                 </div>
                 <h3>Valideren met experts</h3>
-                <p>Uitkomsten bespreken met domeinexperts en verbeteren op basis van feedback.</p>
+                <p>Aannames en uitkomsten continu verifiëren en bijsturen.</p>
               </div>
             </div>
           </div>
@@ -225,11 +229,12 @@
           </div>
           <div class="case-section-body">
             <div class="case-section-title"><span>04</span><h2>Het resultaat</h2></div>
-            <p>Het ontwikkelde model liet zien dat onderhoud op basis van de beschikbare data voorspelbaar was en vormde daarmee een werkend proof of concept. Daarmee werd de technische haalbaarheid van de aanpak aangetoond.</p>
+            <p>Na zo'n vijf maanden stond er een werkend machine-learningmodel voor het helikopterprogramma. Via een dashboard werd per onderdeel zichtbaar waar mogelijke voorraadknelpunten konden ontstaan.</p>
             <ul class="case-check-list">
-              <li>Werkend voorspelmodel ontwikkeld</li>
-              <li>Belangrijke beïnvloedende factoren inzichtelijk gemaakt</li>
-              <li>Technische haalbaarheid aangetoond als basis voor vervolgonderzoek</li>
+              <li>Predictive maintenance model ontwikkeld met XGBoost</li>
+              <li>Voorspellingen ontsloten via een dashboard</li>
+              <li>Eerder zicht op kritische onderdelen met lange levertijden</li>
+              <li>Praktijkkennis aangevuld met datagedreven voorspellingen</li>
             </ul>
           </div>
         </article>
@@ -240,8 +245,8 @@
           <div class="case-side-icon" aria-hidden="true">
             <svg viewBox="0 0 24 24"><path d="M9 18h6M10 22h4"></path><path d="M8.2 15.5A7 7 0 1 1 15.8 15.5c-.8.7-1.3 1.4-1.5 2.5h-4.6c-.2-1.1-.7-1.8-1.5-2.5Z"></path></svg>
           </div>
-          <h2>Waarom niet operationeel geïmplementeerd?</h2>
-          <p>Door veranderende operationele prioriteiten binnen de organisatie is de stap naar implementatie in het dagelijkse proces destijds niet gezet.</p>
+          <h2>Van model naar dagelijks gebruik</h2>
+          <p>Het model is uiteindelijk niet structureel in gebruik genomen. Niet vanwege de techniek, maar omdat er op dat moment onvoldoende tijd en prioriteit was om de implementatie verder te brengen.</p>
         </section>
 
         <section class="case-side-card case-side-card-teal">
@@ -249,11 +254,12 @@
             <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="8"></circle><circle cx="12" cy="12" r="4"></circle><path d="M12 2v3M22 12h-3"></path></svg>
           </div>
           <h2>Wat ik hiervan heb meegenomen</h2>
-          <p>Een technisch werkende oplossing levert pas waarde wanneer ook processen, eigenaarschap en organisatie meebewegen. Daarom kijk ik in mijn werk verder dan alleen het model of de techniek.</p>
+          <p>Een goed model bouwen is één ding. Zorgen dat mensen het daadwerkelijk gebruiken is minstens zo belangrijk.</p>
+          <p>Daarom kijk ik vanaf het begin ook naar processen, mensen en werkwijzen.</p>
           <ul class="case-side-list">
-            <li>Data-oplossingen die passen bij de praktijk</li>
-            <li>Eigenaarschap en draagvlak meenemen</li>
-            <li>Van inzicht naar blijvende impact</li>
+            <li>Techniek laten aansluiten op de praktijk</li>
+            <li>Domeinexperts vanaf het begin betrekken</li>
+            <li>Menselijke expertise ondersteunen, niet vervangen</li>
           </ul>
         </section>
       </aside>
@@ -267,8 +273,8 @@
           <svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="16" rx="2"></rect><path d="M7 3v4M17 3v4M3 10h18"></path><circle cx="12" cy="15" r="2.5"></circle><path d="M12 13v2l1.5 1"></path></svg>
         </div>
         <div class="case-cta-copy">
-          <h2>Loop je tegen een vergelijkbaar vraagstuk aan?</h2>
-          <p>Vertel me waar je tegenaan loopt. Dan kijken we samen wat er nodig is.</p>
+          <h2>Beslis je nog vooral op ervaring terwijl de data er wél is?</h2>
+          <p>Dan is er waarschijnlijk meer mogelijk. Laten we kijken hoe je data kan helpen om betere keuzes te maken.</p>
         </div>
         <a href="https://calendly.com/piene-claessentech/30min" class="case-cta-button">Plan een kennismaking <span>→</span></a>
       </div>

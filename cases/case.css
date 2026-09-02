@@ -7,37 +7,62 @@
   background: var(--bg);
 }
 
+
+/* ============================================================
+   HERO
+   ============================================================ */
+
 .case-hero {
-  padding: 34px 0 26px;
+  padding: 30px 0 24px;
 }
 
 .case-back {
   display: inline-flex;
   align-items: center;
-  margin-bottom: 28px;
+  margin-bottom: 24px;
   color: var(--ink-dim);
   font-size: 13px;
   font-weight: 600;
   transition: color .2s ease;
 }
 
-.case-back:hover { color: var(--accent-deep); }
+.case-back:hover {
+  color: var(--accent-deep);
+}
+
+
+/* ---------- Hero layout ---------- */
 
 .case-hero-grid {
   display: grid;
-  grid-template-columns: minmax(0, .88fr) minmax(420px, 1.12fr);
-  gap: 54px;
+
+  /* Tekst krijgt bewust iets meer ruimte.
+     Zo blijft o.a. 'helikopteronderdelen' heel. */
+  grid-template-columns: minmax(0, 1.2fr) minmax(0, .8fr);
+
+  gap: 42px;
   align-items: center;
 }
+
+.case-hero-copy,
+.case-hero-image {
+  min-width: 0;
+}
+
+
+/* ---------- Label ---------- */
 
 .case-context-label {
   display: inline-flex;
   align-items: center;
   width: fit-content;
+
+  margin-bottom: 16px;
   padding: 6px 12px;
-  margin-bottom: 18px;
+
   border-radius: 999px;
   background: var(--bg-soft);
+
   color: var(--ink-dim);
   font-size: 11px;
   font-weight: 700;
@@ -45,55 +70,115 @@
   text-transform: uppercase;
 }
 
+
+/* ---------- Titel ---------- */
+
 .case-hero h1 {
-  max-width: 13ch;
+  width: 100%;
+  max-width: none;
+
   font-family: var(--display);
-  font-size: clamp(2.35rem, 4.4vw, 4rem);
+
+  /* Grote titel bewust behouden */
+  font-size: clamp(2.25rem, 3.7vw, 3.35rem);
   line-height: 1.08;
   letter-spacing: -.035em;
+
   color: var(--ink);
+
+  /* Geen lelijke afbreking van lange woorden */
+  overflow-wrap: normal;
+  word-break: normal;
+  hyphens: none;
+
+  text-wrap: balance;
 }
+
+
+/* ---------- Intro ---------- */
 
 .case-lede {
-  max-width: 55ch;
-  margin-top: 24px;
+  max-width: 58ch;
+  margin-top: 20px;
+
   color: var(--ink-dim);
-  font-size: 17px;
-  line-height: 1.75;
+  font-size: 16px;
+  line-height: 1.7;
 }
 
+
+/* ---------- Hero afbeelding ---------- */
+
 .case-hero-image {
-  position: relative;
   overflow: hidden;
-  min-height: 330px;
-  aspect-ratio: 16 / 9;
-  border-radius: 22px;
-  box-shadow: var(--shadow-sm);
+  width: 100%;
+
+  aspect-ratio: 16 / 10;
+
+  border-radius: 20px;
   background: var(--bg-soft);
+  box-shadow: var(--shadow-sm);
 }
 
 .case-hero-image img {
+  display: block;
   width: 100%;
   height: 100%;
+
   object-fit: cover;
 }
+
+
+/* ============================================================
+   META — rol / context / type vraagstuk
+   ============================================================ */
 
 .case-meta {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
-  margin-top: 28px;
+
+  /* Volledige beschikbare breedte */
+  width: 100%;
+  max-width: none;
+
+  margin-top: 24px;
+
   border: 1px solid var(--line);
-  border-radius: 18px;
-  background: rgba(255,255,255,.7);
+  border-radius: 16px;
+
+  background: rgba(255, 255, 255, .72);
   box-shadow: var(--shadow-sm);
+}
+
+
+.case-meta-four {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+.case-meta-four .case-meta-item {
+  padding-left: 18px;
+  padding-right: 18px;
+}
+
+.case-meta-four .case-meta-item > div:last-child {
+  min-width: 0;
+}
+
+.case-meta-four .case-meta-item strong {
+  overflow-wrap: anywhere;
 }
 
 .case-meta-item {
   display: flex;
   align-items: center;
-  gap: 14px;
-  min-height: 92px;
-  padding: 20px 28px;
+  justify-content: center;
+
+  gap: 18px;
+
+  min-width: 0;
+  min-height: 86px;
+
+  padding: 18px 24px;
 }
 
 .case-meta-item + .case-meta-item {
@@ -101,11 +186,10 @@
 }
 
 .case-meta-icon {
-  width: 34px;
-  height: 34px;
-  display: grid;
-  place-items: center;
+  width: 45px;
+  height: 45px;
   flex: 0 0 auto;
+
   color: var(--accent-deep);
 }
 
@@ -116,6 +200,7 @@
 .case-cta-icon svg {
   width: 100%;
   height: 100%;
+
   fill: none;
   stroke: currentColor;
   stroke-width: 1.7;
@@ -125,27 +210,39 @@
 
 .case-meta-item span {
   display: block;
-  margin-bottom: 3px;
+
+  margin-bottom: 2px;
+
   color: var(--ink-faint);
-  font-size: 11px;
+  font-size: 10.5px;
   font-weight: 600;
 }
 
 .case-meta-item strong {
   display: block;
+
   color: var(--ink);
-  font-size: 14px;
+  font-size: 13.5px;
   font-weight: 600;
 }
 
+
+/* ============================================================
+   CASE STORY
+   ============================================================ */
+
 .case-story {
-  padding: 28px 0 34px;
+  padding: 30px 0 34px;
 }
 
 .case-story-grid {
   display: grid;
-  grid-template-columns: minmax(0, 1.75fr) minmax(270px, .8fr);
-  gap: 44px;
+
+  grid-template-columns:
+    minmax(0, 1.8fr)
+    minmax(270px, .78fr);
+
+  gap: 42px;
   align-items: start;
 }
 
@@ -153,43 +250,69 @@
   min-width: 0;
 }
 
+
+/* ---------- Hoofdsecties ---------- */
+
 .case-section-row {
   display: grid;
-  grid-template-columns: 82px minmax(0, 1fr);
-  gap: 26px;
-  padding: 34px 0;
+
+  grid-template-columns: 72px minmax(0, 1fr);
+  gap: 22px;
+
+  padding: 28px 0;
+
   border-bottom: 1px solid var(--line);
 }
 
-.case-section-row:first-child { padding-top: 0; }
-.case-section-row:last-child { border-bottom: 0; }
+.case-section-row:first-child {
+  padding-top: 0;
+}
+
+.case-section-row:last-child {
+  border-bottom: 0;
+}
+
+
+/* ---------- Sectie iconen ---------- */
 
 .case-section-icon {
-  width: 72px;
-  height: 72px;
-  padding: 18px;
-  border-radius: 16px;
+  width: 62px;
+  height: 62px;
+
+  padding: 15px;
+
+  border-radius: 15px;
+
   background: var(--accent-tint);
   color: var(--accent-deep);
 }
 
+
+/* ---------- Sectie titels ---------- */
+
 .case-section-title {
   display: flex;
   align-items: center;
-  gap: 14px;
-  margin-bottom: 12px;
+
+  gap: 12px;
+
+  margin-bottom: 10px;
 }
 
 .case-section-title > span {
   display: inline-grid;
   place-items: center;
-  width: 36px;
-  height: 36px;
+
+  width: 32px;
+  height: 32px;
+
   border-radius: 50%;
-  background: var(--accent-tint);
-  color: var(--accent-deep);
+
+  background: var(--accent);
+  color: #fff;
+
   font-family: var(--display);
-  font-size: 13px;
+  font-size: 11px;
   font-weight: 700;
 }
 
@@ -202,96 +325,152 @@
 }
 
 .case-section-title h2 {
-  font-size: 21px;
+  font-size: 20px;
 }
 
+
+/* ---------- Sectie tekst ---------- */
+
 .case-section-body > p {
-  max-width: 72ch;
+  max-width: 68ch;
+
   color: var(--ink-dim);
-  font-size: 15px;
-  line-height: 1.8;
+  font-size: 14px;
+  line-height: 1.65;
 }
+
+.case-section-body > p + p {
+  margin-top: 10px;
+}
+
+
+/* ============================================================
+   AANPAK
+   ============================================================ */
 
 .case-steps {
   display: grid;
-  grid-template-columns: 1fr auto 1fr auto 1fr auto 1fr;
-  align-items: start;
-  gap: 12px;
-  margin-top: 30px;
+
+  grid-template-columns:
+    1fr auto
+    1fr auto
+    1fr auto
+    1fr;
+
+  align-items: stretch;
+
+  gap: 10px;
+
+  margin-top: 22px;
 }
 
 .case-step {
+  padding: 16px 12px;
+
+  border: 1px solid var(--line);
+  border-radius: 13px;
+
+  background: rgba(255, 255, 255, .55);
+
   text-align: center;
 }
 
 .case-step-icon {
-  width: 58px;
-  height: 58px;
-  padding: 15px;
-  margin: 0 auto 13px;
+  width: 44px;
+  height: 44px;
+
+  padding: 10px;
+  margin: 0 auto 10px;
+
   border-radius: 50%;
+
   background: var(--accent-tint);
   color: var(--accent-deep);
 }
 
 .case-step h3 {
-  margin-bottom: 7px;
+  margin-bottom: 5px;
+
   font-family: var(--display);
-  font-size: 12px;
-  line-height: 1.4;
+
+  color: var(--accent-deep);
+
+  font-size: 11px;
+  line-height: 1.35;
 }
 
 .case-step p {
   color: var(--ink-dim);
-  font-size: 11px;
-  line-height: 1.55;
+
+  font-size: 10px;
+  line-height: 1.45;
 }
 
 .case-step-arrow {
-  align-self: start;
-  margin-top: 20px;
-  color: #D8CFC0;
-  font-size: 25px;
+  align-self: center;
+
+  color: #CFC5B6;
+
+  font-size: 22px;
   font-weight: 300;
 }
 
+
+/* ============================================================
+   RESULTAAT / LIJSTEN
+   ============================================================ */
+
 .case-check-list,
 .case-side-list {
-  list-style: none;
-  margin: 20px 0 0;
   display: grid;
-  gap: 9px;
+  gap: 7px;
+
+  list-style: none;
+
+  margin: 16px 0 0;
 }
 
 .case-check-list li,
 .case-side-list li {
   position: relative;
-  padding-left: 25px;
+
+  padding-left: 22px;
+
   color: var(--ink-dim);
-  font-size: 13.5px;
-  line-height: 1.55;
+
+  font-size: 12.5px;
+  line-height: 1.5;
 }
 
 .case-check-list li::before,
 .case-side-list li::before {
   content: "✓";
+
   position: absolute;
   left: 0;
   top: 0;
+
   color: var(--accent-deep);
   font-weight: 700;
 }
 
+
+/* ============================================================
+   REFLECTIEKAARTEN RECHTS
+   ============================================================ */
+
 .case-side-column {
   position: sticky;
-  top: 110px;
+  top: 104px;
+
   display: grid;
-  gap: 22px;
+  gap: 18px;
 }
 
 .case-side-card {
-  padding: 30px 28px;
-  border-radius: 18px;
+  padding: 25px 23px;
+
+  border-radius: 17px;
 }
 
 .case-side-card-warm {
@@ -303,35 +482,46 @@
 }
 
 .case-side-icon {
-  width: 42px;
-  height: 42px;
-  padding: 9px;
-  margin-bottom: 18px;
-  border-radius: 50%;
+  width: 38px;
+  height: 38px;
+
+  padding: 8px;
+  margin-bottom: 14px;
+
+  border-radius: 11px;
 }
 
 .case-side-card-warm .case-side-icon {
-  background: rgba(255,255,255,.55);
+  background: rgba(255, 255, 255, .55);
   color: var(--warm);
 }
 
 .case-side-card-teal .case-side-icon {
-  background: rgba(255,255,255,.55);
+  background: rgba(255, 255, 255, .55);
   color: var(--accent-deep);
 }
 
 .case-side-card h2 {
-  max-width: 16ch;
-  font-size: 19px;
-  line-height: 1.35;
+  max-width: 18ch;
+
+  font-size: 18px;
+  line-height: 1.3;
 }
 
 .case-side-card > p {
-  margin-top: 16px;
+  margin-top: 12px;
+
   color: var(--ink-dim);
-  font-size: 13.5px;
-  line-height: 1.75;
+
+  font-size: 12.5px;
+  line-height: 1.65;
 }
+
+
+/* ============================================================
+   CTA
+   NIET AANGEPAST — bestaande stijl behouden
+   ============================================================ */
 
 .case-cta-section {
   padding: 20px 0 78px;
@@ -341,20 +531,34 @@
   display: grid;
   grid-template-columns: auto minmax(0, 1fr) auto;
   align-items: center;
+
   gap: 24px;
+
   padding: 28px 32px;
+
   border-radius: 18px;
-  background: linear-gradient(135deg, var(--accent-deep), var(--accent));
+
+  background:
+    linear-gradient(
+      135deg,
+      var(--accent-deep),
+      var(--accent)
+    );
+
   box-shadow: var(--shadow-sm);
+
   color: #fff;
 }
 
 .case-cta-icon {
   width: 54px;
   height: 54px;
+
   padding: 14px;
+
   border-radius: 13px;
-  background: rgba(255,255,255,.1);
+
+  background: rgba(255, 255, 255, .1);
   color: #fff;
 }
 
@@ -365,7 +569,9 @@
 
 .case-cta p {
   margin-top: 5px;
-  color: rgba(255,255,255,.78);
+
+  color: rgba(255, 255, 255, .78);
+
   font-size: 13.5px;
 }
 
@@ -373,52 +579,100 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
+
   gap: 12px;
+
   min-height: 50px;
+
   padding: 0 24px;
+
   border-radius: 12px;
+
   background: #fff;
   color: var(--accent-deep);
+
   font-size: 14px;
   font-weight: 700;
+
   white-space: nowrap;
-  transition: transform .2s ease, background .2s ease;
+
+  transition:
+    transform .2s ease,
+    background .2s ease;
 }
 
 .case-cta-button:hover {
   transform: translateY(-1px);
+
   background: var(--bg-soft);
 }
 
+
+/* ============================================================
+   RESPONSIVE — TABLET
+   ============================================================ */
+
+@media (max-width: 1100px) and (min-width: 981px) {
+
+  /* Iets minder extreme verhouding wanneer het scherm smaller wordt */
+  .case-hero-grid {
+    grid-template-columns:
+      minmax(0, 1.12fr)
+      minmax(0, .88fr);
+
+    gap: 32px;
+  }
+}
+
+
 @media (max-width: 980px) {
+
+  /* Hero onder elkaar */
   .case-hero-grid {
     grid-template-columns: 1fr;
-    gap: 30px;
+    gap: 28px;
   }
 
-  .case-hero h1 { max-width: 16ch; }
-  .case-hero-image { min-height: 0; }
+  .case-hero h1 {
+    max-width: 20ch;
+  }
 
+  /* Story onder elkaar */
   .case-story-grid {
     grid-template-columns: 1fr;
   }
 
   .case-side-column {
     position: static;
+
     grid-template-columns: 1fr 1fr;
   }
 }
 
+
+/* ============================================================
+   RESPONSIVE — SMALL TABLET
+   ============================================================ */
+
 @media (max-width: 760px) {
-  .case-hero { padding-top: 24px; }
+
+  .case-hero {
+    padding-top: 22px;
+  }
+
+
+  /* ---------- Meta ---------- */
 
   .case-meta {
     grid-template-columns: 1fr;
   }
 
   .case-meta-item {
-    min-height: 72px;
-    padding: 16px 20px;
+    justify-content: flex-start;
+
+    min-height: 68px;
+
+    padding: 14px 18px;
   }
 
   .case-meta-item + .case-meta-item {
@@ -426,28 +680,71 @@
     border-top: 1px solid var(--line);
   }
 
+
+  .case-meta-four {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .case-meta-four .case-meta-item {
+    justify-content: flex-start;
+    border-left: 0;
+    border-top: 0;
+  }
+
+  .case-meta-four .case-meta-item + .case-meta-item {
+    border-left: 0;
+    border-top: 0;
+  }
+
+  .case-meta-four .case-meta-item:nth-child(even) {
+    border-left: 1px solid var(--line);
+  }
+
+  .case-meta-four .case-meta-item:nth-child(n + 3) {
+    border-top: 1px solid var(--line);
+  }
+
+
+  /* ---------- Story ---------- */
+
   .case-section-row {
-    grid-template-columns: 52px minmax(0, 1fr);
-    gap: 16px;
+    grid-template-columns:
+      52px minmax(0, 1fr);
+
+    gap: 15px;
   }
 
   .case-section-icon {
-    width: 50px;
-    height: 50px;
-    padding: 12px;
-    border-radius: 13px;
+    width: 48px;
+    height: 48px;
+
+    padding: 11px;
+
+    border-radius: 12px;
   }
+
+
+  /* ---------- Aanpak ---------- */
 
   .case-steps {
     grid-template-columns: 1fr 1fr;
-    gap: 24px 14px;
+
+    gap: 12px;
   }
 
-  .case-step-arrow { display: none; }
+  .case-step-arrow {
+    display: none;
+  }
+
+
+  /* ---------- Reflecties ---------- */
 
   .case-side-column {
     grid-template-columns: 1fr;
   }
+
+
+  /* ---------- CTA ---------- */
 
   .case-cta {
     grid-template-columns: auto 1fr;
@@ -455,65 +752,117 @@
 
   .case-cta-button {
     grid-column: 1 / -1;
+
     width: 100%;
   }
 }
 
+
+/* ============================================================
+   RESPONSIVE — MOBILE
+   ============================================================ */
+
 @media (max-width: 520px) {
+
+
+  /* ---------- Meta ---------- */
+
+  .case-meta-four {
+    grid-template-columns: 1fr;
+  }
+
+  .case-meta-four .case-meta-item:nth-child(even) {
+    border-left: 0;
+  }
+
+  .case-meta-four .case-meta-item:nth-child(n + 2) {
+    border-top: 1px solid var(--line);
+  }
+
+  .case-hero-grid {
+    gap: 22px;
+  }
+
   .case-hero h1 {
-    max-width: none;
-    font-size: clamp(2rem, 10vw, 2.6rem);
+    max-width: 100%;
+
+    font-size: clamp(1.75rem, 8.4vw, 2.25rem);
+    line-height: 1.13;
+    letter-spacing: -.025em;
+
+    text-wrap: pretty;
   }
 
   .case-lede {
-    font-size: 15.5px;
+    margin-top: 16px;
+
+    font-size: 15px;
+    line-height: 1.65;
   }
 
   .case-hero-image {
-    border-radius: 16px;
+    aspect-ratio: 16 / 10;
+
+    border-radius: 15px;
   }
+
+
+  /* ---------- Story ---------- */
 
   .case-section-row {
     display: block;
-    padding: 26px 0;
+
+    padding: 24px 0;
   }
 
   .case-section-icon {
-    margin-bottom: 14px;
+    margin-bottom: 12px;
   }
 
   .case-section-title {
-    gap: 10px;
+    gap: 9px;
   }
 
   .case-section-title > span {
-    width: 32px;
-    height: 32px;
+    width: 30px;
+    height: 30px;
   }
 
   .case-section-title h2 {
-    font-size: 19px;
+    font-size: 18px;
   }
+
+
+  /* ---------- Aanpak ---------- */
 
   .case-steps {
     grid-template-columns: 1fr;
-    gap: 22px;
+
+    gap: 10px;
   }
 
   .case-step {
     display: grid;
-    grid-template-columns: 50px 1fr;
-    gap: 2px 14px;
-    text-align: left;
+
+    grid-template-columns: 44px 1fr;
+
+    gap: 2px 12px;
+
     align-items: center;
+
+    padding: 12px;
+
+    text-align: left;
   }
 
   .case-step-icon {
     grid-column: 1;
     grid-row: 1 / 3;
-    width: 48px;
-    height: 48px;
-    padding: 12px;
+
+    width: 42px;
+    height: 42px;
+
+    padding: 10px;
     margin: 0;
   }
 
@@ -522,11 +871,19 @@
     grid-column: 2;
   }
 
-  .case-step h3 { margin: 0; }
+  .case-step h3 {
+    margin: 0;
+  }
+
+
+  /* ---------- Reflecties ---------- */
 
   .case-side-card {
-    padding: 24px 22px;
+    padding: 22px 20px;
   }
+
+
+  /* ---------- CTA ---------- */
 
   .case-cta-section {
     padding-bottom: 56px;
@@ -536,141 +893,11 @@
     display: flex;
     flex-direction: column;
     align-items: flex-start;
+
     padding: 25px 22px;
   }
 
   .case-cta-button {
     align-self: stretch;
-  }
-}
-
-/* ============================================================
-   Case hero sizing
-   Long titles stay inside the text column and wrap safely.
-   ============================================================ */
-
-.case-hero-grid {
-  grid-template-columns: minmax(0, 1fr) minmax(0, 1.08fr);
-  gap: 48px;
-}
-
-.case-hero-copy,
-.case-hero-image {
-  min-width: 0;
-}
-
-.case-hero-copy {
-  overflow: hidden;
-}
-
-.case-hero h1 {
-  width: 100%;
-  max-width: 15ch;
-  font-size: clamp(2.3rem, 3.65vw, 3.35rem);
-  line-height: 1.09;
-  overflow-wrap: normal;
-  word-break: normal;
-  hyphens: none;
-}
-
-.case-hero-image {
-  position: relative;
-  z-index: 1;
-  width: 100%;
-  max-width: 100%;
-}
-
-.case-hero-image img {
-  display: block;
-  width: 100%;
-  max-width: 100%;
-  object-fit: cover;
-}
-
-/* Works for 3 metadata fields and 4 metadata fields. */
-.case-meta {
-  grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
-}
-
-@media (max-width: 1180px) and (min-width: 981px) {
-  .case-hero-grid {
-    grid-template-columns: minmax(0, .95fr) minmax(0, 1.05fr);
-    gap: 34px;
-  }
-
-  .case-hero h1 {
-    max-width: 100%;
-    font-size: clamp(2rem, 3.25vw, 2.75rem);
-  }
-}
-
-@media (max-width: 980px) {
-  .case-hero-grid {
-    grid-template-columns: 1fr;
-    gap: 30px;
-  }
-
-  .case-hero-copy,
-  .case-hero-image {
-    width: 100%;
-    max-width: 100%;
-  }
-
-  .case-hero h1 {
-    max-width: 18ch;
-    overflow-wrap: normal;
-    hyphens: none;
-  }
-}
-
-@media (max-width: 520px) {
-  .case-hero {
-    padding-top: 24px;
-  }
-
-  .case-hero-grid {
-    gap: 24px;
-  }
-
-  .case-hero h1 {
-    max-width: 100%;
-    font-size: clamp(1.8rem, 9vw, 2.35rem);
-    line-height: 1.12;
-    letter-spacing: -.025em;
-    overflow-wrap: normal;
-    hyphens: none;
-  }
-
-  .case-hero-image {
-    min-height: 0;
-    aspect-ratio: 16 / 10;
-    border-radius: 16px;
-  }
-}
-
-
-/* ============================================================
-   Long case titles — natural wrapping, no awkward hyphenation
-   ============================================================ */
-
-.case-hero h1 {
-  overflow-wrap: normal;
-  word-break: normal;
-  hyphens: none;
-  text-wrap: balance;
-}
-
-@media (max-width: 980px) {
-  .case-hero h1 {
-    max-width: 22ch;
-  }
-}
-
-@media (max-width: 520px) {
-  .case-hero h1 {
-    max-width: 100%;
-    font-size: clamp(1.75rem, 8.4vw, 2.25rem);
-    line-height: 1.13;
-    text-wrap: pretty;
   }
 }

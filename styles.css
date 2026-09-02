@@ -917,8 +917,8 @@ section { padding: 96px 0; }
 
 .need-question {
   color: var(--ink);
-  font-size: 17px;
-  line-height: 26px;
+  font-size: 15px;
+  line-height: 15px;
   margin-top: 14px;
   height: 52px;
   overflow: hidden;
@@ -1348,11 +1348,15 @@ section { padding: 96px 0; }
 .about-links .cv-link { margin-top: 0; }
 .about-links .more-link { margin-top: 0; }
 
+.about-cta-row { display: flex; align-items: center; gap: 18px; margin-top: 26px; flex-wrap: wrap; }
+.about-cta-row p { margin-bottom: 0; }
+.about-cta-row .more-link { margin-top: 0; }
+
 
 /* ============================================================
    12. CASES — overzicht (#cases)
    ============================================================ */
-#cases { padding: 96px 0; }
+#cases { padding: 30px 0; }
 
 .cases-head { max-width: 560px; margin-bottom: 32px; }
 .cases-head h2 {
@@ -1450,7 +1454,7 @@ section { padding: 96px 0; }
 /* ============================================================
    13. CONTACT (#contact)
    ============================================================ */
-#contact { background: var(--bg); border-radius: 36px; margin: 0 16px; padding: 72px 0; }
+#contact { background: var(--bg); border-radius: 36px; margin: 0 16px; padding: 40px 0; }
 
 .contact-card {
   background: linear-gradient(135deg, var(--accent-deep), var(--accent));
@@ -1802,7 +1806,7 @@ footer { padding: 36px 0; background: var(--bg); }
 }
 
 .about-story-portrait {
-  min-height: 390px;
+  min-height: 190px;
   position: relative;
   border-radius: 28px;
   overflow: hidden;
@@ -1813,7 +1817,7 @@ footer { padding: 36px 0; background: var(--bg); }
 .about-story-portrait > img {
   width: 100%;
   height: 100%;
-  min-height: 390px;
+  min-height: 190px;
   object-fit: cover;
 }
 
@@ -1895,11 +1899,11 @@ footer { padding: 36px 0; background: var(--bg); }
 
 
 /* ---------- verhaal ---------- */
-.about-story-section { padding: 86px 0 56px; }
+.about-story-section { padding: 70px 0 32px; }
 
 .about-story-section-head {
   max-width: 760px;
-  margin-bottom: 28px;
+  margin-bottom: 10px;
 }
 
 .about-story-section-head h2 {
@@ -1923,7 +1927,7 @@ footer { padding: 36px 0; background: var(--bg); }
   grid-template-columns: .92fr 1.08fr;
   gap: 54px;
   align-items: center;
-  padding: 46px 0;
+  padding: 34px 0;
   border-top: 1px solid var(--line);
 }
 
@@ -2024,7 +2028,7 @@ footer { padding: 36px 0; background: var(--bg); }
 
 /* ---------- persoonlijk ---------- */
 .about-personal-section {
-  padding: 34px 0 10px;
+  padding: 12px 0 10px;
 }
 
 .about-personal-panel {
@@ -2035,9 +2039,8 @@ footer { padding: 36px 0; background: var(--bg); }
 
 .about-personal-head {
   display: flex;
-  justify-content: space-between;
-  align-items: flex-end;
-  gap: 30px;
+  flex-direction: column;
+  gap: 16px;
   margin-bottom: 24px;
 }
 
@@ -2758,3 +2761,19 @@ ul.check li::before { content: "✓"; position: absolute; left: 0; color: var(--
   .cookie-banner-actions .btn { width: 100%; justify-content: center; }
 }
 
+
+
+/* ---------- Over mij: CTA breedte ---------- */
+.about-now-cta .approach-contact-copy {
+  max-width: none;
+  flex: 1;
+  min-width: 0;
+}
+
+.about-now-cta .approach-contact-copy p {
+  max-width: 68ch;
+}
+
+.about-now-cta .approach-contact-actions {
+  flex-shrink: 0;
+}
