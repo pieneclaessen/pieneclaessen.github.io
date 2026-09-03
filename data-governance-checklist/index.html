@@ -55,14 +55,6 @@
     </div>
 
     <div class="nav-mobile-actions">
-      <a href="./" class="nav-scan nav-scan-mobile" aria-label="Doe de gratis scan">
-        <svg viewBox="0 0 24 24" aria-hidden="true">
-          <circle cx="11" cy="11" r="6.5"></circle>
-          <path d="M16 16l4.2 4.2"></path>
-        </svg>
-        <span>Scan</span>
-      </a>
-
       <button class="menu-toggle" type="button"
               aria-expanded="false"
               aria-controls="mobile-nav-panel"
@@ -114,11 +106,14 @@
 <main id="top">
 
   <section class="checklist-hero">
+    <div class="wrap">
+      <a href="../#services" class="about-back-link">← Terug naar home</a>
+    </div>
     <div class="wrap checklist-hero-grid">
       <div class="checklist-hero-copy">
         <span class="eyebrow"><span class="dot"></span>Data governance checklist</span>
         <h1>Ontdek in <span class="accent-text">5 minuten</span> waar jouw organisatie staat met data governance</h1>
-        <p class="lede">Van eigenaarschap en datakwaliteit tot definities, processen en verantwoordelijkheden. Vink aan wat klopt voor jouw organisatie en zie direct waar de grootste gaten zitten.</p>
+        <p class="lede">Van eigenaarschap en datakwaliteit tot systemen, beveiliging en AI. Ontdek waar je basis al stevig staat en waar nog werk te doen is.</p>
 
         <div class="checklist-hero-facts" aria-label="Over deze scan">
           <span><span class="fact-check">✓</span>5 minuten</span>
@@ -129,9 +124,6 @@
 
       <div class="checklist-hero-visual">
         <img src="images/Dashbord van achteren.JPEG" alt="Laptop met data-dashboard op een rustige werkplek">
-        <div class="checklist-image-note">
-          <span class="image-note-icon">✓</span>
-          <p>Goede data governance is de basis voor betrouwbare data, slimmere beslissingen en duurzame groei.</p>
         </div>
       </div>
     </div>
@@ -142,7 +134,7 @@
       <div class="checklist-panel">
         <div class="checklist-intro-row">
           <div class="checklist-intro-copy">
-            <h2>Vink aan wat op dit moment klopt</h2>
+            <h2>Tijd om de balans op te maken</h2>
             <p>Er is geen goed of fout antwoord, alleen een eerlijk beeld van waar je organisatie nu staat. Je hoeft geen data-expert te zijn: de vragen gaan over je organisatie, niet over techniek.</p>
           </div>
           <aside class="checklist-help">
@@ -179,30 +171,30 @@
         <div class="result-text">
           <div class="result-band" id="resultBand">0–8 punten</div>
           <div class="result-title" id="resultTitle">De basis ontbreekt nog</div>
-          <p class="result-desc" id="resultDesc">Data en verantwoordelijkheden zijn versnipperd. Er is geen overzicht van wie wat beheert of waar data staat. Elke uitbreiding — ook met AI — vergroot dit risico. Dit is het moment om eerst structuur aan te brengen, vóórdat je verder bouwt.</p>
+          <p class="result-desc" id="resultDesc">Data en verantwoordelijkheden zijn versnipperd. Er is geen overzicht van wie wat beheert of waar data staat. Dat maakt het lastig om betrouwbaar verder te bouwen met dashboards, automatisering of AI. Dit is het moment om eerst structuur aan te brengen, vóórdat je verder bouwt.</p>
 
           <div class="result-tips">
             <div class="result-tip">
               <span>◎</span>
-              <strong>Zet prioriteiten</strong>
-              <p>Focus op de thema's waar de grootste kansen liggen.</p>
+              <strong id="resultTip1Title">Begin bij je belangrijkste data</strong>
+              <p id="resultTip1Text">Breng in kaart welke data cruciaal is voor je belangrijkste processen en beslissingen.</p>
             </div>
             <div class="result-tip">
               <span>♙</span>
-              <strong>Borg eigenaarschap</strong>
-              <p>Maak verantwoordelijkheden duidelijk en zichtbaar.</p>
+              <strong id="resultTip2Title">Maak eigenaarschap duidelijk</strong>
+              <p id="resultTip2Text">Bepaal wie verantwoordelijk is voor de inhoud, kwaliteit en het gebruik van die data.</p>
             </div>
             <div class="result-tip">
               <span>↗</span>
-              <strong>Zorg voor continuïteit</strong>
-              <p>Zet kleine stappen die zorgen voor blijvende verbetering.</p>
+              <strong id="resultTip3Title">Los één concreet knelpunt op</strong>
+              <p id="resultTip3Text">Kies een plek waar slechte of onduidelijke data nu zichtbaar tijd of kwaliteit kost.</p>
             </div>
           </div>
         </div>
 
         <aside class="result-cta-column">
-          <p class="result-nudge" id="resultNudge">Wil je dit samen ontrafelen?</p>
-          <p>In een vrijblijvend gesprek denken we samen door waar jouw grootste kansen liggen.</p>
+          <p class="result-nudge" id="resultNudge">Niet zeker waar je moet beginnen?</p>
+          <p id="resultCtaText">Ik help je bepalen waar je eerste stap de meeste waarde oplevert.</p>
           <a href="https://calendly.com/piene-claessentech/30min" class="result-cta">Plan een kennismaking →</a>
         </aside>
       </div>
@@ -380,22 +372,56 @@ function updateScores(){
   const title = document.getElementById('resultTitle');
   const desc = document.getElementById('resultDesc');
   const nudge = document.getElementById('resultNudge');
+  const ctaText = document.getElementById('resultCtaText');
+  const tip1Title = document.getElementById('resultTip1Title');
+  const tip1Text = document.getElementById('resultTip1Text');
+  const tip2Title = document.getElementById('resultTip2Title');
+  const tip2Text = document.getElementById('resultTip2Text');
+  const tip3Title = document.getElementById('resultTip3Title');
+  const tip3Text = document.getElementById('resultTip3Text');
 
   if(total <= 8){
     band.textContent = '0–8 punten';
     title.textContent = 'De basis ontbreekt nog';
-    desc.textContent = 'Data en verantwoordelijkheden zijn versnipperd. Er is geen overzicht van wie wat beheert of waar data staat. Elke uitbreiding, en zeker AI, vergroot dit risico. Dit is het moment om eerst structuur aan te brengen, vóórdat je verder bouwt.';
-    nudge.textContent = 'De basis écht sterk neerzetten?';
+    desc.textContent = 'Data en verantwoordelijkheden zijn versnipperd. Er is geen overzicht van wie wat beheert of waar data staat. Dat maakt het lastig om betrouwbaar verder te bouwen met dashboards, automatisering of AI. Dit is het moment om eerst structuur aan te brengen, vóórdat je verder bouwt.';
+
+    tip1Title.textContent = 'Begin bij je belangrijkste data';
+    tip1Text.textContent = 'Breng in kaart welke data cruciaal is voor je belangrijkste processen en beslissingen.';
+    tip2Title.textContent = 'Maak eigenaarschap duidelijk';
+    tip2Text.textContent = 'Bepaal wie verantwoordelijk is voor de inhoud, kwaliteit en het gebruik van die data.';
+    tip3Title.textContent = 'Los één concreet knelpunt op';
+    tip3Text.textContent = 'Kies een plek waar slechte of onduidelijke data nu zichtbaar tijd of kwaliteit kost.';
+
+    nudge.textContent = 'Veel te verbeteren, maar waar begin je?';
+    ctaText.textContent = 'Laten we kijken welke eerste stap direct meer grip op je data geeft.';
   } else if(total <= 16){
     band.textContent = '9–16 punten';
-    title.textContent = 'Losse onderdelen, geen samenhang';
-    desc.textContent = 'Er zijn losse goede initiatieven, maar geen consistent geheel. Sommige teams hebben het op orde, andere niet. Dat werkt tot het misgaat en dan meestal precies op het moment dat het het meest kost.';
-    nudge.textContent = 'Toe aan meer samenhang?';
+    title.textContent = 'De basis is er, nu nog de samenhang.';
+    desc.textContent = 'Je hebt al goede afspraken en initiatieven, maar ze werken nog niet overal hetzelfde. Daardoor ontstaan verschillen in definities, verantwoordelijkheden en werkwijzen en blijft veel afhankelijk van individuele teams of mensen. Dat kan lang goed gaan, tot het misgaat. En dan meestal precies op het moment dat het het meest kost.';
+
+    tip1Title.textContent = 'Gebruik wat al werkt';
+    tip1Text.textContent = 'Kijk waar data al goed georganiseerd is en gebruik die aanpak als vertrekpunt.';
+    tip2Title.textContent = 'Trek belangrijke afspraken gelijk';
+    tip2Text.textContent = 'Maak duidelijk welke definities, rollen en kwaliteitsafspraken organisatiebreed moeten gelden.';
+    tip3Title.textContent = 'Verbind losse initiatieven';
+    tip3Text.textContent = 'Voorkom dat ieder team governance opnieuw uitvindt en zorg dat kennis en oplossingen worden gedeeld.';
+
+    nudge.textContent = 'Van losse onderdelen naar één aanpak?';
+    ctaText.textContent = 'Laten we kijken hoe je bestaande initiatieven bij elkaar brengt en zorgt dat ze ook echt als één geheel werken.';
   } else {
     band.textContent = '17–24 punten';
-    title.textContent = 'Een stevige basis';
-    desc.textContent = 'De basis staat. De volgende stap is niet meer “orde op zaken stellen”, maar gericht bouwen: dashboards, automatiseringen of AI-toepassingen die op deze basis kunnen vertrouwen.';
-    nudge.textContent = 'Toe aan de volgende stap?';
+    title.textContent = 'Je basis staat. Tijd om hem te benutten.';
+    desc.textContent = 'De basis staat. De volgende stap is niet meer ‘orde op zaken stellen’, maar gericht bouwen: dashboards, automatiseringen of AI-toepassingen die op deze basis kunnen vertrouwen.';
+
+    tip1Title.textContent = 'Zoek waar je meer uit je data kunt halen';
+    tip1Text.textContent = 'Kijk waar beslissingen nog vooral op gevoel worden genomen, terwijl de data er al is.';
+    tip2Title.textContent = 'Haal handwerk uit je processen';
+    tip2Text.textContent = 'Kijk waar mensen nog veel tijd kwijt zijn aan verzamelen, combineren, controleren of overtypen van informatie.';
+    tip3Title.textContent = 'Bouw waar het echt iets oplevert';
+    tip3Text.textContent = 'Kies niet voor AI omdat het kan. Kijk waar dashboards, automatisering of AI daadwerkelijk tijd bespaart, beslissingen verbetert of nieuw inzicht geeft.';
+
+    nudge.textContent = 'De randvoorwaarden staan. Wat ga je bouwen?';
+    ctaText.textContent = 'Laten we kijken welke toepassing jouw organisatie echt verder helpt.';
   }
 }
 
