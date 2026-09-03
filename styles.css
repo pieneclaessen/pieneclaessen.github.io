@@ -367,6 +367,7 @@ footer .brand img { height: 40px; }
   }
 
   .nav-scan-mobile {
+    display: none;
     min-height: 40px;
     padding: 8px 13px;
     font-size: 13px;
