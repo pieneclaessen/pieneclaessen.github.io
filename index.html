@@ -14,17 +14,72 @@
 </head>
 <body>
 
-<header>
-  <nav class="wrap">
-    <a href="#top" class="brand"><img src="images/logo.png" alt="Claessen Tech"></a>
+<header class="site-header">
+  <nav class="wrap site-nav" aria-label="Hoofdnavigatie">
+    <a href="/#top" class="brand">
+      <img src="/images/logo.png" alt="Claessen Tech">
+    </a>
+
     <div class="nav-links">
-      <a href="#services">Wat ik doe</a>
-      <a href="#about">Over mij</a>
-      <a href="#approach">Werkwijze</a>
-      <a href="#contact">Contact</a>
+      <a href="/#services">Wat ik doe</a>
+      <a href="/#about">Over mij</a>
+
+      <div class="nav-cases">
+        <button class="nav-cases-toggle" type="button" aria-expanded="false" aria-haspopup="true">
+          <span>Cases</span>
+          <svg viewBox="0 0 20 20" aria-hidden="true"><path d="M6 8l4 4 4-4"></path></svg>
+        </button>
+        <div class="nav-cases-menu" aria-label="Cases">
+          <a href="/cases/executive-dashboards/">Executive dashboards</a>
+          <a href="/cases/helikopter-onderhoud/">Helikopteronderhoud</a>
+          <a href="/cases/digitaliseringsportaal/">Digitaliseringsportaal</a>
+        </div>
+      </div>
+
+      <a href="/#contact">Contact</a>
+      <a href="/data-governance-checklist/" class="nav-scan">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="6.5"></circle><path d="M16 16l4.2 4.2"></path></svg>
+        <span>Doe de gratis scan</span>
+      </a>
       <a href="https://calendly.com/piene-claessentech/30min" class="nav-cta">Plan een kennismaking</a>
     </div>
+
+    <div class="nav-mobile-actions">
+      <a href="/data-governance-checklist/" class="nav-scan nav-scan-mobile" aria-label="Doe de gratis scan">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="6.5"></circle><path d="M16 16l4.2 4.2"></path></svg>
+        <span>Scan</span>
+      </a>
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="mobile-nav-panel" aria-label="Open menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
   </nav>
+
+  <div class="mobile-nav-panel" id="mobile-nav-panel">
+    <div class="mobile-nav-inner">
+      <a href="/#services">Wat ik doe</a>
+      <a href="/#about">Over mij</a>
+
+      <div class="mobile-cases-nav">
+        <button class="mobile-cases-toggle" type="button" aria-expanded="false">
+          <span>Cases</span>
+          <svg viewBox="0 0 20 20" aria-hidden="true"><path d="M6 8l4 4 4-4"></path></svg>
+        </button>
+        <div class="mobile-cases-menu">
+          <a href="/cases/executive-dashboards/">Executive dashboards</a>
+          <a href="/cases/helikopter-onderhoud/">Helikopteronderhoud</a>
+          <a href="/cases/digitaliseringsportaal/">Digitaliseringsportaal</a>
+        </div>
+      </div>
+
+      <a href="/#contact">Contact</a>
+      <a href="/data-governance-checklist/" class="mobile-scan-link">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="6.5"></circle><path d="M16 16l4.2 4.2"></path></svg>
+        Doe de gratis scan
+      </a>
+      <a href="https://calendly.com/piene-claessentech/30min" class="mobile-nav-cta">Plan een kennismaking</a>
+    </div>
+  </div>
 </header>
 
 <main id="top">
@@ -37,13 +92,47 @@
         <p class="lede">Data verspreid over vijf systemen die elkaar tegenspreken. Uren per week verdwijnen in handmatig werk. Beslissingen worden genomen op gevoel, niet op inzicht. Ik help organisaties om dat om te draaien: met een nuchtere aanpak die begint bij de basis, niet bij de hype.</p>
         <div class="hero-actions">
           <a href="https://calendly.com/piene-claessentech/30min" class="btn btn-primary">Plan een kennismaking</a>
-          <a href="#services" class="btn btn-ghost">Ondek mijn aanpak</a>
+          <a href="#services" class="btn btn-ghost">Ontdek mijn aanpak</a>
         </div>
+        <a href="/data-governance-checklist/" class="hero-scan-note">
+          <span class="hero-scan-note-icon" aria-hidden="true">
+            <svg viewBox="0 0 32 32">
+              <circle cx="14" cy="14" r="7"></circle>
+              <path d="M19.5 19.5 25 25"></path>
+              <path d="M14 2.5v3"></path>
+              <path d="M14 22.5v3"></path>
+              <path d="M2.5 14h3"></path>
+              <path d="M22.5 14h3"></path>
+              <path d="m5.8 5.8 2.1 2.1"></path>
+              <path d="m20.1 20.1 2.1 2.1"></path>
+              <path d="m22.2 5.8-2.1 2.1"></path>
+              <path d="m7.9 20.1-2.1 2.1"></path>
+            </svg>
+          </span>
+          <span class="hero-scan-note-copy">
+            Nieuwsgierig waar je nu staat?
+            <strong>Doe de gratis Data Governance Scan →</strong>
+          </span>
+        </a>
       </div>
 
       <div class="portrait-wrap">
         <div class="portrait" aria-hidden="true">
-          <img src="images/Balkon_blauwe_blouse.JPEG">
+          <img
+  src="/images/piene-claessen-profiel-800.webp"
+  srcset="
+    /images/piene-claessen-profiel-500.webp 500w,
+    /images/piene-claessen-profiel-800.webp 800w,
+    /images/piene-claessen-profiel-1200.webp 1200w
+  "
+  sizes="(max-width: 980px) 90vw, 382px"
+  alt="Piene Claessen"
+  class="portrait-img"
+  width="1200"
+  height="1200"
+  fetchpriority="high"
+  decoding="async"
+>
         </div>
       </div>
     </div>
@@ -52,57 +141,119 @@
 <!-- WHAT I DO -->
   <section id="services">
     <div class="wrap">
-      <div class="section-head reveal">
-        <span class="eyebrow"><span class="dot"></span> Wat ik doe</span>
-        <h2>Signalen dat het tijd wordt om iets te doen</h2>
-        <p class="support">Je merkt dat data overal staat, maar nergens samenkomt. Rapportages kosten tijd, processen zijn nog handmatig en inzichten komen te laat.<b><br>Herkenbaar? Afhankelijk van waar je staat, ziet de samenwerking er anders uit.</b></p>
-      </div>
 
-      <div class="service-cards reveal">
-
-        <div class="service-card">
-          <div class="card-head">
-            <div class="icon">🔍</div>
-            <h3>Eerst duidelijkheid</h3>
-          </div>
-          <p>Je weet dat er iets moet gebeuren, maar waar start je?<br><br><em>→ We brengen samen in kaart waar data en AI jou het meeste opleveren en wat dat concreet betekent voor je organisatie.</em></p>
-        </div>
-
-        <div class="service-card">
-          <div class="card-head">
-            <div class="icon">🛠️</div>
-            <h3>Iets bouwen dat werkt</h3>
-          </div>
-          <p>Je weet al wat je nodig hebt, maar niemand die het bouwt.<br><br><em>→ Dashboards, automatiseringen en AI‑toepassingen die direct waarde leveren. Gebouwd op wat jouw organisatie écht nodig heeft.</em></p>
-        </div>
-
-        <div class="service-card">
-          <div class="card-head">
-            <div class="icon">🤝</div>
-            <h3>Bouwen én verankeren</h3>
-          </div>
-          <p>Voor organisaties die willen bouwen én groeien tegelijk.<br><br><em>→ De oplossing bouwen is maar één stap. Ik zorg er ook voor dat processen, mensen en werkwijzen aansluiten, zodat data en AI onderdeel worden van de dagelijkse praktijk.</em></p>
-        </div>
-
-        <div class="service-card">
-          <div class="card-head">
-            <div class="icon">🧭</div>
-            <h3>Een vaste sparringpartner</h3>
-          </div>
-          <p>Voor organisaties die iemand willen om op terug te vallen.<br><br><em>→ Ik bied richting, continuïteit en begeleiding, zodat je organisatie blijft groeien met data en AI.</em></p>
+      <div class="services-intro reveal">
+        <div class="services-intro-main">
+          <span class="eyebrow"><span class="dot"></span> Wat ik doe</span>
+          <h2>Waar loop je nu tegenaan?</h2>
+          <p>Rapporteren kost nog veel handwerk. Data staat verspreid over verschillende systemen. Of je ziet kansen met data en AI, maar weet niet waar je moet beginnen.</p>
+          <p>Je hoeft de oplossing nog niet te kennen. We beginnen bij waar je organisatie nu tegenaan loopt en bepalen van daaruit wat een logische volgende stap is</p> 
         </div>
       </div>
 
-      <div class="start-strip reveal">
-        <div>
+      <div class="need-cards reveal">
+        <article class="need-card">
+          <div class="service-icon" aria-hidden="true">🧭</div>
+          <h3>Eerst duidelijkheid</h3>
+          <p class="need-question">Je wilt vooruit, maar weet nog niet waar je moet beginnen.</p>
+          <div class="need-offer">
+            <h4><span>→</span> Data &amp; AI Scan</h4>
+            <p>We brengen kansen en knelpunten in kaart en vertalen die naar duidelijke prioriteiten en een concreet plan.</p>
+          </div>
+          <a href="/data-governance-checklist/" class="need-scan-link">
+            <span>↗</span> Eerst zelf checken? Doe de gratis scan
+        </a>
+        </article>
+
+        <article class="need-card">
+          <div class="service-icon" aria-hidden="true">⚙️</div>
+          <h3>Realiseren</h3>
+          <p class="need-question">Je weet al wat je nodig hebt, maar niemand die het bouwt.</p>
+          <div class="need-offer">
+            <h4><span>→</span> Data &amp; AI Development</h4>
+            <p>Van dashboards en automatisering tot AI-oplossingen: gebouwd rondom wat jouw organisatie nodig heeft.</p>
+          </div>
+        </article>
+
+        <article class="need-card">
+          <div class="service-icon" aria-hidden="true">🧩</div>
+          <h3>Samen bouwen</h3>
+          <p class="need-question">Je wilt bouwen én iemand die onderweg kritisch met je meedenkt.</p>
+          <div class="need-offer">
+            <h4><span>→</span> Langdurige samenwerking</h4>
+            <p>We bouwen de oplossing én zorgen dat processen, mensen en werkwijzen meegroeien.</p>
+          </div>
+        </article>
+
+        <article class="need-card">
+          <div class="service-icon" aria-hidden="true">🎯</div>
+          <h3>Leiden</h3>
+          <p class="need-question">Je zoekt iemand die met je meedenkt en waar je op kunt terugvallen.</p>
+          <div class="need-offer">
+            <h4><span>→</span>Een vaste sparringspartner</h4>
+            <p>Doorlopend richting, advies en een kritische blik bij keuzes rondom data en AI.</p>
+          </div>
+        </article>
+      </div>
+
+      <div class="connector reveal" aria-hidden="true">
+        <svg viewBox="0 0 1096 52" preserveAspectRatio="none">
+          <path class="connector-line" d="M 130.25 0 L 130.25 5 Q 130.25 25 150.25 25 L 548 25"/>
+          <path class="connector-line" d="M 965.75 0 L 965.75 5 Q 965.75 25 945.75 25 L 548 25"/>
+          <path class="connector-line" d="M 408.75 0 L 408.75 25"/>
+          <path class="connector-line" d="M 687.25 0 L 687.25 25"/>
+          <path class="connector-drop" d="M 548 25 L 548 40"/>
+          <polygon class="connector-arrowhead" points="540,40 556,40 548,50"/>
+        </svg>
+      </div>
+
+      <div class="collaboration-card reveal">
+        <div class="collaboration-icon" aria-hidden="true">🤝</div>
+
+        <div class="collab-text">
+          <h3>Samenwerking op maat</h3>
+          <p>Afhankelijk van wat je organisatie nodig heeft, combineren we verschillende rollen. We beginnen waar het voor jou het meest waardevol is en bouwen vandaaruit verder.</p>
+        </div>
+      </div>
+
+      <div class="service-principles reveal">
+        <div class="service-principle">
+          <div class="principle-icon" aria-hidden="true">🔗</div>
+          <div>
+            <h3>Geen vier losse pakketten</h3>
+            <p>Deze vormen van samenwerking staan niet los van elkaar. In de praktijk bewegen organisaties tussen verschillende behoeften. Soms beginnen we met een concrete vraag, soms met behoefte aan richting. Van daaruit bouwen we verder.</p>
+          </div>
+        </div>
+
+        <div class="service-principle">
+          <div class="principle-icon" aria-hidden="true">📅</div>
+          <div>
+            <h3>Langdurige samenwerking</h3>
+            <p>De meeste trajecten duren 6 maanden of langer. Genoeg tijd om te bouwen, bij te sturen en te zorgen dat het resultaat blijft werken.</p>
+          </div>
+        </div>
+
+        <div class="service-principle">
+          <div class="principle-icon" aria-hidden="true">⚡</div>
+          <div>
+            <h3>Flexibel en meebewegend</h3>
+            <p>Jouw organisatie verandert, prioriteiten verschuiven en nieuwe vragen ontstaan. Mijn rol beweegt mee met wat op dat moment de meeste waarde toevoegt.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="approach-contact-cta reveal">
+        <div class="approach-contact-copy">
           <h3>Vaak is het begin het lastigst.</h3>
           <p>Daarom start ik altijd met een kennismaking van 30 minuten om jouw situatie te begrijpen en samen te bepalen wat een logische eerste stap is.</p>
         </div>
-        <div class="start-strip-actions">
-          <a href="#approach" class="btn btn-ghost-inverse">Bekijk hoe ik werk</a>
-          <a href="https://calendly.com/piene-claessentech/30min" class="btn btn-primary">Plan een kennismaking</a>
+
+        <div class="approach-contact-actions">
+          <a href="#approach" class="approach-contact-secondary">Bekijk hoe ik werk</a>
+          <a href="https://calendly.com/piene-claessentech/30min" class="approach-contact-primary">Plan een kennismaking</a>
         </div>
       </div>
+
     </div>
   </section>
 
@@ -116,14 +267,16 @@
       </div>
 
       <div class="reveal">
-        <span class="eyebrow"><span class="dot"></span> Een beetje over mij</span>
+        <span class="eyebrow"><span class="dot"></span> Over mij</span>
+        <h2 class="about-home-title">Hi, ik ben Piene.</h2>
         <div class="about-body">
-          <p>Ik ben Piene, Data & AI Partner - maar niet het type dat AI inzet zonder dat de basis klopt. Ik help organisaties om van versnipperde data en onderbuikgevoel naar dashboards, voorspelmodellen en AI-oplossingen te gaan die ze ook echt gebruiken.</p>
-          <p>Mijn pad hierheen was niet helemaal recht. Ik begon met bedrijfskunde, vond mijn passie voor data, probeerde vervolgens een tijdje te vliegen bij de Luchtmacht, en kwam alsnog terug bij waar ik blij van word: Data! Daar bleek ik toch beter in te zijn <br>Ik verruilde de cockpit voor een bureau, maar bleef bij Defensie hangen waar ik werkte met data en AI in een omgeving die er echt toe doet. Van stuurinformatie en dashboards tot voorspelmodellen voor helikopteronderhoud. De ene dag sprak ik met een monteur over onderhoud, de volgende gaf ik een generaal een training over het strategisch gebruik van data.</p>
-          <p>Al dat schakelen zit blijkbaar in mijn systeem, want ook buiten werktijd hou ik niet van stilzitten. Je vindt me eerder in de boksschool of onderweg naar een nieuwe bestemming dan op de bank. Nieuwsgierig naar het volledige verhaal?</p>
-        </div>
-        <div class="about-links">
-          <a href="meerovermij.html" class="more-link">Lees hier meer over mij →</a>
+          <p>Ik bouw dashboards, voorspelmodellen en AI-oplossingen, maar kijk altijd verder dan alleen de techniek. Want iets kan technisch perfect werken en toch weinig opleveren als mensen het niet gebruiken of processen er niet op aansluiten.</p>
+          <p>Die combinatie heb ik bij Defensie van dichtbij leren kennen. Ik werkte er aan alles van stuurinformatie en dashboards tot voorspelmodellen voor helikopteronderhoud. De ene dag sprak ik met een monteur over onderhoud, de volgende gaf ik een generaal training over het strategisch gebruik van data.</p>
+          <p>Mijn route daarheen was trouwens niet helemaal recht. Ik begon met bedrijfskunde, ontdekte mijn liefde voor data en probeerde tussendoor nog even vlieger te worden bij de Luchtmacht. Uiteindelijk verruilde ik de cockpit weer in voor data. Daar bleek ik toch beter in te zijn.</p>
+          <div class="about-cta-row">
+            <p>Nieuwsgierig naar het hele verhaal?</p>
+            <a href="/overmij/" class="more-link">Lees hier meer over mij →</a>
+          </div>
         </div>
       </div>
     </div>
@@ -188,7 +341,58 @@
           </div>
         </div>
       </div>
-    </section>
+    </div>
+  </section>
+
+  <!-- CASES -->
+  <section id="cases">
+    <div class="wrap">
+
+      <div class="cases-head reveal">
+        <span class="eyebrow"><span class="dot"></span> Cases</span>
+        <h2>Zo ziet dat er in de praktijk uit</h2>
+        <p>Drie verschillende vraagstukken, met één gemene deler: data inzetten om het werk slimmer en overzichtelijker te maken.</p>
+      </div>
+
+      <!-- featured case: huidige, zelfstandige opdracht -->
+      <a href="/cases/executive-dashboards/" class="case-featured reveal">
+        <div class="case-tags-row">
+          <span class="tag fill">👤 Huidige opdracht</span>
+          <span class="tag outline">📅 12+ maanden</span>
+        </div>
+        <div class="case-body">
+          <div class="case-icon" aria-hidden="true">📊</div>
+          <div class="case-main">
+            <h3>Van losse datavraagstukken naar een structurele data-aanpak</h3>
+            <p class="desc">Langdurig betrokken bij het bouwen, verbeteren en verder ontwikkelen van data binnen de organisatie.</p>
+          </div>
+          <span class="case-link">Bekijk de case →</span>
+        </div>
+      </a>
+
+      <!-- secondary cases: eerdere rollen -->
+      <div class="case-grid reveal">
+        <a href="/cases/helikopter-onderhoud/" class="case-card">
+          <span class="tag outline">👤 Eerdere rol · Luchtmacht</span>
+          <div class="case-body">
+            <div class="case-icon" aria-hidden="true">🚁</div>
+            <h3>Voorspellen wanneer onderhoud aan een helikopter nodig is</h3>
+            <span class="case-link">Bekijk de case →</span>
+          </div>
+        </a>
+
+        <a href="/cases/digitaliseringsportaal/" class="case-card">
+          <span class="tag outline">👤 Eerdere rol · Luchtmacht</span>
+          <div class="case-body">
+            <div class="case-icon" aria-hidden="true">💡</div>
+            <h3>Van losse ideeën naar één plek voor digitalisering</h3>
+            <span class="case-link">Bekijk de case →</span>
+          </div>
+        </a>
+      </div>
+
+    </div>
+  </section>
 
   <!-- CONTACT -->
   <section id="contact">
@@ -221,28 +425,86 @@
       <span>KvK 99777738</span>
       <span>BTW NL005410096B08</span>
     </div>
+    <div class="footer-social-pill">
+      <a class="pill-btn" href="https://www.linkedin.com/in/piene-claessen/" target="_blank" rel="noopener" aria-label="LinkedIn">
+        <svg viewBox="0 0 24 24"><path d="M20.45 20.45h-3.55v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.36V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12zM7.12 20.45H3.56V9h3.56v11.45z"/></svg>
+        LinkedIn
+      </a>
+      <a class="pill-btn" href="https://wa.me/31646037322" target="_blank" rel="noopener" aria-label="WhatsApp">
+        <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12c0 1.82.5 3.53 1.36 5L2 22l5.17-1.36C8.6 21.5 10.26 22 12 22c5.52 0 10-4.48 10-10S17.52 2 12 2zm5.2 14.2c-.24.66-1.32 1.26-1.8 1.32-.46.06-1.02.09-1.66-.1-.38-.12-.87-.28-1.5-.55-2.64-1.14-4.36-3.8-4.5-3.98-.13-.18-1.08-1.44-1.08-2.75s.7-1.94.94-2.2c.25-.27.54-.34.72-.34h.5c.16 0 .38-.03.58.45.24.58.8 2.01.87 2.16.07.15.11.32.02.5-.09.18-.14.29-.28.45-.14.16-.29.36-.42.48-.14.13-.29.28-.13.55.16.27.72 1.19 1.55 1.93 1.06.95 1.96 1.24 2.23 1.38.27.14.43.11.59-.07.16-.18.68-.79.86-1.06.18-.27.36-.22.6-.13.24.09 1.55.73 1.82.86.27.13.45.2.51.31.06.11.06.66-.18 1.31z"/></svg>
+        WhatsApp
+      </a>
+    </div>
   </div>
 </footer>
 
 <script>
-  const els = document.querySelectorAll('.reveal');
-  const io = new IntersectionObserver((entries)=>{
-    entries.forEach(e=>{
-      if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); }
-    });
-  }, {threshold:0.12});
-  
-  els.forEach(el=>io.observe(el));
+document.addEventListener('DOMContentLoaded', function () {
+  const menuToggle = document.querySelector('.menu-toggle');
+  const mobilePanel = document.querySelector('.mobile-nav-panel');
+  const desktopCases = document.querySelector('.nav-cases');
+  const desktopCasesToggle = document.querySelector('.nav-cases-toggle');
+  const mobileCases = document.querySelector('.mobile-cases-nav');
+  const mobileCasesToggle = document.querySelector('.mobile-cases-toggle');
 
-  document.querySelectorAll('a.brand[href="#top"]').forEach(link => {
-    link.addEventListener('click', (e) => {
-      e.preventDefault();
-      window.scrollTo({ top: 0, behavior: 'smooth' });
+  function setMobileMenu(open) {
+    if (!menuToggle || !mobilePanel) return;
+    menuToggle.setAttribute('aria-expanded', String(open));
+    menuToggle.setAttribute('aria-label', open ? 'Sluit menu' : 'Open menu');
+    document.body.classList.toggle('menu-open', open);
+    if (!open && mobileCases && mobileCasesToggle) {
+      mobileCases.classList.remove('is-open');
+      mobileCasesToggle.setAttribute('aria-expanded', 'false');
+    }
+  }
+
+  if (menuToggle && mobilePanel) {
+    menuToggle.addEventListener('click', function () {
+      setMobileMenu(menuToggle.getAttribute('aria-expanded') !== 'true');
     });
+    mobilePanel.querySelectorAll('a').forEach(function (link) {
+      link.addEventListener('click', function () { setMobileMenu(false); });
+    });
+    window.addEventListener('resize', function () {
+      if (window.innerWidth > 1180) setMobileMenu(false);
+    });
+  }
+
+  if (mobileCases && mobileCasesToggle) {
+    mobileCasesToggle.addEventListener('click', function () {
+      const open = !mobileCases.classList.contains('is-open');
+      mobileCases.classList.toggle('is-open', open);
+      mobileCasesToggle.setAttribute('aria-expanded', String(open));
+    });
+  }
+
+  if (desktopCases && desktopCasesToggle) {
+    desktopCasesToggle.addEventListener('click', function (event) {
+      event.stopPropagation();
+      const open = !desktopCases.classList.contains('is-open');
+      desktopCases.classList.toggle('is-open', open);
+      desktopCasesToggle.setAttribute('aria-expanded', String(open));
+    });
+    document.addEventListener('click', function (event) {
+      if (!desktopCases.contains(event.target)) {
+        desktopCases.classList.remove('is-open');
+        desktopCasesToggle.setAttribute('aria-expanded', 'false');
+      }
+    });
+  }
+
+  document.addEventListener('keydown', function (event) {
+    if (event.key !== 'Escape') return;
+    setMobileMenu(false);
+    if (desktopCases && desktopCasesToggle) {
+      desktopCases.classList.remove('is-open');
+      desktopCasesToggle.setAttribute('aria-expanded', 'false');
+    }
   });
+});
 </script>
-
 <script src="script.js"></script>
+<script src="cookie-consent.js"></script>
 
 </body>
 </html>
