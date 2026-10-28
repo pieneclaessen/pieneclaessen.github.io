@@ -9,7 +9,7 @@
   <link rel="alternate" hreflang="nl" href="https://claessentech.com/nl.html">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700&family=Inter:wght@400;500;600&family=Caveat:wght@500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -86,27 +86,52 @@
 
   <!-- HERO -->
   <section class="hero">
-    <div class="wrap hero-grid">
-      <div>
+
+    <div class="hero-media">
+      <img
+        src="/images/piene-claessen-profiel-1200.webp"
+        srcset="
+          /images/piene-claessen-profiel-800.webp 800w,
+          /images/piene-claessen-profiel-1200.webp 1200w
+        "
+        sizes="(max-width: 980px) 100vw, 60vw"
+        alt="Piene Claessen"
+        width="1200"
+        height="1200"
+        fetchpriority="high"
+        decoding="async"
+        onerror="this.style.visibility='hidden'"
+      >
+    </div>
+
+    <div class="hero-panel-shadow" aria-hidden="true">
+      <div class="hero-panel"></div>
+    </div>
+
+    <svg class="hero-swoosh" viewBox="0 0 1000 400" preserveAspectRatio="none" aria-hidden="true">
+      <path d="M 432 238 C 498 212, 532 168, 546 126 C 556 96, 572 72, 612 54"/>
+    </svg>
+
+    <div class="wrap hero-inner">
+      <div class="hero-copy">
+        <span class="hero-kicker">Data &amp; AI partner</span>
         <h1>Data en AI die werken zoals <span class="accent-text">jouw</span> organisatie werkt.</h1>
         <p class="lede">Data verspreid over vijf systemen die elkaar tegenspreken. Uren per week verdwijnen in handmatig werk. Beslissingen worden genomen op gevoel, niet op inzicht. Ik help organisaties om dat om te draaien: met een nuchtere aanpak die begint bij de basis, niet bij de hype.</p>
+
         <div class="hero-actions">
-          <a href="https://calendly.com/piene-claessentech/30min" class="btn btn-primary">Plan een kennismaking</a>
-          <a href="#services" class="btn btn-ghost">Ontdek mijn aanpak</a>
+          <a href="https://calendly.com/piene-claessentech/30min" class="btn btn-light">Plan een kennismaking <span aria-hidden="true">→</span></a>
+          <a href="#services" class="btn btn-outline-light">Ontdek mijn aanpak</a>
         </div>
+
         <a href="/data-governance-checklist/" class="hero-scan-note">
           <span class="hero-scan-note-icon" aria-hidden="true">
             <svg viewBox="0 0 32 32">
               <circle cx="14" cy="14" r="7"></circle>
               <path d="M19.5 19.5 25 25"></path>
-              <path d="M14 2.5v3"></path>
-              <path d="M14 22.5v3"></path>
-              <path d="M2.5 14h3"></path>
-              <path d="M22.5 14h3"></path>
-              <path d="m5.8 5.8 2.1 2.1"></path>
-              <path d="m20.1 20.1 2.1 2.1"></path>
-              <path d="m22.2 5.8-2.1 2.1"></path>
-              <path d="m7.9 20.1-2.1 2.1"></path>
+              <path d="M14 2.5v3"></path><path d="M14 22.5v3"></path>
+              <path d="M2.5 14h3"></path><path d="M22.5 14h3"></path>
+              <path d="m5.8 5.8 2.1 2.1"></path><path d="m20.1 20.1 2.1 2.1"></path>
+              <path d="m22.2 5.8-2.1 2.1"></path><path d="m7.9 20.1-2.1 2.1"></path>
             </svg>
           </span>
           <span class="hero-scan-note-copy">
@@ -115,27 +140,13 @@
           </span>
         </a>
       </div>
-
-      <div class="portrait-wrap">
-        <div class="portrait" aria-hidden="true">
-          <img
-  src="/images/piene-claessen-profiel-800.webp"
-  srcset="
-    /images/piene-claessen-profiel-500.webp 500w,
-    /images/piene-claessen-profiel-800.webp 800w,
-    /images/piene-claessen-profiel-1200.webp 1200w
-  "
-  sizes="(max-width: 980px) 90vw, 382px"
-  alt="Piene Claessen"
-  class="portrait-img"
-  width="1200"
-  height="1200"
-  fetchpriority="high"
-  decoding="async"
->
-        </div>
-      </div>
     </div>
+
+    <div class="hero-handnote" aria-hidden="true">
+      <svg viewBox="0 0 52 44"><path d="M48 8 C 34 4, 16 10, 10 30"/><path d="M4 22 L 10 31 L 18 25"/></svg>
+      <p>Techniek moet mensen verder helpen, niet ingewikkelder maken.</p>
+    </div>
+
   </section>
 
 <!-- WHAT I DO -->
