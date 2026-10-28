@@ -105,97 +105,83 @@
 
 <main id="top">
 
-  <section class="checklist-hero">
-    <div class="wrap">
-      <a href="../#services" class="about-back-link">← Terug naar home</a>
-    </div>
-    <div class="wrap checklist-hero-grid">
-      <div class="checklist-hero-copy">
-        <span class="eyebrow"><span class="dot"></span>Data governance checklist</span>
-        <h1>Ontdek in <span class="accent-text">5 minuten</span> waar jouw organisatie staat met data governance</h1>
-        <p class="lede">Van eigenaarschap en datakwaliteit tot systemen, beveiliging en AI. Ontdek waar je basis al stevig staat en waar nog werk te doen is.</p>
-
-        <div class="checklist-hero-facts" aria-label="Over deze scan">
-          <span><span class="fact-check">✓</span>5 minuten</span>
-          <span><span class="fact-check">✓</span>6 thema's</span>
-          <span><span class="fact-check">✓</span>Direct inzicht</span>
-        </div>
-      </div>
-
-      <div class="checklist-hero-visual">
-        <img src="images/Dashbord van achteren.JPEG" alt="Laptop met data-dashboard op een rustige werkplek">
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section id="checklist">
-    <div class="wrap">
-      <div class="checklist-panel">
-        <div class="checklist-intro-row">
-          <div class="checklist-intro-copy">
-            <h2>Tijd om de balans op te maken</h2>
-            <p>Er is geen goed of fout antwoord, alleen een eerlijk beeld van waar je organisatie nu staat. Je hoeft geen data-expert te zijn: de vragen gaan over je organisatie, niet over techniek.</p>
-          </div>
-          <aside class="checklist-help">
-            <div class="checklist-help-icon">✓</div>
-            <div>
-              <strong>Aan de slag</strong>
-              <p>Vink alleen de stellingen aan die nu kloppen. Je score wordt direct onderaan bijgewerkt.</p>
+  <section class="sc-hero">
+    <div class="sc-hero-panel">
+      <div class="wrap">
+        <a href="../" class="sc-back">← Terug naar home</a>
+        <div class="sc-hero-grid">
+          <div>
+            <span class="sc-label">Data governance scan</span>
+            <h1 class="sc-h1">Ontdek in <span class="accent-text">5 minuten</span> waar jouw organisatie staat met data governance</h1>
+            <p class="sc-lede">Van eigenaarschap en datakwaliteit tot systemen, beveiliging en AI. Ontdek waar je basis al stevig staat en waar nog werk te doen is.</p>
+            <div class="sc-facts" aria-label="Over deze scan">
+              <div><strong>5</strong><span>minuten</span></div>
+              <div><strong>6</strong><span>thema's</span></div>
+              <div><strong>24</strong><span>stellingen</span></div>
             </div>
-          </aside>
+          </div>
+          <div class="sc-hero-img"><div class="sc-pic"><img src="images/checklist_achteren.png" alt="Laptop met data-dashboard op een rustige werkplek"></div></div>
         </div>
-
-        <div id="categories"></div>
       </div>
     </div>
   </section>
 
-  <section id="results" aria-live="polite">
+  <section id="checklist" class="sc-check">
+    <div class="wrap sc-narrow">
+      <div class="sc-intro">
+        <div>
+          <span class="sc-label">De scan</span>
+          <h2 class="sc-h2">Tijd om de balans op te maken</h2>
+          <p class="sc-p">Er is geen goed of fout antwoord, alleen een eerlijk beeld van waar je organisatie nu staat. Je hoeft geen data-expert te zijn: de vragen gaan over je organisatie, niet over techniek.</p>
+        </div>
+        <p class="sc-help"><strong>Zo werkt het</strong>Vink alleen de stellingen aan die nu kloppen. Je score wordt direct bijgewerkt.</p>
+      </div>
+
+      <div id="categories" class="sc-list"></div>
+    </div>
+  </section>
+
+  <section id="results" class="sc-result-section" aria-live="polite">
     <div class="wrap">
-      <div class="result-card">
-        <div class="result-score-column">
-          <div class="gauge-wrap">
+      <div class="sc-result sc-dark">
+        <svg class="dark-contours" viewBox="0 0 1200 400" preserveAspectRatio="xMaxYMin slice" aria-hidden="true"><path d="M1243.4 -20.0 L1240.9 -15.0 L1237.3 -10.5 L1233.6 -6.4 L1230.8 -2.4 L1228.9 2.0 L1227.2 6.8 L1224.7 11.4 L1220.5 15.1 L1214.9 17.5 L1208.7 18.8 L1202.7 19.7 L1197.1 21.1 L1191.8 23.2 L1186.2 25.9 L1180.0 28.2 L1173.4 29.3 L1166.6 29.2 L1160.0 28.0 L1153.6 26.2 L1147.4 24.0 L1141.8 21.1 L1137.2 17.1 L1134.3 12.1 L1133.1 6.6 L1132.9 1.2 L1132.5 -3.5 L1130.7 -7.5 L1127.3 -11.3 L1123.2 -15.3 L1120.0 -20.0 L1118.6 -25.0 L1119.4 -30.0 L1121.7 -34.8 L1124.5 -39.3 L1127.2 -43.8 L1130.0 -48.3 L1133.4 -52.7 L1137.9 -56.5 L1143.3 -59.4 L1149.2 -61.6 L1155.2 -63.5 L1161.1 -65.5 L1167.1 -67.4 L1173.5 -68.5 L1180.0 -68.2 L1186.2 -66.1 L1191.7 -62.8 L1196.4 -59.3 L1200.9 -56.7 L1206.2 -55.4 L1212.4 -54.8 L1219.4 -54.1 L1226.1 -52.4 L1231.7 -49.3 L1236.0 -45.2 L1239.2 -40.6 L1241.6 -35.6 L1243.5 -30.5 L1244.2 -25.3 Z"/><path d="M1278.3 -20.0 L1274.7 -12.2 L1269.9 -5.1 L1265.3 1.6 L1261.9 8.4 L1259.5 15.8 L1256.6 23.4 L1251.8 30.4 L1244.4 35.8 L1235.0 39.1 L1225.1 41.0 L1216.0 43.0 L1207.6 46.2 L1199.3 50.9 L1190.2 56.0 L1180.0 59.9 L1169.0 61.5 L1158.1 60.4 L1147.7 57.5 L1138.0 53.6 L1128.9 49.0 L1120.8 43.5 L1114.5 36.8 L1110.4 28.9 L1108.3 20.6 L1106.9 12.9 L1104.2 6.3 L1099.2 0.5 L1092.2 -5.4 L1085.2 -12.2 L1080.6 -20.0 L1079.7 -28.2 L1082.4 -36.2 L1086.9 -43.6 L1091.7 -50.7 L1095.9 -57.9 L1100.1 -65.3 L1105.3 -72.5 L1112.3 -78.7 L1120.9 -83.4 L1130.5 -86.9 L1140.1 -89.9 L1149.8 -92.6 L1159.6 -94.9 L1169.8 -95.7 L1180.0 -94.3 L1189.5 -90.6 L1197.9 -85.8 L1205.7 -81.6 L1213.8 -79.2 L1223.4 -78.6 L1234.6 -78.6 L1246.4 -77.5 L1257.1 -74.1 L1265.3 -68.4 L1270.9 -60.9 L1274.6 -52.8 L1277.2 -44.6 L1279.2 -36.4 L1279.8 -28.2 Z"/><path d="M1312.0 -20.0 L1308.0 -9.5 L1302.7 0.3 L1297.7 9.8 L1294.0 19.6 L1290.7 29.8 L1286.0 40.1 L1278.3 49.0 L1267.3 55.6 L1254.4 59.8 L1241.4 63.0 L1229.7 67.1 L1218.9 73.3 L1207.6 81.2 L1194.7 88.8 L1180.0 93.7 L1164.6 94.5 L1149.7 91.3 L1136.0 85.6 L1123.6 78.8 L1112.2 71.5 L1102.1 63.6 L1094.0 54.5 L1088.2 44.5 L1084.1 34.3 L1080.0 25.0 L1073.7 16.9 L1064.5 9.3 L1053.8 0.9 L1044.7 -8.9 L1040.1 -20.0 L1041.1 -31.4 L1046.4 -42.1 L1053.3 -52.1 L1059.6 -61.8 L1064.6 -72.0 L1069.6 -82.6 L1076.4 -92.7 L1086.2 -101.3 L1098.4 -107.6 L1111.9 -112.0 L1125.5 -115.4 L1139.0 -118.3 L1152.6 -120.4 L1166.4 -120.7 L1180.0 -118.3 L1192.6 -113.7 L1204.2 -108.6 L1215.4 -105.1 L1228.0 -104.0 L1242.8 -104.8 L1259.4 -105.2 L1275.7 -102.9 L1289.4 -96.8 L1298.8 -87.3 L1304.3 -76.0 L1307.6 -64.3 L1310.2 -53.0 L1312.4 -41.9 L1313.4 -30.9 Z"/><path d="M1345.8 -20.0 L1342.1 -6.7 L1336.5 5.9 L1331.0 18.3 L1326.4 30.9 L1321.7 43.8 L1314.7 56.3 L1303.8 67.0 L1289.5 74.9 L1273.6 80.5 L1258.4 85.9 L1244.6 93.2 L1231.3 103.3 L1216.6 114.5 L1199.4 123.8 L1180.0 128.2 L1160.3 126.5 L1141.9 119.8 L1125.6 110.5 L1111.0 100.8 L1097.5 91.4 L1085.1 81.9 L1074.5 71.4 L1065.9 60.1 L1058.5 48.8 L1050.4 38.4 L1039.7 28.7 L1026.4 18.9 L1013.1 7.7 L1003.4 -5.5 L1000.3 -20.0 L1004.1 -34.4 L1012.1 -47.8 L1020.7 -60.4 L1027.3 -73.0 L1032.3 -86.5 L1037.8 -100.6 L1046.7 -113.6 L1059.8 -124.1 L1076.3 -131.3 L1094.2 -135.9 L1112.0 -139.1 L1129.3 -141.8 L1146.3 -143.7 L1163.3 -143.7 L1180.0 -141.3 L1195.8 -137.1 L1210.9 -133.2 L1226.5 -131.5 L1244.2 -132.5 L1264.6 -134.3 L1286.2 -134.0 L1306.0 -129.2 L1321.0 -119.0 L1330.1 -105.1 L1334.7 -89.7 L1337.5 -74.7 L1340.6 -60.7 L1344.0 -47.2 L1346.4 -33.6 Z"/><path d="M1381.0 -20.0 L1377.2 -3.8 L1370.9 11.7 L1364.3 26.7 L1358.3 41.9 L1351.7 57.3 L1342.3 72.0 L1328.8 84.5 L1311.8 94.2 L1293.9 102.3 L1277.0 111.0 L1261.3 122.4 L1245.1 136.3 L1226.3 149.9 L1204.2 159.2 L1180.0 161.2 L1156.4 155.4 L1135.2 144.4 L1116.8 131.7 L1100.1 119.9 L1084.1 109.6 L1068.5 99.7 L1054.2 89.0 L1041.6 77.2 L1030.0 65.0 L1017.5 53.2 L1002.6 41.6 L986.2 29.1 L971.7 14.5 L962.9 -2.2 L962.5 -20.0 L969.1 -37.3 L979.0 -53.3 L987.9 -68.7 L993.8 -84.7 L998.2 -101.9 L1004.8 -119.3 L1016.5 -134.8 L1034.1 -146.4 L1055.7 -153.4 L1078.3 -157.3 L1100.0 -160.1 L1120.5 -162.8 L1140.4 -165.3 L1160.3 -166.4 L1180.0 -165.3 L1199.3 -162.9 L1218.5 -161.3 L1239.1 -162.0 L1262.5 -164.4 L1288.2 -166.1 L1313.7 -163.6 L1335.3 -154.5 L1350.0 -139.4 L1357.9 -120.8 L1361.6 -101.8 L1364.8 -84.2 L1369.7 -68.1 L1375.8 -52.5 L1380.4 -36.4 Z"/><path d="M1417.5 -20.0 L1412.8 -0.9 L1404.8 17.3 L1396.5 34.9 L1389.0 52.6 L1380.8 70.4 L1369.6 87.5 L1354.2 102.4 L1335.7 114.9 L1316.3 126.3 L1297.8 139.1 L1279.7 154.6 L1259.7 171.4 L1236.0 185.6 L1208.7 192.8 L1180.0 190.3 L1153.1 179.5 L1129.8 164.3 L1109.4 149.4 L1090.2 137.4 L1070.5 127.9 L1050.5 119.0 L1031.4 108.7 L1014.3 96.4 L998.3 83.0 L981.8 69.3 L963.8 55.1 L945.8 39.4 L931.5 21.2 L924.7 0.9 L926.9 -20.0 L935.5 -40.0 L945.9 -58.8 L953.6 -77.4 L958.2 -97.0 L962.5 -118.0 L971.2 -138.3 L987.4 -155.3 L1010.6 -166.7 L1037.7 -172.8 L1064.7 -175.8 L1089.5 -178.6 L1112.3 -182.5 L1134.5 -187.1 L1157.0 -190.7 L1180.0 -192.4 L1203.3 -192.8 L1227.3 -193.7 L1253.3 -196.0 L1282.0 -198.7 L1312.0 -198.4 L1340.0 -191.8 L1361.8 -177.5 L1375.3 -157.1 L1381.8 -134.4 L1385.6 -112.6 L1391.0 -93.3 L1399.6 -75.6 L1409.3 -58.0 L1416.3 -39.4 Z"/><path d="M1454.4 -20.0 L1447.4 1.9 L1437.1 22.6 L1427.1 42.6 L1418.6 62.9 L1409.9 83.5 L1398.1 103.6 L1381.8 121.7 L1362.2 137.8 L1341.4 153.3 L1320.7 170.0 L1299.1 188.6 L1274.3 206.5 L1245.1 219.0 L1212.6 221.9 L1180.0 214.1 L1150.6 198.4 L1125.3 180.6 L1102.7 165.7 L1079.8 155.5 L1055.3 148.5 L1029.8 141.3 L1005.4 131.2 L983.7 117.8 L964.1 102.3 L944.9 85.9 L925.3 68.5 L906.9 49.2 L893.5 27.5 L888.6 3.9 L892.6 -20.0 L901.8 -42.8 L911.1 -64.6 L917.1 -86.6 L920.6 -110.1 L926.1 -134.3 L938.8 -156.7 L960.9 -173.9 L990.5 -184.2 L1022.6 -189.0 L1052.9 -191.7 L1079.6 -195.9 L1103.8 -202.9 L1127.8 -211.5 L1153.2 -219.0 L1180.0 -224.1 L1207.9 -227.2 L1237.1 -229.6 L1268.4 -232.1 L1301.6 -232.9 L1334.6 -228.8 L1363.5 -217.0 L1384.4 -197.1 L1396.6 -172.1 L1402.9 -146.3 L1408.7 -123.0 L1418.3 -102.7 L1431.8 -83.8 L1445.4 -64.0 L1454.0 -42.5 Z"/><path d="M1489.9 -20.0 L1479.7 4.6 L1467.0 27.6 L1456.4 50.0 L1448.5 73.3 L1440.8 97.5 L1429.5 121.4 L1412.9 143.5 L1391.9 163.6 L1368.8 182.7 L1344.6 202.4 L1318.3 222.2 L1287.8 238.9 L1253.0 247.7 L1215.7 245.2 L1180.0 232.1 L1148.6 213.3 L1121.3 195.4 L1095.4 183.1 L1067.7 176.8 L1037.1 173.1 L1005.6 167.2 L976.4 156.4 L951.2 140.7 L929.5 122.0 L908.9 102.1 L888.6 81.2 L870.2 58.5 L857.6 33.5 L853.7 6.8 L858.0 -20.0 L866.4 -45.7 L874.0 -70.7 L878.5 -96.4 L882.3 -123.4 L891.1 -150.1 L909.6 -173.2 L938.7 -189.5 L974.2 -198.3 L1010.1 -202.4 L1041.9 -206.5 L1069.0 -214.4 L1093.9 -226.7 L1119.9 -240.6 L1148.6 -252.7 L1180.0 -260.8 L1213.0 -265.1 L1247.4 -267.2 L1283.2 -267.7 L1319.8 -264.8 L1354.5 -255.7 L1383.3 -238.3 L1403.4 -213.5 L1415.2 -185.2 L1423.2 -157.8 L1433.2 -134.0 L1448.4 -113.2 L1467.1 -92.8 L1483.7 -70.3 L1492.1 -45.6 Z"/><path d="M1522.5 -20.0 L1509.1 7.0 L1495.5 32.3 L1486.2 57.6 L1481.1 84.6 L1475.7 113.2 L1465.3 141.7 L1447.7 168.0 L1424.2 191.5 L1397.1 213.1 L1367.9 233.8 L1335.7 252.7 L1299.2 266.3 L1259.1 270.2 L1218.1 262.6 L1180.0 246.0 L1146.8 226.7 L1116.8 211.7 L1086.5 204.4 L1052.7 203.0 L1015.6 202.1 L978.5 196.3 L945.6 183.0 L918.7 163.5 L896.2 140.8 L875.2 117.3 L854.3 93.1 L835.4 67.3 L822.4 39.3 L818.1 9.7 L821.6 -20.0 L828.7 -48.8 L834.9 -77.2 L839.4 -106.3 L845.8 -136.1 L859.9 -164.2 L885.4 -187.0 L921.0 -201.9 L961.0 -209.7 L998.5 -214.9 L1029.9 -222.8 L1056.2 -236.8 L1081.7 -255.9 L1110.3 -275.8 L1143.4 -291.6 L1180.0 -300.7 L1218.3 -304.0 L1257.3 -303.5 L1296.7 -300.1 L1335.6 -292.6 L1371.2 -278.3 L1399.9 -256.1 L1419.9 -227.8 L1433.1 -197.8 L1444.9 -170.1 L1460.6 -146.4 L1481.9 -124.8 L1504.9 -102.3 L1522.4 -76.8 L1528.5 -48.6 Z"/></svg>
+        <div class="sc-result-score">
+          <span class="sc-label sc-label-dark">Jouw score</span>
+          <div class="sc-gauge">
             <svg viewBox="0 0 120 120" aria-hidden="true">
-              <circle class="gauge-bg" cx="60" cy="60" r="52"></circle>
-              <circle class="gauge-fill" id="gaugeFill" cx="60" cy="60" r="52" stroke-dasharray="0 327"></circle>
+              <circle class="sc-gauge-bg" cx="60" cy="60" r="52"></circle>
+              <circle class="sc-gauge-fill" id="gaugeFill" cx="60" cy="60" r="52" stroke-dasharray="0 327"></circle>
             </svg>
-            <div class="gauge-number">
-              <div class="num" id="gaugeNum">0</div>
-              <div class="den">van de 24</div>
-            </div>
+            <div class="sc-gauge-num"><span id="gaugeNum">0</span><small>van de 24</small></div>
           </div>
-          <button class="reset-link" type="button" onclick="resetAll()">↻ Opnieuw beginnen</button>
         </div>
-
-        <div class="result-text">
-          <div class="result-band" id="resultBand">0–8 punten</div>
-          <div class="result-title" id="resultTitle">De basis ontbreekt nog</div>
-          <p class="result-desc" id="resultDesc">Data en verantwoordelijkheden zijn versnipperd. Er is geen overzicht van wie wat beheert of waar data staat. Dat maakt het lastig om betrouwbaar verder te bouwen met dashboards, automatisering of AI. Dit is het moment om eerst structuur aan te brengen, vóórdat je verder bouwt.</p>
-
-          <div class="result-tips">
-            <div class="result-tip">
-              <span>◎</span>
-              <strong id="resultTip1Title">Begin bij je belangrijkste data</strong>
-              <p id="resultTip1Text">Breng in kaart welke data cruciaal is voor je belangrijkste processen en beslissingen.</p>
+        <div class="sc-result-text">
+          <span class="sc-band" id="resultBand"></span>
+          <h2 class="sc-result-title" id="resultTitle"></h2>
+          <p class="sc-result-desc" id="resultDesc"></p>
+          <div class="sc-tips">
+            <div class="sc-tip">
+              <span class="sc-tip-n">01</span>
+              <strong id="resultTip1Title"></strong>
+              <p id="resultTip1Text"></p>
             </div>
-            <div class="result-tip">
-              <span>♙</span>
-              <strong id="resultTip2Title">Maak eigenaarschap duidelijk</strong>
-              <p id="resultTip2Text">Bepaal wie verantwoordelijk is voor de inhoud, kwaliteit en het gebruik van die data.</p>
+            <div class="sc-tip">
+              <span class="sc-tip-n">02</span>
+              <strong id="resultTip2Title"></strong>
+              <p id="resultTip2Text"></p>
             </div>
-            <div class="result-tip">
-              <span>↗</span>
-              <strong id="resultTip3Title">Los één concreet knelpunt op</strong>
-              <p id="resultTip3Text">Kies een plek waar slechte of onduidelijke data nu zichtbaar tijd of kwaliteit kost.</p>
+            <div class="sc-tip">
+              <span class="sc-tip-n">03</span>
+              <strong id="resultTip3Title"></strong>
+              <p id="resultTip3Text"></p>
             </div>
           </div>
         </div>
-
-        <aside class="result-cta-column">
-          <p class="result-nudge" id="resultNudge">Niet zeker waar je moet beginnen?</p>
-          <p id="resultCtaText">Ik help je bepalen waar je eerste stap de meeste waarde oplevert.</p>
-          <a href="https://calendly.com/piene-claessentech/30min" class="result-cta">Plan een kennismaking →</a>
+        <aside class="sc-result-cta">
+          <p class="sc-nudge" id="resultNudge"></p>
+          <p class="sc-cta-text" id="resultCtaText"></p>
+          <a href="https://calendly.com/piene-claessentech/30min" class="sc-cta-btn">Plan een kennismaking <span aria-hidden="true">→</span></a>
+          <button class="sc-reset" type="button" onclick="resetAll()">↻ Opnieuw beginnen</button>
         </aside>
       </div>
     </div>
@@ -227,8 +213,7 @@
 <script>
 const data = [
   {
-    icon:"🧭",
-    title:"1. Eigenaarschap van data",
+    title:"Eigenaarschap van data",
     intro:"Zonder eigenaar is elk databesluit uiteindelijk niemands verantwoordelijkheid.",
     items:[
       "Voor de belangrijkste datasets (klant-, financiële en operationele data) is een eigenaar aangewezen.",
@@ -238,8 +223,7 @@ const data = [
     ]
   },
   {
-    icon:"📊",
-    title:"2. Datakwaliteit & eenduidige definities",
+    title:"Datakwaliteit & eenduidige definities",
     intro:"Een dashboard is pas nuttig als niemand eerst twijfelt aan de cijfers erin — of aan wat ze precies betekenen.",
     items:[
       "Kernbegrippen (zoals 'actieve klant' of 'omzet') zijn organisatiebreed hetzelfde gedefinieerd.",
@@ -249,8 +233,7 @@ const data = [
     ]
   },
   {
-    icon:"🔒",
-    title:"3. Toegangsrechten & beveiliging",
+    title:"Toegangsrechten & beveiliging",
     intro:"Wie er ooit toegang kreeg, heeft die vaak nog — ook na een andere rol of vertrek.",
     items:[
       "Toegang tot gevoelige data is gekoppeld aan rol of functie, niet aan individuele uitzonderingen.",
@@ -260,8 +243,7 @@ const data = [
     ]
   },
   {
-    icon:"🗂️",
-    title:"4. Waar data staat (systemen & tools)",
+    title:"Waar data staat (systemen & tools)",
     intro:"Je kunt niet beheren wat je niet in kaart hebt gebracht.",
     items:[
       "Er bestaat een actueel overzicht van de belangrijkste systemen waarin data wordt opgeslagen.",
@@ -271,8 +253,7 @@ const data = [
     ]
   },
   {
-    icon:"🗑️",
-    title:"5. Bewaartermijnen & opschoning",
+    title:"Bewaartermijnen & opschoning",
     intro:"Data die je niet meer nodig hebt, is alleen nog maar risico — geen waarde.",
     items:[
       "Voor de belangrijkste datacategorieën zijn bewaartermijnen vastgesteld.",
@@ -282,8 +263,7 @@ const data = [
     ]
   },
   {
-    icon:"🤖",
-    title:"6. AI-gebruik & risico's specifiek",
+    title:"AI-gebruik & risico's specifiek",
     intro:"AI maakt bestaande datazwaktes zichtbaarder — en de gevolgen groter.",
     items:[
       "Er is overzicht van welke AI-tools binnen de organisatie worden gebruikt, ook los van een officieel traject.",
@@ -294,55 +274,49 @@ const data = [
   }
 ];
 
-const TOTAL = data.reduce((a,c)=>a+c.items.length,0);
+const TOTAL = data.reduce((a, c) => a + c.items.length, 0);
 const checkedState = {};
 
 function renderCategories(){
   const wrap = document.getElementById('categories');
   wrap.innerHTML = '';
-  data.forEach((cat, ci)=>{
-    const catDiv = document.createElement('div');
-    catDiv.className = 'category';
-    catDiv.id = `category-${ci}`;
-    catDiv.innerHTML = `
-      <div class="category-head">
-        <div class="cat-icon">${cat.icon}</div>
-        <div class="cat-title-wrap">
-          <div class="cat-title">${cat.title}</div>
-          <p class="cat-intro">${cat.intro}</p>
+  data.forEach((cat, ci) => {
+    const n = String(ci + 1).padStart(2, '0');
+    const sec = document.createElement('section');
+    sec.className = 'sc-cat';
+    sec.id = `category-${ci}`;
+    sec.innerHTML = `
+      <header class="sc-cat-head">
+        <span class="sc-cat-n">${n}</span>
+        <div class="sc-cat-copy">
+          <h3>${cat.title}</h3>
+          <p>${cat.intro}</p>
         </div>
-        <div class="cat-score" id="catscore-${ci}">0/${cat.items.length}</div>
-      </div>
-      <div class="items">
-        ${cat.items.map((label, ii)=>`
-          <div class="item" id="item-${ci}-${ii}" onclick="toggle(${ci},${ii})">
-            <div class="checkbox">
-              <svg width="12" height="10" viewBox="0 0 12 10" fill="none">
-                <path d="M1 5L4.2 8.2L11 1" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-              </svg>
-            </div>
-            <div class="item-label">${label}</div>
-          </div>
-        `).join('')}
-      </div>
-    `;
-    wrap.appendChild(catDiv);
+        <span class="sc-cat-score" id="catscore-${ci}">0/${cat.items.length}</span>
+      </header>
+      <ul class="sc-items">
+        ${cat.items.map((label, ii) => `
+          <li>
+            <label class="sc-item" id="item-${ci}-${ii}">
+              <input type="checkbox" onchange="toggle(${ci},${ii})">
+              <span class="sc-box" aria-hidden="true"><svg viewBox="0 0 12 10"><path d="M1 5L4.2 8.2L11 1"/></svg></span>
+              <span class="sc-text">${label}</span>
+            </label>
+          </li>`).join('')}
+      </ul>`;
+    wrap.appendChild(sec);
   });
 }
 
 function trackEvent(name, params){
-  if (typeof window.gtag === 'function') {
-    window.gtag('event', name, params);
-  }
+  if (typeof window.gtag === 'function') window.gtag('event', name, params);
 }
 
 function toggle(ci, ii){
-  const key = ci+'-'+ii;
+  const key = ci + '-' + ii;
   checkedState[key] = !checkedState[key];
-  const el = document.getElementById(`item-${ci}-${ii}`);
-  el.classList.toggle('checked', checkedState[key]);
+  document.getElementById(`item-${ci}-${ii}`).classList.toggle('checked', checkedState[key]);
   updateScores();
-
   trackEvent('checklist_item_toggle', {
     category: data[ci].title,
     item: data[ci].items[ii].slice(0, 100),
@@ -350,23 +324,22 @@ function toggle(ci, ii){
   });
 }
 
+function setText(id, t){ const el = document.getElementById(id); if (el) el.textContent = t; }
+
 function updateScores(){
   let total = 0;
-  data.forEach((cat, ci)=>{
-    let catCount = 0;
-    cat.items.forEach((_, ii)=>{ if(checkedState[ci+'-'+ii]) catCount++; });
-    total += catCount;
-    const scoreEl = document.getElementById(`catscore-${ci}`);
-    scoreEl.textContent = `${catCount}/${cat.items.length}${catCount === cat.items.length ? ' ✓' : ''}`;
-    const categoryEl = document.getElementById(`category-${ci}`);
-    if (categoryEl) categoryEl.classList.toggle('complete', catCount === cat.items.length);
+  data.forEach((cat, ci) => {
+    let c = 0;
+    cat.items.forEach((_, ii) => { if (checkedState[ci + '-' + ii]) c++; });
+    total += c;
+    setText(`catscore-${ci}`, `${c}/${cat.items.length}`);
+    const el = document.getElementById(`category-${ci}`);
+    if (el) el.classList.toggle('complete', c === cat.items.length);
   });
-
-  document.getElementById('gaugeNum').textContent = total;
-
-  const circumference = 2*Math.PI*52;
-  const fillLen = circumference * (total/TOTAL);
-  document.getElementById('gaugeFill').setAttribute('stroke-dasharray', `${fillLen} ${circumference}`);
+  setText('gaugeNum', total);
+  const circ = 2 * Math.PI * 52;
+  const fill = document.getElementById('gaugeFill');
+  if (fill) fill.setAttribute('stroke-dasharray', `${circ * total / TOTAL} ${circ}`);
 
   const band = document.getElementById('resultBand');
   const title = document.getElementById('resultTitle');
@@ -423,19 +396,20 @@ function updateScores(){
     nudge.textContent = 'De randvoorwaarden staan. Wat ga je bouwen?';
     ctaText.textContent = 'Laten we kijken welke toepassing jouw organisatie echt verder helpt.';
   }
+
 }
 
 function resetAll(){
   Object.keys(checkedState).forEach(k => checkedState[k] = false);
-  document.querySelectorAll('.item.checked').forEach(el => el.classList.remove('checked'));
+  document.querySelectorAll('.sc-item.checked').forEach(el => el.classList.remove('checked'));
+  document.querySelectorAll('.sc-item input').forEach(el => el.checked = false);
   updateScores();
-  window.scrollTo({top:0, behavior:'smooth'});
+  window.scrollTo({ top: 0, behavior: 'smooth' });
   trackEvent('checklist_reset', {});
 }
 
 renderCategories();
 updateScores();
-
 </script>
 
 <script src="../cookie-consent.js"></script>
