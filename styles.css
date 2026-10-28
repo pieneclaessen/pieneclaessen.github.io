@@ -685,10 +685,14 @@ section { padding: 96px 0; }
   --hero-cut-top: 59%;
   --hero-cut-bottom: 46%;
   --hero-dark: #0E3135;
+  /* hoogte van de hero; de foto is altijd ongeveer 1,43 keer zo breed als hoog,
+     zodat hij op elk scherm hetzelfde wordt bijgesneden */
+  --hero-h: clamp(500px, 39.5vw, 600px);
+  --photo-w: calc(var(--hero-h) * 1.3);
 
   position: relative;
   isolation: isolate;
-  min-height: clamp(540px, 42vw, 640px);
+  min-height: var(--hero-h);
   padding: 0;
   overflow: hidden;
   background: var(--hero-dark);
@@ -710,7 +714,7 @@ section { padding: 96px 0; }
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: 62% 30%;
+  object-position: 58% 50%;
 }
 
 /* zachte overloop van paneel naar foto + lichte vignet */
@@ -785,17 +789,17 @@ section { padding: 96px 0; }
   min-height: inherit;
   display: flex;
   align-items: center;
-  padding-top: 56px;
-  padding-bottom: 56px;
+  padding-top: 44px;
+  padding-bottom: 44px;
 }
 
-.hero-copy { width: 100%; max-width: 540px; }
+.hero-copy { width: 100%; max-width: 580px; }
 
 .hero-kicker {
   display: inline-flex;
   align-items: center;
   gap: 14px;
-  margin-bottom: 20px;
+  margin-bottom: 16px;
   font-size: 11.5px;
   font-weight: 600;
   letter-spacing: .14em;
@@ -807,23 +811,23 @@ section { padding: 96px 0; }
 .hero h1 {
   font-family: var(--display);
   font-weight: 700;
-  font-size: clamp(2.4rem, 4.3vw, 3.7rem);
-  line-height: 1.07;
+  font-size: clamp(2.3rem, 3.7vw, 3.35rem);
+  line-height: 1.08;
   letter-spacing: -0.025em;
   color: #fff;
 }
 .hero h1 .accent-text { color: var(--petrol-light); }
 
 .hero p.lede {
-  margin-top: 22px;
-  max-width: 50ch;
-  font-size: 16.5px;
+  margin-top: 18px;
+  max-width: 56ch;
+  font-size: 16px;
   line-height: 1.65;
   color: rgba(255, 255, 255, .84);
 }
 
-.hero-actions { margin-top: 32px; display: flex; gap: 14px; flex-wrap: wrap; }
-.hero-actions .btn { min-height: 54px; padding: 0 30px; justify-content: center; gap: 12px; }
+.hero-actions { margin-top: 26px; display: flex; gap: 14px; flex-wrap: wrap; }
+.hero-actions .btn { min-height: 50px; padding: 0 28px; justify-content: center; gap: 12px; }
 
 .btn-light { background: var(--bg-card); color: var(--ink); box-shadow: 0 10px 24px -14px rgba(0, 0, 0, .55); }
 .btn-light:hover { background: var(--bg-soft); transform: translateY(-1px); }
@@ -831,7 +835,7 @@ section { padding: 96px 0; }
 .btn-outline-light:hover { border-color: #fff; background: rgba(255, 255, 255, .08); }
 
 .hero-scan-note {
-  margin-top: 24px;
+  margin-top: 20px;
   display: inline-flex;
   align-items: center;
   gap: 12px;
@@ -857,12 +861,21 @@ section { padding: 96px 0; }
 
 
 /* ---------- responsive ---------- */
-/* brede schermen: de foto houdt dezelfde breedte als op een laptop (1512px),
-   zodat hij niet verder wordt bijgesneden. Snede en oranje lijn schuiven mee met de rechterkant. */
-@media (min-width: 1513px) {
-  .hero { --hero-cut-top: calc(100% - 620px); --hero-cut-bottom: calc(100% - 816px); }
-  .hero-media { left: calc(100% - 907px); }
-  .hero-swoosh { left: auto; width: 1512px; }
+/* desktop: fotovlak schaalt mee met de hoogte van de hero, zodat de uitsnede overal gelijk blijft.
+   Snede en oranje lijn liggen vast ten opzichte van de rechterkant. */
+@media (min-width: 1181px) {
+  .hero {
+    --hero-cut-bottom: calc(100% - var(--photo-w) + 24px);
+    --hero-cut-top: calc(100% - var(--photo-w) + 200px);
+  }
+  .hero-media { left: calc(100% - var(--photo-w)); }
+  .hero-swoosh { left: auto; width: calc(var(--photo-w) * 1.79); }
+}
+@media (min-width: 1181px) and (max-width: 1320px) {
+  .hero-copy { max-width: 500px; }
+}
+@media (min-width: 1181px) and (max-width: 1260px) {
+  .hero-copy { max-width: 460px; }
 }
 
 @media (max-width: 1180px) {
