@@ -857,6 +857,14 @@ section { padding: 96px 0; }
 
 
 /* ---------- responsive ---------- */
+/* brede schermen: de foto houdt dezelfde breedte als op een laptop (1512px),
+   zodat hij niet verder wordt bijgesneden. Snede en oranje lijn schuiven mee met de rechterkant. */
+@media (min-width: 1513px) {
+  .hero { --hero-cut-top: calc(100% - 620px); --hero-cut-bottom: calc(100% - 816px); }
+  .hero-media { left: calc(100% - 907px); }
+  .hero-swoosh { left: auto; width: 1512px; }
+}
+
 @media (max-width: 1180px) {
   .hero { --hero-cut-top: 64%; --hero-cut-bottom: 52%; }
   .hero-copy { max-width: 470px; }
