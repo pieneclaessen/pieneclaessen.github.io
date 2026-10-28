@@ -10,7 +10,6 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../../styles.css">
-  <link rel="stylesheet" href="../case.css">
 </head>
 <body>
 
@@ -105,174 +104,137 @@
 </header>
 
 <main id="top" class="case-page">
-  <section class="case-hero">
-    <div class="wrap">
-      <a class="case-back" href="../../#cases">← Terug naar cases</a>
+  <!-- HERO -->
+  <section class="cs-hero">
+    <div class="cs-hero-panel">
+      <svg class="cases-contours" viewBox="0 0 1200 640" preserveAspectRatio="xMidYMid slice" aria-hidden="true"><path d="M141.6 660.0 L140.2 668.2 L135.0 675.7 L127.3 682.1 L119.6 687.6 L113.3 693.0 L108.7 698.9 L104.6 705.4 L99.6 711.7 L92.8 716.7 L84.4 720.0 L75.3 721.8 L66.3 723.1 L57.6 724.7 L49.0 726.6 L40.0 728.3 L30.7 728.9 L21.4 728.2 L12.2 726.7 L2.9 725.0 L-7.0 723.5 L-17.5 721.7 L-27.6 718.5 L-35.7 713.2 L-40.5 705.6 L-41.6 696.7 L-40.2 687.8 L-38.4 679.9 L-38.1 672.9 L-39.7 666.5 L-42.2 660.0 L-44.2 653.1 L-44.4 646.0 L-43.1 638.9 L-40.8 632.0 L-38.1 624.8 L-35.0 617.5 L-30.6 610.4 L-24.2 604.4 L-15.8 600.1 L-6.3 597.4 L3.2 595.6 L12.3 593.5 L21.1 590.5 L30.2 587.2 L40.0 584.9 L50.1 585.1 L59.5 588.3 L67.6 593.8 L74.3 599.9 L80.4 605.4 L86.9 609.7 L94.1 613.1 L101.8 616.6 L109.0 620.9 L115.6 626.0 L121.6 631.7 L127.7 637.8 L133.8 644.4 L139.0 651.9 Z"/><path d="M182.3 660.0 L178.0 671.3 L169.5 681.5 L159.1 690.2 L149.8 698.1 L143.1 706.4 L138.2 715.7 L133.2 725.5 L125.9 734.4 L115.4 741.0 L102.8 744.8 L89.6 746.8 L76.9 748.6 L64.9 751.3 L52.8 754.9 L40.0 758.2 L26.5 760.0 L12.8 759.7 L-0.8 758.0 L-14.6 755.7 L-28.8 753.0 L-43.1 749.2 L-55.8 743.0 L-65.0 733.8 L-69.4 722.0 L-69.4 709.3 L-67.5 697.3 L-66.8 687.1 L-69.2 678.1 L-74.4 669.4 L-80.2 660.0 L-83.9 649.8 L-84.3 639.4 L-81.7 629.1 L-77.5 619.2 L-72.7 609.2 L-67.2 599.2 L-60.1 589.7 L-50.5 581.6 L-38.6 575.7 L-25.4 571.6 L-12.4 568.3 L0.2 564.4 L12.7 559.7 L25.9 555.4 L40.0 553.5 L54.1 555.6 L66.8 561.7 L77.4 570.2 L86.6 578.4 L95.7 584.7 L106.2 588.9 L118.3 592.2 L130.9 596.2 L142.6 601.9 L152.7 609.3 L161.4 617.8 L169.4 627.2 L176.5 637.4 L181.4 648.4 Z"/><path d="M219.1 660.0 L212.2 674.1 L201.4 686.8 L189.9 698.0 L180.6 708.8 L174.3 720.5 L169.4 733.3 L162.8 746.2 L152.1 757.1 L137.4 764.5 L120.3 768.5 L103.2 770.8 L87.4 773.8 L72.3 778.7 L56.8 785.0 L40.0 790.6 L22.0 793.8 L3.6 793.7 L-14.6 791.2 L-32.6 787.2 L-50.3 782.1 L-67.2 775.0 L-81.2 765.0 L-90.4 751.6 L-94.1 736.0 L-93.9 720.3 L-93.3 706.3 L-96.0 694.5 L-103.2 683.7 L-113.2 672.6 L-122.2 660.0 L-126.8 646.3 L-125.9 632.5 L-120.8 619.3 L-113.8 606.6 L-106.5 594.0 L-98.7 581.4 L-89.1 569.3 L-76.7 558.9 L-61.5 551.0 L-45.0 545.2 L-28.4 540.1 L-12.2 534.6 L4.3 528.9 L21.8 524.7 L40.0 524.4 L57.6 529.3 L73.1 538.4 L86.3 548.9 L98.4 557.6 L111.8 563.0 L127.7 565.9 L145.7 568.5 L163.7 573.1 L179.6 580.9 L192.4 591.4 L202.3 603.6 L210.6 616.8 L217.0 630.6 L220.5 645.2 Z"/><path d="M252.5 660.0 L244.2 676.7 L232.7 691.9 L221.5 706.0 L213.1 720.1 L207.5 735.4 L201.8 751.7 L192.4 767.0 L177.5 779.1 L158.0 786.7 L136.8 790.8 L116.6 794.3 L98.3 799.9 L80.4 808.4 L61.3 818.3 L40.0 826.4 L17.1 830.3 L-6.1 829.2 L-28.4 824.3 L-49.8 817.2 L-70.0 808.6 L-88.3 797.7 L-102.8 783.7 L-111.9 766.7 L-115.9 748.4 L-117.4 730.9 L-120.7 715.8 L-129.0 702.8 L-142.2 690.2 L-156.8 676.1 L-167.6 660.0 L-171.1 642.7 L-167.0 625.7 L-158.3 609.7 L-148.4 594.6 L-139.1 579.3 L-129.8 563.8 L-118.4 548.7 L-103.5 535.7 L-85.1 525.7 L-65.0 518.1 L-44.7 511.7 L-24.4 505.3 L-3.7 499.6 L18.0 496.7 L40.0 498.8 L60.7 506.4 L78.9 517.4 L95.0 528.0 L111.2 535.2 L130.2 538.2 L152.7 539.1 L177.1 541.3 L200.0 547.6 L218.7 558.7 L232.1 573.5 L241.6 590.0 L248.6 607.1 L253.7 624.6 L255.6 642.3 Z"/><path d="M284.5 660.0 L276.3 679.4 L265.4 697.4 L255.2 714.5 L247.7 732.1 L241.8 750.9 L234.0 769.9 L220.8 787.0 L201.2 799.6 L177.4 807.5 L153.0 812.7 L130.7 818.9 L110.3 828.7 L89.6 842.0 L66.4 855.6 L40.0 865.2 L12.0 868.0 L-15.6 863.9 L-41.2 854.9 L-64.8 843.7 L-86.6 831.0 L-105.9 816.6 L-121.2 799.6 L-131.4 780.4 L-137.6 760.7 L-143.3 742.5 L-152.5 726.9 L-167.5 712.6 L-186.4 697.5 L-203.8 680.0 L-214.0 660.0 L-214.2 639.2 L-205.8 619.2 L-193.5 600.8 L-181.6 583.0 L-171.6 564.7 L-161.7 545.7 L-149.0 527.3 L-131.3 511.6 L-109.3 499.7 L-85.0 491.1 L-60.3 484.2 L-35.8 478.1 L-10.9 473.4 L14.7 472.2 L40.0 476.4 L63.5 485.4 L84.6 496.3 L104.6 504.9 L126.3 508.8 L152.1 508.6 L181.6 508.0 L211.7 511.2 L237.9 521.0 L257.0 537.0 L269.1 556.8 L276.5 577.9 L282.0 598.7 L286.2 619.2 L287.7 639.7 Z"/><path d="M317.4 660.0 L310.4 682.2 L300.5 703.2 L290.9 723.6 L283.2 744.5 L275.8 766.2 L264.8 787.4 L247.4 805.6 L223.6 819.0 L196.6 828.1 L170.3 836.0 L146.5 846.7 L124.1 862.0 L100.0 880.1 L71.8 896.1 L40.0 904.9 L7.1 904.1 L-24.0 894.9 L-51.9 880.7 L-77.1 865.1 L-100.2 849.4 L-121.0 832.8 L-138.3 814.5 L-151.6 794.6 L-162.2 774.6 L-173.9 756.3 L-190.0 739.9 L-211.3 723.7 L-234.0 705.4 L-251.7 683.9 L-258.8 660.0 L-254.1 635.9 L-241.5 613.3 L-226.8 592.4 L-214.7 571.6 L-205.4 549.5 L-195.6 526.5 L-181.1 504.7 L-159.9 486.8 L-133.1 474.1 L-103.8 465.7 L-74.4 459.6 L-45.6 454.4 L-17.0 450.8 L11.8 450.8 L40.0 455.5 L66.4 463.8 L91.2 472.2 L116.3 476.9 L144.6 476.8 L177.6 474.0 L213.5 473.7 L247.5 480.3 L274.3 495.5 L291.6 517.4 L300.8 542.5 L306.2 567.5 L311.2 591.3 L316.3 614.2 L319.2 637.1 Z"/><path d="M353.2 660.0 L347.1 685.2 L337.2 709.3 L327.0 732.7 L317.9 756.5 L308.1 780.7 L293.8 803.8 L272.7 823.4 L245.9 838.4 L217.1 850.2 L189.9 862.5 L165.0 878.9 L139.9 899.8 L111.2 921.3 L77.4 937.2 L40.0 942.3 L2.9 935.5 L-30.8 919.8 L-60.2 900.6 L-86.7 882.0 L-111.8 865.1 L-135.6 848.5 L-157.0 830.6 L-175.3 811.2 L-191.9 791.4 L-210.1 772.6 L-232.5 754.6 L-258.2 735.6 L-282.1 713.4 L-297.4 687.7 L-299.9 660.0 L-290.4 632.9 L-274.8 607.8 L-260.0 584.0 L-249.5 559.5 L-241.8 533.1 L-231.6 506.1 L-214.1 481.5 L-187.7 462.7 L-155.0 450.7 L-120.1 443.7 L-86.2 438.9 L-54.0 434.4 L-22.4 430.9 L9.0 430.0 L40.0 433.0 L69.9 438.2 L99.3 442.4 L130.5 442.7 L165.9 439.3 L205.7 436.1 L246.1 438.7 L281.3 450.9 L306.3 473.0 L320.3 501.2 L326.8 530.8 L331.7 558.7 L338.4 584.4 L346.7 609.2 L352.8 634.4 Z"/><path d="M391.7 660.0 L385.1 688.3 L373.6 715.3 L361.6 741.5 L350.6 767.9 L338.5 794.4 L321.8 819.7 L298.5 841.6 L270.3 859.5 L240.8 875.6 L212.9 893.6 L186.0 915.7 L156.9 940.7 L122.5 962.9 L82.5 975.4 L40.0 973.9 L-0.4 959.6 L-35.7 937.8 L-66.4 915.3 L-94.9 896.4 L-123.6 881.1 L-152.4 866.6 L-179.6 850.3 L-204.1 831.5 L-227.0 811.3 L-250.9 791.0 L-277.5 770.3 L-305.0 747.4 L-327.6 721.0 L-339.1 691.1 L-336.9 660.0 L-324.2 630.1 L-308.1 602.3 L-295.3 575.0 L-287.6 546.2 L-281.0 515.4 L-268.7 485.0 L-245.9 459.2 L-212.6 441.2 L-173.2 431.1 L-133.2 426.1 L-95.9 422.0 L-61.4 416.6 L-27.9 410.8 L5.9 406.7 L40.0 405.6 L74.2 406.3 L109.2 406.1 L147.1 403.0 L189.2 398.7 L234.0 397.9 L276.6 406.0 L310.6 425.6 L332.2 454.8 L342.9 488.3 L348.5 521.1 L355.5 550.4 L366.8 577.2 L380.2 603.6 L389.9 631.3 Z"/><path d="M431.4 660.0 L422.1 691.3 L407.7 721.0 L393.5 749.6 L381.2 778.5 L368.4 807.9 L351.0 836.3 L327.3 861.7 L298.7 884.1 L268.6 905.4 L239.0 928.8 L208.5 955.3 L173.9 981.5 L132.9 1000.9 L86.8 1007.0 L40.0 997.4 L-2.6 975.9 L-39.1 950.3 L-71.6 927.9 L-103.8 912.0 L-138.1 900.6 L-173.6 889.3 L-207.6 874.5 L-238.1 855.3 L-265.8 833.3 L-293.3 810.1 L-321.9 785.7 L-349.0 758.6 L-369.1 727.8 L-376.9 694.2 L-371.5 660.0 L-357.9 627.4 L-343.7 596.4 L-334.2 565.2 L-328.8 531.9 L-321.4 497.3 L-304.3 464.9 L-274.0 439.5 L-232.7 423.8 L-187.0 416.3 L-143.4 412.3 L-104.5 406.9 L-69.2 397.9 L-34.4 387.0 L1.9 377.4 L40.0 371.1 L79.4 367.5 L120.6 364.2 L164.8 360.3 L212.3 358.1 L260.1 362.6 L302.5 378.2 L333.8 405.5 L352.1 440.8 L361.3 477.9 L368.9 511.9 L381.2 541.5 L399.2 569.0 L418.0 597.3 L430.3 628.0 Z"/><path d="M469.4 660.0 L455.9 694.1 L438.4 726.1 L423.4 757.2 L411.9 789.2 L400.6 822.4 L384.4 855.2 L361.0 885.4 L331.8 912.7 L299.8 938.9 L266.6 966.2 L230.7 994.1 L189.2 1018.3 L141.3 1031.9 L89.8 1029.8 L40.0 1012.5 L-4.0 986.4 L-42.0 960.8 L-77.7 942.4 L-115.5 932.4 L-157.1 926.3 L-200.1 917.7 L-240.3 902.8 L-275.1 881.3 L-305.5 855.8 L-334.3 828.6 L-363.0 799.9 L-388.9 768.7 L-406.9 734.1 L-412.5 697.1 L-406.4 660.0 L-394.2 624.4 L-383.0 589.9 L-376.4 554.5 L-371.2 517.2 L-359.9 479.9 L-335.3 447.3 L-296.1 424.0 L-247.3 411.1 L-197.3 405.3 L-152.4 400.0 L-114.1 390.1 L-79.0 374.3 L-42.8 356.1 L-3.1 340.1 L40.0 329.4 L85.4 323.4 L132.6 320.0 L182.2 318.6 L233.2 321.5 L282.0 333.1 L322.8 356.4 L351.3 390.3 L368.0 429.7 L378.7 468.1 L391.5 501.7 L411.4 531.0 L436.6 559.5 L459.5 590.4 L471.6 624.6 Z"/><path d="M1259.5 -30.0 L1257.9 -24.4 L1255.3 -19.2 L1252.8 -14.1 L1250.6 -8.9 L1248.3 -3.7 L1245.3 1.3 L1241.0 5.8 L1236.0 9.8 L1230.6 13.6 L1225.4 17.8 L1219.9 22.5 L1213.8 27.1 L1206.5 30.6 L1198.3 31.6 L1190.0 29.9 L1182.4 26.1 L1175.9 21.6 L1170.2 17.6 L1164.4 14.8 L1158.4 12.8 L1152.0 10.7 L1146.0 8.1 L1140.6 4.7 L1135.7 0.8 L1130.8 -3.3 L1125.7 -7.7 L1120.9 -12.5 L1117.3 -17.9 L1115.9 -23.9 L1116.9 -30.0 L1119.3 -35.8 L1121.8 -41.3 L1123.5 -46.8 L1124.5 -52.8 L1125.8 -58.9 L1128.8 -64.7 L1134.2 -69.2 L1141.5 -72.0 L1149.7 -73.3 L1157.4 -74.0 L1164.3 -75.0 L1170.6 -76.6 L1176.8 -78.5 L1183.2 -80.2 L1190.0 -81.3 L1197.0 -82.0 L1204.3 -82.6 L1212.2 -83.2 L1220.6 -83.6 L1229.1 -82.8 L1236.6 -80.1 L1242.2 -75.2 L1245.4 -68.9 L1247.1 -62.3 L1248.4 -56.3 L1250.6 -51.1 L1253.8 -46.2 L1257.2 -41.1 L1259.3 -35.7 Z"/><path d="M1297.4 -30.0 L1294.1 -21.5 L1289.8 -13.5 L1286.0 -5.7 L1283.0 2.3 L1280.1 10.6 L1275.9 18.7 L1270.0 26.2 L1262.6 32.9 L1254.6 39.4 L1246.4 46.2 L1237.5 53.2 L1227.3 59.5 L1215.4 63.2 L1202.5 62.9 L1190.0 58.8 L1178.9 52.3 L1169.4 45.8 L1160.5 40.9 L1151.1 38.1 L1140.9 36.4 L1130.3 34.1 L1120.3 30.4 L1111.6 25.1 L1103.9 18.8 L1096.7 12.0 L1089.4 4.9 L1082.8 -2.8 L1078.2 -11.5 L1076.7 -20.7 L1078.3 -30.0 L1081.4 -38.9 L1084.4 -47.5 L1086.1 -56.3 L1087.4 -65.6 L1090.1 -75.0 L1096.0 -83.3 L1105.6 -89.3 L1117.7 -92.6 L1130.3 -94.1 L1141.6 -95.4 L1151.4 -97.7 L1160.3 -101.4 L1169.4 -105.7 L1179.3 -109.5 L1190.0 -112.1 L1201.3 -113.6 L1213.0 -114.5 L1225.4 -115.0 L1238.2 -114.5 L1250.5 -111.8 L1261.0 -106.2 L1268.3 -97.8 L1272.5 -87.9 L1275.1 -78.2 L1278.1 -69.7 L1282.9 -62.2 L1289.0 -55.1 L1294.7 -47.4 L1297.8 -38.8 Z"/><path d="M1334.4 -30.0 L1329.1 -18.6 L1323.2 -7.9 L1318.7 2.6 L1315.8 13.7 L1313.0 25.4 L1308.3 37.0 L1300.8 47.8 L1291.0 57.5 L1280.0 66.6 L1268.2 75.6 L1255.2 84.2 L1240.3 90.8 L1223.7 93.5 L1206.3 91.1 L1190.0 84.3 L1175.7 75.8 L1163.2 68.5 L1150.8 64.2 L1137.1 62.7 L1122.0 61.8 L1106.8 59.4 L1092.9 54.1 L1081.3 46.3 L1071.5 37.1 L1062.4 27.5 L1053.4 17.5 L1045.2 6.7 L1039.7 -5.1 L1037.9 -17.5 L1039.6 -30.0 L1043.0 -42.1 L1045.9 -53.9 L1047.8 -66.0 L1050.0 -78.6 L1055.1 -90.8 L1064.9 -100.9 L1079.4 -107.7 L1096.2 -111.2 L1112.5 -113.2 L1126.5 -115.8 L1138.2 -120.7 L1149.3 -127.7 L1161.3 -135.4 L1175.0 -141.7 L1190.0 -145.6 L1205.8 -147.4 L1222.1 -147.8 L1238.8 -147.1 L1255.5 -144.7 L1270.9 -139.4 L1283.5 -130.4 L1292.3 -118.6 L1297.7 -105.6 L1302.1 -93.5 L1307.8 -83.1 L1316.1 -73.8 L1325.4 -64.3 L1333.1 -53.7 L1336.3 -42.0 Z"/><path d="M1369.8 -30.0 L1362.5 -15.9 L1355.8 -2.5 L1352.0 11.1 L1350.4 25.7 L1348.4 41.3 L1343.2 56.8 L1333.8 71.0 L1321.0 83.5 L1306.1 94.6 L1289.8 104.9 L1272.1 113.8 L1252.4 119.7 L1231.0 120.5 L1209.6 115.7 L1190.0 107.0 L1172.8 97.8 L1156.9 91.4 L1140.3 89.2 L1121.7 89.6 L1101.4 89.6 L1081.6 86.3 L1064.5 78.7 L1050.8 67.8 L1039.5 55.3 L1028.8 42.6 L1018.0 29.7 L1008.1 16.1 L1001.2 1.3 L998.7 -14.3 L1000.2 -30.0 L1003.5 -45.3 L1006.6 -60.4 L1009.3 -75.8 L1013.5 -91.3 L1022.1 -105.6 L1036.7 -116.9 L1056.0 -124.1 L1076.8 -128.1 L1095.6 -131.4 L1111.0 -136.8 L1124.0 -145.7 L1137.0 -157.1 L1152.3 -168.4 L1170.2 -176.9 L1190.0 -181.3 L1210.5 -182.2 L1231.1 -180.9 L1251.7 -178.1 L1271.7 -173.1 L1289.8 -164.8 L1304.3 -152.7 L1314.7 -138.0 L1322.0 -122.7 L1329.2 -108.9 L1338.6 -96.9 L1350.7 -85.8 L1363.0 -73.8 L1371.6 -60.1 L1373.8 -45.1 Z"/><path d="M1403.3 -30.0 L1394.9 -13.2 L1389.0 3.0 L1387.3 20.0 L1388.1 38.8 L1387.1 58.7 L1380.9 78.2 L1368.5 95.4 L1351.4 109.8 L1331.5 121.9 L1310.2 132.3 L1287.4 140.6 L1262.9 145.1 L1237.4 144.0 L1212.6 137.6 L1190.0 128.3 L1169.8 120.2 L1150.1 116.4 L1128.7 117.1 L1104.6 119.6 L1079.2 119.6 L1055.5 114.4 L1036.0 103.4 L1021.0 88.7 L1008.6 72.8 L996.2 57.3 L983.1 41.9 L970.8 25.6 L962.0 7.8 L958.5 -11.0 L959.8 -30.0 L963.5 -48.6 L967.6 -66.9 L972.1 -85.2 L979.5 -103.1 L992.3 -119.0 L1011.6 -131.1 L1034.9 -138.9 L1058.2 -144.2 L1078.0 -150.2 L1093.8 -160.0 L1107.7 -174.1 L1123.2 -190.4 L1142.3 -204.9 L1165.2 -214.3 L1190.0 -217.6 L1215.1 -216.3 L1239.7 -212.3 L1263.6 -206.8 L1286.6 -199.2 L1307.1 -188.2 L1323.9 -173.7 L1336.4 -156.9 L1346.6 -140.0 L1357.4 -124.9 L1371.0 -111.5 L1386.6 -98.3 L1400.9 -83.4 L1409.3 -66.4 L1409.6 -48.0 Z"/><path d="M1435.6 -30.0 L1427.8 -10.5 L1424.5 8.9 L1426.4 29.9 L1429.8 53.3 L1429.2 77.7 L1420.5 100.6 L1403.5 119.9 L1380.6 135.1 L1354.9 147.0 L1328.2 156.7 L1300.6 163.8 L1272.1 167.0 L1243.1 165.0 L1215.4 158.4 L1190.0 150.4 L1166.4 145.0 L1142.4 144.7 L1115.7 148.4 L1086.1 152.1 L1056.1 150.9 L1029.5 142.3 L1008.6 127.2 L992.8 108.5 L978.9 89.6 L964.1 71.7 L947.7 54.1 L932.2 35.3 L921.3 14.6 L917.1 -7.6 L919.0 -30.0 L924.1 -51.8 L930.4 -73.0 L937.8 -93.9 L948.9 -113.7 L965.9 -130.9 L989.0 -143.9 L1014.7 -153.1 L1038.8 -161.0 L1058.3 -171.4 L1073.9 -186.8 L1089.1 -206.8 L1107.8 -227.4 L1131.8 -243.6 L1160.1 -252.0 L1190.0 -252.6 L1219.3 -247.8 L1247.4 -240.7 L1274.4 -232.7 L1300.2 -223.1 L1323.6 -210.4 L1343.0 -194.3 L1358.6 -176.1 L1372.3 -158.0 L1387.1 -141.7 L1404.5 -126.6 L1422.9 -110.9 L1437.9 -92.8 L1445.0 -72.3 L1443.2 -50.8 Z"/><path d="M1468.3 -30.0 L1463.1 -7.6 L1464.3 15.5 L1470.3 41.1 L1475.7 69.2 L1473.6 97.7 L1460.3 123.2 L1436.6 143.2 L1406.8 157.8 L1375.0 168.6 L1343.4 177.2 L1312.0 183.7 L1280.3 186.7 L1248.6 185.2 L1218.3 180.2 L1190.0 175.1 L1162.6 173.5 L1133.6 176.9 L1101.4 182.7 L1066.7 186.0 L1033.0 182.1 L1004.5 169.1 L982.8 149.5 L966.1 127.3 L950.0 106.0 L931.5 86.4 L910.8 67.0 L891.7 45.6 L879.1 21.5 L875.3 -4.2 L879.2 -30.0 L887.2 -54.8 L896.6 -78.6 L907.4 -101.6 L921.9 -123.1 L942.1 -141.7 L967.1 -156.3 L993.5 -168.0 L1016.7 -180.1 L1035.2 -196.2 L1050.8 -218.1 L1068.2 -243.4 L1091.4 -266.8 L1121.2 -282.6 L1155.2 -288.0 L1190.0 -284.4 L1223.1 -275.7 L1254.3 -265.9 L1284.3 -256.4 L1313.3 -245.9 L1339.9 -232.5 L1362.8 -215.5 L1381.9 -196.2 L1399.3 -177.0 L1417.8 -159.1 L1438.3 -141.8 L1458.3 -123.2 L1473.1 -101.7 L1478.8 -77.9 L1475.6 -53.4 Z"/><path d="M1503.4 -30.0 L1502.9 -4.3 L1509.3 22.9 L1519.0 53.4 L1524.3 86.1 L1518.1 117.8 L1497.7 144.4 L1465.9 163.8 L1428.8 176.8 L1391.5 186.3 L1356.1 194.4 L1322.1 201.5 L1288.3 206.0 L1254.5 206.8 L1221.7 205.0 L1190.0 203.7 L1158.2 206.0 L1124.0 212.2 L1086.4 218.7 L1047.3 220.0 L1011.0 211.9 L981.3 194.1 L958.8 170.2 L940.3 145.4 L920.7 122.6 L897.2 101.9 L871.6 80.6 L849.4 56.3 L836.4 28.6 L834.9 -0.9 L842.5 -30.0 L854.4 -57.5 L867.3 -83.5 L880.8 -108.4 L897.4 -131.6 L918.7 -152.2 L943.8 -169.5 L968.9 -185.3 L990.4 -202.9 L1007.9 -225.5 L1024.7 -253.3 L1045.9 -282.5 L1074.8 -306.5 L1111.1 -319.6 L1150.9 -320.3 L1190.0 -311.8 L1226.4 -299.8 L1260.5 -288.6 L1293.8 -279.1 L1326.5 -269.1 L1357.0 -255.7 L1383.7 -238.0 L1406.4 -217.4 L1427.1 -196.5 L1448.6 -176.6 L1471.3 -156.7 L1492.1 -134.9 L1506.4 -110.2 L1511.3 -83.3 L1508.4 -56.1 Z"/><path d="M1543.2 -30.0 L1548.4 -0.6 L1559.6 31.3 L1570.9 66.5 L1573.2 103.1 L1559.9 136.6 L1530.3 162.8 L1489.7 180.5 L1446.0 191.8 L1404.8 200.6 L1367.5 209.8 L1332.3 219.3 L1297.2 227.2 L1261.4 231.9 L1225.6 234.0 L1190.0 236.6 L1153.4 241.8 L1113.9 249.3 L1071.4 254.6 L1028.8 252.4 L990.5 239.5 L959.8 217.1 L936.0 190.1 L914.3 163.6 L889.7 140.2 L860.3 118.5 L830.1 95.0 L806.3 67.2 L795.2 35.5 L798.0 2.1 L810.7 -30.0 L826.8 -59.8 L842.2 -87.7 L856.7 -114.5 L873.0 -140.1 L893.2 -163.6 L916.5 -185.0 L939.4 -206.0 L959.3 -229.8 L977.0 -258.6 L996.7 -291.2 L1023.3 -322.0 L1059.2 -344.0 L1102.1 -352.4 L1147.2 -347.6 L1190.0 -334.8 L1229.2 -321.0 L1266.4 -310.3 L1303.5 -302.4 L1340.5 -293.7 L1375.4 -280.5 L1405.8 -261.7 L1431.5 -239.2 L1454.8 -216.0 L1478.4 -193.4 L1502.5 -170.8 L1524.1 -146.0 L1538.7 -118.4 L1544.3 -88.7 L1543.7 -59.0 Z"/><path d="M1588.9 -30.0 L1599.4 3.6 L1613.4 40.2 L1623.2 79.8 L1619.2 119.0 L1596.1 152.9 L1556.3 177.6 L1507.6 193.0 L1459.2 203.2 L1416.4 213.0 L1379.1 225.4 L1343.9 239.6 L1307.6 252.4 L1269.4 261.5 L1230.1 267.4 L1190.0 272.6 L1148.3 279.3 L1103.8 286.2 L1057.1 289.0 L1011.6 282.6 L971.6 265.0 L939.5 238.9 L913.1 209.9 L886.8 182.9 L856.0 159.3 L820.9 136.2 L787.6 109.8 L764.6 77.8 L757.9 41.6 L766.8 4.7 L784.8 -30.0 L804.0 -61.6 L819.6 -91.4 L832.3 -120.7 L845.8 -149.5 L862.9 -177.3 L883.4 -203.8 L904.3 -230.6 L924.0 -260.4 L943.8 -294.3 L968.4 -329.4 L1002.0 -359.3 L1045.4 -377.2 L1094.7 -379.8 L1144.2 -369.9 L1190.0 -354.5 L1231.9 -341.1 L1272.6 -333.0 L1314.1 -327.9 L1355.9 -320.7 L1395.0 -306.9 L1428.4 -285.9 L1456.2 -260.6 L1481.2 -234.5 L1506.4 -209.3 L1532.2 -184.1 L1555.4 -156.9 L1571.8 -126.8 L1580.1 -94.7 L1583.8 -62.3 Z"/></svg>
+      <div class="wrap">
+        <a class="cs-back" href="../../#cases">← Terug naar cases</a>
 
-      <div class="case-hero-grid">
-        <div class="case-hero-copy">
-          <span class="case-context-label">Eerdere rol · Luchtmacht</span>
-          <h1>Van losse ideeën naar één plek voor digitalisering</h1>
-          <p class="case-lede">Bij de Luchtmacht werkten veel mensen aan ideeën om processen slimmer en digitaler te maken. Alleen ontbrak het overzicht. Samen met twee collega’s ontwikkelde ik een centraal portaal waarin die initiatieven samenkwamen en verder konden worden opgepakt.</p>
-        </div>
+        <div class="cs-hero-grid">
+          <div>
+            <span class="cs-label"><span>Eerdere rol<span class="cs-label-org"> · Luchtmacht</span></span></span>
+            <h1 class="cs-h1">Van losse ideeën naar <span class="accent-text">één plek</span> voor digitalisering</h1>
+            <p class="cs-lede">Bij de Luchtmacht werkten veel mensen aan ideeën om processen slimmer en digitaler te maken. Alleen ontbrak het overzicht. Samen met twee collega’s ontwikkelde ik een centraal portaal waarin die initiatieven samenkwamen en verder konden worden opgepakt.</p>
+          </div>
 
-        <figure class="case-hero-image">
-          <img src="../images/coding_militair.webp" alt="Militair die code schrijft als visuele illustratie bij de case over het digitaliseringsportaal">
-        </figure>
-      </div>
-
-      <div class="case-meta" aria-label="Case-informatie">
-        <div class="case-meta-item">
-          <div class="case-meta-icon" aria-hidden="true">
-            <svg viewBox="0 0 24 24"><circle cx="12" cy="7" r="3.5"></circle><path d="M5.5 20v-2.5a6.5 6.5 0 0 1 13 0V20"></path></svg>
+          <div class="cs-hero-img">
+            <div class="cs-pic">
+              <img src="../images/coding_militair.webp" alt="Militair die code schrijft als visuele illustratie bij de case over het digitaliseringsportaal">
+            </div>
           </div>
-          <div><span>Mijn rol</span><strong>Data Analist</strong></div>
-        </div>
-        <div class="case-meta-item">
-          <div class="case-meta-icon" aria-hidden="true">
-            <svg viewBox="0 0 24 24"><path d="M5 21V5l7-3 7 3v16"></path><path d="M9 8h1M14 8h1M9 12h1M14 12h1M9 16h1M14 16h1"></path></svg>
-          </div>
-          <div><span>Context</span><strong>de Koninklijke Luchtmacht</strong></div>
-        </div>
-        <div class="case-meta-item">
-          <div class="case-meta-icon" aria-hidden="true">
-            <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="8"></circle><circle cx="12" cy="12" r="4"></circle><path d="M12 2v3M22 12h-3"></path></svg>
-          </div>
-          <div><span>Type vraagstuk</span><strong>Procesdigitalisering</strong></div>
         </div>
       </div>
     </div>
+
+    <!-- CASE-INFORMATIE -->
+    <div class="wrap cs-meta-wrap">
+      <dl class="cs-meta cs-meta--3" aria-label="Case-informatie">
+        <div><dt>Mijn rol</dt><dd>Data Analist</dd></div>
+        <div><dt>Organisatie</dt><dd>Koninklijke Luchtmacht</dd></div>
+        <div><dt>Type vraagstuk</dt><dd>Procesdigitalisering</dd></div>
+      </dl>
+    </div>
   </section>
 
-  <section class="case-story">
-    <div class="wrap case-story-grid">
-      <div class="case-main-column">
-        <article class="case-section-row">
-          <div class="case-section-icon" aria-hidden="true">
-            <svg viewBox="0 0 24 24"><circle cx="10.5" cy="10.5" r="6.5"></circle><path d="M15.5 15.5 21 21"></path></svg>
-          </div>
-          <div class="case-section-body">
-            <div class="case-section-title"><span>01</span><h2>Het vraagstuk</h2></div>
-            <p>Goede ideeën waren er binnen de Luchtmacht genoeg. Het probleem was dat ze overal en nergens terechtkwamen: in mails, notities, gesprekken en losse initiatieven.</p>
-            <p>Daardoor ontbrak het overzicht. Verschillende onderdelen konden met hetzelfde probleem bezig zijn zonder dat van elkaar te weten. Soms bleek pas later dat een ander onderdeel al een oplossing had gebouwd.</p>
-            <p>De behoefte was daarom duidelijk: één centrale plek waar digitaliseringsideeën binnenkomen, zichtbaar worden en verder kunnen worden opgepakt.</p>
-          </div>
+
+  <!-- VERHAAL -->
+  <section class="cs-story">
+    <div class="wrap cs-grid">
+      <div class="cs-main">
+
+        <article class="cs-sec">
+          <span class="cs-num">01<em>Het vraagstuk</em></span>
+          <p class="cs-p">Goede ideeën waren er binnen de Luchtmacht genoeg. Het probleem was dat ze overal en nergens terechtkwamen: in mails, notities, gesprekken en losse initiatieven.</p>
+          <p class="cs-p">Daardoor ontbrak het overzicht. Verschillende onderdelen konden met hetzelfde probleem bezig zijn zonder dat van elkaar te weten. Soms bleek pas later dat een ander onderdeel al een oplossing had gebouwd.</p>
+          <p class="cs-p">De behoefte was daarom duidelijk: één centrale plek waar digitaliseringsideeën binnenkomen, zichtbaar worden en verder kunnen worden opgepakt.</p>
         </article>
 
-        <article class="case-section-row">
-          <div class="case-section-icon" aria-hidden="true">
-            <svg viewBox="0 0 24 24"><circle cx="12" cy="7" r="3.5"></circle><path d="M5.5 20v-2.5a6.5 6.5 0 0 1 13 0V20"></path></svg>
-          </div>
-          <div class="case-section-body">
-            <div class="case-section-title"><span>02</span><h2>Mijn rol</h2></div>
-            <p>Als Data Analist werkte ik samen met twee collega’s aan het idee en de ontwikkeling van het portaal. Mijn rol lag vooral aan de technische kant: de behoefte vertalen naar een werkende oplossing en de processen en workflows daarachter bouwen.</p>
-            <p>We kozen bewust voor SharePoint en Nintex, binnen de bestaande werkomgeving van de Luchtmacht. Geen nieuw los systeem waar mensen weer aan moesten wennen, maar een oplossing op een plek die ze al gebruikten.</p>
-          </div>
+        <article class="cs-sec">
+          <span class="cs-num">02<em>Mijn rol</em></span>
+          <p class="cs-p">Als Data Analist werkte ik samen met twee collega’s aan het idee en de ontwikkeling van het portaal. Mijn rol lag vooral aan de technische kant: de behoefte vertalen naar een werkende oplossing en de processen en workflows daarachter bouwen.</p>
+          <p class="cs-p">We kozen bewust voor SharePoint en Nintex, binnen de bestaande werkomgeving van de Luchtmacht. Geen nieuw los systeem waar mensen weer aan moesten wennen, maar een oplossing op een plek die ze al gebruikten.</p>
         </article>
 
-        <article class="case-section-row case-approach-section">
-          <div class="case-section-icon" aria-hidden="true">
-            <svg viewBox="0 0 24 24"><circle cx="6" cy="12" r="2.2"></circle><circle cx="18" cy="6" r="2.2"></circle><circle cx="18" cy="18" r="2.2"></circle><path d="M8 11l8-4M8 13l8 4"></path></svg>
-          </div>
-          <div class="case-section-body">
-            <div class="case-section-title"><span>03</span><h2>Mijn aanpak</h2></div>
-            <p>In plaats van maandenlang het perfecte portaal uit te denken, bouwden we snel een eerste versie en verbeterden we die op basis van feedback uit de praktijk.</p>
-
-            <div class="case-steps">
-              <div class="case-step">
-                <div class="case-step-icon" aria-hidden="true">
-                  <svg viewBox="0 0 24 24"><circle cx="9" cy="8" r="3"></circle><circle cx="17" cy="9" r="2.5"></circle><path d="M3 20v-2a6 6 0 0 1 12 0v2M14 20v-1.5a4.5 4.5 0 0 1 7 0V20"></path></svg>
-                </div>
-                <h3>Behoefte begrijpen</h3>
-                <p>In kaart brengen waar ideeën verloren gingen en wat verschillende onderdelen nodig hadden.</p>
-              </div>
-              <span class="case-step-arrow" aria-hidden="true">→</span>
-
-              <div class="case-step">
-                <div class="case-step-icon" aria-hidden="true">
-                  <svg viewBox="0 0 24 24"><path d="m8 5-5 7 5 7M16 5l5 7-5 7M14 3l-4 18"></path></svg>
-                </div>
-                <h3>Eerste versie bouwen</h3>
-                <p>Binnen zes weken een werkende eerste versie ontwikkelen in SharePoint en Nintex.</p>
-              </div>
-              <span class="case-step-arrow" aria-hidden="true">→</span>
-
-              <div class="case-step">
-                <div class="case-step-icon" aria-hidden="true">
-                  <svg viewBox="0 0 24 24"><path d="M4 5h16v11H8l-4 4V5Z"></path><path d="M8 9h8M8 12h5"></path></svg>
-                </div>
-                <h3>Feedback ophalen</h3>
-                <p>De eerste versie voorleggen aan andere Luchtmachtonderdelen en leren van het gebruik.</p>
-              </div>
-              <span class="case-step-arrow" aria-hidden="true">→</span>
-
-              <div class="case-step">
-                <div class="case-step-icon" aria-hidden="true">
-                  <svg viewBox="0 0 24 24"><path d="M20 7h-4V3M4 17h4v4"></path><path d="M18.5 5.5A8 8 0 0 0 5 9M5.5 18.5A8 8 0 0 0 19 15"></path></svg>
-                </div>
-                <h3>Doorontwikkelen</h3>
-                <p>Workflows en functionaliteit verbeteren totdat er een Luchtmachtbrede oplossing stond.</p>
-              </div>
-            </div>
-          </div>
+        <article class="cs-sec">
+          <span class="cs-num">03<em>Mijn aanpak</em></span>
+          <p class="cs-intro">In plaats van maandenlang het perfecte portaal uit te denken, bouwden we snel een eerste versie en verbeterden we die op basis van feedback uit de praktijk.</p>
+          <ol class="cs-steps">
+            <li class="cs-step">
+              <span class="cs-step-n">01</span>
+              <h3>Behoefte begrijpen</h3>
+              <p>In kaart brengen waar ideeën verloren gingen en wat verschillende onderdelen nodig hadden.</p>
+            </li>
+            <li class="cs-step">
+              <span class="cs-step-n">02</span>
+              <h3>Eerste versie bouwen</h3>
+              <p>Binnen zes weken een werkende eerste versie ontwikkelen in SharePoint en Nintex.</p>
+            </li>
+            <li class="cs-step">
+              <span class="cs-step-n">03</span>
+              <h3>Feedback ophalen</h3>
+              <p>De eerste versie voorleggen aan andere Luchtmachtonderdelen en leren van het gebruik.</p>
+            </li>
+            <li class="cs-step">
+              <span class="cs-step-n">04</span>
+              <h3>Doorontwikkelen</h3>
+              <p>Workflows en functionaliteit verbeteren totdat er een Luchtmachtbrede oplossing stond.</p>
+            </li>
+          </ol>
         </article>
 
-        <article class="case-section-row case-result-section">
-          <div class="case-section-icon" aria-hidden="true">
-            <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"></circle><path d="m8 12 2.7 2.7L16.5 9"></path></svg>
-          </div>
-          <div class="case-section-body">
-            <div class="case-section-title"><span>04</span><h2>Het resultaat</h2></div>
-            <p>Zes weken na de start stond de eerste werkende versie. Vier maanden later was het uitgegroeid tot een Luchtmachtbreed portaal voor digitaliseringsinitiatieven.</p>
-            <p>Inmiddels zijn er meer dan 1.500 ideeën ingediend. Business analisten en digitaliseringsteams kunnen vanuit één plek zien welke initiatieven er spelen en bepalen welke verder worden uitgewerkt.</p>
-            <p>Het extra effect zat in de zichtbaarheid tussen onderdelen. Teams konden makkelijker zien waar anderen mee bezig waren, elkaar sneller vinden en kennis en bestaande oplossingen met elkaar delen.</p>
-            <ul class="case-check-list">
-              <li>Meer dan 1.500 digitaliseringsideeën centraal verzameld</li>
-              <li>Eén overzicht voor staf en verschillende Luchtmachtonderdelen</li>
-              <li>Minder kans dat hetzelfde vraagstuk op meerdere plekken los van elkaar wordt opgepakt</li>
-              <li>Teams konden elkaar makkelijker vinden en kennis delen</li>
-            </ul>
-          </div>
+        <article class="cs-sec">
+          <span class="cs-num">04<em>Het resultaat</em></span>
+          <p class="cs-p">Zes weken na de start stond de eerste werkende versie. Vier maanden later was het uitgegroeid tot een Luchtmachtbreed portaal voor digitaliseringsinitiatieven.</p>
+          <p class="cs-p">Inmiddels zijn er meer dan 1.500 ideeën ingediend. Business analisten en digitaliseringsteams kunnen vanuit één plek zien welke initiatieven er spelen en bepalen welke verder worden uitgewerkt.</p>
+          <p class="cs-p">Het extra effect zat in de zichtbaarheid tussen onderdelen. Teams konden makkelijker zien waar anderen mee bezig waren, elkaar sneller vinden en kennis en bestaande oplossingen met elkaar delen.</p>
+          <ul class="cs-checks">
+            <li>Meer dan 1.500 digitaliseringsideeën centraal verzameld</li>
+            <li>Eén overzicht voor staf en verschillende Luchtmachtonderdelen</li>
+            <li>Minder kans dat hetzelfde vraagstuk op meerdere plekken los van elkaar wordt opgepakt</li>
+            <li>Teams konden elkaar makkelijker vinden en kennis delen</li>
+          </ul>
         </article>
+
       </div>
 
-      <aside class="case-side-column" aria-label="Reflecties bij deze case">
-        <section class="case-side-card case-side-card-warm">
-          <div class="case-side-icon" aria-hidden="true">
-            <svg viewBox="0 0 24 24"><path d="M4 6h16v12H4z"></path><path d="M8 10h8M8 14h5"></path></svg>
-          </div>
-          <h2>Niet nóg een nieuw systeem</h2>
-          <p>We kozen bewust voor de bestaande werkomgeving. Het portaal moest niet alleen technisch werken, maar vooral makkelijk onderdeel worden van hoe mensen al werkten.</p>
-        </section>
+      <!-- TAKEAWAYS -->
+      <aside class="cs-side" aria-label="Belangrijkste inzichten">
+        <span class="cs-label cs-side-k">Belangrijkste inzichten</span>
 
-        <section class="case-side-card case-side-card-teal">
-          <div class="case-side-icon" aria-hidden="true">
-            <svg viewBox="0 0 24 24"><path d="M9 18h6M10 22h4"></path><path d="M8.2 15.5A7 7 0 1 1 15.8 15.5c-.8.7-1.3 1.4-1.5 2.5h-4.6c-.2-1.1-.7-1.8-1.5-2.5Z"></path></svg>
-          </div>
-          <h2>Wat ik hiervan heb meegenomen</h2>
+        <div class="cs-insight">
+          <h3>Wat ik hiervan heb meegenomen</h3>
           <p>Die eerste versie was verre van perfect. En dat was juist nuttig. Door snel iets werkends neer te zetten, konden we feedback ophalen uit de praktijk en gericht verbeteren.</p>
-          <ul class="case-side-list">
+          <ul class="cs-dots">
             <li>Klein beginnen en snel iets werkends neerzetten</li>
             <li>Gebruikers vroeg betrekken</li>
             <li>Bouwen binnen de bestaande werkwijze</li>
             <li>Doorontwikkelen op basis van echt gebruik</li>
           </ul>
-        </section>
+        </div>
+        <div class="cs-insight">
+          <h3>Niet nóg een nieuw systeem</h3>
+          <p>We kozen bewust voor de bestaande werkomgeving. Het portaal moest niet alleen technisch werken, maar vooral makkelijk onderdeel worden van hoe mensen al werkten.</p>
+        </div>
       </aside>
     </div>
   </section>
 
-  <section class="case-cta-section">
+
+  <!-- CTA -->
+  <section class="cs-cta-section">
     <div class="wrap">
-      <div class="case-cta">
-        <div class="case-cta-icon" aria-hidden="true">
-          <svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="16" rx="2"></rect><path d="M7 3v4M17 3v4M3 10h18"></path><circle cx="12" cy="15" r="2.5"></circle><path d="M12 13v2l1.5 1"></path></svg>
-        </div>
-        <div class="case-cta-copy">
-          <h2>Hebben jullie goede ideeën, maar ontbreekt het overzicht?</h2>
+      <div class="approach-contact-cta cs-cta">
+        <svg class="dark-contours" viewBox="0 0 1200 400" preserveAspectRatio="xMaxYMin slice" aria-hidden="true"><path d="M1243.4 -20.0 L1240.9 -15.0 L1237.3 -10.5 L1233.6 -6.4 L1230.8 -2.4 L1228.9 2.0 L1227.2 6.8 L1224.7 11.4 L1220.5 15.1 L1214.9 17.5 L1208.7 18.8 L1202.7 19.7 L1197.1 21.1 L1191.8 23.2 L1186.2 25.9 L1180.0 28.2 L1173.4 29.3 L1166.6 29.2 L1160.0 28.0 L1153.6 26.2 L1147.4 24.0 L1141.8 21.1 L1137.2 17.1 L1134.3 12.1 L1133.1 6.6 L1132.9 1.2 L1132.5 -3.5 L1130.7 -7.5 L1127.3 -11.3 L1123.2 -15.3 L1120.0 -20.0 L1118.6 -25.0 L1119.4 -30.0 L1121.7 -34.8 L1124.5 -39.3 L1127.2 -43.8 L1130.0 -48.3 L1133.4 -52.7 L1137.9 -56.5 L1143.3 -59.4 L1149.2 -61.6 L1155.2 -63.5 L1161.1 -65.5 L1167.1 -67.4 L1173.5 -68.5 L1180.0 -68.2 L1186.2 -66.1 L1191.7 -62.8 L1196.4 -59.3 L1200.9 -56.7 L1206.2 -55.4 L1212.4 -54.8 L1219.4 -54.1 L1226.1 -52.4 L1231.7 -49.3 L1236.0 -45.2 L1239.2 -40.6 L1241.6 -35.6 L1243.5 -30.5 L1244.2 -25.3 Z"/><path d="M1278.3 -20.0 L1274.7 -12.2 L1269.9 -5.1 L1265.3 1.6 L1261.9 8.4 L1259.5 15.8 L1256.6 23.4 L1251.8 30.4 L1244.4 35.8 L1235.0 39.1 L1225.1 41.0 L1216.0 43.0 L1207.6 46.2 L1199.3 50.9 L1190.2 56.0 L1180.0 59.9 L1169.0 61.5 L1158.1 60.4 L1147.7 57.5 L1138.0 53.6 L1128.9 49.0 L1120.8 43.5 L1114.5 36.8 L1110.4 28.9 L1108.3 20.6 L1106.9 12.9 L1104.2 6.3 L1099.2 0.5 L1092.2 -5.4 L1085.2 -12.2 L1080.6 -20.0 L1079.7 -28.2 L1082.4 -36.2 L1086.9 -43.6 L1091.7 -50.7 L1095.9 -57.9 L1100.1 -65.3 L1105.3 -72.5 L1112.3 -78.7 L1120.9 -83.4 L1130.5 -86.9 L1140.1 -89.9 L1149.8 -92.6 L1159.6 -94.9 L1169.8 -95.7 L1180.0 -94.3 L1189.5 -90.6 L1197.9 -85.8 L1205.7 -81.6 L1213.8 -79.2 L1223.4 -78.6 L1234.6 -78.6 L1246.4 -77.5 L1257.1 -74.1 L1265.3 -68.4 L1270.9 -60.9 L1274.6 -52.8 L1277.2 -44.6 L1279.2 -36.4 L1279.8 -28.2 Z"/><path d="M1312.0 -20.0 L1308.0 -9.5 L1302.7 0.3 L1297.7 9.8 L1294.0 19.6 L1290.7 29.8 L1286.0 40.1 L1278.3 49.0 L1267.3 55.6 L1254.4 59.8 L1241.4 63.0 L1229.7 67.1 L1218.9 73.3 L1207.6 81.2 L1194.7 88.8 L1180.0 93.7 L1164.6 94.5 L1149.7 91.3 L1136.0 85.6 L1123.6 78.8 L1112.2 71.5 L1102.1 63.6 L1094.0 54.5 L1088.2 44.5 L1084.1 34.3 L1080.0 25.0 L1073.7 16.9 L1064.5 9.3 L1053.8 0.9 L1044.7 -8.9 L1040.1 -20.0 L1041.1 -31.4 L1046.4 -42.1 L1053.3 -52.1 L1059.6 -61.8 L1064.6 -72.0 L1069.6 -82.6 L1076.4 -92.7 L1086.2 -101.3 L1098.4 -107.6 L1111.9 -112.0 L1125.5 -115.4 L1139.0 -118.3 L1152.6 -120.4 L1166.4 -120.7 L1180.0 -118.3 L1192.6 -113.7 L1204.2 -108.6 L1215.4 -105.1 L1228.0 -104.0 L1242.8 -104.8 L1259.4 -105.2 L1275.7 -102.9 L1289.4 -96.8 L1298.8 -87.3 L1304.3 -76.0 L1307.6 -64.3 L1310.2 -53.0 L1312.4 -41.9 L1313.4 -30.9 Z"/><path d="M1345.8 -20.0 L1342.1 -6.7 L1336.5 5.9 L1331.0 18.3 L1326.4 30.9 L1321.7 43.8 L1314.7 56.3 L1303.8 67.0 L1289.5 74.9 L1273.6 80.5 L1258.4 85.9 L1244.6 93.2 L1231.3 103.3 L1216.6 114.5 L1199.4 123.8 L1180.0 128.2 L1160.3 126.5 L1141.9 119.8 L1125.6 110.5 L1111.0 100.8 L1097.5 91.4 L1085.1 81.9 L1074.5 71.4 L1065.9 60.1 L1058.5 48.8 L1050.4 38.4 L1039.7 28.7 L1026.4 18.9 L1013.1 7.7 L1003.4 -5.5 L1000.3 -20.0 L1004.1 -34.4 L1012.1 -47.8 L1020.7 -60.4 L1027.3 -73.0 L1032.3 -86.5 L1037.8 -100.6 L1046.7 -113.6 L1059.8 -124.1 L1076.3 -131.3 L1094.2 -135.9 L1112.0 -139.1 L1129.3 -141.8 L1146.3 -143.7 L1163.3 -143.7 L1180.0 -141.3 L1195.8 -137.1 L1210.9 -133.2 L1226.5 -131.5 L1244.2 -132.5 L1264.6 -134.3 L1286.2 -134.0 L1306.0 -129.2 L1321.0 -119.0 L1330.1 -105.1 L1334.7 -89.7 L1337.5 -74.7 L1340.6 -60.7 L1344.0 -47.2 L1346.4 -33.6 Z"/><path d="M1381.0 -20.0 L1377.2 -3.8 L1370.9 11.7 L1364.3 26.7 L1358.3 41.9 L1351.7 57.3 L1342.3 72.0 L1328.8 84.5 L1311.8 94.2 L1293.9 102.3 L1277.0 111.0 L1261.3 122.4 L1245.1 136.3 L1226.3 149.9 L1204.2 159.2 L1180.0 161.2 L1156.4 155.4 L1135.2 144.4 L1116.8 131.7 L1100.1 119.9 L1084.1 109.6 L1068.5 99.7 L1054.2 89.0 L1041.6 77.2 L1030.0 65.0 L1017.5 53.2 L1002.6 41.6 L986.2 29.1 L971.7 14.5 L962.9 -2.2 L962.5 -20.0 L969.1 -37.3 L979.0 -53.3 L987.9 -68.7 L993.8 -84.7 L998.2 -101.9 L1004.8 -119.3 L1016.5 -134.8 L1034.1 -146.4 L1055.7 -153.4 L1078.3 -157.3 L1100.0 -160.1 L1120.5 -162.8 L1140.4 -165.3 L1160.3 -166.4 L1180.0 -165.3 L1199.3 -162.9 L1218.5 -161.3 L1239.1 -162.0 L1262.5 -164.4 L1288.2 -166.1 L1313.7 -163.6 L1335.3 -154.5 L1350.0 -139.4 L1357.9 -120.8 L1361.6 -101.8 L1364.8 -84.2 L1369.7 -68.1 L1375.8 -52.5 L1380.4 -36.4 Z"/><path d="M1417.5 -20.0 L1412.8 -0.9 L1404.8 17.3 L1396.5 34.9 L1389.0 52.6 L1380.8 70.4 L1369.6 87.5 L1354.2 102.4 L1335.7 114.9 L1316.3 126.3 L1297.8 139.1 L1279.7 154.6 L1259.7 171.4 L1236.0 185.6 L1208.7 192.8 L1180.0 190.3 L1153.1 179.5 L1129.8 164.3 L1109.4 149.4 L1090.2 137.4 L1070.5 127.9 L1050.5 119.0 L1031.4 108.7 L1014.3 96.4 L998.3 83.0 L981.8 69.3 L963.8 55.1 L945.8 39.4 L931.5 21.2 L924.7 0.9 L926.9 -20.0 L935.5 -40.0 L945.9 -58.8 L953.6 -77.4 L958.2 -97.0 L962.5 -118.0 L971.2 -138.3 L987.4 -155.3 L1010.6 -166.7 L1037.7 -172.8 L1064.7 -175.8 L1089.5 -178.6 L1112.3 -182.5 L1134.5 -187.1 L1157.0 -190.7 L1180.0 -192.4 L1203.3 -192.8 L1227.3 -193.7 L1253.3 -196.0 L1282.0 -198.7 L1312.0 -198.4 L1340.0 -191.8 L1361.8 -177.5 L1375.3 -157.1 L1381.8 -134.4 L1385.6 -112.6 L1391.0 -93.3 L1399.6 -75.6 L1409.3 -58.0 L1416.3 -39.4 Z"/><path d="M1454.4 -20.0 L1447.4 1.9 L1437.1 22.6 L1427.1 42.6 L1418.6 62.9 L1409.9 83.5 L1398.1 103.6 L1381.8 121.7 L1362.2 137.8 L1341.4 153.3 L1320.7 170.0 L1299.1 188.6 L1274.3 206.5 L1245.1 219.0 L1212.6 221.9 L1180.0 214.1 L1150.6 198.4 L1125.3 180.6 L1102.7 165.7 L1079.8 155.5 L1055.3 148.5 L1029.8 141.3 L1005.4 131.2 L983.7 117.8 L964.1 102.3 L944.9 85.9 L925.3 68.5 L906.9 49.2 L893.5 27.5 L888.6 3.9 L892.6 -20.0 L901.8 -42.8 L911.1 -64.6 L917.1 -86.6 L920.6 -110.1 L926.1 -134.3 L938.8 -156.7 L960.9 -173.9 L990.5 -184.2 L1022.6 -189.0 L1052.9 -191.7 L1079.6 -195.9 L1103.8 -202.9 L1127.8 -211.5 L1153.2 -219.0 L1180.0 -224.1 L1207.9 -227.2 L1237.1 -229.6 L1268.4 -232.1 L1301.6 -232.9 L1334.6 -228.8 L1363.5 -217.0 L1384.4 -197.1 L1396.6 -172.1 L1402.9 -146.3 L1408.7 -123.0 L1418.3 -102.7 L1431.8 -83.8 L1445.4 -64.0 L1454.0 -42.5 Z"/><path d="M1489.9 -20.0 L1479.7 4.6 L1467.0 27.6 L1456.4 50.0 L1448.5 73.3 L1440.8 97.5 L1429.5 121.4 L1412.9 143.5 L1391.9 163.6 L1368.8 182.7 L1344.6 202.4 L1318.3 222.2 L1287.8 238.9 L1253.0 247.7 L1215.7 245.2 L1180.0 232.1 L1148.6 213.3 L1121.3 195.4 L1095.4 183.1 L1067.7 176.8 L1037.1 173.1 L1005.6 167.2 L976.4 156.4 L951.2 140.7 L929.5 122.0 L908.9 102.1 L888.6 81.2 L870.2 58.5 L857.6 33.5 L853.7 6.8 L858.0 -20.0 L866.4 -45.7 L874.0 -70.7 L878.5 -96.4 L882.3 -123.4 L891.1 -150.1 L909.6 -173.2 L938.7 -189.5 L974.2 -198.3 L1010.1 -202.4 L1041.9 -206.5 L1069.0 -214.4 L1093.9 -226.7 L1119.9 -240.6 L1148.6 -252.7 L1180.0 -260.8 L1213.0 -265.1 L1247.4 -267.2 L1283.2 -267.7 L1319.8 -264.8 L1354.5 -255.7 L1383.3 -238.3 L1403.4 -213.5 L1415.2 -185.2 L1423.2 -157.8 L1433.2 -134.0 L1448.4 -113.2 L1467.1 -92.8 L1483.7 -70.3 L1492.1 -45.6 Z"/><path d="M1522.5 -20.0 L1509.1 7.0 L1495.5 32.3 L1486.2 57.6 L1481.1 84.6 L1475.7 113.2 L1465.3 141.7 L1447.7 168.0 L1424.2 191.5 L1397.1 213.1 L1367.9 233.8 L1335.7 252.7 L1299.2 266.3 L1259.1 270.2 L1218.1 262.6 L1180.0 246.0 L1146.8 226.7 L1116.8 211.7 L1086.5 204.4 L1052.7 203.0 L1015.6 202.1 L978.5 196.3 L945.6 183.0 L918.7 163.5 L896.2 140.8 L875.2 117.3 L854.3 93.1 L835.4 67.3 L822.4 39.3 L818.1 9.7 L821.6 -20.0 L828.7 -48.8 L834.9 -77.2 L839.4 -106.3 L845.8 -136.1 L859.9 -164.2 L885.4 -187.0 L921.0 -201.9 L961.0 -209.7 L998.5 -214.9 L1029.9 -222.8 L1056.2 -236.8 L1081.7 -255.9 L1110.3 -275.8 L1143.4 -291.6 L1180.0 -300.7 L1218.3 -304.0 L1257.3 -303.5 L1296.7 -300.1 L1335.6 -292.6 L1371.2 -278.3 L1399.9 -256.1 L1419.9 -227.8 L1433.1 -197.8 L1444.9 -170.1 L1460.6 -146.4 L1481.9 -124.8 L1504.9 -102.3 L1522.4 -76.8 L1528.5 -48.6 Z"/></svg>
+        <svg class="dark-swoosh" viewBox="0 0 1000 300" preserveAspectRatio="none" aria-hidden="true"><path d="M 610 320 C 650 230, 690 150, 760 110 C 850 60, 940 70, 1010 30"/></svg>
+        <span class="dark-facet" aria-hidden="true"></span>
+        <div class="approach-contact-copy">
+          <h3>Hebben jullie goede ideeën, maar ontbreekt het <span class="accent-text">overzicht</span>?</h3>
           <p>Dan is er waarschijnlijk meer mogelijk. Laten we kijken hoe je initiatieven samenbrengt en voorkomt dat teams langs elkaar heen werken.</p>
         </div>
-        <a href="https://calendly.com/piene-claessentech/30min" class="case-cta-button">Plan een kennismaking <span>→</span></a>
+        <div class="approach-contact-actions">
+          <a href="https://calendly.com/piene-claessentech/30min" class="approach-contact-primary">Plan een kennismaking <span aria-hidden="true">→</span></a>
+        </div>
       </div>
     </div>
   </section>
